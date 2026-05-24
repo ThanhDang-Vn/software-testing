@@ -67,7 +67,9 @@ This role focuses on designing evaluation frameworks for generative AI and agent
 - CI/CD pipeline integration
 - Unit, integration, regression, and E2E testing
 
-**📸 Screenshot:** `[ATTACH: screenshot_job1_momentive.png — must show your LinkedIn username]`
+**📸 Screenshot:**
+
+![Job 1 – Momentive Software LinkedIn Screenshot](img/req1/req1-01.png)
 
 **AI Impact Analysis:**  
 This role exemplifies the emergence of AI-native QA positions where the primary subject under test is an LLM/agentic system itself; traditional black-box testing skills are being replaced by evaluation framework design, hallucination detection, and grounding assessment — competencies that did not exist in QA job descriptions before 2023.
@@ -95,7 +97,9 @@ Specialized QA role targeting generative AI and AI-agent testing. The engineer v
 - LangChain / LangGraph / CrewAI / AutoGen (preferred)
 - API testing; CI/CD integration
 
-**📸 Screenshot:** `[ATTACH: screenshot_job2_zenith.png — must show your LinkedIn username]`
+**📸 Screenshot:**
+
+![Job 2 – Zenith System Solutions LinkedIn Screenshot](img/req1/req1-02.png)
 
 **AI Impact Analysis:**  
 Zenith's posting illustrates how agentic AI frameworks (LangChain, CrewAI, AutoGen) are creating a new sub-discipline within QA focused on validating non-deterministic multi-agent workflows — a testing challenge where traditional equivalence partitioning and boundary value analysis techniques are insufficient without LLM-specific evaluation methods.
@@ -121,7 +125,9 @@ Enterprise-scale QA engineering role at FedEx focused on agentic AI behavior tes
 - BS in Computer Science or related field
 - 4+ years IT/QA experience
 
-**📸 Screenshot:** `[ATTACH: screenshot_job3_fedex.png — must show your LinkedIn username]`
+**📸 Screenshot:**
+
+![Job 3 – FedEx LinkedIn Screenshot](img/req1/req1-03.png)
 
 **AI Impact Analysis:**  
 FedEx's adoption of a dedicated "AI & Agentic Behavior Engineer" title at enterprise scale confirms that AI testing is no longer confined to tech startups; logistics and supply-chain enterprises now require QA engineers who can validate agentic decision-making systems that directly affect operational workflows.
@@ -148,7 +154,9 @@ Design and deploy autonomous test agents for E2E testing of AI-powered applicati
 - AI/ML concepts; TensorFlow/PyTorch (bonus)
 - 3+ years experience; BS in Computer Science or related AI discipline
 
-**📸 Screenshot:** `[ATTACH: screenshot_job4_trimble.png — must show your LinkedIn username]`
+**📸 Screenshot:**
+
+![Job 4 – Trimble Inc. LinkedIn Screenshot](img/req1/req1-04.png)
 
 **AI Impact Analysis:**  
 Trimble's salary range ($78K–$108K) for an agentic AI QA engineer provides concrete market data showing that AI-augmented QA roles command a significant premium over traditional automation roles (~$60K–$80K); this 20–35% salary uplift will likely accelerate the transition of QA professionals toward AI-specialized skill sets.
@@ -175,7 +183,9 @@ Highly specialized AI testing role requiring 8+ years QA/testing experience with
 - Cloud AI platforms: Azure OpenAI, AWS Bedrock, Google Vertex AI
 - Prompt engineering; responsible AI principles
 
-**📸 Screenshot:** `[ATTACH: screenshot_job5_tmv.png — must show your LinkedIn username]`
+**📸 Screenshot:**
+
+![Job 5 – TMV Global Inc LinkedIn Screenshot](img/req1/req1-05.png)
 
 **AI Impact Analysis:**  
 TMV Global's requirement for "hallucination detection, factual accuracy, and bias assessment" across Azure OpenAI, AWS Bedrock, and Google Vertex AI demonstrates how AI QA has evolved into a cross-platform discipline; testers must now evaluate AI system outputs against responsible AI principles — a domain that requires ethical reasoning skills beyond traditional test engineering.
@@ -201,7 +211,9 @@ Lead QA automation engineer for a fintech company in Ho Chi Minh City. Covers fu
 - Git, Jenkins/GitLab CI
 - Banking domain knowledge (transfers, payments, account management)
 
-**📸 Screenshot:** `[ATTACH: screenshot_job6_galaxyfinx.png — must show your LinkedIn username]`
+**📸 Screenshot:**
+
+![Job 6 – Galaxy FinX LinkedIn Screenshot](img/req1/req1-06.png)
 
 **AI Impact Analysis:**  
 Galaxy FinX's posting reflects the Vietnamese fintech QA market in 2026 — still predominantly automation-first without explicit AI requirements, but the banking domain's strict correctness requirements mean AI-assisted test generation will face regulatory scrutiny before adoption, potentially delaying AI integration in this sector compared to tech startups.
@@ -228,7 +240,9 @@ Mid-to-senior QA engineering role at a Vietnamese software company. Covers API t
 - CI/CD (CircleCI preferred)
 - Agile/Scrum; English fluency required
 
-**📸 Screenshot:** `[ATTACH: screenshot_job7_smg.png — must show your LinkedIn username]`
+**📸 Screenshot:**
+
+![Job 7 – SMG Vietnam LinkedIn Screenshot](img/req1/req1-07.png)
 
 **AI Impact Analysis:**  
 SMG Vietnam's posting is representative of the majority of the Vietnamese QA market in 2026 — focused on classical automation and API testing with no AI requirements — indicating that while global AI QA roles surge, the domestic Vietnamese IT market still has a 12–24 month lag in adopting AI-native testing requirements.
@@ -255,7 +269,9 @@ Full-stack tester role at a Vietnamese IT company combining manual and automatio
 - Cursor, Claude, GitHub Copilot, or ChatGPT experience (preferred)
 - Jira / qTest / Xray / TestRail
 
-**📸 Screenshot:** `[ATTACH: screenshot_job8_ltsgroup.png — must show your LinkedIn username]`
+**📸 Screenshot:**
+
+![Job 8 – LTS Group LinkedIn Screenshot](img/req1/req1-08.png)
 
 **AI Impact Analysis:**  
 LTS Group's explicit listing of "Claude, GitHub Copilot, ChatGPT" as preferred tools marks a pivotal shift in the Vietnamese domestic QA market — it signals that local companies are beginning to reward AI tool proficiency, even if not yet requiring it, suggesting the Vietnamese market will close its AI adoption gap within 1–2 years.
@@ -283,7 +299,9 @@ QA engineering role at a startup focused on computer vision and mobile fitness a
 - MediaPipe / computer vision testing (preferred)
 - Linear bug tracking; performance and load testing
 
-**📸 Screenshot:** `[ATTACH: screenshot_job9_quantum.png — must show your LinkedIn username]`
+**📸 Screenshot:**
+
+![Job 9 – Quantum Movement LinkedIn Screenshot](img/req1/req1-09.png)
 
 **AI Impact Analysis:**  
 Quantum Movement's preference for MediaPipe/computer vision testing experience shows how AI-adjacent testing skills (validating ML model outputs in fitness/health apps) are creating new specializations within QA that blur the boundary between traditional software testing and AI model evaluation.
@@ -310,7 +328,9 @@ Entry-level QA engineering role at DXC Technology (global IT services company). 
 - Intermediate English
 - Git / Jenkins / Azure DevOps and Xray / Zephyr (nice-to-have)
 
-**📸 Screenshot:** `[ATTACH: screenshot_job10_dxc.png — must show your LinkedIn username]`
+**📸 Screenshot:**
+
+![Job 10 – DXC Technology LinkedIn Screenshot](img/req1/req1-10.png)
 
 **AI Impact Analysis:**  
 DXC's junior QA role represents the entry-level end of the 2026 market — where AI tools are not yet required but where entry-level candidates who proactively demonstrate AI tool proficiency (Copilot, ChatGPT for test generation) will differentiate themselves and accelerate career progression compared to peers relying solely on traditional tools like Katalon and TestComplete.
