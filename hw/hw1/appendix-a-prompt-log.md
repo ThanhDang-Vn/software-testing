@@ -1,10 +1,8 @@
 # Appendix A — AI Prompt Log (AI-02)
 
-> **Student:** [YOUR_FULL_NAME] — [YOUR_STUDENT_ID]
+> **Student:** Nguyễn Thành Dâng — 23127334
 > **Course:** Software Testing — HCMUS 2026
-> **Assignment:** HW01-AI
-> **AI Tool:** Claude (claude-sonnet-4-6) via Claude Code CLI
-> **Format:** HH:MM dd/mm/yyyy | Tool | Prompt Summary | Purpose | Artifact
+> **Assignment:** HW01
 
 ---
 
@@ -24,6 +22,8 @@
 | 10 | 17:45 24/05/2026 | Claude Sonnet 4.6 | "Merge verified req3.md into report.md replacing old Req 3 placeholder" | Integrate approved Req 3 content into main report | report.md Req 3 section |
 | 11 | 18:00 24/05/2026 | Claude Sonnet 4.6 | "Generate QA/QC role mindmap in Markdown format with 3 AI-mistake annotations" | Create mindmap artifact with ISTQB process structure | mindmap.md |
 | 12 | 18:10 24/05/2026 | Claude Sonnet 4.6 | "Generate prompt log template for Appendix A (AI-02)" | Document all AI interactions for audit compliance | appendix-a-prompt-log.md |
+| 13 | 10:00 03/06/2026 | Claude Sonnet 4.6 | "Verify defects 1–5 in Req 2: fetch source links and check content accuracy + AI hallucination notes" | Verify content and hallucination notes against primary sources (BleepingComputer, NVD, OpenSSL) | report.md Req 2 (patch fix) |
+| 14 | 10:20 03/06/2026 | Claude Sonnet 4.6 | "Switch Req 3 device from rice cooker to air fryer — rewrite all 15 test cases" | Redesign test cases for new device; update device info, TCs, edge cases, summary table, AI Critique | req3.md + report.md Req 3 (full rewrite) |
 
 ---
 
@@ -57,10 +57,10 @@
 
 | Section | Details |
 |---------|---------|
-| **1. What was asked** | Design 15 test cases for the Kangaroo electric rice cooker (student's physical device); ≥3 edge cases AI cannot generate; format: Objective / Input / Steps / Expected / Actual / Verdict |
-| **2. What AI generated** | 12 normal test cases covering documented Kangaroo modes (cook, quick cook, reheat, timer, porridge, steam, keep-warm, cancel, brown rice, yogurt, standalone reheat, manual time); 3 edge cases with "Why AI missed" explanations |
-| **3. What I verified** | Checked that each TC maps to a real Kangaroo function button; confirmed TC formats match required structure; validated edge case explanations are technically correct |
-| **4. What I changed** | Adjusted TC13–TC15 edge case descriptions to match my specific Kangaroo model's button layout and display behavior; filled in observed behavior after execution |
+| **1. What was asked** | Design 15 test cases for the air fryer (nồi chiên không dầu — student's physical device); ≥3 edge cases AI cannot generate; format: Objective / Input / Steps / Expected / Actual / Verdict |
+| **2. What AI generated** | 12 normal test cases covering documented air fryer functions (fry frozen food, temperature adjustment, timer setting, preheat, roast chicken, cancel mid-cycle, basket auto-pause, reheat, bake, max temperature, shake reminder, back-to-back cycles); 3 edge cases with "Why AI missed" explanations |
+| **3. What I verified** | Checked that each TC maps to a real air fryer function; confirmed TC formats match required structure; validated edge case explanations are technically correct for air fryer hardware |
+| **4. What I changed** | Switched device from rice cooker to air fryer (03/06/2026); rewrote all 15 TCs from scratch; updated edge cases to air fryer-specific safety scenarios (wet food, 0:00 timer BVA, no-basket thermal safety); updated video TC list to TC01/TC05/TC06/TC14/TC15 |
 | **5. Final human judgment** | Device photo with student ID, execution videos with voice narration, and filling in Actual/Verdict columns after real physical testing are 100% student tasks — AI cannot perform physical testing |
 
 ---
