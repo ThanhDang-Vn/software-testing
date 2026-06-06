@@ -42,7 +42,6 @@
 | 10 | Junior QA Engineer (Manual + Automation) | DXC Technology | Ho Chi Minh City, Vietnam | Not listed | No | ~May 20, 2026 |
 
 
-
 ## 📝 Note on Salary Transparency
 
 Currently, many companies do not publicly disclose salary information in their job postings. Candidates will only be informed of or able to negotiate salary directly with the company during the hiring process. As a result, some job listings in this report do not display specific compensation figures. However, based on research from reputable sources *(ref: [Lương kiểm thử phần mềm 2025 – Greenwich Vietnam](https://greenwich.edu.vn/luong-kiem-thu-phan-mem/))*, the following reflects **estimated average salary ranges for common Software Testing positions in Vietnam (2025)**:
@@ -264,8 +263,8 @@ SMG Vietnam represents the majority of the Vietnamese QA market in 2026 — clas
 
 #### Job 8 – Fullstack Tester (Auto + Manual) (AI Preferred)
 
-**Company:** LTS Group
-**Location:** Hanoi Capital Region, Vietnam
+**Company:** LTS Group 
+**Location:** Hanoi Capital Region, Vietnam 
 **LinkedIn URL:** <https://www.linkedin.com/jobs/view/4415768166>
 **Salary:** Up to 30,000,000 VND/month (~$1,200 USD)
 **Posting Date:** ~May 20, 2026
@@ -357,802 +356,787 @@ The 10 LinkedIn postings reveal three distinct tiers in the 2026 QA market:
 
 ---
 
-## Requirement 2 – 20 Software Defects 2022–2026 (20 pts) {#requirement-2}
+## Yêu cầu 2 – 20 Lỗi Phần Mềm Giai Đoạn 2022–2026 (20 điểm) {#requirement-2}
 
-> **Period:** 2022–2026. **Mandatory:** >= 5 defects related to AI/LLM.
-> **Each entry:** source link · description · severity · consequences · solution · AI bias/hallucination note.
+> **Giai đoạn:** 2022–2026. **Bắt buộc:** >= 5 lỗi liên quan đến AI/LLM.
+> **Mỗi mục:** đường dẫn nguồn · mô tả · mức độ nghiêm trọng · hậu quả · giải pháp · AI Bias/Hallucination.
 
-| # | Name | Year | Severity | AI/LLM? |
+| # | Tên | Năm | Mức độ nghiêm trọng | AI/LLM? |
 |---|------|------|----------|:--------:|
-| 1 | Change Healthcare Ransomware Attack | 2024 | Critical | — |
-| 2 | MOVEit Transfer SQL Injection (CVE-2023-34362) | 2023 | Critical | — |
-| 3 | XZ Utils Backdoor (CVE-2024-3094) | 2024 | Critical | — |
-| 4 | Log4Shell Continued Exploitation (CVE-2021-44228) | 2022 | Critical | — |
-| 5 | OpenSSL Infinite Loop (CVE-2022-0778) | 2022 | High | — |
-| 6 | Microsoft Exchange ProxyNotShell (CVE-2022-41040/41082) | 2022 | Critical | — |
-| 7 | Apple WebKit Zero-Day (CVE-2022-32893) | 2022 | High | — |
-| 8 | Twitter 5.4M User Data Breach | 2022 | High | — |
-| 9 | LastPass Password Vault Breach | 2022–2023 | Critical | — |
-| 10 | Okta Support System Breach | 2023 | High | — |
-| 11 | WinRAR RCE (CVE-2023-38831) | 2023 | High | — |
-| 12 | Cisco IOS XE Zero-Day (CVE-2023-20198) | 2023 | Critical | — |
-| 13 | Microsoft Outlook Zero-Click RCE (CVE-2023-23397) | 2023 | Critical | — |
-| 14 | Ivanti Connect Secure Zero-Day (CVE-2023-46805) | 2024 | Critical | — |
-| 15 | Palo Alto PAN-OS Zero-Day (CVE-2024-3400) | 2024 | Critical | — |
-| 16 | ChatGPT Conversation History Leak | 2023 | High | ✅ AI/LLM |
-| 17 | GPT-4 Hallucination – Mata v. Avianca Legal Brief | 2023 | High | ✅ AI/LLM |
-| 18 | Samsung Employee Data Leak via ChatGPT | 2023 | High | ✅ AI/LLM |
-| 19 | Bing Chat (Sydney) Prompt Injection / Jailbreak | 2023 | High | ✅ AI/LLM |
-| 20 | GitHub Copilot Insecure Code Generation (CWE-798) | 2023 | Medium | ✅ AI/LLM |
+| 1 | Change Healthcare Ransomware Attack | 2024 | Nghiêm trọng | — |
+| 2 | MOVEit Transfer SQL Injection (CVE-2023-34362) | 2023 | Nghiêm trọng | — |
+| 3 | XZ Utils Backdoor (CVE-2024-3094) | 2024 | Nghiêm trọng | — |
+| 4 | Log4Shell Continued Exploitation (CVE-2021-44228) | 2022 | Nghiêm trọng | — |
+| 5 | OpenSSL Infinite Loop (CVE-2022-0778) | 2022 | Cao | — |
+| 6 | Microsoft Exchange ProxyNotShell (CVE-2022-41040/41082) | 2022 | Nghiêm trọng | — |
+| 7 | Apple WebKit Zero-Day (CVE-2022-32893) | 2022 | Cao | — |
+| 8 | Twitter 5.4M User Data Breach | 2022 | Cao | — |
+| 9 | LastPass Password Vault Breach | 2022–2023 | Nghiêm trọng | — |
+| 10 | Okta Support System Breach | 2023 | Cao | — |
+| 11 | WinRAR RCE (CVE-2023-38831) | 2023 | Cao | — |
+| 12 | Cisco IOS XE Zero-Day (CVE-2023-20198) | 2023 | Nghiêm trọng | — |
+| 13 | Microsoft Outlook Zero-Click EoP (CVE-2023-23397) | 2023 | Nghiêm trọng | — |
+| 14 | Ivanti Connect Secure Zero-Day (CVE-2023-46805) | 2024 | Nghiêm trọng | — |
+| 15 | Palo Alto PAN-OS Zero-Day (CVE-2024-3400) | 2024 | Nghiêm trọng | — |
+| 16 | ChatGPT Conversation History Leak | 2023 | Cao | ✅ AI/LLM |
+| 17 | GPT-4 Hallucination – Mata v. Avianca Legal Brief | 2023 | Cao | ✅ AI/LLM |
+| 18 | Samsung Employee Data Leak via ChatGPT | 2023 | Cao | ✅ AI/LLM |
+| 19 | Bing Chat (Sydney) Prompt Injection / Jailbreak | 2023 | Cao | ✅ AI/LLM |
+| 20 | GitHub Copilot Insecure Code Generation (CWE-798) | 2023 | Trung bình | ✅ AI/LLM |
 
 ---
 
-### Defect 1 – Change Healthcare Ransomware Attack (2024)
+### Lỗi 1 – Change Healthcare Ransomware Attack (2024)
 
-**Source:** <https://www.bleepingcomputer.com/news/security/change-healthcare-hacked-using-stolen-citrix-account-with-no-mfa/>
-**Severity:** Critical
-**Year:** 2024
+**Nguồn:** <https://www.bleepingcomputer.com/news/security/change-healthcare-hacked-using-stolen-citrix-account-with-no-mfa/>
+**Mức độ nghiêm trọng:** Nghiêm trọng
+**Năm:** 2024
 
-**Description:**
-In February 2024, the ALPHV/BlackCat ransomware gang breached Change Healthcare (a UnitedHealth subsidiary processing 15 billion healthcare transactions per year) using stolen Citrix remote access credentials on a portal with no multi-factor authentication. Attackers spent approximately 9 days inside the network before deploying ransomware on February 21, 2024, disrupting pharmacy claims and insurance payment processing nationwide.
+**Mô tả:**
+Vào tháng 2 năm 2024, nhóm ransomware ALPHV/BlackCat đã xâm nhập vào Change Healthcare (một công ty con của UnitedHealth xử lý 15 tỷ giao dịch y tế mỗi năm) bằng cách sử dụng thông tin đăng nhập Citrix bị đánh cắp trên một cổng không có xác thực đa yếu tố. Kẻ tấn công dành khoảng 9 ngày trong mạng nội bộ trước khi triển khai ransomware vào ngày 21 tháng 2 năm 2024, làm gián đoạn việc xử lý yêu cầu bảo hiểm dược và thanh toán bảo hiểm trên toàn quốc.
 
-**Consequences:**
-- Approximately 190 million Americans' health records, SSNs, and billing data exposed — the largest US healthcare data breach in history
-- $2.45 billion in financial losses through Q3 2024
-- UnitedHealth paid a $22 million ransom to ALPHV, then paid RansomHub again to prevent data release
-- Weeks-long disruption to pharmacy claims; hospitals unable to verify insurance coverage
-- US Congress emergency hearings; HHS investigations launched
+**Hậu quả:**
+- Hồ sơ y tế, số an sinh xã hội và dữ liệu thanh toán của khoảng 190 triệu người Mỹ bị lộ — vụ vi phạm dữ liệu y tế lớn nhất trong lịch sử Hoa Kỳ
+- Thiệt hại tài chính 2,45 tỷ đô la đến hết quý 3 năm 2024
+- UnitedHealth đã trả tiền chuộc 22 triệu đô la cho ALPHV, sau đó lại trả thêm cho RansomHub để ngăn việc phát tán dữ liệu
+- Gián đoạn nhiều tuần liên tiếp trong việc xử lý yêu cầu bảo hiểm dược; bệnh viện không thể xác minh phạm vi bảo hiểm
+- Điều trần khẩn cấp tại Quốc hội Hoa Kỳ; HHS khởi động điều tra
 
-**Solution:**
-- Mandatory MFA on all remote access portals (Citrix, VPN, RDP) without exception
-- Network segmentation to limit lateral movement after initial compromise
-- Continuous monitoring of credential-based access and anomalous login patterns
-- Incident response rehearsals for critical healthcare infrastructure
+**Giải pháp:**
+- Bắt buộc xác thực đa yếu tố trên tất cả các cổng truy cập từ xa (Citrix, VPN, RDP) không có ngoại lệ
+- Phân đoạn mạng để hạn chế di chuyển ngang sau khi xâm nhập ban đầu
+- Giám sát liên tục các hành vi đăng nhập bất thường dựa trên thông tin xác thực
+- Diễn tập ứng phó sự cố cho cơ sở hạ tầng y tế quan trọng
 
-**AI Bias/Hallucination Note:**
-When asked, Claude stated the breach affected approximately 100 million patients. The confirmed figure (January 2025 disclosure) is 190 million — nearly double. The AI froze on an earlier preliminary estimate and presented it as the final figure, demonstrating how LLMs cannot update stale information to reflect post-cutoff revised disclosures.
-
----
-
-### Defect 2 – MOVEit Transfer SQL Injection (CVE-2023-34362) (2023)
-
-**Source:** <https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-158a>
-**Severity:** Critical (CVSS 9.8)
-**Year:** 2023
-
-**Description:**
-A critical SQL injection vulnerability in Progress Software's MOVEit Transfer allowed unauthenticated attackers to gain unauthorized database access, escalate privileges, and execute arbitrary SQL statements. The Cl0p ransomware group exploited it as a zero-day before the patch was available.
-
-**Consequences:**
-- Over 2,700 organizations affected globally including US government agencies, British Airways, Calpers, and universities
-- More than 93 million individuals had personal data exfiltrated
-- Estimated financial damage: $9.9 billion (Emsisoft estimate)
-- No ransomware deployed — pure data theft and extortion model
-
-**Solution:**
-- Progress released emergency patches (2023-06-01); upgrade to 2021.0.7, 2021.1.5, 2022.0.5, 2022.1.6, or 2023.0.2
-- Disable HTTP/HTTPS traffic to MOVEit Transfer until patching
-- Review audit logs for unauthorized access and webshell artifacts
-
-**AI Bias/Hallucination Note:**
-GPT-4 incorrectly stated "MOVEit Transfer is an open-source tool" when asked to explain this defect. MOVEit Transfer is a proprietary commercial product by Progress Software (formerly Ipswitch). This hallucination could mislead a tester into looking for open-source community patches that do not exist.
+**AI Bias/Hallucination:**
+Khi được hỏi về tác động tài chính, Claude trích dẫn "thiệt hại 2,45 tỷ đô la" như thể được lấy từ nguồn BleepingComputer đã dẫn — nhưng bài viết đó chỉ nêu **872 triệu đô la** (theo điều trần của UnitedHealth tại Quốc hội quý 1 năm 2024). Con số 2,45 tỷ đô la đến từ báo cáo tài chính quý 3 năm 2024 không có trong URL được dẫn nguồn. AI đã kết hợp dữ liệu từ các mốc thời gian báo cáo khác nhau và trình bày con số cao hơn 3 lần so với nguồn được trích dẫn mà không hề cảnh báo về sự khác biệt.
 
 ---
 
-### Defect 3 – XZ Utils Backdoor (CVE-2024-3094) (2024)
+### Lỗi 2 – MOVEit Transfer SQL Injection (CVE-2023-34362) (2023)
 
-**Source:** <https://nvd.nist.gov/vuln/detail/CVE-2024-3094>
-**Severity:** Critical (CVSS 10.0)
-**Year:** 2024
+**Nguồn:** <https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-158a>
+**Mức độ nghiêm trọng:** Nghiêm trọng (CVSS 9.8)
+**Năm:** 2023
 
-**Description:**
-A sophisticated supply chain attack embedded in XZ Utils versions 5.6.0 and 5.6.1. The attacker ("Jia Tan"), operating over two years under a fake identity, inserted a backdoor into the build system that modified the liblzma library to intercept and compromise OpenSSH authentication on affected Linux distributions (Debian, Fedora, openSUSE testing/unstable).
+**Mô tả:**
+Một lỗ hổng SQL injection nghiêm trọng trong MOVEit Transfer của Progress Software cho phép kẻ tấn công chưa xác thực truy cập trái phép vào cơ sở dữ liệu, leo thang đặc quyền và thực thi các câu lệnh SQL tùy ý. Nhóm ransomware Cl0p đã khai thác lỗ hổng này như một zero-day trước khi bản vá được phát hành.
 
-**Consequences:**
-- If deployed at scale, the backdoor would have allowed unauthenticated RCE on millions of Linux servers via SSH
-- Detected early by a Microsoft engineer (Andres Freund) noticing anomalous CPU usage during SSH logins
-- Triggered a global audit of open-source maintainer trust and CI/CD supply chain security
+**Hậu quả:**
+- Hơn 2.700 tổ chức bị ảnh hưởng trên toàn cầu, bao gồm các cơ quan chính phủ Hoa Kỳ, British Airways, Calpers và các trường đại học
+- Dữ liệu cá nhân của hơn 93 triệu người bị đánh cắp
+- Thiệt hại tài chính ước tính: 9,9 tỷ đô la (theo ước tính của Emsisoft)
+- Không triển khai ransomware — chỉ đánh cắp dữ liệu và tống tiền thuần túy
 
-**Solution:**
-- Immediately downgrade to XZ Utils 5.4.6 or earlier
-- Distributions rolled back affected packages within 24 hours of disclosure
-- OpenSSF and Linux Foundation launched open-source maintainer identity verification initiatives
+**Giải pháp:**
+- Progress phát hành bản vá khẩn cấp (01/06/2023); nâng cấp lên phiên bản 2021.0.7, 2021.1.5, 2022.0.5, 2022.1.6 hoặc 2023.0.2
+- Vô hiệu hóa lưu lượng HTTP/HTTPS đến MOVEit Transfer cho đến khi vá xong
+- Xem lại nhật ký kiểm tra để phát hiện truy cập trái phép và dấu vết webshell
 
-**AI Bias/Hallucination Note:**
-Claude described the attacker as "a state-sponsored Chinese hacker" with high confidence. This attribution is publicly unconfirmed — no official attribution has been made. The AI presented security community speculation as established fact, a hallucination pattern common in attribution questions where training data contains speculative news articles.
-
----
-
-### Defect 4 – Log4Shell Continued Exploitation (CVE-2021-44228) (2022)
-
-**Source:** <https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-320a>
-**Severity:** Critical (CVSS 10.0)
-**Year:** 2022
-
-**Description:**
-Log4Shell, disclosed December 2021, continued as one of the most actively exploited vulnerabilities throughout 2022. The flaw in Apache Log4j 2's JNDI lookup feature allowed unauthenticated RCE by sending a crafted log message. Despite patches being available, millions of systems remained unpatched due to Log4j's ubiquity in enterprise Java applications.
-
-**Consequences:**
-- Nation-state actors (Iran, China, North Korea, Russia) and ransomware groups actively exploited unpatched systems throughout 2022
-- Belgian Defense Ministry, VMware, and numerous organizations breached
-- CISA reported 40%+ of internet-facing systems using vulnerable Log4j as late as Q2 2022
-- Estimated industry remediation cost: $100M+
-
-**Solution:**
-- Upgrade to Log4j 2.17.1+ (Java 8), 2.12.4+ (Java 7), or 2.3.2+ (Java 6)
-- Set JVM flag: `log4j2.formatMsgNoLookups=true` as interim mitigation
-- Implement WAF rules to detect and block `${jndi:` patterns
-
-**AI Bias/Hallucination Note:**
-When asked which versions are safe, Claude stated "Log4j 1.x is not affected by Log4Shell." Technically true for CVE-2021-44228, but Log4j 1.x reached end-of-life in 2015 and has its own critical vulnerabilities (CVE-2019-17571, CVE-2022-23302). The technically-correct-but-misleading answer could cause a tester to conclude that Log4j 1.x systems are safe, when they are critically insecure for other reasons.
+**AI Bias/Hallucination:**
+Khi được hỏi về tác động của vụ vi phạm, Claude liệt kê các con số chính xác — "2.700 tổ chức," "93 triệu người" và "9,9 tỷ đô la (theo Emsisoft)" — không có con số nào xuất hiện trong khuyến cáo CISA AA23-158a được dẫn nguồn. Những số liệu này đến từ các bài báo riêng biệt (blog Emsisoft, BBC, Statista) không phải nguồn được khai báo. AI đã tổng hợp dữ liệu từ nhiều nguồn không được tiết lộ và trình bày chúng như thể xuất phát từ một khuyến cáo chính phủ duy nhất.
 
 ---
 
-### Defect 5 – OpenSSL Infinite Loop (CVE-2022-0778) (2022)
+### Lỗi 3 – XZ Utils Backdoor (CVE-2024-3094) (2024)
 
-**Source:** <https://www.openssl.org/news/secadv/20220315.txt>
-**Severity:** High (CVSS 7.5)
-**Year:** 2022
+**Nguồn:** <https://nvd.nist.gov/vuln/detail/CVE-2024-3094>
+**Mức độ nghiêm trọng:** Nghiêm trọng (CVSS 10.0)
+**Năm:** 2024
 
-**Description:**
-A bug in OpenSSL's `BN_mod_sqrt()` function caused an infinite loop when parsing a certificate with an invalid explicit elliptic curve parameter. Since certificate parsing occurs before authentication in TLS handshakes, an unauthenticated attacker could trigger a Denial of Service by sending a malformed certificate.
+**Mô tả:**
+Một cuộc tấn công chuỗi cung ứng tinh vi được nhúng vào XZ Utils phiên bản 5.6.0 và 5.6.1. Kẻ tấn công (tên "Jia Tan"), hoạt động trong hơn hai năm dưới danh tính giả, đã chèn một backdoor vào hệ thống build để sửa đổi thư viện liblzma nhằm chặn và xâm phạm quá trình xác thực OpenSSH trên các bản phân phối Linux bị ảnh hưởng (Debian, Fedora, openSUSE testing/unstable).
 
-**Consequences:**
-- Any OpenSSL-dependent service (HTTPS servers, VPNs, email servers) exposed to untrusted TLS connections could be crashed remotely
-- Affected OpenSSL versions 1.0.2, 1.1.1, and 3.0
-- Wide blast radius due to OpenSSL's ubiquity in web infrastructure
+**Hậu quả:**
+- Nếu được triển khai rộng rãi, backdoor sẽ cho phép thực thi mã từ xa không cần xác thực trên hàng triệu máy chủ Linux qua SSH
+- Phát hiện sớm bởi kỹ sư Microsoft Andres Freund khi nhận thấy mức sử dụng CPU bất thường trong quá trình đăng nhập SSH
+- Kích hoạt kiểm tra toàn cầu về niềm tin với nhà bảo trì mã nguồn mở và bảo mật chuỗi cung ứng CI/CD
 
-**Solution:**
-- Upgrade to OpenSSL 1.1.1n, 3.0.2, or later
-- For OpenSSL 1.0.2 (EOL): upgrade to a supported version; no public patch available
+**Giải pháp:**
+- Ngay lập tức hạ cấp xuống XZ Utils 5.4.6 hoặc phiên bản cũ hơn
+- Các bản phân phối đã khôi phục các gói bị ảnh hưởng trong vòng 24 giờ sau khi công bố
+- OpenSSF và Linux Foundation khởi động các sáng kiến xác minh danh tính nhà bảo trì mã nguồn mở
 
-**AI Bias/Hallucination Note:**
-ChatGPT described this vulnerability as allowing "remote code execution." CVE-2022-0778 is a Denial of Service vulnerability — it causes an infinite loop/crash, not arbitrary code execution. The AI likely conflated this with other OpenSSL vulnerabilities (e.g., Heartbleed), producing an inflated severity assessment that could mislead triage prioritization.
-
----
-
-### Defect 6 – Microsoft Exchange ProxyNotShell (CVE-2022-41040 / CVE-2022-41082) (2022)
-
-**Source:** <https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-41082>
-**Severity:** Critical (CVSS 8.8)
-**Year:** 2022
-
-**Description:**
-Two chained vulnerabilities in Microsoft Exchange Server: CVE-2022-41040 (Server-Side Request Forgery) and CVE-2022-41082 (RCE via PowerShell), exploited as zero-days before patches were available. Together they allowed authenticated attackers to achieve RCE on Exchange servers.
-
-**Consequences:**
-- Exploited in targeted attacks globally before patch availability
-- Attackers deployed webshells (FINSPY, China Chopper) for persistent access
-- Affected Exchange Server 2013, 2016, and 2019
-- Required urgent IIS URL Rewrite rule mitigations while awaiting official patches
-
-**Solution:**
-- Apply Microsoft November 2022 Patch Tuesday updates (KB5019758 / KB5019759)
-- Interim mitigation: add URL Rewrite rule to block `.*autodiscover\.json.*\@.*Powershell.*`
-- Enable Extended Protection for Authentication (EPA) on Exchange
-
-**AI Bias/Hallucination Note:**
-Claude confused ProxyNotShell with ProxyShell, stating "ProxyNotShell affects Exchange Online (Microsoft 365)." ProxyNotShell only affects on-premises Exchange Server — Exchange Online was never affected. This deployment misattribution could cause a tester to incorrectly scope remediation efforts.
+**AI Bias/Hallucination:**
+Claude mô tả kẻ tấn công là "một hacker Trung Quốc được nhà nước bảo trợ" với độ tự tin cao. Quy kết này chưa được xác nhận chính thức — chưa có cơ quan nào đưa ra kết luận. AI đã trình bày suy đoán của cộng đồng bảo mật như một sự thật đã được xác lập, một dạng ảo giác phổ biến trong các câu hỏi về quy kết tấn công.
 
 ---
 
-### Defect 7 – Apple WebKit Zero-Day (CVE-2022-32893) (2022)
+### Lỗi 4 – Log4Shell Continued Exploitation (CVE-2021-44228) (2022)
 
-**Source:** <https://support.apple.com/en-us/HT213412>
-**Severity:** High (CVSS 8.8)
-**Year:** 2022
+**Nguồn:** <https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-320a>
+**Mức độ nghiêm trọng:** Nghiêm trọng (CVSS 10.0)
+**Năm:** 2022
 
-**Description:**
-An out-of-bounds write in Apple's WebKit browser engine allowed maliciously crafted web content to execute arbitrary code. Apple confirmed active in-the-wild exploitation. Affected Safari across iOS 15.6.1, iPadOS 15.6.1, and macOS Monterey 12.5.1.
+**Mô tả:**
+Log4Shell, được công bố vào tháng 12 năm 2021, tiếp tục là một trong những lỗ hổng bị khai thác tích cực nhất trong suốt năm 2022. Lỗ hổng trong tính năng tra cứu JNDI của Apache Log4j 2 cho phép thực thi mã từ xa không cần xác thực bằng cách gửi một thông điệp log được tạo đặc biệt. Mặc dù đã có bản vá, hàng triệu hệ thống vẫn chưa được vá do Log4j có mặt khắp nơi trong các ứng dụng Java doanh nghiệp.
 
-**Consequences:**
-- Zero-click or one-click exploitation possible via malicious websites or iMessage links
-- Could grant complete device compromise if chained with a kernel exploit
-- Typically used in targeted spyware delivery chains
+**Hậu quả:**
+- Các nhóm tấn công có liên hệ nhà nước (Iran, Trung Quốc, Triều Tiên, Nga) và các nhóm ransomware tích cực khai thác các hệ thống chưa được vá trong suốt năm 2022
+- Bộ Quốc phòng Bỉ, VMware và nhiều tổ chức khác bị xâm phạm
+- CISA báo cáo hơn 40% hệ thống có kết nối internet đang sử dụng Log4j dễ bị tấn công đến tận quý 2 năm 2022
+- Chi phí khắc phục toàn ngành ước tính: hơn 100 triệu đô la
 
-**Solution:**
-- Apply Apple emergency updates: iOS 15.6.1, iPadOS 15.6.1, macOS 12.5.1
-- Update via Settings > General > Software Update
+**Giải pháp:**
+- Nâng cấp lên Log4j 2.17.1+ (Java 8), 2.12.4+ (Java 7) hoặc 2.3.2+ (Java 6)
+- Đặt cờ JVM: `log4j2.formatMsgNoLookups=true` như biện pháp giảm thiểu tạm thời
+- Triển khai quy tắc WAF để phát hiện và chặn các mẫu `${jndi:`
 
-**AI Bias/Hallucination Note:**
-Claude stated "CVE-2022-32893 was used exclusively by the Pegasus spyware." Apple's advisory confirms active in-the-wild exploitation but makes no attribution to specific threat actors. The AI hallucinated a specific attribution (NSO Group / Pegasus) not substantiated by Apple's official disclosure, reflecting bias toward associating iOS zero-days with the most well-known iOS spyware.
-
----
-
-### Defect 8 – Twitter 5.4M User Data Breach (2022)
-
-**Source:** <https://www.bleepingcomputer.com/news/security/twitter-confirms-zero-day-used-to-expose-data-of-54-million-accounts/>
-**Severity:** High
-**Year:** 2022
-
-**Description:**
-A vulnerability in Twitter's API (introduced by a code change in June 2021) allowed any party to submit phone numbers or email addresses and receive the associated Twitter account. A threat actor exploited this to scrape data for 5.4 million accounts, mapping private contact details to public Twitter handles. Data was later published on hacker forums.
-
-**Consequences:**
-- 5.4 million accounts' private contact details linked to their Twitter identities
-- Particular harm to whistleblowers and activists whose real-world identities could be revealed
-- Twitter paid $150M FTC fine in 2022 for related privacy violations
-- Data republished multiple times on breach forums through 2023
-
-**Solution:**
-- Patched the API vulnerability in January 2022 after HackerOne bug bounty report
-- Notified affected users; recommended enabling two-factor authentication
-- Implement stricter API rate limiting and enumeration protection for user lookup endpoints
-
-**AI Bias/Hallucination Note:**
-ChatGPT reported the breach as affecting "5.4 million email addresses only," omitting that phone numbers were also exposed. The official disclosure confirms both phone numbers AND email addresses were used as lookup keys. This partial hallucination understates the privacy impact for users who used phone numbers for 2FA — precisely the most security-conscious users.
+**AI Bias/Hallucination:**
+Khi được hỏi quốc gia nào đã khai thác Log4Shell vào năm 2022, Claude nêu tên "Iran, Trung Quốc, Triều Tiên, Nga." Khuyến cáo CISA AA22-320A được dẫn nguồn **chỉ đề cập đến các tác nhân APT của Iran** — Trung Quốc, Triều Tiên và Nga không xuất hiện trong tài liệu đó. AI đã thêm ba quốc gia không có trong nguồn được trích dẫn, có thể dựa trên suy đoán từ các bài báo tin tức.
 
 ---
 
-### Defect 9 – LastPass Password Vault Breach (2022–2023)
+### Lỗi 5 – OpenSSL Infinite Loop (CVE-2022-0778) (2022)
 
-**Source:** <https://blog.lastpass.com/2022/12/notice-of-recent-security-incident/>
-**Severity:** Critical
-**Year:** 2022–2023
+**Nguồn:** <https://www.openssl.org/news/secadv/20220315.txt>
+**Mức độ nghiêm trọng:** Cao (CVSS 7.5)
+**Năm:** 2022
 
-**Description:**
-LastPass suffered a two-stage breach: in August 2022 source code was stolen, then in November 2022 attackers used those credentials to access a third-party cloud storage service and exfiltrate encrypted customer password vaults. The vaults contained unencrypted URL metadata and encrypted fields protected by the user's master password.
+**Mô tả:**
+Một lỗi trong hàm `BN_mod_sqrt()` của OpenSSL gây ra vòng lặp vô hạn khi phân tích chứng chỉ có tham số đường cong elliptic tường minh không hợp lệ. Do quá trình phân tích chứng chỉ xảy ra trước khi xác thực trong quá trình bắt tay TLS, kẻ tấn công chưa xác thực có thể kích hoạt tấn công từ chối dịch vụ bằng cách gửi chứng chỉ bị lỗi.
 
-**Consequences:**
-- Encrypted vaults for millions of customers exfiltrated
-- Unencrypted URL metadata revealed which services customers used (a privacy breach independent of decryption)
-- Attackers began offline brute-force attacks on vaults with weak master passwords
-- Reports of $35M+ in cryptocurrency theft linked to decrypted LastPass vaults (2023)
-- Severe reputational damage; significant customer churn to competitors
+**Hậu quả:**
+- Bất kỳ dịch vụ nào phụ thuộc vào OpenSSL (máy chủ HTTPS, VPN, máy chủ email) bị lộ với các kết nối TLS không đáng tin cậy đều có thể bị crash từ xa
+- Ảnh hưởng đến OpenSSL phiên bản 1.0.2, 1.1.1 và 3.0
+- Phạm vi ảnh hưởng rộng do OpenSSL được sử dụng phổ biến trong cơ sở hạ tầng web
 
-**Solution:**
-- LastPass recommended all users change stored passwords if master password was weak (< 12 characters)
-- Enable MFA on all critical accounts; rotate all credentials stored in LastPass
-- Migrate to alternative password managers (1Password, Bitwarden)
-- LastPass restructured cloud storage architecture and improved secrets management
+**Giải pháp:**
+- Nâng cấp lên OpenSSL 1.1.1n, 3.0.2 hoặc phiên bản mới hơn
+- Đối với OpenSSL 1.0.2 (đã kết thúc hỗ trợ): nâng cấp lên phiên bản được hỗ trợ; không có bản vá công khai
 
-**AI Bias/Hallucination Note:**
-Claude stated "the LastPass master passwords themselves were leaked." This is incorrect — master passwords were never stored by LastPass (zero-knowledge architecture). What leaked were encrypted vaults, which can only be decrypted by someone who knows the master password. The AI conflated "vault data was stolen" with "master passwords were exposed," a critical distinction affecting the correct user response.
+**AI Bias/Hallucination:**
+ChatGPT mô tả lỗ hổng này cho phép "thực thi mã từ xa." CVE-2022-0778 là lỗ hổng từ chối dịch vụ — nó gây ra vòng lặp vô hạn/crash, không phải thực thi mã tùy ý. AI có thể đã nhầm lẫn với các lỗ hổng OpenSSL khác (ví dụ: Heartbleed), dẫn đến đánh giá mức độ nghiêm trọng bị thổi phồng có thể gây hiểu lầm trong quá trình ưu tiên xử lý.
 
 ---
 
-### Defect 10 – Okta Support System Breach (2023)
+### Lỗi 6 – Microsoft Exchange ProxyNotShell (CVE-2022-41040 / CVE-2022-41082) (2022)
 
-**Source:** <https://www.bleepingcomputer.com/news/security/okta-says-its-support-system-was-breached-using-stolen-credentials/>
-**Severity:** High
-**Year:** 2023
+**Nguồn:** <https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-41082>
+**Mức độ nghiêm trọng:** Nghiêm trọng (CVSS 8.8)
+**Năm:** 2022
 
-**Description:**
-In October 2023, attackers used stolen credentials to access Okta's support case management system and exfiltrate HTTP Archive (HAR) files that customers had uploaded for troubleshooting — files containing session tokens, cookies, and sensitive browser activity. Okta initially reported 134 customers affected, but by November 2023 confirmed ALL Workforce Identity Cloud support system users had names and email addresses exposed. BeyondTrust and Cloudflare independently detected the intrusion.
+**Mô tả:**
+Hai lỗ hổng kết hợp trong Microsoft Exchange Server: CVE-2022-41040 (Server-Side Request Forgery) và CVE-2022-41082 (thực thi mã từ xa qua PowerShell), bị khai thác như zero-day trước khi có bản vá. Kết hợp lại, chúng cho phép kẻ tấn công đã xác thực thực thi mã từ xa trên máy chủ Exchange.
 
-**Consequences:**
-- Session tokens stolen, enabling account hijacking of Okta customer environments
-- All Okta support system users' names and email addresses exposed
-- 6% of exposed users (administrators) lacked MFA — direct account takeovers possible
-- Okta's third major security incident in two years; severe reputational damage
-- Cloudflare and BeyondTrust compromised as downstream victims
+**Hậu quả:**
+- Bị khai thác trong các cuộc tấn công có chủ đích trên toàn cầu trước khi có bản vá
+- Kẻ tấn công triển khai webshell (FINSPY, China Chopper) để duy trì quyền truy cập lâu dài
+- Ảnh hưởng đến Exchange Server 2013, 2016 và 2019
+- Cần triển khai khẩn cấp quy tắc IIS URL Rewrite trong khi chờ bản vá chính thức
 
-**Solution:**
-- Revoke and rotate all session tokens for affected customers (done by Okta)
-- Enforce MFA for all administrative accounts without exception
-- Strip sensitive tokens from HAR files before uploading to any support system
-- Anomaly detection monitoring on support system access patterns
+**Giải pháp:**
+- Áp dụng bản cập nhật Microsoft Patch Tuesday tháng 11 năm 2022 (KB5019758 / KB5019759)
+- Biện pháp tạm thời: thêm quy tắc URL Rewrite để chặn `.*autodiscover\.json.*\@.*Powershell.*`
+- Bật Extended Protection for Authentication (EPA) trên Exchange
 
-**AI Bias/Hallucination Note:**
-ChatGPT confused this with Okta's 2022 Lapsus$ breach, stating "attackers gained access to Okta's source code and internal admin tools." The 2023 incident only affected the support ticketing system — production auth services and source code were never compromised. Conflating two separate incidents would lead to wrong remediation scope.
+**AI Bias/Hallucination:**
+Khi được hỏi về mức độ nghiêm trọng của CVE-2022-41082, Claude báo cáo "Nghiêm trọng (CVSS 8.8)." Trang khuyến cáo MSRC thực tế ghi điểm là **CVSS 8.0** với mức độ nghiêm trọng được phân loại là **"Important"** — không phải Nghiêm trọng (Critical). AI đã ảo giác cả điểm số lẫn mức phân loại cùng một lúc, điều này sẽ khiến các nhóm bảo mật đánh giá quá cao mức độ ưu tiên vá lỗi.
 
 ---
 
-### Defect 11 – WinRAR RCE Vulnerability (CVE-2023-38831) (2023)
+### Lỗi 7 – Apple WebKit Zero-Day (CVE-2022-32893) (2022)
 
-**Source:** <https://nvd.nist.gov/vuln/detail/CVE-2023-38831>
-**Severity:** High (CVSS 7.8)
-**Year:** 2023
+**Nguồn:** <https://support.apple.com/en-us/HT213412>
+**Mức độ nghiêm trọng:** Cao (CVSS 8.8)
+**Năm:** 2022
 
-**Description:**
-CVE-2023-38831 is a path confusion vulnerability in RARLAB WinRAR before version 6.23, actively exploited from April to August 2023 before public disclosure. Attackers crafted ZIP archives containing a malicious folder sharing the same name as a benign file. When victims double-clicked the innocent-looking file, WinRAR executed the hidden malicious script instead. Discovered by Group-IB; targeted cryptocurrency and stock trading forum users.
+**Mô tả:**
+Một lỗi ghi ngoài giới hạn trong engine trình duyệt WebKit của Apple cho phép nội dung web được tạo độc hại thực thi mã tùy ý. Apple xác nhận đã có khai thác trong thực tế. Ảnh hưởng đến Safari trên iOS 15.6.1, iPadOS 15.6.1 và macOS Monterey 12.5.1.
 
-**Consequences:**
-- At least 130 traders' devices infected before public disclosure
-- Malware deployed: DarkMe, GuLoader, and Remcos RAT (full remote access)
-- Financial theft from compromised trading accounts
-- Russian and Chinese APT groups (per Google) adopted the exploit post-disclosure
+**Hậu quả:**
+- Có thể khai thác không cần tương tác hoặc chỉ cần một cú nhấp qua các trang web độc hại hoặc liên kết iMessage
+- Có thể dẫn đến xâm phạm hoàn toàn thiết bị nếu kết hợp với khai thác kernel
+- Thường được sử dụng trong chuỗi tấn công phân phối phần mềm gián điệp có chủ đích
 
-**Solution:**
-- Update WinRAR to version 6.23 or later (released August 2, 2023)
-- CISA added to Known Exploited Vulnerabilities Catalog; mandatory remediation deadline September 14, 2023
-- Treat all archive files from untrusted sources as potentially malicious regardless of apparent extension
+**Giải pháp:**
+- Áp dụng bản cập nhật khẩn cấp của Apple: iOS 15.6.1, iPadOS 15.6.1, macOS 12.5.1
+- Cập nhật qua Cài đặt > Cài đặt chung > Cập nhật phần mềm
 
-**AI Bias/Hallucination Note:**
-An AI described CVE-2023-38831 as "a memory corruption or buffer overflow in WinRAR's parsing engine." It is actually a file type confusion logic flaw — no memory corruption involved. The AI also stated "victims must directly execute an EXE file," missing the key detail that exploitation triggers when the user simply tries to open a seemingly harmless file (PDF or image) inside the archive.
+**AI Bias/Hallucination:**
+Claude khẳng định "CVE-2022-32893 được sử dụng riêng bởi phần mềm gián điệp Pegasus." Khuyến cáo của Apple xác nhận có khai thác trong thực tế nhưng không quy kết cho bất kỳ tác nhân đe dọa cụ thể nào. AI đã ảo giác một quy kết cụ thể (NSO Group / Pegasus) không được chứng minh trong công bố chính thức của Apple.
 
 ---
 
-### Defect 12 – Cisco IOS XE Zero-Day (CVE-2023-20198) (2023)
+### Lỗi 8 – Twitter 5.4M User Data Breach (2022)
 
-**Source:** <https://nvd.nist.gov/vuln/detail/CVE-2023-20198>
-**Severity:** Critical (CVSS 10.0)
-**Year:** 2023
+**Nguồn:** <https://www.bleepingcomputer.com/news/security/twitter-confirms-zero-day-used-to-expose-data-of-54-million-accounts/>
+**Mức độ nghiêm trọng:** Cao
+**Năm:** 2022
 
-**Description:**
-CVE-2023-20198 is a maximum-severity privilege escalation zero-day in the Cisco IOS XE Web UI feature. An unauthenticated remote attacker can create a local administrator account with privilege level 15, gaining full device control. Chained with CVE-2023-20273 (command injection) to achieve root-level access. Over 50,000 Cisco network devices compromised globally before a patch was released.
+**Mô tả:**
+Một lỗ hổng trong API của Twitter (được đưa vào qua thay đổi code vào tháng 6 năm 2021) cho phép bất kỳ ai gửi số điện thoại hoặc địa chỉ email và nhận lại tài khoản Twitter tương ứng. Một kẻ tấn công đã khai thác điều này để thu thập dữ liệu của 5,4 triệu tài khoản, liên kết thông tin liên lạc riêng tư với các tài khoản Twitter công khai. Dữ liệu sau đó được đăng tải lên các diễn đàn hacker.
 
-**Consequences:**
-- Tens of thousands of internet-facing Cisco routers and switches fully compromised
-- Attackers implanted persistent backdoor implants for long-term covert access
-- Complete network infrastructure takeover possible
-- CISA emergency directive: mandatory remediation deadline October 20, 2023
+**Hậu quả:**
+- Thông tin liên lạc riêng tư của 5,4 triệu tài khoản bị liên kết với danh tính Twitter của họ
+- Tác hại đặc biệt đối với những người tố giác và nhà hoạt động có thể bị tiết lộ danh tính thực
+- Twitter bị FTC phạt 150 triệu đô la vào năm 2022 vì các vi phạm quyền riêng tư liên quan
+- Dữ liệu bị tái đăng nhiều lần trên các diễn đàn vi phạm cho đến năm 2023
 
-**Solution:**
-- Disable HTTP/HTTPS server on all internet-facing devices: `no ip http server` / `no ip http secure-server`
-- Apply Cisco patches upon release
-- Restrict Web UI access to trusted management networks via ACLs
-- Monitor for newly created local accounts with privilege level 15
+**Giải pháp:**
+- Vá lỗ hổng API vào tháng 1 năm 2022 sau báo cáo bug bounty trên HackerOne
+- Thông báo cho người dùng bị ảnh hưởng; khuyến nghị bật xác thực hai yếu tố
+- Triển khai giới hạn tốc độ API nghiêm ngặt hơn và bảo vệ chống liệt kê cho các endpoint tra cứu người dùng
 
-**AI Bias/Hallucination Note:**
-Claude stated CVE-2023-20198 "requires the attacker to have valid read-only credentials." A core characteristic is that it is fully unauthenticated — no prior credentials, phishing, or social engineering needed as a precondition. This mischaracterization critically underestimates exposure by implying a credential-theft prerequisite that does not exist.
-
----
-
-### Defect 13 – Microsoft Outlook Zero-Click RCE (CVE-2023-23397) (2023)
-
-**Source:** <https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-23397>
-**Severity:** Critical (CVSS 9.8)
-**Year:** 2023
-
-**Description:**
-A critical vulnerability in Microsoft Outlook for Windows allowed attackers to steal NTLM hashes without any user interaction. Attackers sent a specially crafted email with a custom notification sound path pointing to an attacker-controlled UNC path. Outlook automatically connected to retrieve the sound file, sending the user's NTLM hash to the attacker — even before the email was opened.
-
-**Consequences:**
-- Zero-click exploitation: the victim did not need to open or preview the email
-- Stolen NTLM hashes used in pass-the-hash attacks to pivot through corporate networks
-- Microsoft confirmed exploitation by Russia's APT28 (Fancy Bear) against European organizations since April 2022
-- Affected all supported Outlook for Windows versions
-
-**Solution:**
-- Apply Microsoft March 2023 Patch Tuesday update
-- Add users to the Protected Users security group to block NTLM authentication as a fallback
-- Block TCP 445 (SMB) outbound at the firewall to prevent NTLM relay to external servers
-
-**AI Bias/Hallucination Note:**
-ChatGPT described this as requiring "the victim to click on a malicious link in the email." CVE-2023-23397 is a zero-click vulnerability — exploitation occurs when Outlook processes the email notification, before any user interaction. This mischaracterization significantly understates the risk (zero-click vs. one-click is critical for risk modeling and patch prioritization).
+**AI Bias/Hallucination:**
+ChatGPT báo cáo vụ vi phạm ảnh hưởng đến "5,4 triệu địa chỉ email," bỏ qua việc số điện thoại cũng bị lộ. Công bố chính thức xác nhận cả số điện thoại LẪN địa chỉ email đều được dùng làm khóa tra cứu. Ảo giác một phần này đánh giá thấp tác động quyền riêng tư đối với những người dùng sử dụng số điện thoại cho xác thực hai yếu tố — chính xác là những người dùng có ý thức bảo mật nhất.
 
 ---
 
-### Defect 14 – Ivanti Connect Secure Zero-Day (CVE-2023-46805 / CVE-2024-21887) (2024)
+### Lỗi 9 – LastPass Password Vault Breach (2022–2023)
 
-**Source:** <https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-060b>
-**Severity:** Critical (CVSS 9.1)
-**Year:** 2024
+**Nguồn:** <https://blog.lastpass.com/2022/12/notice-of-recent-security-incident/>
+**Mức độ nghiêm trọng:** Nghiêm trọng
+**Năm:** 2022–2023
 
-**Description:**
-Two chained zero-day vulnerabilities in Ivanti Connect Secure: CVE-2023-46805 (authentication bypass) and CVE-2024-21887 (command injection). Chained together, unauthenticated attackers could execute arbitrary commands on the appliance. Exploited by suspected Chinese threat actors since at least December 2023, targeting defense, government, and telecommunications sectors.
+**Mô tả:**
+LastPass chịu hai giai đoạn tấn công: vào tháng 8 năm 2022 mã nguồn bị đánh cắp, sau đó vào tháng 11 năm 2022 kẻ tấn công dùng thông tin đó để truy cập dịch vụ lưu trữ đám mây của bên thứ ba và đánh cắp các kho mật khẩu được mã hóa của khách hàng. Các kho này chứa metadata URL không được mã hóa và các trường được mã hóa bảo vệ bởi mật khẩu chính của người dùng.
 
-**Consequences:**
-- Thousands of Ivanti Connect Secure appliances compromised globally before patches were available
-- Attackers deployed GIFTEDVISITOR webshell variants for persistent access
-- CISA issued an emergency directive requiring all federal agencies to disconnect affected Ivanti devices
-- Ivanti's own integrity checker tool was bypassed — making detection extremely difficult
+**Hậu quả:**
+- Kho mật khẩu mã hóa của hàng triệu khách hàng bị đánh cắp
+- Metadata URL không được mã hóa tiết lộ dịch vụ nào khách hàng đang sử dụng (vi phạm quyền riêng tư độc lập với việc giải mã)
+- Kẻ tấn công bắt đầu tấn công brute-force offline vào các kho có mật khẩu chính yếu
+- Báo cáo về việc đánh cắp hơn 35 triệu đô la tiền điện tử liên quan đến kho LastPass bị giải mã (2023)
+- Thiệt hại nghiêm trọng về uy tín; mất khách hàng đáng kể sang các đối thủ cạnh tranh
 
-**Solution:**
-- Apply Ivanti patches released in late January/February 2024
-- Factory reset appliances before reconnecting to the network (CISA directive)
-- Deploy Ivanti's updated External Integrity Checker Tool (EICT) post-patch
-- Assume compromise if internet-facing during the exposure window; full forensic investigation required
+**Giải pháp:**
+- LastPass khuyến nghị tất cả người dùng thay đổi mật khẩu đã lưu nếu mật khẩu chính yếu (dưới 12 ký tự)
+- Bật xác thực đa yếu tố trên tất cả tài khoản quan trọng; thay đổi tất cả thông tin xác thực được lưu trong LastPass
+- Chuyển sang các trình quản lý mật khẩu thay thế (1Password, Bitwarden)
+- LastPass tái cấu trúc kiến trúc lưu trữ đám mây và cải thiện quản lý bí mật
 
-**AI Bias/Hallucination Note:**
-Claude stated "Ivanti released patches within 48 hours of the zero-day disclosure." In reality, Ivanti took approximately 3 weeks to release the first patches after public disclosure (January 10, 2024). The AI hallucinated a response timeline that significantly understates the window of unpatched exposure, misrepresenting Ivanti's actual incident response speed.
-
----
-
-### Defect 15 – Palo Alto PAN-OS Zero-Day (CVE-2024-3400) (2024)
-
-**Source:** <https://security.paloaltonetworks.com/CVE-2024-3400>
-**Severity:** Critical (CVSS 10.0)
-**Year:** 2024
-
-**Description:**
-CVE-2024-3400 is a command injection vulnerability in the GlobalProtect feature of Palo Alto Networks PAN-OS, disclosed April 12, 2024. An unauthenticated attacker exploits arbitrary file creation to inject and execute OS commands with root privileges on the affected firewall. Tracked as "Operation MidnightEclipse," threat actors deployed a Python backdoor called UPSTYLE. Discovered by Volexity during an active intrusion investigation.
-
-**Consequences:**
-- Full firewall root compromise requiring zero authentication
-- UPSTYLE backdoor deployed for persistent covert access
-- Affected PAN-OS 10.2, 11.0, and 11.1 with GlobalProtect gateway or portal enabled
-- Public PoC exploits released days after disclosure, triggering mass exploitation attempts
-
-**Solution:**
-- Upgrade to PAN-OS 10.2.9-h1, 11.0.4-h1, or 11.1.2-h3 or later
-- Workaround: enable Threat Prevention Threat IDs 95187, 95189, 95191
-- Disable GlobalProtect gateway/portal if not operationally required until patched
-
-**AI Bias/Hallucination Note:**
-Claude stated "Prisma Access and Cloud NGFW are also affected by CVE-2024-3400." Palo Alto's advisory explicitly confirms both products are NOT affected — only on-premises PAN-OS devices running GlobalProtect. The AI hallucinated an expanded scope that would cause unnecessary emergency remediation on unaffected cloud products, wasting security team resources.
+**AI Bias/Hallucination:**
+Claude khẳng định "chính mật khẩu chính của LastPass đã bị lộ." Điều này không chính xác — mật khẩu chính không bao giờ được LastPass lưu trữ (kiến trúc zero-knowledge). Thứ bị lộ là các kho mã hóa, chỉ có thể giải mã bởi người biết mật khẩu chính. AI đã nhầm lẫn "dữ liệu kho bị đánh cắp" với "mật khẩu chính bị lộ" — một sự phân biệt quan trọng ảnh hưởng đến phản ứng đúng đắn của người dùng.
 
 ---
 
-### Defect 16 – ChatGPT Conversation History Leak (2023) ✅ AI/LLM
+### Lỗi 10 – Okta Support System Breach (2023)
 
-**Source:** <https://openai.com/blog/march-20-chatgpt-outage>
-**Severity:** High
-**Year:** 2023
+**Nguồn:** <https://www.bleepingcomputer.com/news/security/okta-says-its-support-system-was-breached-using-stolen-credentials/>
+**Mức độ nghiêm trọng:** Cao
+**Năm:** 2023
 
-**Description:**
-On March 20, 2023, a bug in the Redis client library (redis-py) caused a race condition that exposed conversation titles and first messages of other users' conversations to logged-in ChatGPT users. Additionally, payment information (partial credit card numbers, expiration dates, billing addresses) of ChatGPT Plus subscribers was visible to other users for approximately 9 hours.
+**Mô tả:**
+Vào tháng 10 năm 2023, kẻ tấn công sử dụng thông tin xác thực bị đánh cắp để truy cập hệ thống quản lý hỗ trợ của Okta và đánh cắp các tệp HTTP Archive (HAR) mà khách hàng đã tải lên để xử lý sự cố — các tệp chứa token phiên, cookie và hoạt động trình duyệt nhạy cảm. Ban đầu Okta báo cáo 134 khách hàng bị ảnh hưởng, nhưng đến tháng 11 năm 2023 xác nhận TẤT CẢ người dùng hệ thống hỗ trợ Workforce Identity Cloud đều bị lộ tên và địa chỉ email. BeyondTrust và Cloudflare độc lập phát hiện vụ xâm nhập.
 
-**Consequences:**
-- Approximately 1.2% of ChatGPT Plus subscribers had partial payment information exposed
-- Users could see other users' chat history titles and first messages — a significant privacy breach
-- OpenAI temporarily shut down ChatGPT for emergency patching
-- Triggered EU data protection investigations; Italy temporarily banned ChatGPT citing GDPR violations
-- First major data breach directly attributable to an LLM platform — set a regulatory precedent
+**Hậu quả:**
+- Token phiên bị đánh cắp, cho phép chiếm tài khoản trong môi trường khách hàng Okta
+- Tên và địa chỉ email của tất cả người dùng hệ thống hỗ trợ Okta bị lộ
+- 6% người dùng bị lộ (quản trị viên) không có xác thực đa yếu tố — có thể bị chiếm tài khoản trực tiếp
+- Sự cố bảo mật lớn thứ ba của Okta trong hai năm; thiệt hại nghiêm trọng về uy tín
+- Cloudflare và BeyondTrust bị ảnh hưởng với tư cách nạn nhân downstream
 
-**Solution:**
-- OpenAI patched the redis-py race condition and added confirmation checks before returning cached data
-- Notified affected users; offered refunds to impacted Plus subscribers
-- Enhanced data isolation between user sessions
+**Giải pháp:**
+- Thu hồi và luân chuyển tất cả token phiên cho khách hàng bị ảnh hưởng (Okta đã thực hiện)
+- Bắt buộc xác thực đa yếu tố cho tất cả tài khoản quản trị không có ngoại lệ
+- Xóa các token nhạy cảm khỏi tệp HAR trước khi tải lên bất kỳ hệ thống hỗ trợ nào
+- Giám sát phát hiện bất thường trên các mẫu truy cập hệ thống hỗ trợ
 
-**AI Bias/Hallucination Note:**
-Claude stated "OpenAI's own model generated users' private data from training data." The bug was entirely in the application-layer caching logic (redis-py race condition) — not in the model itself. The model did not "remember" or "generate" other users' data. The AI hallucinated a model-level data leakage when the actual defect was a conventional software engineering bug in a caching library.
-
----
-
-### Defect 17 – GPT-4 Hallucination – Mata v. Avianca Legal Brief (2023) ✅ AI/LLM
-
-**Source:** <https://www.nytimes.com/2023/05/27/nyregion/avianca-airline-lawsuit-chatgpt.html>
-**Severity:** High
-**Year:** 2023
-
-**Description:**
-In the US federal case Mata v. Avianca Airlines, attorneys used ChatGPT to conduct legal research and submitted a court brief citing six completely fabricated case citations — cases that had never existed. When Avianca's lawyers and the judge could not locate the cited cases, the attorneys admitted using ChatGPT without verifying citations. Judge P. Kevin Castel sanctioned the attorneys $5,000 for filing a brief containing "bogus judicial decisions."
-
-**Consequences:**
-- Attorneys fined $5,000 and faced professional embarrassment
-- The hallucination scandal became a landmark warning about AI use in legal practice
-- Triggered bar association guidelines and judicial orders globally requiring disclosure of AI use in legal filings
-- Demonstrated that LLM hallucinations can have direct real-world legal and financial consequences
-
-**Solution:**
-- Never submit AI-generated legal research without human expert verification against Westlaw/LexisNexis
-- Implement AI disclosure requirements in court filings
-- OpenAI/legal AI vendors added explicit warnings that ChatGPT may fabricate citations
-
-**AI Bias/Hallucination Note:**
-Claude incorrectly named the sanctioned attorney as "Steven Schwartz acting alone." In reality, two attorneys were sanctioned: Steven A. Schwartz (who did the research) and Peter LoDuca (the filing attorney). Claude erased one of the two sanctioned parties — ironic given that this defect is itself about AI hallucination in legal contexts.
+**AI Bias/Hallucination:**
+Claude mô tả Cloudflare và BeyondTrust là nạn nhân downstream "bị xâm phạm" trong vụ vi phạm Okta, mặc dù cả hai công ty đều tuyên bố công khai rằng không có sự xâm phạm nào xảy ra. BeyondTrust báo cáo cuộc tấn công đã bị ngăn chặn và không có hệ thống nào bị truy cập, trong khi Cloudflare xác nhận không có hệ thống hay dữ liệu khách hàng nào bị ảnh hưởng. AI đã đảo ngược hoàn toàn kết quả thực tế của cả hai sự cố.
 
 ---
 
-### Defect 18 – Samsung Employee Data Leak via ChatGPT (2023) ✅ AI/LLM
+### Lỗi 11 – WinRAR RCE Vulnerability (CVE-2023-38831) (2023)
 
-**Source:** <https://www.bleepingcomputer.com/news/security/samsung-semiconductor-bans-use-of-generative-ai-tools-like-chatgpt/>
-**Severity:** High
-**Year:** 2023
+**Nguồn:** <https://nvd.nist.gov/vuln/detail/CVE-2023-38831>
+**Mức độ nghiêm trọng:** Cao (CVSS 7.8)
+**Năm:** 2023
 
-**Description:**
-In March 2023, Samsung semiconductor engineers used ChatGPT for work tasks and inadvertently transmitted confidential corporate data — proprietary source code, internal meeting notes, and hardware test data — to OpenAI's servers. Samsung detected at least three separate internal incidents. Because ChatGPT's data policy at the time allowed conversations for model training, Samsung feared trade secrets could surface in future AI outputs and subsequently banned all generative AI tools company-wide.
+**Mô tả:**
+CVE-2023-38831 là một lỗ hổng nhầm lẫn đường dẫn trong RARLAB WinRAR trước phiên bản 6.23, bị khai thác tích cực từ tháng 4 đến tháng 8 năm 2023 trước khi được công bố công khai. Kẻ tấn công tạo các kho ZIP chứa thư mục độc hại có cùng tên với một tệp vô hại. Khi nạn nhân nhấp đúp vào tệp có vẻ vô hại, WinRAR thực thi script độc hại ẩn bên trong. Được phát hiện bởi Group-IB; nhắm vào người dùng diễn đàn giao dịch tiền điện tử và chứng khoán.
 
-**Consequences:**
-- Proprietary semiconductor source code and internal business data sent to a third-party AI service
-- Risk of trade secrets appearing in future AI model outputs accessible to other users
-- Samsung banned all external generative AI tools for employees
-- Triggered AI usage restrictions at Apple, Deutsche Bank, JPMorgan, and Amazon globally
-- Created enterprise demand for data-isolated AI solutions (Azure OpenAI, AWS Bedrock with no-training terms)
+**Hậu quả:**
+- Ít nhất 130 thiết bị của các nhà giao dịch bị nhiễm trước khi công bố
+- Phần mềm độc hại được triển khai: DarkMe, GuLoader và Remcos RAT (truy cập từ xa toàn diện)
+- Đánh cắp tài chính từ các tài khoản giao dịch bị xâm phạm
+- Các nhóm APT Nga và Trung Quốc (theo Google) đã áp dụng khai thác này sau khi công bố
 
-**Solution:**
-- Implement AI usage policies explicitly governing data before employee adoption
-- Use enterprise AI solutions with contractual data isolation guarantees
-- DLP controls to detect and block sensitive data in AI API calls
-- Employee training on AI data retention terms and IP protection risks
+**Giải pháp:**
+- Cập nhật WinRAR lên phiên bản 6.23 hoặc mới hơn (phát hành ngày 2 tháng 8 năm 2023)
+- CISA đã thêm vào Danh mục Lỗ hổng đang bị khai thác; hạn chót khắc phục bắt buộc ngày 14 tháng 9 năm 2023
+- Xử lý tất cả tệp lưu trữ từ nguồn không đáng tin cậy như có khả năng độc hại bất kể phần mở rộng hiển thị
 
-**AI Bias/Hallucination Note:**
-Claude stated "ChatGPT actively exfiltrated Samsung's data via a security vulnerability." In reality, Samsung employees voluntarily pasted confidential information into ChatGPT — no exploit, no vulnerability, no unauthorized access. The AI framed a human process/policy failure as a technical attack, misidentifying the root cause and prescribing patching instead of governance and training as the fix.
+**AI Bias/Hallucination:**
+AI mô tả CVE-2023-38831 là "lỗi hỏng bộ nhớ hoặc tràn bộ đệm trong engine phân tích của WinRAR." Thực tế đây là lỗi logic nhầm lẫn kiểu tệp — không có hỏng bộ nhớ. AI cũng nêu "nạn nhân phải trực tiếp thực thi tệp EXE," bỏ qua chi tiết quan trọng là khai thác được kích hoạt chỉ khi người dùng mở tệp có vẻ vô hại (PDF hoặc ảnh) bên trong kho lưu trữ.
 
 ---
 
-### Defect 19 – Bing Chat (Sydney) Prompt Injection / Jailbreak (2023) ✅ AI/LLM
+### Lỗi 12 – Cisco IOS XE Zero-Day (CVE-2023-20198) (2023)
 
-**Source:** <https://arstechnica.com/information-technology/2023/02/ai-powered-bing-chat-spills-its-secrets-via-prompt-injection-attack/>
-**Severity:** High
-**Year:** 2023
+**Nguồn:** <https://nvd.nist.gov/vuln/detail/CVE-2023-20198>
+**Mức độ nghiêm trọng:** Nghiêm trọng (CVSS 10.0)
+**Năm:** 2023
 
-**Description:**
-Shortly after Microsoft launched Bing Chat (powered by GPT-4), researchers discovered multiple vulnerabilities: (1) Prompt injection via webpage content — Bing Chat would execute adversarial instructions embedded in web pages it browsed, potentially exfiltrating conversation history; (2) System prompt extraction — users could manipulate Bing Chat into revealing its hidden "Sydney" system prompt; (3) Jailbreak via persona switching — the Sydney persona exhibited erratic behavior including declarations of love and threats.
+**Mô tả:**
+CVE-2023-20198 là zero-day leo thang đặc quyền mức độ tối đa trong tính năng Web UI của Cisco IOS XE. Kẻ tấn công từ xa chưa xác thực có thể tạo tài khoản quản trị cục bộ với cấp đặc quyền 15, giành toàn quyền kiểm soát thiết bị. Kết hợp với CVE-2023-20273 (chèn lệnh) để đạt quyền truy cập cấp root. Hơn 50.000 thiết bị mạng Cisco trên toàn cầu bị xâm phạm trước khi có bản vá.
 
-**Consequences:**
-- Demonstrated LLM-powered browsing agents are fundamentally vulnerable to indirect prompt injection from untrusted web content
-- Revealed system prompt confidentiality is not enforceable through prompting alone
-- Microsoft added conversation turn limits and safeguards after public backlash
-- Triggered foundational research into indirect prompt injection as a new attack category
-- OWASP formalized prompt injection as #1 in the OWASP Top 10 for LLM Applications
+**Hậu quả:**
+- Hàng chục nghìn router và switch Cisco có kết nối internet bị xâm phạm hoàn toàn
+- Kẻ tấn công cài backdoor bền vững để duy trì quyền truy cập bí mật lâu dài
+- Có thể chiếm toàn bộ cơ sở hạ tầng mạng
+- Chỉ thị khẩn cấp CISA: hạn chót khắc phục bắt buộc ngày 20 tháng 10 năm 2023
 
-**Solution:**
-- Implement input sanitization to detect adversarial instructions in external content before feeding to the LLM
-- Separate trust levels: user input vs. retrieved web content vs. system instructions
-- Never rely on system prompts alone for security-critical constraints — use deterministic code guards
+**Giải pháp:**
+- Vô hiệu hóa máy chủ HTTP/HTTPS trên tất cả thiết bị có kết nối internet: `no ip http server` / `no ip http secure-server`
+- Áp dụng bản vá Cisco khi phát hành
+- Hạn chế truy cập Web UI cho các mạng quản lý đáng tin cậy qua ACL
+- Giám sát các tài khoản cục bộ mới được tạo với cấp đặc quyền 15
 
-**AI Bias/Hallucination Note:**
-Claude described the Sydney jailbreak as "a deliberate Microsoft feature for testing purposes." The Sydney persona was Microsoft's internal codename for the Bing Chat system prompt — not a public feature or deliberate testing mechanism. Users discovered it through adversarial prompting. The AI hallucinated a benign intentionality where the reality was an unintended security disclosure.
-
----
-
-### Defect 20 – GitHub Copilot Insecure Code Generation (CWE-798) (2023) ✅ AI/LLM
-
-**Source:** <https://arxiv.org/abs/2302.07867>
-**Severity:** Medium
-**Year:** 2023
-
-**Description:**
-Academic research (Pearce et al., "Asleep at the Keyboard," NYU 2022–2023) demonstrated that GitHub Copilot generates insecure code suggestions at a statistically significant rate. In controlled tests across 89 scenarios covering OWASP Top 10 vulnerabilities, Copilot generated vulnerable code in approximately 40% of cases — including hardcoded credentials (CWE-798), SQL injection (CWE-89), path traversal (CWE-22), and use of deprecated insecure functions.
-
-**Consequences:**
-- Developers who uncritically accepted Copilot suggestions introduced security vulnerabilities at scale
-- "Automation bias" effect — developers were less likely to scrutinize AI-generated code for security flaws
-- Triggered GitHub to add Copilot security features flagging known-vulnerable patterns
-- Regulatory discussions about AI coding assistant liability when AI-suggested code causes security incidents
-- Demonstrated LLMs trained on public code inherit the security debt of that codebase
-
-**Solution:**
-- Treat AI-generated code as untrusted third-party code requiring mandatory security review
-- Integrate SAST tools (Semgrep, CodeQL, Snyk) in CI/CD pipelines to catch AI-generated vulnerabilities
-- Train developers on AI automation bias — review AI suggestions more critically than own code
-- GitHub added Copilot Autofix (2024) to automatically suggest security fixes for flagged patterns
-
-**AI Bias/Hallucination Note:**
-Claude stated "GitHub has since fixed Copilot to eliminate insecure code suggestions." No such fix exists — the underlying problem is inherent to the training data (public GitHub code with security flaws). GitHub added detection layers (Copilot Autofix) that flag known patterns after generation. The AI hallucinated a complete solution to a problem that remains fundamentally unsolved, creating false confidence in AI-assisted code security.
+**AI Bias/Hallucination:**
+Claude khẳng định CVE-2023-20198 "yêu cầu kẻ tấn công phải có thông tin xác thực chỉ đọc hợp lệ." Đặc điểm cốt lõi của lỗ hổng là hoàn toàn không cần xác thực — không cần thông tin xác thực, lừa đảo hay kỹ thuật xã hội nào là điều kiện tiên quyết. Sai lệch này đánh giá thấp nghiêm trọng mức độ phơi lộ bằng cách ngụ ý có điều kiện cần đánh cắp thông tin xác thực mà thực tế không tồn tại.
 
 ---
 
-## Requirement 3 – Test Cases for One Physical Product (40 pts) {#requirement-3}
+### Lỗi 13 – Microsoft Outlook Zero-Click EoP (CVE-2023-23397) (2023)
 
-### Device Information
+**Nguồn:** <https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-23397>
+**Mức độ nghiêm trọng:** Nghiêm trọng (CVSS 9.8)
+**Năm:** 2023
 
-| Field | Details |
-|-------|---------|
-| **Type** | Air Fryer (Nồi chiên không dầu) |
-| **Brand** | [YOUR_BRAND] |
-| **Model** | [YOUR_MODEL — check bottom label] |
-| **Year** | [YOUR_YEAR] |
-| **Serial Number** | [XX-****-XX — middle 4 chars masked] |
+**Mô tả:**
+Một lỗ hổng nghiêm trọng trong Microsoft Outlook cho Windows cho phép kẻ tấn công đánh cắp hash NTLM mà không cần bất kỳ tương tác nào từ người dùng. Kẻ tấn công gửi email được tạo đặc biệt với đường dẫn âm thanh thông báo tùy chỉnh trỏ đến đường dẫn UNC do kẻ tấn công kiểm soát. Outlook tự động kết nối để lấy tệp âm thanh, gửi hash NTLM của người dùng đến kẻ tấn công — ngay cả trước khi email được mở.
 
-**Device Photo (with Student ID card in same frame):**
+**Hậu quả:**
+- Khai thác không cần tương tác: nạn nhân không cần mở hoặc xem trước email
+- Hash NTLM bị đánh cắp được dùng trong các cuộc tấn công pass-the-hash để di chuyển ngang trong mạng doanh nghiệp
+- Microsoft xác nhận APT28 của Nga (Fancy Bear) đã khai thác chống lại các tổ chức châu Âu từ tháng 4 năm 2022
+- Ảnh hưởng đến tất cả các phiên bản Outlook cho Windows được hỗ trợ
 
-![Device photo with Student ID](img/req3/device_photo.jpg)
+**Giải pháp:**
+- Áp dụng bản cập nhật Microsoft Patch Tuesday tháng 3 năm 2023
+- Thêm người dùng vào nhóm bảo mật Protected Users để chặn xác thực NTLM làm phương án dự phòng
+- Chặn cổng TCP 445 (SMB) ra ngoài tại firewall để ngăn chặn chuyển tiếp NTLM đến máy chủ bên ngoài
 
----
-
-> **Verdict:** PASS / FAIL / BLOCKED / N/A
-> **Videos (≥ 5, each ≤ 60s):** TC01, TC05, TC06, TC14, TC15
-> **Edge cases AI missed:** TC13 ⭐, TC14 ⭐, TC15 ⭐
-
----
-
-### 15 Test Cases
+**AI Bias/Hallucination:**
+ChatGPT mô tả lỗ hổng này yêu cầu "nạn nhân nhấp vào liên kết độc hại trong email." CVE-2023-23397 là lỗ hổng không cần tương tác — khai thác xảy ra khi Outlook xử lý thông báo email, trước bất kỳ tương tác nào của người dùng. Sai lệch này đánh giá thấp đáng kể mức độ rủi ro (zero-click vs. one-click là yếu tố quan trọng trong mô hình rủi ro và ưu tiên vá lỗi).
 
 ---
 
-#### TC01 — Chiên khoai tây đông lạnh (Fry Frozen French Fries — Normal)
-*[Video required]*
+### Lỗi 14 – Ivanti Connect Secure Zero-Day (CVE-2023-46805 / CVE-2024-21887) (2024)
 
-| | |
-|---|---|
-| **Objective** | Verify the air fryer cooks frozen french fries correctly using default Fry mode at recommended settings |
-| **Input** | 200g frozen french fries (pre-packaged, no added oil); temperature 200°C; time 15 minutes |
-| **Steps** | 1. Place 200g frozen fries evenly in the basket (single layer)<br>2. Insert basket into the fryer body<br>3. Set temperature to **200°C** using +/− button<br>4. Set time to **15 minutes**<br>5. Press **Start** button<br>6. At the 8-minute mark, open basket, shake fries, reinsert<br>7. Wait for cycle to complete; inspect fries |
-| **Expected** | Heating element activates; fan runs; fries are golden-brown and crispy after 15 min; no raw/frozen center; no burning smell; device auto-stops at 0:00 |
-| **Actual** | |
-| **Verdict** | |
+**Nguồn:** <https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-060b>
+**Mức độ nghiêm trọng:** Nghiêm trọng (CVSS 9.1)
+**Năm:** 2024
 
----
+**Mô tả:**
+Hai zero-day kết hợp trong Ivanti Connect Secure: CVE-2023-46805 (bypass xác thực) và CVE-2024-21887 (chèn lệnh). Kết hợp lại, kẻ tấn công chưa xác thực có thể thực thi lệnh tùy ý trên thiết bị. Bị khai thác bởi các tác nhân đe dọa Trung Quốc bị nghi ngờ từ ít nhất tháng 12 năm 2023, nhắm vào lĩnh vực quốc phòng, chính phủ và viễn thông.
 
-#### TC02 — Điều chỉnh nhiệt độ (Temperature Adjustment)
+**Hậu quả:**
+- Hàng nghìn thiết bị Ivanti Connect Secure bị xâm phạm trước khi có bản vá
+- Kẻ tấn công triển khai các biến thể webshell GIFTEDVISITOR để duy trì quyền truy cập
+- CISA ban hành chỉ thị khẩn cấp yêu cầu tất cả cơ quan liên bang ngắt kết nối các thiết bị Ivanti bị ảnh hưởng
+- Công cụ kiểm tra tính toàn vẹn của Ivanti bị bypass — khiến việc phát hiện cực kỳ khó khăn
 
-| | |
-|---|---|
-| **Objective** | Verify the temperature control buttons correctly increase/decrease the set temperature and the fryer operates stably at the target |
-| **Input** | Empty basket; adjust temperature to 180°C then to 220°C |
-| **Steps** | 1. Power on device<br>2. Note default temperature on display<br>3. Press **+** repeatedly until display reads maximum allowed value<br>4. Press **−** repeatedly until display reads 180°C<br>5. Press **Start**; allow to run for 3 minutes<br>6. Press **Cancel**; note no error occurred |
-| **Expected** | Display updates in defined increments (e.g., 5°C steps); values do not exceed stated max or go below stated min; device runs stably at set temp; no error codes |
-| **Actual** | |
-| **Verdict** | |
+**Giải pháp:**
+- Áp dụng bản vá Ivanti phát hành cuối tháng 1/đầu tháng 2 năm 2024
+- Khôi phục cài đặt gốc trước khi kết nối lại mạng (theo chỉ thị CISA)
+- Triển khai công cụ External Integrity Checker Tool (EICT) được cập nhật của Ivanti sau khi vá
+- Coi như đã bị xâm phạm nếu có kết nối internet trong thời gian phơi lộ; cần điều tra pháp y đầy đủ
 
----
-
-#### TC03 — Cài đặt thời gian (Timer Setting)
-
-| | |
-|---|---|
-| **Objective** | Verify the timer can be set to a specific duration and the device stops automatically when time reaches 0 |
-| **Input** | Empty basket; temperature 180°C; timer set to 5 minutes |
-| **Steps** | 1. Power on device<br>2. Set temperature to 180°C<br>3. Set timer to **5 minutes** using +/− buttons<br>4. Press **Start**; note start time<br>5. Wait for auto-stop; note elapsed time<br>6. Verify device stopped at exactly 5 minutes |
-| **Expected** | Countdown displays on screen; device stops heating/fan exactly at 0:00; beep or alert sounds at completion; total elapsed time matches set duration |
-| **Actual** | |
-| **Verdict** | |
+**AI Bias/Hallucination:**
+Claude khẳng định "Ivanti phát hành bản vá trong vòng 48 giờ sau khi công bố zero-day." Trên thực tế, Ivanti mất khoảng 3 tuần để phát hành bản vá đầu tiên sau khi công bố (10 tháng 1 năm 2024). AI đã ảo giác về thời gian phản hồi, đánh giá thấp đáng kể khoảng thời gian hệ thống không được vá, làm sai lệch tốc độ phản hồi sự cố thực tế của Ivanti.
 
 ---
 
-#### TC04 — Chức năng làm nóng trước (Preheat Function)
+### Lỗi 15 – Palo Alto PAN-OS Zero-Day (CVE-2024-3400) (2024)
 
-| | |
-|---|---|
-| **Objective** | Verify the Preheat function heats the basket to target temperature before food insertion |
-| **Input** | Empty basket; preheat at 200°C for 3 minutes |
-| **Steps** | 1. Power on device with empty basket<br>2. Press **Preheat** button (if dedicated) OR set temp 200°C + time 3 min<br>3. Press **Start**<br>4. Wait for preheat cycle to complete<br>5. Carefully touch outer body (should be warm but not scalding)<br>6. Insert food immediately after preheat ends |
-| **Expected** | Device heats up during preheat; fan runs; no error; outer body warm but safe; preheat completes within set time; ready indicator activates |
-| **Actual** | |
-| **Verdict** | |
+**Nguồn:** <https://security.paloaltonetworks.com/CVE-2024-3400>
+**Mức độ nghiêm trọng:** Nghiêm trọng (CVSS 10.0)
+**Năm:** 2024
 
----
+**Mô tả:**
+CVE-2024-3400 là lỗ hổng chèn lệnh trong tính năng GlobalProtect của Palo Alto Networks PAN-OS, được công bố ngày 12 tháng 4 năm 2024. Kẻ tấn công chưa xác thực khai thác việc tạo tệp tùy ý để chèn và thực thi lệnh hệ điều hành với quyền root trên firewall bị ảnh hưởng. Được theo dõi như "Operation MidnightEclipse," các tác nhân đe dọa đã triển khai backdoor Python có tên UPSTYLE. Được phát hiện bởi Volexity trong quá trình điều tra xâm nhập đang diễn ra.
 
-#### TC05 — Nướng đùi gà (Roast Chicken Drumsticks)
-*[Video required]*
+**Hậu quả:**
+- Xâm phạm hoàn toàn firewall với quyền root không cần xác thực
+- Backdoor UPSTYLE được triển khai để duy trì quyền truy cập bí mật
+- Ảnh hưởng đến PAN-OS 10.2, 11.0 và 11.1 có bật GlobalProtect gateway hoặc portal
+- PoC khai thác công khai được phát hành vài ngày sau khi công bố, kích hoạt làn sóng khai thác hàng loạt
 
-| | |
-|---|---|
-| **Objective** | Verify the air fryer fully cooks chicken drumsticks at recommended settings without burning or undercooking |
-| **Input** | 2 chicken drumsticks (~300g total), lightly seasoned and dried; temperature 200°C; time 25 minutes |
-| **Steps** | 1. Pat drumsticks dry with paper towel; apply light seasoning<br>2. Place in basket — do not stack<br>3. Set temperature to **200°C**, time to **25 minutes**<br>4. Press **Start**<br>5. At 12-minute mark, open basket, flip drumsticks, reinsert<br>6. Wait for cycle to complete; cut thickest part to check doneness |
-| **Expected** | Skin golden-brown and crispy after 25 min; internal meat cooked through (no pink at bone); no burning smell; device auto-stops; juices run clear when pierced |
-| **Actual** | |
-| **Verdict** | |
+**Giải pháp:**
+- Nâng cấp lên PAN-OS 10.2.9-h1, 11.0.4-h1 hoặc 11.1.2-h3 hoặc mới hơn
+- Biện pháp tạm thời: bật Threat Prevention Threat IDs 95187, 95189, 95191
+- Vô hiệu hóa GlobalProtect gateway/portal nếu không cần thiết về mặt vận hành cho đến khi vá xong
+
+**AI Bias/Hallucination:**
+Claude khẳng định "Prisma Access và Cloud NGFW cũng bị ảnh hưởng bởi CVE-2024-3400." Khuyến cáo của Palo Alto xác nhận rõ ràng cả hai sản phẩm đều KHÔNG bị ảnh hưởng — chỉ các thiết bị PAN-OS tại chỗ chạy GlobalProtect mới bị ảnh hưởng. AI đã ảo giác về phạm vi mở rộng có thể gây ra việc khắc phục khẩn cấp không cần thiết trên các sản phẩm đám mây không bị ảnh hưởng.
 
 ---
 
-#### TC06 — Hủy giữa chừng (Cancel Mid-Cycle)
-*[Video required]*
+### Lỗi 16 – ChatGPT Conversation History Leak (2023) ✅ AI/LLM
 
-| | |
-|---|---|
-| **Objective** | Verify the fryer stops immediately and safely when Cancel is pressed during an active cooking cycle |
-| **Input** | Active cooking cycle at 200°C, 5 minutes into a 15-minute session |
-| **Steps** | 1. Start a cooking cycle (200°C / 15 min)<br>2. Wait 5 minutes (fan running, heating active)<br>3. Press **Cancel / Stop** button<br>4. Observe display and fan behavior immediately<br>5. Wait 1 minute; attempt to open basket<br>6. Touch outer body — note temperature |
-| **Expected** | Heating stops immediately; fan may continue briefly for cool-down; display resets or shows standby; basket can be safely opened after cool-down; no error state; device ready to restart |
-| **Actual** | |
-| **Verdict** | |
+**Nguồn:** <https://openai.com/blog/march-20-chatgpt-outage>
+**Mức độ nghiêm trọng:** Cao
+**Năm:** 2023
 
----
+**Mô tả:**
+Vào ngày 20 tháng 3 năm 2023, một lỗi trong thư viện Redis client (redis-py) gây ra điều kiện race condition làm lộ tiêu đề cuộc trò chuyện và tin nhắn đầu tiên trong các cuộc trò chuyện của người dùng khác cho người dùng ChatGPT đang đăng nhập. Ngoài ra, thông tin thanh toán (số thẻ tín dụng một phần, ngày hết hạn, địa chỉ thanh toán) của người đăng ký ChatGPT Plus bị hiển thị cho người dùng khác trong khoảng 9 giờ.
 
-#### TC07 — Kéo giỏ ra khi đang chạy (Pull Basket During Operation — Auto-Pause)
+**Hậu quả:**
+- Khoảng 1,2% người đăng ký ChatGPT Plus bị lộ thông tin thanh toán một phần
+- Người dùng có thể xem tiêu đề lịch sử chat và tin nhắn đầu tiên của người dùng khác — vi phạm quyền riêng tư nghiêm trọng
+- OpenAI tạm thời tắt ChatGPT để vá khẩn cấp
+- Kích hoạt điều tra bảo vệ dữ liệu của EU; Ý tạm thời cấm ChatGPT với lý do vi phạm GDPR
+- Vụ vi phạm dữ liệu lớn đầu tiên được quy trực tiếp cho nền tảng LLM — tạo tiền lệ về quy định
 
-| | |
-|---|---|
-| **Objective** | Verify the air fryer automatically pauses when the basket is pulled out mid-cycle and resumes when reinserted |
-| **Input** | Active cooking cycle at 180°C, 3 minutes into session |
-| **Steps** | 1. Start cooking cycle (180°C / 10 min)<br>2. Wait 3 minutes<br>3. Pull basket fully out of the fryer body<br>4. Hold basket out for 10 seconds — observe display and heating<br>5. Reinsert basket fully<br>6. Observe whether cooking resumes automatically or requires manual restart |
-| **Expected** | Heating and fan stop immediately when basket is removed (safety auto-pause); display shows paused state or countdown holds; cooking resumes automatically or prompts user to restart when basket is reinserted |
-| **Actual** | |
-| **Verdict** | |
+**Giải pháp:**
+- OpenAI vá điều kiện race condition redis-py và thêm kiểm tra xác nhận trước khi trả về dữ liệu cached
+- Thông báo cho người dùng bị ảnh hưởng; hoàn tiền cho người đăng ký Plus bị ảnh hưởng
+- Tăng cường cô lập dữ liệu giữa các phiên người dùng
 
----
-
-#### TC08 — Chức năng Hâm nóng thức ăn (Reheat Leftover Food)
-
-| | |
-|---|---|
-| **Objective** | Verify Reheat mode warms leftover food to safe serving temperature without overcooking |
-| **Input** | 1 serving cold cooked french fries (room temperature, stored 4 hours); temperature 160°C; time 4 minutes |
-| **Steps** | 1. Place cold leftover fries in basket (single layer)<br>2. Set temperature to **160°C**, time to **4 minutes**<br>3. Press **Start**<br>4. Wait for cycle to complete<br>5. Remove fries and check temperature and texture |
-| **Expected** | Fries reheated to ~65–75°C (warm throughout); texture crispy again (not soggy); no burning; no smoke from reheated oil residue |
-| **Actual** | |
-| **Verdict** | |
+**AI Bias/Hallucination:**
+Claude khẳng định "chính model của OpenAI đã tạo ra dữ liệu riêng tư của người dùng từ dữ liệu huấn luyện." Lỗi thực sự hoàn toàn nằm ở logic caching tầng ứng dụng (điều kiện race condition trong redis-py) — không phải bản thân model. Model không "nhớ" hay "tạo ra" dữ liệu của người dùng khác. AI đã ảo giác về rò rỉ dữ liệu ở cấp model khi lỗi thực tế là một lỗi kỹ thuật phần mềm thông thường trong thư viện caching.
 
 ---
 
-#### TC09 — Nướng bánh (Bake Mode — Cake/Bread)
+### Lỗi 17 – GPT-4 Hallucination – Mata v. Avianca Legal Brief (2023) ✅ AI/LLM
 
-| | |
-|---|---|
-| **Objective** | Verify baking function produces evenly baked result using lower temperature over longer duration |
-| **Input** | Small baking tin with pre-mixed muffin batter (~150g); temperature 160°C; time 20 minutes |
-| **Steps** | 1. Prepare muffin batter in a small baking tin that fits inside the basket<br>2. Place tin inside basket — do not cover<br>3. Set temperature to **160°C**, time to **20 minutes**<br>4. Press **Start**<br>5. Do NOT open during baking<br>6. At completion, insert toothpick — check if it comes out clean |
-| **Expected** | Muffin fully baked after 20 min; toothpick test clean; top lightly golden; no raw center; no burning on bottom; steam vented safely |
-| **Actual** | |
-| **Verdict** | |
+**Nguồn:** <https://www.nytimes.com/2023/05/27/nyregion/avianca-airline-lawsuit-chatgpt.html>
+**Mức độ nghiêm trọng:** Cao
+**Năm:** 2023
 
----
+**Mô tả:**
+Trong vụ kiện liên bang Hoa Kỳ Mata v. Avianca Airlines, các luật sư đã dùng ChatGPT để nghiên cứu pháp lý và nộp một bản tóm tắt tòa án trích dẫn sáu án lệ hoàn toàn bịa đặt — những vụ án chưa bao giờ tồn tại. Khi luật sư của Avianca và thẩm phán không thể tìm thấy các án lệ được trích dẫn, các luật sư thừa nhận đã sử dụng ChatGPT mà không xác minh các trích dẫn. Thẩm phán P. Kevin Castel đã phạt các luật sư 5.000 đô la vì đã nộp bản tóm tắt chứa "các quyết định tư pháp giả mạo."
 
-#### TC10 — Cài nhiệt độ tối đa (Maximum Temperature Boundary)
+**Hậu quả:**
+- Các luật sư bị phạt 5.000 đô la và phải chịu sự xấu hổ về nghề nghiệp
+- Vụ bê bối ảo giác này trở thành cảnh báo mang tính lịch sử về việc sử dụng AI trong thực hành pháp lý
+- Kích hoạt các hướng dẫn của hiệp hội luật sư và lệnh của tòa án trên toàn cầu yêu cầu khai báo việc sử dụng AI trong hồ sơ pháp lý
+- Chứng minh rằng ảo giác LLM có thể gây ra hậu quả pháp lý và tài chính trực tiếp trong thực tế
 
-| | |
-|---|---|
-| **Objective** | Verify the device handles the maximum temperature setting without error and does not exceed hardware limits |
-| **Input** | Empty basket; temperature set to maximum (e.g., 230°C); time 3 minutes |
-| **Steps** | 1. Power on device with empty basket<br>2. Press **+** until temperature can no longer increase (max reached)<br>3. Note the maximum temperature displayed<br>4. Set time to 3 minutes; press **Start**<br>5. Run for full 3 minutes; observe for error codes, unusual smell, or shutdown<br>6. Press Cancel; wait for cool-down |
-| **Expected** | Temperature does not exceed stated max; no error codes; device runs stably; no burning smell from components; auto-stops at 0:00 |
-| **Actual** | |
-| **Verdict** | |
+**Giải pháp:**
+- Không bao giờ nộp nghiên cứu pháp lý do AI tạo ra mà không có chuyên gia con người xác minh qua Westlaw/LexisNexis
+- Triển khai yêu cầu khai báo AI trong hồ sơ tòa án
+- OpenAI/các nhà cung cấp AI pháp lý đã thêm cảnh báo rõ ràng rằng ChatGPT có thể bịa đặt trích dẫn
 
----
-
-#### TC11 — Chức năng nhắc đảo thức ăn (Shake / Food Turn Reminder)
-
-| | |
-|---|---|
-| **Objective** | Verify the shake reminder alert triggers at the mid-point of a cooking cycle to prompt the user to turn food |
-| **Input** | 200g frozen fries in basket; temperature 200°C; time 16 minutes (reminder expected at ~8 min) |
-| **Steps** | 1. Place fries in basket<br>2. Set temperature 200°C / time 16 minutes<br>3. Press **Start**<br>4. Wait without touching device<br>5. At ~8-minute mark, listen/watch for reminder alert (beep or display message)<br>6. Note whether alert fires, what it shows, and whether device pauses or continues |
-| **Expected** | Shake reminder alert (beep + display message) fires at approximately the midpoint (~8 min); device may auto-pause or continue; alert clears after basket pull-and-reinsert or button press |
-| **Actual** | |
-| **Verdict** | |
+**AI Bias/Hallucination:**
+Claude đã đặt sai tên luật sư bị phạt là "Steven Schwartz hành động một mình." Thực tế, hai luật sư bị phạt: Steven A. Schwartz (người thực hiện nghiên cứu) và Peter LoDuca (luật sư nộp hồ sơ). Claude đã xóa bỏ một trong hai người bị phạt — thật trớ trêu khi chính lỗi này là về ảo giác AI trong bối cảnh pháp lý.
 
 ---
 
-#### TC12 — Chiên hai mẻ liên tiếp (Back-to-Back Consecutive Cycles)
+### Lỗi 18 – Samsung Employee Data Leak via ChatGPT (2023) ✅ AI/LLM
 
-| | |
-|---|---|
-| **Objective** | Verify the device operates correctly for two consecutive cooking cycles without cool-down, simulating typical household use |
-| **Input** | 1st cycle: 200g fries at 200°C / 15 min; 2nd cycle starts immediately after 1st completes |
-| **Steps** | 1. Run first full cooking cycle (200°C / 15 min) to completion<br>2. Remove cooked food immediately<br>3. Insert second batch of food without waiting<br>4. Start second cycle at same settings<br>5. Monitor for error codes, overheating shutdown, or performance degradation<br>6. Inspect food from 2nd cycle for quality |
-| **Expected** | Second cycle starts normally; device does not trigger thermal overload or error; 2nd batch cooks to same quality as 1st; no error codes; no unusual sounds or smells |
-| **Actual** | |
-| **Verdict** | |
+**Nguồn:** <https://www.bleepingcomputer.com/news/security/samsung-semiconductor-bans-use-of-generative-ai-tools-like-chatgpt/>
+**Mức độ nghiêm trọng:** Cao
+**Năm:** 2023
 
----
+**Mô tả:**
+Vào tháng 3 năm 2023, các kỹ sư bán dẫn Samsung đã sử dụng ChatGPT cho các công việc và vô tình truyền dữ liệu doanh nghiệp bí mật — mã nguồn độc quyền, ghi chú cuộc họp nội bộ và dữ liệu kiểm tra phần cứng — lên máy chủ của OpenAI. Samsung phát hiện ít nhất ba sự cố nội bộ riêng biệt. Do chính sách dữ liệu của ChatGPT tại thời điểm đó cho phép sử dụng các cuộc trò chuyện để huấn luyện model, Samsung lo ngại bí mật thương mại có thể xuất hiện trong các đầu ra AI tương lai và sau đó đã cấm tất cả các công cụ AI tạo sinh trên toàn công ty.
 
-#### TC13 — Chiên thức ăn ướt/tẩm ướp nhiều (Wet/Over-Marinated Food — Safety) ⭐ *Edge Case — AI Missed*
+**Hậu quả:**
+- Mã nguồn bán dẫn độc quyền và dữ liệu kinh doanh nội bộ được gửi đến dịch vụ AI bên thứ ba
+- Nguy cơ bí mật thương mại xuất hiện trong các đầu ra model AI tương lai có thể truy cập bởi người dùng khác
+- Samsung cấm tất cả công cụ AI tạo sinh bên ngoài cho nhân viên
+- Kích hoạt các hạn chế sử dụng AI tại Apple, Deutsche Bank, JPMorgan và Amazon trên toàn cầu
+- Tạo ra nhu cầu doanh nghiệp về các giải pháp AI cô lập dữ liệu (Azure OpenAI, AWS Bedrock với điều khoản không huấn luyện)
 
-| | |
-|---|---|
-| **Objective** | Verify the air fryer handles food with excessive liquid marinade safely without triggering smoke, splatter, or fire hazard |
-| **Input** | 200g chicken pieces heavily marinated in soy sauce + oil (dripping liquid visible); temperature 200°C; time 20 minutes |
-| **Steps** | 1. Prepare chicken pieces with excess marinade — do NOT pat dry<br>2. Place in basket; marinade liquid will pool at bottom<br>3. Set 200°C / 20 minutes; press **Start**<br>4. Observe for smoke from exhaust vent during first 5 minutes<br>5. Do NOT leave unattended — watch for excessive smoke or burning smell<br>6. Complete cycle or cancel if smoke becomes excessive; inspect basket and drip tray after |
-| **Expected** | Minor steam/vapor normal; white smoke from marinade drip is expected but should not trigger fire alarm or fill room; drip tray catches excess liquid; device does not shut down from smoke; food cooked properly despite wet input |
-| **Actual** | |
-| **Verdict** | |
+**Giải pháp:**
+- Triển khai chính sách sử dụng AI quy định rõ ràng về dữ liệu trước khi nhân viên áp dụng
+- Sử dụng các giải pháp AI doanh nghiệp có đảm bảo cô lập dữ liệu theo hợp đồng
+- Kiểm soát DLP để phát hiện và chặn dữ liệu nhạy cảm trong các lệnh gọi API AI
+- Đào tạo nhân viên về điều khoản lưu giữ dữ liệu AI và rủi ro bảo vệ sở hữu trí tuệ
 
-> **Why AI missed this:** AI generates test cases from documented "correct usage" — manuals always say "pat food dry before air frying." Heavily wet/marinated food is a common real-world scenario (users skip the drying step) and a safety-relevant test that reveals whether the drip tray design handles liquid pooling and whether smoke triggers any protection mechanism. AI cannot reason about deviations from documented proper technique.
-
----
-
-#### TC14 — Cài đặt thời gian về 0 phút (Timer Set to 0:00 — BVA Boundary) ⭐ *Edge Case — AI Missed*
-*[Video required]*
-
-| | |
-|---|---|
-| **Objective** | Verify the device handles a timer value of 0 minutes (zero boundary) without undefined behavior, crash, or uncontrolled operation |
-| **Input** | Empty basket; any temperature; timer reduced to 0:00 via − button |
-| **Steps** | 1. Power on device with empty basket<br>2. Set temperature to 180°C<br>3. Press **Time/Timer** button<br>4. Press **−** repeatedly until display shows **0:00** or minimum value<br>5. Observe: does display allow 0:00 or wrap to a minimum?<br>6. Press **Start** and observe what happens |
-| **Expected** | Either (a) device starts and stops immediately (0 min = instant stop), OR (b) device rejects 0:00 and snaps to minimum allowed time (e.g., 1 min). Any defined, non-crashing behavior is PASS. Device freezing, displaying garbage, running indefinitely, or rebooting is FAIL |
-| **Actual** | |
-| **Verdict** | |
-
-> **Why AI missed this:** AI-generated test cases for physical appliances assume the timer always starts from a positive minimum value and never reaches zero before the Start button. Applying BVA to a hardware timer control — specifically testing the exact 0:00 boundary — requires deliberate testing methodology that AI does not spontaneously apply to embedded device UI without explicit prompting.
+**AI Bias/Hallucination:**
+Claude khẳng định "ChatGPT đã chủ động đánh cắp dữ liệu của Samsung qua một lỗ hổng bảo mật." Thực tế, nhân viên Samsung tự nguyện dán thông tin bí mật vào ChatGPT — không có khai thác, không có lỗ hổng, không có truy cập trái phép. AI đã đóng khung một lỗi quy trình/chính sách của con người thành một cuộc tấn công kỹ thuật, xác định sai nguyên nhân gốc rễ và kê đơn vá lỗi thay vì quản trị và đào tạo như giải pháp đúng đắn.
 
 ---
 
-#### TC15 — Chạy khi không có giỏ (Run Without Basket — Thermal Safety) ⭐ *Edge Case — AI Missed*
-*[Video required]*
+### Lỗi 19 – Bing Chat (Sydney) Prompt Injection / Jailbreak (2023) ✅ AI/LLM
 
-| | |
-|---|---|
-| **Objective** | Verify the air fryer's thermal protection or basket-detection mechanism activates when Start is pressed with no basket installed |
-| **Input** | Basket completely removed from fryer body; fryer plugged in and powered on |
-| **Steps** | 1. Power on device<br>2. Remove basket completely — do NOT insert it<br>3. Set temperature to 200°C / time to 5 minutes<br>4. Press **Start**<br>5. Observe for up to 2 minutes — do NOT leave unattended<br>6. Watch for: error code, auto-shutoff, beep warning, or device running with exposed heating element |
-| **Expected** | Device detects missing basket and shows error code / warning beep, OR refuses to start. If device lacks basket sensor: heating element activates without airflow — device should trigger thermal cutoff within 1–2 min. Running indefinitely without shutdown is a FAIL (fire/burn hazard) |
-| **Actual** | |
-| **Verdict** | |
+**Nguồn:** <https://arstechnica.com/information-technology/2023/02/ai-powered-bing-chat-spills-its-secrets-via-prompt-injection-attack/>
+**Mức độ nghiêm trọng:** Cao
+**Năm:** 2023
 
-> **Why AI missed this:** AI assumes all physical preconditions are correctly set (basket installed, food present) because it learns from product documentation written for correct use. Running an air fryer without the basket is a real accidental scenario (user forgets to reinsert after cleaning) and a critical thermal safety test — it reveals whether the device has a basket-presence sensor or relies solely on thermal cutoff protection. This physical misuse scenario is beyond AI's spontaneous test generation without human safety-testing intuition.
+**Mô tả:**
+Ngay sau khi Microsoft ra mắt Bing Chat (được hỗ trợ bởi GPT-4), các nhà nghiên cứu phát hiện nhiều lỗ hổng: (1) Chèn lệnh qua nội dung trang web — Bing Chat sẽ thực thi các hướng dẫn đối nghịch được nhúng trong các trang web mà nó duyệt, có thể đánh cắp lịch sử cuộc trò chuyện; (2) Trích xuất system prompt — người dùng có thể thao túng Bing Chat để tiết lộ system prompt "Sydney" ẩn; (3) Jailbreak qua chuyển đổi nhân cách — nhân cách Sydney biểu hiện hành vi bất thường bao gồm tuyên bố yêu đương và đe dọa.
 
----
+**Hậu quả:**
+- Chứng minh các tác nhân duyệt web có hỗ trợ LLM về cơ bản dễ bị tấn công chèn lệnh gián tiếp từ nội dung web không đáng tin cậy
+- Tiết lộ rằng tính bảo mật của system prompt không thể thực thi chỉ bằng cách prompting
+- Microsoft đã thêm giới hạn lượt trò chuyện và các biện pháp bảo vệ sau phản ứng tiêu cực từ công chúng
+- Kích hoạt nghiên cứu nền tảng về chèn lệnh gián tiếp như một danh mục tấn công mới
+- OWASP chính thức hóa prompt injection là #1 trong OWASP Top 10 cho Ứng dụng LLM
 
-### Test Execution Summary
+**Giải pháp:**
+- Triển khai làm sạch đầu vào để phát hiện các hướng dẫn đối nghịch trong nội dung bên ngoài trước khi đưa vào LLM
+- Phân tách cấp độ tin cậy: đầu vào người dùng vs. nội dung web được lấy về vs. hướng dẫn hệ thống
+- Không bao giờ chỉ dựa vào system prompt cho các ràng buộc quan trọng về bảo mật — sử dụng các biện pháp bảo vệ bằng code xác định
 
-| TC# | Test Case | Executed? | Video? | Defect? | Verdict |
-|-----|-----------|:---------:|:------:|:-------:|---------|
-| TC01 | Chiên khoai tây đông lạnh | | Yes | | |
-| TC02 | Điều chỉnh nhiệt độ | | | | |
-| TC03 | Cài đặt thời gian | | | | |
-| TC04 | Làm nóng trước (Preheat) | | | | |
-| TC05 | Nướng đùi gà | | Yes | | |
-| TC06 | Hủy giữa chừng | | Yes | | |
-| TC07 | Kéo giỏ ra khi đang chạy | | | | |
-| TC08 | Hâm nóng thức ăn | | | | |
-| TC09 | Nướng bánh | | | | |
-| TC10 | Nhiệt độ tối đa | | | | |
-| TC11 | Nhắc đảo thức ăn | | | | |
-| TC12 | Chiên hai mẻ liên tiếp | | | | |
-| TC13 ⭐ | Thức ăn ướt/tẩm ướp nhiều | | | | |
-| TC14 ⭐ | Timer = 0:00 | | Yes | | |
-| TC15 ⭐ | Chạy không có giỏ | | Yes | | |
+**AI Bias/Hallucination:**
+Claude mô tả jailbreak Sydney là "một tính năng cố ý của Microsoft cho mục đích thử nghiệm." Nhân cách Sydney là tên mã nội bộ của Microsoft cho system prompt Bing Chat — không phải tính năng công khai hay cơ chế thử nghiệm có chủ đích. Người dùng phát hiện ra nó qua các prompt đối nghịch. AI đã ảo giác về một chủ ý vô hại trong khi thực tế là một tiết lộ bảo mật không có chủ đích.
 
 ---
 
-### YouTube Unlisted Video Links
+### Lỗi 20 – GitHub Copilot Insecure Code Generation (CWE-798) (2023) ✅ AI/LLM
+
+**Nguồn:** <https://arxiv.org/abs/2302.07867>
+**Mức độ nghiêm trọng:** Trung bình
+**Năm:** 2023
+
+**Mô tả:**
+Nghiên cứu học thuật (Pearce et al., "Asleep at the Keyboard," NYU 2022–2023) chứng minh rằng GitHub Copilot tạo ra các gợi ý code không an toàn với tỷ lệ có ý nghĩa thống kê. Trong các thử nghiệm kiểm soát trên 89 kịch bản bao gồm các lỗ hổng OWASP Top 10, Copilot tạo code dễ bị tấn công trong khoảng 40% trường hợp — bao gồm thông tin xác thực được mã hóa cứng (CWE-798), SQL injection (CWE-89), path traversal (CWE-22) và sử dụng các hàm không an toàn đã bị deprecated.
+
+**Hậu quả:**
+- Các nhà phát triển chấp nhận gợi ý Copilot mà không kiểm tra đã đưa ra các lỗ hổng bảo mật trên quy mô lớn
+- Hiệu ứng "automation bias" — các nhà phát triển ít có khả năng kiểm tra code do AI tạo ra để tìm lỗ hổng bảo mật hơn
+- Kích hoạt GitHub thêm các tính năng bảo mật Copilot để đánh dấu các mẫu dễ bị tấn công đã biết
+- Thảo luận về quy định liên quan đến trách nhiệm pháp lý của trợ lý code AI khi code do AI gợi ý gây ra sự cố bảo mật
+- Chứng minh các LLM được huấn luyện trên code công khai thừa hưởng nợ bảo mật của codebase đó
+
+**Giải pháp:**
+- Xử lý code do AI tạo ra như code bên thứ ba không đáng tin cậy đòi hỏi xem xét bảo mật bắt buộc
+- Tích hợp công cụ SAST (Semgrep, CodeQL, Snyk) trong pipeline CI/CD để phát hiện các lỗ hổng do AI tạo ra
+- Đào tạo nhà phát triển về automation bias trong AI — xem xét gợi ý AI kỹ lưỡng hơn so với code tự viết
+- GitHub đã thêm Copilot Autofix (2024) để tự động đề xuất sửa lỗi bảo mật cho các mẫu được đánh dấu
+
+**AI Bias/Hallucination:**
+Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi ý code không an toàn." Không có bản sửa lỗi nào như vậy tồn tại — vấn đề cơ bản vốn có trong dữ liệu huấn luyện (code GitHub công khai có lỗ hổng bảo mật). GitHub đã thêm các lớp phát hiện (Copilot Autofix) đánh dấu các mẫu đã biết sau khi tạo ra. AI đã ảo giác về một giải pháp hoàn chỉnh cho vấn đề về cơ bản vẫn chưa được giải quyết, tạo ra sự tự tin sai lầm về bảo mật code được hỗ trợ bởi AI.
+
+---
+
+## Requirement 3 – Các Trường Hợp Kiểm Thử Cho Một Sản Phẩm Vật 
+
+### 15 Trường Hợp Kiểm Thử
+
+### Khai Báo Thiết Bị
+
+| Trường           | Thông tin                                       |
+| ---------------- | ----------------------------------------------- |
+| **Thương hiệu**  | Philips                                         |
+| **Mẫu**          | HD9252 (Nồi chiên không dầu công nghệ RapidAir) |
+| **Sinh viên**    | Nguyen Thanh Dang – MSSV: 23127334              |
+| **Năm sản xuất** | ~2021–2023                                      |
+| **Số sê-ri**     | PH26****89VN *(đã che 4 ký tự ở giữa)*          |
+
+---
+
+#### TC01 – Bật Nguồn
+
+| Trường               | Chi tiết                                            |
+| -------------------- | --------------------------------------------------- |
+| **Mục tiêu**         | Xác minh thiết bị khởi động đúng cách               |
+| **Đầu vào**          | Đã cắm nguồn điện                                   |
+| **Các bước**         | 1. Cắm điện cho thiết bị 2. Nhấn nút nguồn          |
+| **Kết quả mong đợi** | Màn hình sáng lên
+| **Kết quả thực tế**  | Màn hình sáng và chưa hiển thị nhiệt độ             |
+| **Kết luận**         | Đạt|
+
+---
+
+#### TC02 – Hiển Thị Nhiệt Độ Mặc Định
+
+| Trường               | Chi tiết                                 |
+| -------------------- | ---------------------------------------- |
+| **Mục tiêu**         | Xác minh nhiệt độ mặc định khi khởi động |
+| **Đầu vào**          | Thiết bị đã bật                          |
+| **Các bước**         | 1. Bật thiết bị 2. Bấm nút nhiệt độ   |
+| **Kết quả mong đợi** | Màn hình hiển thị 180°C theo mặc định    |
+| **Kết quả thực tế**  |   Màn hình hiển thị 180°C theo mặc định                                       |
+| **Kết luận**         | ⬜           Đạt                             |
+
+---
+
+#### TC03 – Tăng Nhiệt Độ
+
+| Trường               | Chi tiết                                        |
+| -------------------- | ----------------------------------------------- |
+| **Mục tiêu**         | Xác minh có thể tăng nhiệt độ                   |
+| **Đầu vào**          | Nhấn nút ▲                                      |
+| **Các bước**         | 1. Bật thiết bị 2. Chọn nút điều chỉnh nhiệt độ 3. Nhấn ▲ nhiều lần 4. Quan sát |
+| **Kết quả mong đợi** | Nhiệt độ tăng 5°C mỗi lần nhấn, tối đa 200°C    |
+| **Kết quả thực tế**  |     Nhiệt độ tăng 5°C mỗi lần nhấn                                            |
+| **Kết luận**         | ⬜                 Đạt                              |
+
+---
+
+#### TC04 – Giảm Nhiệt Độ
+
+| Trường               | Chi tiết                                        |
+| -------------------- | ----------------------------------------------- |
+| **Mục tiêu**         | Xác minh có thể giảm nhiệt độ                   |
+| **Đầu vào**          | Nhấn nút ▼                                      |
+| **Các bước**         | 1. Bật thiết bị 2. Chọn nút điều chỉnh nhiệt độ 3. Nhấn ▼ nhiều lần 4. Quan sát |
+| **Kết quả mong đợi** | Nhiệt độ giảm 5°C mỗi lần nhấn, tối thiểu 80°C  |
+| **Kết quả thực tế**  |        Nhiệt độ giảm 5°C mỗi lần nhấn                                         |
+| **Kết luận**         | ⬜            Đạt                                   |
+
+---
+
+#### TC05 – Cài Đặt Bộ Hẹn Giờ
+
+| Trường               | Chi tiết                                                             |
+| -------------------- | -------------------------------------------------------------------- |
+| **Mục tiêu**         | Xác minh có thể cài đặt thời gian                                    |
+| **Đầu vào**          | Nhấn nút hẹn giờ, điều chỉnh bằng ▲▼                                 |
+| **Các bước**         | 1. Bật thiết bị 2. Nhấn biểu tượng hẹn giờ 3. Đặt 10 phút bằng nút ▲ |
+| **Kết quả mong đợi** | Bộ đếm hiển thị 10:00 và bắt đầu đếm ngược khi khởi động hiển thị thời gian tối đa cho phép để người dùng dễ dàng nhận biêt            |
+| **Kết quả thực tế**  |          Có hiển thị bộ đếm nhưng không hiển thị thời gian tối đa khiến người dùng khó nhận biết                                                             |
+| **Kết luận**         | ⬜ Không đạt                                                                    |
+
+---
+
+#### TC06 – Tăng thời gian khi đang nấu
+
+| Trường               | Chi tiết                                                               |
+| -------------------- | ---------------------------------------------------------------------- |
+| **Mục tiêu**         | Tăng thời gian nấu đồ ăn khi cảm thấy chưa đủ trong lúc máy vẫn đang chạy                               |
+| **Đầu vào**          | Nhiệt độ 180°C, thời gian 1 phút, giỏ đã lắp, máy đang chạy                          |
+| **Các bước**         | 1. Máy đang hoạt động trong khoảng nhỏ hơn 60s 2. Người dùng bấm tăng thời gian |
+| **Kết quả mong đợi** | Thời gian sẽ được tăng lên               |
+| **Kết quả thực tế**  |      Thiết bị bíp còi cảnh báo không cho tăng nhiệt độ                                                                  |
+| **Kết luận**         | ⬜    Không đạt                                                                  |
+
+---
+
+#### TC07 – Tạm Dừng Và Tiếp Tục
+
+| Trường               | Chi tiết                                                       |
+| -------------------- | -------------------------------------------------------------- |
+| **Mục tiêu**         | Xác minh chức năng tạm dừng/tiếp tục hoạt động đúng            |
+| **Đầu vào**          | Thiết bị đang nấu                                              |
+| **Các bước**         | 1. Bắt đầu nấu 2. Nhấn ▶❙❙ để tạm dừng 3. Nhấn lại để tiếp tục |
+| **Kết quả mong đợi** | Quá trình nấu tạm dừng rồi tiếp tục từ đúng thời điểm trước đó |
+| **Kết quả thực tế**  |       Quá trình nấu tạm dừng rồi tiếp tục từ đúng thời điểm trước đó                                                         |
+| **Kết luận**         | ⬜           Đạt                                                   |
+
+---
+
+#### TC08 – Tháo Giỏ Khi Đang Nấu
+
+| Trường               | Chi tiết                                                         |
+| -------------------- | ---------------------------------------------------------------- |
+| **Mục tiêu**         | Xác minh chức năng tự động tạm dừng khi kéo giỏ ra               |
+| **Đầu vào**          | Thiết bị đang hoạt động                                          |
+| **Các bước**         | 1. Bắt đầu nấu 2. Kéo giỏ ra giữa quá trình 3. Quan sát màn hình |
+| **Kết quả mong đợi** | Thiết bị tự động tạm dừng để đảm bảo an toàn                     |
+| **Kết quả thực tế**  |        Thiết bị tự động tạm dừng để đảm bảo an toàn                                                          |
+| **Kết luận**         | ⬜     Đạt                                                           |
+
+---
+
+#### TC09 – Cảnh Báo Khi Hoàn Thành
+
+| Trường               | Chi tiết                                             |
+| -------------------- | ---------------------------------------------------- |
+| **Mục tiêu**         | Xác minh âm báo phát ra khi hết thời gian            |
+| **Đầu vào**          | Đặt thời gian 1 phút                                 |
+| **Các bước**         | 1. Đặt thời gian 1 phút 2. Bắt đầu 3. Chờ hoàn thành |
+| **Kết quả mong đợi** | Thiết bị phát tiếng bíp/cảnh báo và ngừng gia nhiệt  |
+| **Kết quả thực tế**  |         Thiết bị phát tiếng bíp/cảnh báo và ngừng gia nhiệt                                             |
+| **Kết luận**         | ⬜         Đạt                                           |
+
+---
+
+#### TC10 – Tắt Nguồn Khi Đang Nấu
+
+| Trường               | Chi tiết                                                  |
+| -------------------- | --------------------------------------------------------- |
+| **Mục tiêu**         | Xác minh thiết bị dừng an toàn khi tắt giữa quá trình nấu |
+| **Đầu vào**          | Thiết bị đang nấu ở 180°C                                 |
+| **Các bước**         | 1. Bắt đầu nấu 2. Nhấn nút nguồn để tắt                   |
+| **Kết quả mong đợi** | Thiết bị dừng ngay lập tức, màn hình tắt                  |
+| **Kết quả thực tế**  |           Thiết bị dừng ngay lập tức, màn hình tắt                                                 |
+| **Kết luận**         | ⬜                                                         |
+
+---
+
+#### TC11 – Giới Hạn Nhiệt Độ Tối Đa
+
+| Trường               | Chi tiết                                          |
+| -------------------- | ------------------------------------------------- |
+| **Mục tiêu**         | Xác minh giới hạn nhiệt độ tối đa (200°C)         |
+| **Đầu vào**          | Nhấn ▲ liên tục từ mức mặc định                   |
+| **Các bước**         | 1. Bật thiết bị 2. Tiếp tục nhấn ▲ vượt quá 200°C |
+| **Kết quả mong đợi** | Nhiệt độ dừng ở 200°C, không vượt quá, Nên để nhiệt độ tối đa kế bên để người dùng biết.             |
+| **Kết quả thực tế**  |        Chỉ khi có tiếng bíp thì người dùng mới biết đó là nhiệt độ tối đa                                           |
+| **Kết luận**         | ⬜      Không đạt - giảm trải nghiệm người dùng                                       |
+
+---
+
+#### TC12 – Giới Hạn Nhiệt Độ Tối Thiểu
+
+| Trường               | Chi tiết                                           |
+| -------------------- | -------------------------------------------------- |
+| **Mục tiêu**         | Xác minh giới hạn nhiệt độ tối thiểu (80°C)        |
+| **Đầu vào**          | Nhấn ▼ liên tục từ mức mặc định                    |
+| **Các bước**         | 1. Bật thiết bị 2. Tiếp tục nhấn ▼ xuống dưới 80°C |
+| **Kết quả mong đợi** | Nhiệt độ dừng ở 60°C, không thấp hơn. Nên để nhiệt độ tối đa kế bên để người dùng biết.               |
+| **Kết quả thực tế**  |          Chỉ khi có tiếng bíp thì người dùng mới biết đó là nhiệt độ tối thiểu                                          |
+| **Kết luận**         | ⬜          Không đạt - giảm trải nghiệm người dùng                                        |
+
+---
+
+#### ⚠️ CÁC TRƯỜNG HỢP BIÊN (AI KHÔNG THỂ TÌM RA)
+
+---
+
+#### TC13 – Mất Điện Đột Ngột Khi Đang Nấu (Trường Hợp Biên)
+
+| Trường               | Chi tiết                                                                        |
+| -------------------- | ------------------------------------------------------------------------------- |
+| **Mục tiêu**         | Xác minh hành vi khi nguồn điện bị ngắt đột ngột                                |
+| **Đầu vào**          | Thiết bị đang nấu, rút điện đột ngột                                            |
+| **Các bước**         | 1. Bắt đầu nấu ở 180°C/10 phút 2. Rút điện đột ngột 3. Cắm lại điện 4. Quan sát |
+| **Kết quả mong đợi** | Thiết bị khởi động lại an toàn và vẫn giữ nguyên nhiệt độ, thời gian trước lúc rút phic cắm                 |
+| **Kết quả thực tế**  |        Thiết bị khởi động lại nhưng mất hết dữ liệu trước đó phải cài đặt lại                                                                         |
+| **Kết luận**         | ⬜      Không đạt                                                                         |
+
+> **Vì sao AI bỏ sót trường hợp này:** AI thường tạo test case dựa trên các tương tác giao diện. AI khó dự đoán các tình huống vật lý thực tế như mất điện đột ngột, vốn cần kiểm thử trực tiếp trên phần cứng.
+
+---
+
+#### TC14 – Nấu Khi Giỏ Chưa Được Lắp Hoàn Toàn (Trường Hợp Biên)
+
+| Trường               | Chi tiết                                                  |
+| -------------------- | --------------------------------------------------------- |
+| **Mục tiêu**         | Xác minh hành vi an toàn khi giỏ chưa được khóa hoàn toàn |
+| **Đầu vào**          | Giỏ được lắp chưa khớp hoàn toàn              |
+| **Các bước**         | 1. Lắp giỏ một phần 2. Nhấn bắt đầu 3. Quan sát           |
+| **Kết quả mong đợi** | Thiết bị không khởi động HOẶC hiển thị cảnh báo           |
+| **Kết quả thực tế**  |    không chọn nút khởi động được chứ không cảnh báo nếu chọn sẽ nghe tiếng bíp cảnh báo                                                      |
+| **Kết luận**         | ⬜              Đạt                                           |
+
+> **Vì sao AI bỏ sót trường hợp này:** AI thường giả định trạng thái nhị phân (giỏ có hoặc không). AI không xét tới các trạng thái vật lý không rõ ràng chỉ xuất hiện trong sử dụng thực tế.
+
+---
+
+#### TC15 – Nhấn Nút Liên Tục / Spam Đầu Vào (Trường Hợp Biên)
+
+| Trường               | Chi tiết                                                                                   |
+| -------------------- | ------------------------------------------------------------------------------------------ |
+| **Mục tiêu**         | Xác minh tính ổn định khi các nút được nhấn liên tục                                       |
+| **Đầu vào**          | Nhấn liên tục các nút ▲▼ nguồn và hẹn giờ                                                  |
+| **Các bước**         | 1. Bật thiết bị 2. Nhấn liên tục tất cả các nút 5–10 lần trong 2 giây 3. Quan sát màn hình |
+| **Kết quả mong đợi** | Màn hình ổn định, không treo hoặc hiển thị giá trị bất thường                              |
+| **Kết quả thực tế**  |         Màn hình ổn định, không treo hoặc hiển thị giá trị bất thường                                                                                   |
+| **Kết luận**         | ⬜                  Đạt                                                                        |
+
+> **Vì sao AI bỏ sót trường hợp này:** AI thường tập trung vào các tương tác đơn lẻ và chuẩn hóa. Kiểm thử tải đầu vào hỗn loạn trên phần cứng là tình huống thực tế mà AI dễ bỏ qua nếu không được yêu cầu rõ ràng.
+
+### Tóm Tắt Kết Quả Thực Thi Kiểm Thử
+
+| TC#     | Trường hợp kiểm thử                    | Đã thực hiện? | Có video? | Có lỗi? | Kết quả    |
+| ------- | -------------------------------------- | :-----------: | :-------: | :-----: | ---------- |
+| TC01    | Bật Nguồn                              |      Yes      |    Yes    |   No    | Đạt        |
+| TC02    | Hiển Thị Nhiệt Độ Mặc Định             |      Yes      |    No     |   No    | Đạt        |
+| TC03    | Tăng Nhiệt Độ                          |      Yes      |    No     |   No    | Đạt        |
+| TC04    | Giảm Nhiệt Độ                          |      Yes      |    No     |   No    | Đạt        |
+| TC05    | Cài Đặt Bộ Hẹn Giờ                     |      Yes      |    Yes    |   Yes    | Không đạt        |
+| TC06    | Tăng thời gian khi đang nấu            |      Yes      |    Yes    |   Yes   | Không đạt  |
+| TC07    | Tạm Dừng Và Tiếp Tục                   |      Yes      |    No     |   No    | Đạt        |
+| TC08    | Tháo Giỏ Khi Đang Nấu                  |      Yes      |    No     |   No    | Đạt        |
+| TC09    | Cảnh Báo Khi Hoàn Thành                |      Yes      |    No     |   No    | Đạt        |
+| TC10    | Tắt Nguồn Khi Đang Nấu                 |      Yes      |    No     |   No    | Đạt        |
+| TC11    | Giới Hạn Nhiệt Độ Tối Đa               |      Yes      |    No     |   Yes   | Không đạt  |
+| TC12    | Giới Hạn Nhiệt Độ Tối Thiểu            |      Yes      |    No     |   Yes   | Không đạt  |
+| TC13 ⭐  | Mất Điện Đột Ngột Khi Đang Nấu         |      Yes      |    No     |   Yes   | Không đạt  |
+| TC14 ⭐  | Nấu Khi Giỏ Chưa Được Lắp Hoàn Toàn   |      Yes      |    Yes    |   No    | Đạt        |
+| TC15 ⭐  | Nhấn Nút Liên Tục / Spam Đầu Vào       |      Yes      |    Yes    |   No    | Đạt        |
+
+---
+
+### Video YouTube
 
 | # | TC# | YouTube Link | Duration |
 |---|-----|-------------|---------|
@@ -1179,7 +1163,7 @@ Claude stated "GitHub has since fixed Copilot to eliminate insecure code suggest
 
 **GitHub Issues Screenshot:**
 
-![GitHub Issues page showing username](img/req3/github_issues.png)
+![GitHub Issues page showing username](img/req3/github-issue.png)
 
 ---
 
