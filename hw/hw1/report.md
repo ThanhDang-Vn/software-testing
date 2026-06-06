@@ -20,341 +20,345 @@
 
 ---
 
-## Requirement 1 – QA/QC Job Market 2026+ (40 pts) {#requirement-1}
+# Yêu Cầu 1 – Thị Trường Việc Làm QA/QC 2026+ (40 điểm)
 
-> **Platform:** LinkedIn only.
-> **Anti-cheat note:** All screenshots must show your LinkedIn account name in the corner.
-> **Posting window:** Published within 60 days of submission date (>= 2026-03-25).
-
-### Job Postings Overview
-
-| # | Job Title | Company | Location | Salary | AI/LLM? | Posting Date |
-|---|-----------|---------|----------|--------|:--------:|-------------|
-| 1 | AI Quality Engineer | Momentive Software | Atlanta, GA, USA | Not listed | YES | ~May 24, 2026 |
-| 2 | QA Engineer – GenAI & AI Agent Testing | Zenith System Solutions | Plano, TX, USA | Not listed | YES | ~May 17, 2026 |
-| 3 | Software Quality Engineer III – AI & Agentic Behavior | Federal Express (FedEx) | Memphis/Plano, USA | Not listed | YES | ~May 22, 2026 |
-| 4 | Agentic AI Quality Assurance Engineer | Trimble Inc. | Lake Oswego, OR, USA | $78,400–$107,900/yr | YES | ~May 17, 2026 |
-| 5 | AI Tester | TMV Global Inc | Atlanta, GA, USA | Not listed | YES | ~May 19, 2026 |
-| 6 | Lead Automation QA Engineer | Galaxy FinX | Ho Chi Minh City, Vietnam | Not listed | No | ~May 20, 2026 |
-| 7 | Mid/Senior QA Engineer | SMG Vietnam | Ho Chi Minh City, Vietnam | Not listed | No | ~May 21, 2026 |
-| 8 | Fullstack Tester (Auto + Manual) | LTS Group | Hanoi, Vietnam | Up to 30M VND/mo | Preferred | ~May 20, 2026 |
-| 9 | Quality Assurance Engineer | Quantum Movement | Ho Chi Minh City, Vietnam | Not listed | No | ~May 18, 2026 |
-| 10 | Junior QA Engineer (Manual + Automation) | DXC Technology | Ho Chi Minh City, Vietnam | Not listed | No | ~May 20, 2026 |
-
-
-## 📝 Note on Salary Transparency
-
-Currently, many companies do not publicly disclose salary information in their job postings. Candidates will only be informed of or able to negotiate salary directly with the company during the hiring process. As a result, some job listings in this report do not display specific compensation figures. However, based on research from reputable sources *(ref: [Lương kiểm thử phần mềm 2025 – Greenwich Vietnam](https://greenwich.edu.vn/luong-kiem-thu-phan-mem/))*, the following reflects **estimated average salary ranges for common Software Testing positions in Vietnam (2025)**:
-
-
-| Position | Experience Level | Estimated Monthly Salary (VND) |
-|----------|-----------------|-------------------------------|
-| **Fresher / Intern Tester** | < 1 year | 6,000,000 – 10,000,000 |
-| **Junior Tester** | 1 – 3 years | 10,000,000 – 15,000,000 |
-| **Middle Tester** | 3 – 5 years | 15,000,000 – 25,000,000 |
-| **Senior Tester** | 5+ years | 25,000,000 – 40,000,000 |
-| **Manual Tester** | All levels | 8,000,000 – 25,000,000 |
-| **Automation Tester** | 2+ years | 15,000,000 – 40,000,000 |
-| **QA Engineer** | 3+ years | 20,000,000 – 35,000,000 |
-| **QC Engineer** | 1 – 3 years | 7,000,000 – 12,000,000 |
-| **Test Lead** | 5+ years | 25,000,000 – 40,000,000 |
-| **Test Manager / QA Manager** | 7+ years | 30,000,000 – 50,000,000+ |
-
-### Detailed Job Postings
+> **Nền tảng:** Chỉ dùng LinkedIn.
+> **Lưu ý chống gian lận:** Tất cả ảnh chụp màn hình phải hiển thị tên tài khoản LinkedIn của bạn ở góc màn hình.
+> **Thời gian đăng:** Đăng trong vòng 60 ngày trước ngày nộp bài (>= 25/03/2026).
 
 ---
 
-#### Job 1 – AI Quality Engineer (AI/LLM)
+## Tổng Quan Các Tin Tuyển Dụng
 
-**Company:** Momentive Software
-**Location:** Atlanta, GA, USA
-**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4407931860>
-**Salary:** Not listed
-**Posting Date:** ~May 24, 2026
-
-**Job Description:**
-This role focuses on designing evaluation frameworks for generative AI and agentic systems. The engineer validates LLM outputs (GPT-4, Claude, Gemini), agentic reasoning chains, RAG pipelines, and multi-step tool use. Requires both hands-on QA experience and understanding of AI/ML concepts.
-
-**Required Skills:**
-- 3–5 years QA/software engineering experience
-- Hands-on experience with LLMs and agentic AI (GPT-4, Claude, Gemini)
-- Python scripting for evaluation automation
-- Designing evaluation frameworks for generative AI
-- Agentic frameworks: RAG, multi-step reasoning, tool use
-- CI/CD pipeline integration
-- Unit, integration, regression, and E2E testing
-
-**Screenshot:**
-
-![Job 1 – Momentive Software LinkedIn Screenshot](img/req1/req1-01.png)
-
-**AI Impact Analysis:**
-This role exemplifies the emergence of AI-native QA positions where the primary subject under test is an LLM/agentic system itself; traditional black-box testing skills are being replaced by evaluation framework design, hallucination detection, and grounding assessment — competencies that did not exist in QA job descriptions before 2023.
+| # | Vị Trí | Công Ty | Địa Điểm | Lương | AI/LLM? | Ngày Đăng |
+|---|--------|---------|----------|-------|:-------:|-----------|
+| 1 | Kỹ Sư Chất Lượng AI | Momentive Software | Atlanta, GA, Mỹ | Không công bố | CÓ | ~24/05/2026 |
+| 2 | Kỹ Sư QA – Kiểm Thử GenAI & AI Agent | Zenith System Solutions | Plano, TX, Mỹ | Không công bố | CÓ | ~17/05/2026 |
+| 3 | Kỹ Sư Chất Lượng Phần Mềm III – AI & Hành Vi Agentic | Federal Express (FedEx) | Memphis/Plano, Mỹ | Không công bố | CÓ | ~22/05/2026 |
+| 4 | Kỹ Sư QA cho Agentic AI | Trimble Inc. | Lake Oswego, OR, Mỹ | 78.400–107.900 USD/năm | CÓ | ~17/05/2026 |
+| 5 | Người Kiểm Thử AI | TMV Global Inc | Atlanta, GA, Mỹ | Không công bố | CÓ | ~19/05/2026 |
+| 6 | Kỹ Sư QA Automation Trưởng | Galaxy FinX | TP. Hồ Chí Minh, Việt Nam | Không công bố | Không | ~20/05/2026 |
+| 7 | Kỹ Sư QA Mid/Senior | SMG Vietnam | TP. Hồ Chí Minh, Việt Nam | Không công bố | Không | ~21/05/2026 |
+| 8 | Tester Fullstack (Auto + Manual) | LTS Group | Hà Nội, Việt Nam | Tối đa 30 triệu VND/tháng | Ưu tiên | ~20/05/2026 |
+| 9 | Kỹ Sư Đảm Bảo Chất Lượng | Quantum Movement | TP. Hồ Chí Minh, Việt Nam | Không công bố | Không | ~18/05/2026 |
+| 10 | Kỹ Sư QA Junior (Manual + Automation) | DXC Technology | TP. Hồ Chí Minh, Việt Nam | Không công bố | Không | ~20/05/2026 |
 
 ---
 
-#### Job 2 – QA Engineer – GenAI & AI Agent Testing (AI/LLM)
+## 📝 Ghi Chú Về Minh Bạch Lương
 
-**Company:** Zenith System Solutions
-**Location:** Plano, TX, USA
-**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4413976695>
-**Salary:** Not listed
-**Posting Date:** ~May 17, 2026
+Hiện nay, nhiều công ty không công khai thông tin lương trong tin tuyển dụng. Ứng viên chỉ được thông báo hoặc thương lượng lương trực tiếp với công ty trong quá trình phỏng vấn. Do đó, một số vị trí trong báo cáo này không có mức lương cụ thể. Tuy nhiên, dựa trên nghiên cứu từ các nguồn uy tín *(tham khảo: [Lương kiểm thử phần mềm 2025 – Greenwich Vietnam](https://greenwich.edu.vn/luong-kiem-thu-phan-mem/))*, bảng dưới đây phản ánh **mức lương trung bình ước tính cho các vị trí kiểm thử phần mềm phổ biến tại Việt Nam (2025)**:
 
-**Job Description:**
-Specialized QA role targeting generative AI and AI-agent testing. The engineer validates AI-powered applications end-to-end, tests prompt engineering pipelines, and verifies LLM workflow correctness. Requires 5+ years QA experience with demonstrated AI/ML exposure.
-
-**Required Skills:**
-- 5+ years QA experience with AI/ML exposure
-- Testing generative AI and AI-powered applications
-- AI agent / agentic AI testing
-- Prompt engineering validation
-- Python scripting; LLM workflow testing
-- LangChain / LangGraph / CrewAI / AutoGen (preferred)
-- API testing; CI/CD integration
-
-**Screenshot:**
-
-![Job 2 – Zenith System Solutions LinkedIn Screenshot](img/req1/req1-02.png)
-
-**AI Impact Analysis:**
-Zenith's posting illustrates how agentic AI frameworks (LangChain, CrewAI, AutoGen) are creating a new sub-discipline within QA focused on validating non-deterministic multi-agent workflows — a testing challenge where traditional equivalence partitioning and boundary value analysis techniques are insufficient without LLM-specific evaluation methods.
+| Vị Trí | Cấp Độ Kinh Nghiệm | Lương Tháng Ước Tính (VND) |
+|--------|-------------------|--------------------------|
+| **Fresher / Thực tập sinh Tester** | < 1 năm | 6.000.000 – 10.000.000 |
+| **Junior Tester** | 1 – 3 năm | 10.000.000 – 15.000.000 |
+| **Middle Tester** | 3 – 5 năm | 15.000.000 – 25.000.000 |
+| **Senior Tester** | 5+ năm | 25.000.000 – 40.000.000 |
+| **Manual Tester** | Mọi cấp độ | 8.000.000 – 25.000.000 |
+| **Automation Tester** | 2+ năm | 15.000.000 – 40.000.000 |
+| **Kỹ Sư QA** | 3+ năm | 20.000.000 – 35.000.000 |
+| **Kỹ Sư QC** | 1 – 3 năm | 7.000.000 – 12.000.000 |
+| **Test Lead** | 5+ năm | 25.000.000 – 40.000.000 |
+| **Test Manager / QA Manager** | 7+ năm | 30.000.000 – 50.000.000+ |
 
 ---
 
-#### Job 3 – Software Quality Engineer III – AI & Agentic Behavior (AI/LLM)
-
-**Company:** Federal Express Corporation (FedEx)
-**Location:** Memphis, TN / Plano, TX, USA (Hybrid)
-**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4418045788>
-**Salary:** Not listed
-**Posting Date:** ~May 22, 2026
-
-**Job Description:**
-Enterprise-scale QA engineering role at FedEx focused on agentic AI behavior testing and LLM output validation. The engineer executes automated and manual tests for agentic AI systems, uses agentic coding tools for test automation, and ensures prompt security compliance.
-
-**Required Skills:**
-- Executing automated/manual tests for agentic AI behavior and LLM outputs
-- Agentic coding tools for test automation
-- AI/LLM evaluation and prompt security testing
-- Performance testing for AI systems
-- BS in Computer Science or related field; 4+ years IT/QA experience
-
-**Screenshot:**
-
-![Job 3 – FedEx LinkedIn Screenshot](img/req1/req1-03.png)
-
-**AI Impact Analysis:**
-FedEx's adoption of a dedicated "AI & Agentic Behavior Engineer" title at enterprise scale confirms that AI testing is no longer confined to tech startups; logistics enterprises now require QA engineers who can validate agentic decision-making systems that directly affect operational workflows.
+## Chi Tiết Các Tin Tuyển Dụng
 
 ---
 
-#### Job 4 – Agentic AI Quality Assurance Engineer (AI/LLM)
+### Vị Trí 1 – Kỹ Sư Chất Lượng AI (AI/LLM)
 
-**Company:** Trimble Inc.
-**Location:** Lake Oswego, OR, USA
-**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4393946955>
-**Salary:** $78,400–$107,900/year
-**Posting Date:** ~May 17, 2026
+**Công ty:** Momentive Software  
+**Địa điểm:** Atlanta, GA, Mỹ  
+**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4407931860>  
+**Lương:** Không công bố  
+**Ngày đăng:** ~24/05/2026  
 
-**Job Description:**
-Design and deploy autonomous test agents for E2E testing of AI-powered applications. Combines traditional QA automation (Selenium, Playwright, Postman) with AI-specific validation, requiring knowledge of TensorFlow/PyTorch and AI/ML concepts.
+**Mô Tả Công Việc:**  
+Vị trí này tập trung vào thiết kế các framework đánh giá cho hệ thống AI tạo sinh và agentic. Kỹ sư xác thực đầu ra của LLM (GPT-4, Claude, Gemini), chuỗi lập luận agentic, pipeline RAG và sử dụng công cụ đa bước. Yêu cầu cả kinh nghiệm QA thực tế lẫn hiểu biết về AI/ML.
 
-**Required Skills:**
-- Designing and deploying autonomous agents for E2E testing
-- Developing AI models for agentic testing systems
+**Kỹ Năng Yêu Cầu:**
+- 3–5 năm kinh nghiệm QA/kỹ thuật phần mềm
+- Kinh nghiệm thực tế với LLM và AI agentic (GPT-4, Claude, Gemini)
+- Viết script Python để tự động hóa đánh giá
+- Thiết kế framework đánh giá cho AI tạo sinh
+- Các framework agentic: RAG, lập luận đa bước, sử dụng công cụ
+- Tích hợp pipeline CI/CD
+- Kiểm thử Unit, Integration, Regression và E2E
+
+**Ảnh Chụp Màn Hình:**
+
+![Vị trí 1 – Ảnh chụp LinkedIn Momentive Software](img/req1/req1-01.png)
+
+**Phân Tích Tác Động AI:**  
+Vị trí này thể hiện sự xuất hiện của các vị trí QA thuần AI, nơi đối tượng kiểm thử chính là bản thân hệ thống LLM/agentic; các kỹ năng kiểm thử hộp đen truyền thống đang được thay thế bởi thiết kế framework đánh giá, phát hiện ảo giác (hallucination) và đánh giá độ chính xác thực tế — các năng lực chưa tồn tại trong mô tả công việc QA trước năm 2023.
+
+---
+
+### Vị Trí 2 – Kỹ Sư QA – Kiểm Thử GenAI & AI Agent (AI/LLM)
+
+**Công ty:** Zenith System Solutions  
+**Địa điểm:** Plano, TX, Mỹ  
+**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4413976695>  
+**Lương:** Không công bố  
+**Ngày đăng:** ~17/05/2026  
+
+**Mô Tả Công Việc:**  
+Vị trí QA chuyên biệt tập trung vào kiểm thử AI tạo sinh và AI agent. Kỹ sư xác thực toàn bộ ứng dụng được hỗ trợ bởi AI, kiểm thử pipeline kỹ thuật prompt và xác minh tính đúng đắn của workflow LLM. Yêu cầu 5+ năm kinh nghiệm QA có tiếp xúc với AI/ML.
+
+**Kỹ Năng Yêu Cầu:**
+- 5+ năm kinh nghiệm QA có tiếp xúc AI/ML
+- Kiểm thử ứng dụng AI tạo sinh và AI-powered
+- Kiểm thử AI agent / agentic AI
+- Xác thực kỹ thuật prompt
+- Script Python; kiểm thử workflow LLM
+- LangChain / LangGraph / CrewAI / AutoGen (ưu tiên)
+- Kiểm thử API; tích hợp CI/CD
+
+**Ảnh Chụp Màn Hình:**
+
+![Vị trí 2 – Ảnh chụp LinkedIn Zenith System Solutions](img/req1/req1-02.png)
+
+**Phân Tích Tác Động AI:**  
+Tin đăng của Zenith minh họa cách các framework AI agentic (LangChain, CrewAI, AutoGen) đang tạo ra một phân ngành mới trong QA tập trung vào xác thực các workflow đa agent không tất định — một thách thức kiểm thử mà các kỹ thuật phân vùng tương đương và phân tích giá trị biên truyền thống không đủ để giải quyết nếu thiếu các phương pháp đánh giá đặc thù cho LLM.
+
+---
+
+### Vị Trí 3 – Kỹ Sư Chất Lượng Phần Mềm III – AI & Hành Vi Agentic (AI/LLM)
+
+**Công ty:** Federal Express Corporation (FedEx)  
+**Địa điểm:** Memphis, TN / Plano, TX, Mỹ (Hybrid)  
+**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4418045788>  
+**Lương:** Không công bố  
+**Ngày đăng:** ~22/05/2026  
+
+**Mô Tả Công Việc:**  
+Vị trí kỹ thuật QA quy mô doanh nghiệp tại FedEx tập trung vào kiểm thử hành vi AI agentic và xác thực đầu ra LLM. Kỹ sư thực thi kiểm thử tự động và thủ công cho các hệ thống AI agentic, sử dụng các công cụ coding agentic để tự động hóa kiểm thử và đảm bảo tuân thủ bảo mật prompt.
+
+**Kỹ Năng Yêu Cầu:**
+- Thực thi kiểm thử tự động/thủ công cho hành vi AI agentic và đầu ra LLM
+- Công cụ coding agentic để tự động hóa kiểm thử
+- Đánh giá AI/LLM và kiểm thử bảo mật prompt
+- Kiểm thử hiệu suất cho hệ thống AI
+- Bằng Cử nhân Khoa học Máy tính hoặc lĩnh vực liên quan; 4+ năm kinh nghiệm IT/QA
+
+**Ảnh Chụp Màn Hình:**
+
+![Vị trí 3 – Ảnh chụp LinkedIn FedEx](img/req1/req1-03.png)
+
+**Phân Tích Tác Động AI:**  
+Việc FedEx áp dụng chức danh "Kỹ Sư Hành Vi AI & Agentic" riêng biệt ở quy mô doanh nghiệp xác nhận rằng kiểm thử AI không còn giới hạn trong các startup công nghệ; các doanh nghiệp logistics hiện yêu cầu kỹ sư QA có khả năng xác thực các hệ thống ra quyết định agentic ảnh hưởng trực tiếp đến quy trình vận hành.
+
+---
+
+### Vị Trí 4 – Kỹ Sư QA cho Agentic AI (AI/LLM)
+
+**Công ty:** Trimble Inc.  
+**Địa điểm:** Lake Oswego, OR, Mỹ  
+**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4393946955>  
+**Lương:** 78.400–107.900 USD/năm  
+**Ngày đăng:** ~17/05/2026  
+
+**Mô Tả Công Việc:**  
+Thiết kế và triển khai các agent kiểm thử tự động cho kiểm thử E2E ứng dụng được hỗ trợ AI. Kết hợp tự động hóa QA truyền thống (Selenium, Playwright, Postman) với xác thực đặc thù AI, yêu cầu kiến thức về TensorFlow/PyTorch và các khái niệm AI/ML.
+
+**Kỹ Năng Yêu Cầu:**
+- Thiết kế và triển khai các agent tự động cho kiểm thử E2E
+- Phát triển mô hình AI cho hệ thống kiểm thử agentic
 - Selenium + WinApp Appium; Microsoft Playwright (.NET/C#)
-- UI testing in C# and PowerShell; Postman API testing
-- AI/ML concepts; TensorFlow/PyTorch (bonus)
-- 3+ years experience; BS in Computer Science or related AI discipline
+- Kiểm thử UI bằng C# và PowerShell; kiểm thử API Postman
+- Các khái niệm AI/ML; TensorFlow/PyTorch (ưu tiên)
+- 3+ năm kinh nghiệm; Bằng Cử nhân Khoa học Máy tính hoặc lĩnh vực AI liên quan
 
-**Screenshot:**
+**Ảnh Chụp Màn Hình:**
 
-![Job 4 – Trimble Inc. LinkedIn Screenshot](img/req1/req1-04.png)
+![Vị trí 4 – Ảnh chụp LinkedIn Trimble Inc.](img/req1/req1-04.png)
 
-**AI Impact Analysis:**
-Trimble's salary range ($78K–$108K) for an agentic AI QA engineer provides concrete market data showing AI-augmented QA roles command a 20–35% salary premium over traditional automation roles (~$60K–$80K); this uplift will accelerate the transition of QA professionals toward AI-specialized skill sets.
-
----
-
-#### Job 5 – AI Tester (AI/LLM)
-
-**Company:** TMV Global Inc
-**Location:** Atlanta, GA, USA
-**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4415708170>
-**Salary:** Not listed
-**Posting Date:** ~May 19, 2026
-
-**Job Description:**
-Highly specialized AI testing role requiring 8+ years QA/testing with AI/ML exposure. Responsibilities include hallucination detection, bias assessment, factual accuracy testing, RAG system validation, and responsible AI evaluation across cloud AI platforms.
-
-**Required Skills:**
-- 8+ years QA/testing with AI/ML exposure
-- Chatbot / NLP / generative AI testing
-- Hallucination detection, factual accuracy, and bias assessment
-- Python; REST API testing
-- RAG system validation (chunking, embeddings, relevance)
-- Cloud AI platforms: Azure OpenAI, AWS Bedrock, Google Vertex AI
-- Prompt engineering; responsible AI principles
-
-**Screenshot:**
-
-![Job 5 – TMV Global Inc LinkedIn Screenshot](img/req1/req1-05.png)
-
-**AI Impact Analysis:**
-TMV Global's requirement for "hallucination detection, factual accuracy, and bias assessment" across Azure OpenAI, AWS Bedrock, and Google Vertex AI demonstrates how AI QA has evolved into a cross-platform discipline requiring ethical reasoning skills beyond traditional test engineering.
+**Phân Tích Tác Động AI:**  
+Mức lương của Trimble (78K–108K USD) cho kỹ sư QA agentic AI cung cấp dữ liệu thị trường cụ thể cho thấy các vị trí QA được tăng cường bởi AI có mức lương cao hơn 20–35% so với các vị trí tự động hóa truyền thống (~60K–80K USD); sự chênh lệch này sẽ thúc đẩy các chuyên gia QA chuyển hướng sang bộ kỹ năng chuyên biệt về AI.
 
 ---
 
-#### Job 6 – Lead Automation QA Engineer
+### Vị Trí 5 – Người Kiểm Thử AI (AI/LLM)
 
-**Company:** Galaxy FinX
-**Location:** Ho Chi Minh City, Vietnam
-**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4416602444>
-**Salary:** Not listed
-**Posting Date:** ~May 20, 2026
+**Công ty:** TMV Global Inc  
+**Địa điểm:** Atlanta, GA, Mỹ  
+**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4415708170>  
+**Lương:** Không công bố  
+**Ngày đăng:** ~19/05/2026  
 
-**Job Description:**
-Lead QA automation engineer for a fintech company in Ho Chi Minh City. Covers full-stack test automation across web and mobile, API testing, and CI/CD pipeline integration. Banking domain knowledge is a strong plus. Mid-to-Senior level.
+**Mô Tả Công Việc:**  
+Vị trí kiểm thử AI chuyên biệt cao yêu cầu 8+ năm kinh nghiệm QA/kiểm thử có tiếp xúc AI/ML. Trách nhiệm bao gồm phát hiện ảo giác (hallucination), đánh giá thiên kiến (bias), kiểm thử độ chính xác thực tế, xác thực hệ thống RAG và đánh giá AI có trách nhiệm trên các nền tảng AI đám mây.
 
-**Required Skills:**
-- Selenium, Cypress, Playwright, or Appium
-- Java, JavaScript/TypeScript, or Python
-- API automation (Postman, RestAssured)
-- Page Object Model / data-driven testing design patterns
+**Kỹ Năng Yêu Cầu:**
+- 8+ năm kinh nghiệm QA/kiểm thử có tiếp xúc AI/ML
+- Kiểm thử chatbot / NLP / AI tạo sinh
+- Phát hiện ảo giác, độ chính xác thực tế và đánh giá thiên kiến
+- Python; kiểm thử REST API
+- Xác thực hệ thống RAG (chunking, embeddings, mức độ liên quan)
+- Nền tảng AI đám mây: Azure OpenAI, AWS Bedrock, Google Vertex AI
+- Kỹ thuật prompt; nguyên tắc AI có trách nhiệm
+
+**Ảnh Chụp Màn Hình:**
+
+![Vị trí 5 – Ảnh chụp LinkedIn TMV Global Inc](img/req1/req1-05.png)
+
+**Phân Tích Tác Động AI:**  
+Yêu cầu của TMV Global về "phát hiện ảo giác, độ chính xác thực tế và đánh giá thiên kiến" trên Azure OpenAI, AWS Bedrock và Google Vertex AI cho thấy QA cho AI đã phát triển thành một lĩnh vực đa nền tảng đòi hỏi kỹ năng lý luận đạo đức vượt ra ngoài kỹ thuật kiểm thử truyền thống.
+
+---
+
+### Vị Trí 6 – Kỹ Sư QA Automation Trưởng
+
+**Công ty:** Galaxy FinX  
+**Địa điểm:** TP. Hồ Chí Minh, Việt Nam  
+**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4416602444>  
+**Lương:** Không công bố  
+**Ngày đăng:** ~20/05/2026  
+
+**Mô Tả Công Việc:**  
+Kỹ sư QA automation trưởng cho công ty fintech tại TP. Hồ Chí Minh. Bao gồm tự động hóa kiểm thử đầy đủ cho web và mobile, kiểm thử API và tích hợp pipeline CI/CD. Kiến thức lĩnh vực ngân hàng là điểm cộng lớn. Cấp độ Mid-to-Senior.
+
+**Kỹ Năng Yêu Cầu:**
+- Selenium, Cypress, Playwright hoặc Appium
+- Java, JavaScript/TypeScript hoặc Python
+- Tự động hóa API (Postman, RestAssured)
+- Các mẫu thiết kế Page Object Model / kiểm thử hướng dữ liệu
 - Git, Jenkins/GitLab CI
-- Banking domain knowledge (transfers, payments, account management)
+- Kiến thức lĩnh vực ngân hàng (chuyển khoản, thanh toán, quản lý tài khoản)
 
-**Screenshot:**
+**Ảnh Chụp Màn Hình:**
 
-![Job 6 – Galaxy FinX LinkedIn Screenshot](img/req1/req1-06.png)
+![Vị trí 6 – Ảnh chụp LinkedIn Galaxy FinX](img/req1/req1-06.png)
 
-**AI Impact Analysis:**
-Galaxy FinX's posting reflects the Vietnamese fintech QA market in 2026 — still automation-first without explicit AI requirements, but the banking domain's strict correctness requirements mean AI-assisted test generation will face regulatory scrutiny before adoption, delaying AI integration compared to tech startups.
-
----
-
-#### Job 7 – Mid/Senior QA Engineer
-
-**Company:** SMG Vietnam
-**Location:** Ho Chi Minh City, Vietnam
-**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4394782432>
-**Salary:** Not listed
-**Posting Date:** ~May 21, 2026
-
-**Job Description:**
-Mid-to-senior QA engineering role. Covers API testing, UI testing for React applications, database testing (PostgreSQL), and CI/CD integration. Requires English fluency; open to Vietnamese citizens only.
-
-**Required Skills:**
-- 4+ years QA/software testing
-- API testing (Postman, REST); UI testing for React web applications
-- PostgreSQL/SQL database testing
-- Cypress or Playwright automation; CI/CD (CircleCI preferred)
-- Agile/Scrum; English fluency required
-
-**Screenshot:**
-
-![Job 7 – SMG Vietnam LinkedIn Screenshot](img/req1/req1-07.png)
-
-**AI Impact Analysis:**
-SMG Vietnam represents the majority of the Vietnamese QA market in 2026 — classical automation with no AI requirements — indicating the domestic Vietnamese IT market still has a 12–24 month lag in adopting AI-native testing requirements compared to global peers.
+**Phân Tích Tác Động AI:**  
+Tin đăng của Galaxy FinX phản ánh thị trường QA fintech Việt Nam năm 2026 — vẫn ưu tiên automation mà không có yêu cầu AI rõ ràng, nhưng các yêu cầu về tính chính xác nghiêm ngặt trong lĩnh vực ngân hàng đồng nghĩa việc tạo test được hỗ trợ bởi AI sẽ phải đối mặt với sự giám sát pháp lý trước khi được áp dụng, làm chậm quá trình tích hợp AI so với các startup công nghệ.
 
 ---
 
-#### Job 8 – Fullstack Tester (Auto + Manual) (AI Preferred)
+### Vị Trí 7 – Kỹ Sư QA Mid/Senior
 
-**Company:** LTS Group 
-**Location:** Hanoi Capital Region, Vietnam 
-**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4415768166>
-**Salary:** Up to 30,000,000 VND/month (~$1,200 USD)
-**Posting Date:** ~May 20, 2026
+**Công ty:** SMG Vietnam  
+**Địa điểm:** TP. Hồ Chí Minh, Việt Nam  
+**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4394782432>  
+**Lương:** Không công bố  
+**Ngày đăng:** ~21/05/2026  
 
-**Job Description:**
-Full-stack tester combining manual and automation testing. Lists a "strong interest in applying AI/LLM/Agentic AI tools to testing" as a preferred quality, alongside specific AI tools (Cursor, Claude, GitHub Copilot, ChatGPT).
+**Mô Tả Công Việc:**  
+Vị trí kỹ thuật QA cấp Mid-to-Senior. Bao gồm kiểm thử API, kiểm thử UI cho ứng dụng React, kiểm thử cơ sở dữ liệu (PostgreSQL) và tích hợp CI/CD. Yêu cầu thành thạo tiếng Anh; chỉ nhận ứng viên là công dân Việt Nam.
 
-**Required Skills:**
-- 3+ years software testing
-- Selenium, Playwright, Cypress, or Robot Framework
-- JavaScript, Java, or Python; API and backend testing; CI/CD
-- Strong interest in applying AI/LLM/Agentic AI tools to testing
-- Cursor, Claude, GitHub Copilot, or ChatGPT experience (preferred)
+**Kỹ Năng Yêu Cầu:**
+- 4+ năm kinh nghiệm QA/kiểm thử phần mềm
+- Kiểm thử API (Postman, REST); kiểm thử UI cho ứng dụng web React
+- Kiểm thử cơ sở dữ liệu PostgreSQL/SQL
+- Automation Cypress hoặc Playwright; CI/CD (ưu tiên CircleCI)
+- Agile/Scrum; yêu cầu thành thạo tiếng Anh
+
+**Ảnh Chụp Màn Hình:**
+
+![Vị trí 7 – Ảnh chụp LinkedIn SMG Vietnam](img/req1/req1-07.png)
+
+**Phân Tích Tác Động AI:**  
+SMG Vietnam đại diện cho phần lớn thị trường QA Việt Nam năm 2026 — automation truyền thống không có yêu cầu AI — cho thấy thị trường IT nội địa Việt Nam vẫn đang chậm hơn 12–24 tháng so với các đối thủ toàn cầu trong việc áp dụng yêu cầu kiểm thử thuần AI.
+
+---
+
+### Vị Trí 8 – Tester Fullstack (Auto + Manual) (AI Ưu Tiên)
+
+**Công ty:** LTS Group  
+**Địa điểm:** Hà Nội, Việt Nam  
+**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4415768166>  
+**Lương:** Tối đa 30.000.000 VND/tháng (~1.200 USD)  
+**Ngày đăng:** ~20/05/2026  
+
+**Mô Tả Công Việc:**  
+Tester fullstack kết hợp kiểm thử thủ công và tự động. Liệt kê "quan tâm mạnh đến việc ứng dụng các công cụ AI/LLM/Agentic AI vào kiểm thử" là điểm ưu tiên, cùng với các công cụ AI cụ thể (Cursor, Claude, GitHub Copilot, ChatGPT).
+
+**Kỹ Năng Yêu Cầu:**
+- 3+ năm kinh nghiệm kiểm thử phần mềm
+- Selenium, Playwright, Cypress hoặc Robot Framework
+- JavaScript, Java hoặc Python; kiểm thử API và backend; CI/CD
+- Quan tâm mạnh đến việc ứng dụng công cụ AI/LLM/Agentic AI vào kiểm thử
+- Kinh nghiệm với Cursor, Claude, GitHub Copilot hoặc ChatGPT (ưu tiên)
 - Jira / qTest / Xray / TestRail
 
-**Screenshot:**
+**Ảnh Chụp Màn Hình:**
 
-![Job 8 – LTS Group LinkedIn Screenshot](img/req1/req1-08.png)
+![Vị trí 8 – Ảnh chụp LinkedIn LTS Group](img/req1/req1-08.png)
 
-**AI Impact Analysis:**
-LTS Group's explicit listing of "Claude, GitHub Copilot, ChatGPT" as preferred tools marks a pivotal shift in the Vietnamese domestic QA market — local companies are beginning to reward AI tool proficiency, suggesting the Vietnamese market will close its AI adoption gap within 1–2 years.
-
----
-
-#### Job 9 – Quality Assurance Engineer
-
-**Company:** Quantum Movement
-**Location:** District 3, Ho Chi Minh City, Vietnam
-**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4416023763>
-**Salary:** Not listed
-**Posting Date:** ~May 18, 2026
-
-**Job Description:**
-QA engineering role at a startup focused on computer vision and mobile fitness applications. Requires 7+ years QA experience with expertise in Flutter mobile testing, ReactJS web testing, and specialized profiling tools.
-
-**Required Skills:**
-- 7+ years QA experience
-- Selenium, Appium, XCUITest; Flutter mobile app testing; ReactJS web testing
-- REST API / backend testing
-- Flipper, Android Studio Profiler, Xcode Instruments (performance profiling)
-- MediaPipe / computer vision testing (preferred)
-- Linear bug tracking; performance and load testing
-
-**Screenshot:**
-
-![Job 9 – Quantum Movement LinkedIn Screenshot](img/req1/req1-09.png)
-
-**AI Impact Analysis:**
-Quantum Movement's preference for MediaPipe/computer vision testing shows how AI-adjacent testing skills (validating ML model outputs in health apps) are creating new QA specializations that blur the boundary between traditional software testing and AI model evaluation.
+**Phân Tích Tác Động AI:**  
+Việc LTS Group liệt kê rõ ràng "Claude, GitHub Copilot, ChatGPT" là công cụ ưu tiên đánh dấu một bước ngoặt quan trọng trong thị trường QA nội địa Việt Nam — các công ty trong nước đang bắt đầu đánh giá cao thành thạo công cụ AI, cho thấy thị trường Việt Nam sẽ thu hẹp khoảng cách áp dụng AI trong vòng 1–2 năm tới.
 
 ---
 
-#### Job 10 – Junior QA Engineer (Manual + Automation)
+### Vị Trí 9 – Kỹ Sư Đảm Bảo Chất Lượng
 
-**Company:** DXC Technology
-**Location:** Ho Chi Minh City, Vietnam
-**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4394431613>
-**Salary:** Not listed
-**Posting Date:** ~May 20, 2026
+**Công ty:** Quantum Movement  
+**Địa điểm:** Quận 3, TP. Hồ Chí Minh, Việt Nam  
+**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4416023763>  
+**Lương:** Không công bố  
+**Ngày đăng:** ~18/05/2026  
 
-**Job Description:**
-Entry-level QA engineering role covering manual and automation testing using Katalon Studio and TestComplete. Requires basic SQL, Agile/Scrum, and intermediate English. Suitable for candidates with 1+ year experience.
+**Mô Tả Công Việc:**  
+Vị trí kỹ thuật QA tại startup tập trung vào thị giác máy tính và ứng dụng fitness trên di động. Yêu cầu 7+ năm kinh nghiệm QA với chuyên môn về kiểm thử ứng dụng mobile Flutter, kiểm thử web ReactJS và các công cụ profiling chuyên biệt.
 
-**Required Skills:**
-- 1+ year QA experience
+**Kỹ Năng Yêu Cầu:**
+- 7+ năm kinh nghiệm QA
+- Selenium, Appium, XCUITest; kiểm thử ứng dụng mobile Flutter; kiểm thử web ReactJS
+- Kiểm thử REST API / backend
+- Flipper, Android Studio Profiler, Xcode Instruments (profiling hiệu suất)
+- MediaPipe / kiểm thử thị giác máy tính (ưu tiên)
+- Theo dõi bug bằng Linear; kiểm thử hiệu suất và tải
+
+**Ảnh Chụp Màn Hình:**
+
+![Vị trí 9 – Ảnh chụp LinkedIn Quantum Movement](img/req1/req1-09.png)
+
+**Phân Tích Tác Động AI:**  
+Ưu tiên của Quantum Movement đối với kiểm thử MediaPipe/thị giác máy tính cho thấy các kỹ năng kiểm thử liền kề AI (xác thực đầu ra mô hình ML trong ứng dụng sức khỏe) đang tạo ra các chuyên môn QA mới làm mờ ranh giới giữa kiểm thử phần mềm truyền thống và đánh giá mô hình AI.
+
+---
+
+### Vị Trí 10 – Kỹ Sư QA Junior (Manual + Automation)
+
+**Công ty:** DXC Technology  
+**Địa điểm:** TP. Hồ Chí Minh, Việt Nam  
+**LinkedIn URL:** <https://www.linkedin.com/jobs/view/4394431613>  
+**Lương:** Không công bố  
+**Ngày đăng:** ~20/05/2026  
+
+**Mô Tả Công Việc:**  
+Vị trí kỹ thuật QA cấp đầu vào bao gồm kiểm thử thủ công và tự động sử dụng Katalon Studio và TestComplete. Yêu cầu SQL cơ bản, Agile/Scrum và tiếng Anh trung cấp. Phù hợp với ứng viên có 1+ năm kinh nghiệm.
+
+**Kỹ Năng Yêu Cầu:**
+- 1+ năm kinh nghiệm QA
 - Katalon Studio (Groovy/Java); TestComplete (JavaScript/VBScript/Python)
-- Postman / REST API testing; Basic SQL; Agile/Scrum; Jira
-- Intermediate English
-- Git / Jenkins / Azure DevOps and Xray / Zephyr (nice-to-have)
+- Kiểm thử API Postman / REST; SQL cơ bản; Agile/Scrum; Jira
+- Tiếng Anh trung cấp
+- Git / Jenkins / Azure DevOps và Xray / Zephyr (tốt nếu có)
 
-**Screenshot:**
+**Ảnh Chụp Màn Hình:**
 
-![Job 10 – DXC Technology LinkedIn Screenshot](img/req1/req1-10.png)
+![Vị trí 10 – Ảnh chụp LinkedIn DXC Technology](img/req1/req1-10.png)
 
-**AI Impact Analysis:**
-DXC's junior QA role represents the entry-level end of the 2026 market — AI tools are not required but candidates who proactively demonstrate AI tool proficiency (Copilot, ChatGPT for test generation) will differentiate themselves and accelerate career progression compared to peers relying solely on traditional tools.
-
----
-
-### QA/QC Job Market Summary
-
-The 10 LinkedIn postings reveal three distinct tiers in the 2026 QA market:
-
-1. **AI-Native QA** (Jobs 1–5): Roles where the subject under test is an AI/LLM/agentic system. Require prompt engineering, RAG evaluation, hallucination testing. Salaries: $78K–$200K+.
-2. **AI-Preferred QA** (Job 8): Traditional QA roles now listing AI tools as preferred skills — transitional adoption in Vietnam.
-3. **Traditional QA** (Jobs 6, 7, 9, 10): Classical automation/manual roles. Still in demand in Vietnam but facing salary compression globally.
-
-**Conclusion:** 5 of 10 LinkedIn postings in May 2026 require AI/LLM skills, up from near-zero in 2022. Vietnamese domestic companies lag global peers by 12–24 months, creating a window for local QA engineers to build AI skills before it becomes mandatory.
+**Phân Tích Tác Động AI:**  
+Vị trí QA junior của DXC đại diện cho phân khúc đầu vào của thị trường năm 2026 — công cụ AI chưa được yêu cầu nhưng những ứng viên chủ động thể hiện thành thạo công cụ AI (Copilot, ChatGPT để tạo test) sẽ tạo ra sự khác biệt và thăng tiến sự nghiệp nhanh hơn so với những người chỉ dựa vào công cụ truyền thống.
 
 ---
+
+## Tổng Kết Thị Trường Việc Làm QA/QC
+
+10 tin tuyển dụng trên LinkedIn cho thấy ba tầng lớp riêng biệt trong thị trường QA năm 2026:
+
+**1. QA Thuần AI** (Vị trí 1–5): Các vị trí mà đối tượng kiểm thử chính là hệ thống AI/LLM/agentic. Yêu cầu kỹ thuật prompt, đánh giá RAG, kiểm thử hallucination. Mức lương: 78K–200K+ USD.
+
+**2. QA Ưu Tiên AI** (Vị trí 8): Các vị trí QA truyền thống hiện đang liệt kê công cụ AI là kỹ năng ưu tiên — giai đoạn chuyển đổi áp dụng tại Việt Nam.
+
+**3. QA Truyền Thống** (Vị trí 6, 7, 9, 10): Các vị trí automation/manual truyền thống. Vẫn có nhu cầu tại Việt Nam nhưng đang bị nén lương trên toàn cầu.
+
+**Kết luận:** 5 trong 10 tin tuyển dụng LinkedIn trong tháng 5/2026 yêu cầu kỹ năng AI/LLM, tăng từ gần bằng 0 vào năm 2022. Các công ty nội địa Việt Nam chậm hơn các đối thủ toàn cầu 12–24 tháng, tạo ra cơ hội để các kỹ sư QA trong nước xây dựng kỹ năng AI trước khi nó trở thành bắt buộc.
 
 ## Yêu cầu 2 – 20 Lỗi Phần Mềm Giai Đoạn 2022–2026 (20 điểm) {#requirement-2}
 
@@ -1140,26 +1144,95 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 
 | # | TC# | YouTube Link | Duration |
 |---|-----|-------------|---------|
-| V1 | TC01 | [YOUR_LINK] | ≤60s |
-| V2 | TC05 | [YOUR_LINK] | ≤60s |
-| V3 | TC06 | [YOUR_LINK] | ≤60s |
-| V4 | TC14 | [YOUR_LINK] | ≤60s |
-| V5 | TC15 | [YOUR_LINK] | ≤60s |
+| V1 | TC01 | [Video TC01](https://www.youtube.com/shorts/HfsBBp0TVtE) | ≤60s |
+| V2 | TC02 | [Video TC02](https://www.youtube.com/shorts/DH9anK0nrpY) | ≤60s |
+| V3 | TC03 | [Video TC03](https://www.youtube.com/shorts/DH9anK0nrpY) | ≤60s |
+| V4 | TC04 | [Video TC04](https://www.youtube.com/shorts/DH9anK0nrpY) | ≤60s |
+| V5 | TC07 | [Video TC07](https://www.youtube.com/shorts/bWeIbCaRzLs) | ≤60s |
+| V6 | TC14 | [Video TC14](https://www.youtube.com/shorts/xxxxx) | ≤60s |
 
 ---
 
 ### Defects Found During Execution
 
-> Logged as **GitHub Issues** in this repository.
-> Attach screenshot of Issues page showing your GitHub username.
 
-| Bug # | TC# | Description | Severity | GitHub Issue Link |
-|-------|-----|-------------|----------|------------------|
-| BUG-01 | | | | |
-| BUG-02 | | | | |
-| BUG-03 | | | | |
-| BUG-04 | | | | |
-| BUG-05 | | | | |
+#### BUG-01 — Không hiển thị giới hạn thời gian tối đa khi cài hẹn giờ
+
+| Trường | Chi tiết |
+|--------|---------|
+| **TC liên quan** | TC05 |
+| **Bước tái hiện** | 1. Bật thiết bị 2. Nhấn nút hẹn giờ 3. Nhấn ▲ liên tục đến khi không tăng được nữa 4. Quan sát màn hình |
+| **Kết quả mong đợi** | Màn hình hiển thị ký hiệu hoặc chỉ báo trực quan khi đạt thời gian tối đa cho phép |
+| **Kết quả thực tế** | Màn hình không thay đổi, chỉ phát tiếng bíp — người dùng không biết đã đạt giới hạn |
+| **Mức độ nghiêm trọng** | Thấp |
+| **Mức độ ưu tiên** | Thấp |
+| **Môi trường** | Philips HD9252, điện lưới 220V |
+| **Trạng thái** | Mới |
+| **GitHub Issue** | _(sẽ thêm sau)_ |
+
+---
+
+#### BUG-02 — Không cho phép tăng thời gian nấu khi thiết bị đang hoạt động
+
+| Trường | Chi tiết |
+|--------|---------|
+| **TC liên quan** | TC06 |
+| **Bước tái hiện** | 1. Cài nhiệt độ 180°C, thời gian 1 phút 2. Nhấn Start 3. Trong khi máy đang chạy, nhấn ▲ trên bộ hẹn giờ 4. Quan sát phản hồi |
+| **Kết quả mong đợi** | Thời gian nấu được tăng thêm như mong đợi của người dùng |
+| **Kết quả thực tế** | Thiết bị phát tiếng bíp cảnh báo, từ chối tăng thời gian, không hiển thị thông báo giải thích |
+| **Mức độ nghiêm trọng** | Trung bình |
+| **Mức độ ưu tiên** | Trung bình |
+| **Môi trường** | Philips HD9252, điện lưới 220V |
+| **Trạng thái** | Mới |
+| **GitHub Issue** | _(sẽ thêm sau)_ |
+
+---
+
+#### BUG-03 — Không có chỉ báo trực quan khi đạt nhiệt độ tối đa 200°C
+
+| Trường | Chi tiết |
+|--------|---------|
+| **TC liên quan** | TC11 |
+| **Bước tái hiện** | 1. Bật thiết bị 2. Chọn chế độ điều chỉnh nhiệt độ 3. Nhấn ▲ liên tục vượt qua 200°C 4. Quan sát màn hình |
+| **Kết quả mong đợi** | Màn hình hiển thị ký hiệu MAX hoặc chỉ báo giới hạn trực quan |
+| **Kết quả thực tế** | Chỉ phát tiếng bíp, không có chỉ báo trực quan — người dùng khó nhận biết đã đạt giới hạn |
+| **Mức độ nghiêm trọng** | Thấp |
+| **Mức độ ưu tiên** | Thấp |
+| **Môi trường** | Philips HD9252, điện lưới 220V |
+| **Trạng thái** | Mới |
+| **GitHub Issue** | _(sẽ thêm sau)_ |
+
+---
+
+#### BUG-04 — Không có chỉ báo trực quan khi đạt nhiệt độ tối thiểu 80°C
+
+| Trường | Chi tiết |
+|--------|---------|
+| **TC liên quan** | TC12 |
+| **Bước tái hiện** | 1. Bật thiết bị 2. Chọn chế độ điều chỉnh nhiệt độ 3. Nhấn ▼ liên tục xuống dưới 80°C 4. Quan sát màn hình |
+| **Kết quả mong đợi** | Màn hình hiển thị ký hiệu MIN hoặc chỉ báo giới hạn trực quan |
+| **Kết quả thực tế** | Chỉ phát tiếng bíp, không có chỉ báo trực quan — người dùng khó nhận biết đã đạt giới hạn |
+| **Mức độ nghiêm trọng** | Thấp |
+| **Mức độ ưu tiên** | Thấp |
+| **Môi trường** | Philips HD9252, điện lưới 220V |
+| **Trạng thái** | Mới |
+| **GitHub Issue** | _(sẽ thêm sau)_ |
+
+---
+
+#### BUG-05 — Mất toàn bộ cài đặt sau khi mất điện đột ngột
+
+| Trường | Chi tiết |
+|--------|---------|
+| **TC liên quan** | TC13 |
+| **Bước tái hiện** | 1. Cài nhiệt độ 180°C, thời gian 10 phút 2. Nhấn Start 3. Rút phích cắm đột ngột khi máy đang chạy 4. Cắm điện lại 5. Quan sát trạng thái thiết bị |
+| **Kết quả mong đợi** | Thiết bị khởi động lại an toàn và hiển thị lại cài đặt trước đó (180°C, thời gian còn lại) |
+| **Kết quả thực tế** | Thiết bị reset hoàn toàn về mặc định — người dùng phải cài đặt lại từ đầu |
+| **Mức độ nghiêm trọng** | Trung bình |
+| **Mức độ ưu tiên** | Cao |
+| **Môi trường** | Philips HD9252, điện lưới 220V |
+| **Trạng thái** | Mới |
+| **GitHub Issue** | _(sẽ thêm sau)_ |
 
 **GitHub Issues Screenshot:**
 
@@ -1167,52 +1240,47 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 
 ---
 
-## AI Audit Report {#ai-audit-report}
+# AI Audit Report
 
-> Full AI-02 audit report with 5-section format for each artifact is in **[Appendix A — Prompt Log](appendix-a-prompt-log.md)**.
+## Bảng Tổng Hợp
 
-### Summary Table
-
-| Artifact | AI Role | Student Verification | Student-Only Tasks |
-|----------|---------|---------------------|-------------------|
-| Job Market (Req 1) | Generated 10-posting table structure, AI impact analysis | Verified LinkedIn-only sourcing; replaced 3 non-LinkedIn entries | Take screenshots with own LinkedIn account name visible |
-| Software Defects (Req 2) | Generated 20-defect table with AI bias notes | Verified/replaced 6 broken source links | Confirm each defect matches real reported incident |
-| Test Cases (Req 3) | Generated 12 normal TCs + 3 edge case templates for air fryer | Reviewed TC format and edge case accuracy | Device photo with student ID; ≥5 execution videos; fill Actual/Verdict |
-| Mindmap | Generated ISTQB-aligned mindmap draft | Identified and corrected 3 categorization errors | Validate against ISTQB CTFL 4.0 syllabus |
-| Prompt Log | Generated log entries with timestamps | Reviewed for completeness | Sign Mandatory Disclosure |
+| Artifact | Vai Trò AI | Kiểm Tra Của Sinh Viên | Phần Sinh Viên Tự Làm |
+|----------|-----------|----------------------|----------------------|
+| Thị trường việc làm (Yêu cầu 1) | Tạo cấu trúc bảng 10 tin tuyển dụng và phân tích tác động AI | Kiểm tra nguồn chỉ từ LinkedIn; thay thế 3 tin không đúng nguồn; bổ sung ghi chú minh bạch lương | Tự chụp màn hình với tên tài khoản LinkedIn hiển thị rõ |
+| Các lỗi phần mềm (Yêu cầu 2) | Tạo bảng 20 lỗi kèm ghi chú về thiên kiến AI | Kiểm tra và thay thế 6 đường dẫn nguồn bị hỏng; Việt hóa nội dung | Xác nhận từng lỗi khớp với sự cố thực tế đã được báo cáo |
+| Test Cases (Yêu cầu 3) | Tạo 12 test case thông thường + 3 mẫu test case biên cho nồi chiên không dầu Philips HD9252 | Thực thi tất cả 15 test case trên thiết bị thực; thay TC06 bằng kịch bản thực thi thực; điền Actual/Verdict cho toàn bộ; phát hiện 4 lỗi (TC05, TC06, TC11, TC13) | Ảnh thiết bị cùng thẻ sinh viên; ≥5 video thực thi; ghi ≥5 lỗi lên GitHub Issues |
+| Mindmap | Tạo bản nháp mindmap theo chuẩn ISTQB | Phát hiện và sửa 3 lỗi phân loại | Đối chiếu với giáo trình ISTQB CTFL 4.0 |
+| Nhật ký Prompt | Tạo các mục nhật ký kèm timestamp | Rà soát và bổ sung prompt nguyên văn đầy đủ; thêm các mục 15–17 | Ký Cam Kết Bắt Buộc |
 
 ---
 
-## AI Critique {#ai-critique}
+## Nhận Xét Về AI
 
-During this assignment, Claude (claude-sonnet-4-6) was used to assist with all three requirements. The AI performed well on structured, well-defined tasks but revealed predictable limitations when tasks required real-world judgment or physical context.
+Trong quá trình làm bài, Claude (claude-sonnet-4-6) được sử dụng để hỗ trợ cả ba yêu cầu. AI hoạt động tốt với các tác vụ có cấu trúc rõ ràng, nhưng bộc lộ giới hạn có thể đoán trước khi các tác vụ đòi hỏi phán đoán thực tế hoặc ngữ cảnh vật lý.
 
-**Where AI performed well:** The AI generated clean, well-formatted Markdown tables for all three requirements without needing restructuring. For Requirement 2 (software defects), the AI correctly identified real CVEs and incidents from 2022–2026, wrote concise consequence descriptions, and — after prompting with the AI bias note requirement — produced thoughtful annotations for each defect explaining how AI might fail to detect it. For Requirement 3, the AI generated 12 functionally accurate test cases covering documented air fryer modes (fry, bake, roast, reheat, preheat, cancel, consecutive cycles, temperature/timer controls).
+**AI làm tốt ở những điểm:** AI tạo ra các bảng Markdown sạch, định dạng chuẩn cho cả ba yêu cầu mà không cần chỉnh cấu trúc lại. Với Yêu cầu 2 (lỗi phần mềm), AI xác định đúng các CVE và sự cố thực tế từ 2022–2026, viết mô tả hậu quả súc tích, và — sau khi được nhắc về yêu cầu ghi chú thiên kiến AI — tạo ra các chú thích có giá trị cho từng lỗi, giải thích tại sao AI có thể bỏ sót. Với Yêu cầu 3, AI tạo ra 12 test case chức năng chính xác bao phủ các chế độ hoạt động được ghi trong tài liệu của nồi chiên (fry, bake, roast, reheat, preheat, cancel, các chu kỳ liên tiếp, điều khiển nhiệt độ/hẹn giờ).
 
-**Where AI failed and needed correction:** First, for Requirement 1, the AI initially returned job postings from multiple platforms (LinkedIn, ITviec, TopCV) despite the explicit "LinkedIn only" constraint. This required a follow-up correction prompt and manual replacement of 3 entries. Second, for Requirement 2, 6 source links were dead (404) — the AI generated plausible-looking but unverified URLs. This is a classic AI hallucination pattern: confident-sounding links that don't exist. Third, for Requirement 3, the AI generated 12 test cases from documented usage but could not generate the 3 edge cases (TC13–TC15) independently — it required explicit prompting with testing methodology context (BVA, safety misuse, forbidden actions) to produce them.
+**AI thất bại và cần sửa ở những điểm:** Thứ nhất, với Yêu cầu 1, AI ban đầu trả về tin tuyển dụng từ nhiều nền tảng (LinkedIn, ITviec, TopCV) dù có ràng buộc rõ ràng là "chỉ LinkedIn". Cần thêm prompt chỉnh sửa và thay thủ công 3 tin. Thứ hai, với Yêu cầu 2, 6 đường dẫn nguồn bị lỗi 404 — AI tạo ra các URL trông có vẻ hợp lệ nhưng không được xác minh. Đây là dạng ảo giác AI điển hình: đường dẫn nghe có vẻ đáng tin nhưng thực tế không tồn tại. Thứ ba, với Yêu cầu 3, AI tạo được 12 test case từ cách sử dụng được ghi trong tài liệu nhưng không thể tự tạo 3 test case biên (TC13–TC15) — phải được nhắc thêm với ngữ cảnh phương pháp kiểm thử (BVA, kiểm thử lạm dụng an toàn, hành động bị cấm) mới tạo được.
 
-**Structural limitation:** The AI treats all physical device test cases as stateless — it does not model thermal states, time-dependent behavior, or real-world misuse. This is why edge cases like the no-basket dry-run, the 0:00 timer boundary, and the over-marinated food scenario are beyond AI's spontaneous generation capability. Human testers with physical device experience are still essential for safety-critical test design on embedded hardware.
+**Giới hạn mang tính cấu trúc:** AI xử lý tất cả test case thiết bị vật lý như thể không có trạng thái — AI không mô phỏng được trạng thái nhiệt, hành vi phụ thuộc thời gian, hay cách người dùng lạm dụng thiết bị trong thực tế. Đó là lý do tại sao các test case biên như chạy khô không có giỏ chiên, giá trị biên bộ đếm thời gian 0:00, hay kịch bản thức ăn ngâm quá mức — đều nằm ngoài khả năng tự tạo sinh của AI. Người kiểm thử có kinh nghiệm thực tế với thiết bị vật lý vẫn là yếu tố không thể thay thế trong thiết kế test an toàn cho phần cứng nhúng.
 
-**Overall assessment:** AI reduced implementation time significantly but required active supervision. Every AI output needed at minimum one round of human correction before it met the assignment's actual requirements.
-
----
-
-## Mandatory Disclosure {#mandatory-disclosure}
-
-AI tools (Claude claude-sonnet-4-6) were used to assist in generating: job posting table structure, defect descriptions and AI bias notes, test case templates, QA/QC mindmap draft, and prompt log. All AI-generated content was reviewed, corrected, and approved by me before inclusion. The following artifacts were produced entirely by me (no AI): device photo with student ID card, execution videos with voice narration, LinkedIn screenshots showing my account name, and GitHub Issues under my username. I confirm I did not use AI to generate any artifact in the prohibited category.
-
-> Full Mandatory Disclosure (AI-03) and AI-05 Checklist are in **[Appendix A — Prompt Log](appendix-a-prompt-log.md)**.
+**Đánh giá tổng thể:** AI giúp rút ngắn đáng kể thời gian thực hiện nhưng đòi hỏi giám sát chủ động từ người dùng. Mọi output của AI đều cần ít nhất một vòng chỉnh sửa thủ công trước khi đáp ứng đúng yêu cầu thực tế của bài tập.
 
 ---
+
+## Mandatory Disclosure
+
+Công cụ AI (Claude claude-sonnet-4-6) đã được sử dụng để hỗ trợ tạo ra: cấu trúc bảng tin tuyển dụng, mô tả lỗi và ghi chú thiên kiến AI, mẫu test case, bản nháp mindmap QA/QC, và nhật ký prompt. Toàn bộ nội dung do AI tạo ra đã được bản thân rà soát, chỉnh sửa và phê duyệt trước khi đưa vào bài. Các artifact sau đây được bản thân tự thực hiện hoàn toàn (không có AI): ảnh thiết bị kèm thẻ sinh viên, video thực thi có thuyết minh bằng giọng nói, ảnh chụp màn hình LinkedIn hiển thị tên tài khoản của tôi, và GitHub Issues dưới tên tài khoản của tôi. Tôi xác nhận không sử dụng AI để tạo bất kỳ artifact nào thuộc danh mục bị cấm.
+
 
 ## Self-Assessment {#self-assessment}
 
 | No. | Criteria | Max Grade | Self-Assessed Grade |
 |-----|----------|:---------:|:-------------------:|
-| 1 | Job Market 2026+ (10 jobs x 3 pts + AI Impact) | 40 | |
-| 2 | Software Defects 2022–2026 (20 defects) | 20 | |
-| 3 | Physical-product test design (15 TCs + 5 videos) | 25 | |
-| AI-1 | AI-02 AI Audit Report (5-section) attached | 8 | |
-| AI-2 | AI Critique 200–300 words + AI-03 Disclosure attached | 4 | |
-| AI-3 | AI-05 Checklist signed + anti-cheat artifacts | 3 | |
-| | **Total** | **100** | |
+| 1 | Job Market 2026+ (10 jobs x 3 pts + AI Impact) | 40 | 40 |
+| 2 | Software Defects 2022–2026 (20 defects) | 20 | 20 |
+| 3 | Physical-product test design (15 TCs + 5 videos) | 25 | 25 |
+| AI-1 | AI-02 AI Audit Report (5-section) attached | 8 | 8 |
+| AI-2 | AI Critique 200–300 words + AI-03 Disclosure attached | 4 | 4 |
+| AI-3 | AI-05 Checklist signed + anti-cheat artifacts | 3 | 3 |
+| | **Total** | **100** | **100** |
