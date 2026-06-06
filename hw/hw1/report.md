@@ -1156,13 +1156,83 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 ### Defects Found During Execution
 
 
-| Bug # | TC# | Description | Severity |
-|-------|-----|-------------|----------|
-| BUG-01 | TC05 | Màn hình không hiển thị thời gian tối đa cho phép khi cài hẹn giờ, khiến người dùng không biết giới hạn trên | Low | 
-| BUG-02 | TC06 | Thiết bị không cho phép tăng thời gian nấu khi đang hoạt động — chỉ phát tiếng bíp cảnh báo mà không có giải thích | Medium |
-| BUG-03 | TC11 | Khi nhiệt độ đạt tối đa 200°C, thiết bị chỉ phát tiếng bíp mà không hiển thị chỉ báo trực quan, gây khó hiểu cho người dùng | Low |
-| BUG-04 | TC12 | Khi nhiệt độ đạt tối thiểu 80°C, thiết bị chỉ phát tiếng bíp mà không hiển thị chỉ báo trực quan, gây khó hiểu cho người dùng | Low | 
-| BUG-05 | TC13 | Sau khi mất điện đột ngột và cắm lại, thiết bị không khôi phục cài đặt (nhiệt độ, thời gian) trước đó — người dùng phải cài đặt lại từ đầu | Medium |
+#### BUG-01 — Không hiển thị giới hạn thời gian tối đa khi cài hẹn giờ
+
+| Trường | Chi tiết |
+|--------|---------|
+| **TC liên quan** | TC05 |
+| **Bước tái hiện** | 1. Bật thiết bị 2. Nhấn nút hẹn giờ 3. Nhấn ▲ liên tục đến khi không tăng được nữa 4. Quan sát màn hình |
+| **Kết quả mong đợi** | Màn hình hiển thị ký hiệu hoặc chỉ báo trực quan khi đạt thời gian tối đa cho phép |
+| **Kết quả thực tế** | Màn hình không thay đổi, chỉ phát tiếng bíp — người dùng không biết đã đạt giới hạn |
+| **Mức độ nghiêm trọng** | Thấp |
+| **Mức độ ưu tiên** | Thấp |
+| **Môi trường** | Philips HD9252, điện lưới 220V |
+| **Trạng thái** | Mới |
+| **GitHub Issue** | _(sẽ thêm sau)_ |
+
+---
+
+#### BUG-02 — Không cho phép tăng thời gian nấu khi thiết bị đang hoạt động
+
+| Trường | Chi tiết |
+|--------|---------|
+| **TC liên quan** | TC06 |
+| **Bước tái hiện** | 1. Cài nhiệt độ 180°C, thời gian 1 phút 2. Nhấn Start 3. Trong khi máy đang chạy, nhấn ▲ trên bộ hẹn giờ 4. Quan sát phản hồi |
+| **Kết quả mong đợi** | Thời gian nấu được tăng thêm như mong đợi của người dùng |
+| **Kết quả thực tế** | Thiết bị phát tiếng bíp cảnh báo, từ chối tăng thời gian, không hiển thị thông báo giải thích |
+| **Mức độ nghiêm trọng** | Trung bình |
+| **Mức độ ưu tiên** | Trung bình |
+| **Môi trường** | Philips HD9252, điện lưới 220V |
+| **Trạng thái** | Mới |
+| **GitHub Issue** | _(sẽ thêm sau)_ |
+
+---
+
+#### BUG-03 — Không có chỉ báo trực quan khi đạt nhiệt độ tối đa 200°C
+
+| Trường | Chi tiết |
+|--------|---------|
+| **TC liên quan** | TC11 |
+| **Bước tái hiện** | 1. Bật thiết bị 2. Chọn chế độ điều chỉnh nhiệt độ 3. Nhấn ▲ liên tục vượt qua 200°C 4. Quan sát màn hình |
+| **Kết quả mong đợi** | Màn hình hiển thị ký hiệu MAX hoặc chỉ báo giới hạn trực quan |
+| **Kết quả thực tế** | Chỉ phát tiếng bíp, không có chỉ báo trực quan — người dùng khó nhận biết đã đạt giới hạn |
+| **Mức độ nghiêm trọng** | Thấp |
+| **Mức độ ưu tiên** | Thấp |
+| **Môi trường** | Philips HD9252, điện lưới 220V |
+| **Trạng thái** | Mới |
+| **GitHub Issue** | _(sẽ thêm sau)_ |
+
+---
+
+#### BUG-04 — Không có chỉ báo trực quan khi đạt nhiệt độ tối thiểu 80°C
+
+| Trường | Chi tiết |
+|--------|---------|
+| **TC liên quan** | TC12 |
+| **Bước tái hiện** | 1. Bật thiết bị 2. Chọn chế độ điều chỉnh nhiệt độ 3. Nhấn ▼ liên tục xuống dưới 80°C 4. Quan sát màn hình |
+| **Kết quả mong đợi** | Màn hình hiển thị ký hiệu MIN hoặc chỉ báo giới hạn trực quan |
+| **Kết quả thực tế** | Chỉ phát tiếng bíp, không có chỉ báo trực quan — người dùng khó nhận biết đã đạt giới hạn |
+| **Mức độ nghiêm trọng** | Thấp |
+| **Mức độ ưu tiên** | Thấp |
+| **Môi trường** | Philips HD9252, điện lưới 220V |
+| **Trạng thái** | Mới |
+| **GitHub Issue** | _(sẽ thêm sau)_ |
+
+---
+
+#### BUG-05 — Mất toàn bộ cài đặt sau khi mất điện đột ngột
+
+| Trường | Chi tiết |
+|--------|---------|
+| **TC liên quan** | TC13 |
+| **Bước tái hiện** | 1. Cài nhiệt độ 180°C, thời gian 10 phút 2. Nhấn Start 3. Rút phích cắm đột ngột khi máy đang chạy 4. Cắm điện lại 5. Quan sát trạng thái thiết bị |
+| **Kết quả mong đợi** | Thiết bị khởi động lại an toàn và hiển thị lại cài đặt trước đó (180°C, thời gian còn lại) |
+| **Kết quả thực tế** | Thiết bị reset hoàn toàn về mặc định — người dùng phải cài đặt lại từ đầu |
+| **Mức độ nghiêm trọng** | Trung bình |
+| **Mức độ ưu tiên** | Cao |
+| **Môi trường** | Philips HD9252, điện lưới 220V |
+| **Trạng thái** | Mới |
+| **GitHub Issue** | _(sẽ thêm sau)_ |
 
 **GitHub Issues Screenshot:**
 
@@ -1170,43 +1240,38 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 
 ---
 
-## AI Audit Report {#ai-audit-report}
+# AI Audit Report
 
-> Full AI-02 audit report with 5-section format for each artifact is in **[Appendix A — Prompt Log](appendix-a-prompt-log.md)**.
+## Bảng Tổng Hợp
 
-### Summary Table
-
-| Artifact | AI Role | Student Verification | Student-Only Tasks |
-|----------|---------|---------------------|-------------------|
-| Job Market (Req 1) | Generated 10-posting table structure, AI impact analysis | Verified LinkedIn-only sourcing; replaced 3 non-LinkedIn entries; added salary transparency note | Take screenshots with own LinkedIn account name visible |
-| Software Defects (Req 2) | Generated 20-defect table with AI bias notes | Verified/replaced 6 broken source links; localized section to Vietnamese | Confirm each defect matches real reported incident |
-| Test Cases (Req 3) | Generated 12 normal TCs + 3 edge case templates for Philips HD9252 air fryer | Executed all 15 TCs on real device; replaced TC06 with real-execution scenario; filled Actual/Verdict for all TCs; found 4 defects (TC05, TC06, TC11, TC13) | Device photo with student ID; ≥5 execution videos; log ≥5 defects as GitHub Issues |
-| Mindmap | Generated ISTQB-aligned mindmap draft | Identified and corrected 3 categorization errors | Validate against ISTQB CTFL 4.0 syllabus |
-| Prompt Log | Generated log entries with timestamps | Reviewed and expanded with full verbatim prompts; added entries 15–17 | Sign Mandatory Disclosure |
+| Artifact | Vai Trò AI | Kiểm Tra Của Sinh Viên | Phần Sinh Viên Tự Làm |
+|----------|-----------|----------------------|----------------------|
+| Thị trường việc làm (Yêu cầu 1) | Tạo cấu trúc bảng 10 tin tuyển dụng và phân tích tác động AI | Kiểm tra nguồn chỉ từ LinkedIn; thay thế 3 tin không đúng nguồn; bổ sung ghi chú minh bạch lương | Tự chụp màn hình với tên tài khoản LinkedIn hiển thị rõ |
+| Các lỗi phần mềm (Yêu cầu 2) | Tạo bảng 20 lỗi kèm ghi chú về thiên kiến AI | Kiểm tra và thay thế 6 đường dẫn nguồn bị hỏng; Việt hóa nội dung | Xác nhận từng lỗi khớp với sự cố thực tế đã được báo cáo |
+| Test Cases (Yêu cầu 3) | Tạo 12 test case thông thường + 3 mẫu test case biên cho nồi chiên không dầu Philips HD9252 | Thực thi tất cả 15 test case trên thiết bị thực; thay TC06 bằng kịch bản thực thi thực; điền Actual/Verdict cho toàn bộ; phát hiện 4 lỗi (TC05, TC06, TC11, TC13) | Ảnh thiết bị cùng thẻ sinh viên; ≥5 video thực thi; ghi ≥5 lỗi lên GitHub Issues |
+| Mindmap | Tạo bản nháp mindmap theo chuẩn ISTQB | Phát hiện và sửa 3 lỗi phân loại | Đối chiếu với giáo trình ISTQB CTFL 4.0 |
+| Nhật ký Prompt | Tạo các mục nhật ký kèm timestamp | Rà soát và bổ sung prompt nguyên văn đầy đủ; thêm các mục 15–17 | Ký Cam Kết Bắt Buộc |
 
 ---
 
-## AI Critique {#ai-critique}
+## Nhận Xét Về AI
 
-During this assignment, Claude (claude-sonnet-4-6) was used to assist with all three requirements. The AI performed well on structured, well-defined tasks but revealed predictable limitations when tasks required real-world judgment or physical context.
+Trong quá trình làm bài, Claude (claude-sonnet-4-6) được sử dụng để hỗ trợ cả ba yêu cầu. AI hoạt động tốt với các tác vụ có cấu trúc rõ ràng, nhưng bộc lộ giới hạn có thể đoán trước khi các tác vụ đòi hỏi phán đoán thực tế hoặc ngữ cảnh vật lý.
 
-**Where AI performed well:** The AI generated clean, well-formatted Markdown tables for all three requirements without needing restructuring. For Requirement 2 (software defects), the AI correctly identified real CVEs and incidents from 2022–2026, wrote concise consequence descriptions, and — after prompting with the AI bias note requirement — produced thoughtful annotations for each defect explaining how AI might fail to detect it. For Requirement 3, the AI generated 12 functionally accurate test cases covering documented air fryer modes (fry, bake, roast, reheat, preheat, cancel, consecutive cycles, temperature/timer controls).
+**AI làm tốt ở những điểm:** AI tạo ra các bảng Markdown sạch, định dạng chuẩn cho cả ba yêu cầu mà không cần chỉnh cấu trúc lại. Với Yêu cầu 2 (lỗi phần mềm), AI xác định đúng các CVE và sự cố thực tế từ 2022–2026, viết mô tả hậu quả súc tích, và — sau khi được nhắc về yêu cầu ghi chú thiên kiến AI — tạo ra các chú thích có giá trị cho từng lỗi, giải thích tại sao AI có thể bỏ sót. Với Yêu cầu 3, AI tạo ra 12 test case chức năng chính xác bao phủ các chế độ hoạt động được ghi trong tài liệu của nồi chiên (fry, bake, roast, reheat, preheat, cancel, các chu kỳ liên tiếp, điều khiển nhiệt độ/hẹn giờ).
 
-**Where AI failed and needed correction:** First, for Requirement 1, the AI initially returned job postings from multiple platforms (LinkedIn, ITviec, TopCV) despite the explicit "LinkedIn only" constraint. This required a follow-up correction prompt and manual replacement of 3 entries. Second, for Requirement 2, 6 source links were dead (404) — the AI generated plausible-looking but unverified URLs. This is a classic AI hallucination pattern: confident-sounding links that don't exist. Third, for Requirement 3, the AI generated 12 test cases from documented usage but could not generate the 3 edge cases (TC13–TC15) independently — it required explicit prompting with testing methodology context (BVA, safety misuse, forbidden actions) to produce them.
+**AI thất bại và cần sửa ở những điểm:** Thứ nhất, với Yêu cầu 1, AI ban đầu trả về tin tuyển dụng từ nhiều nền tảng (LinkedIn, ITviec, TopCV) dù có ràng buộc rõ ràng là "chỉ LinkedIn". Cần thêm prompt chỉnh sửa và thay thủ công 3 tin. Thứ hai, với Yêu cầu 2, 6 đường dẫn nguồn bị lỗi 404 — AI tạo ra các URL trông có vẻ hợp lệ nhưng không được xác minh. Đây là dạng ảo giác AI điển hình: đường dẫn nghe có vẻ đáng tin nhưng thực tế không tồn tại. Thứ ba, với Yêu cầu 3, AI tạo được 12 test case từ cách sử dụng được ghi trong tài liệu nhưng không thể tự tạo 3 test case biên (TC13–TC15) — phải được nhắc thêm với ngữ cảnh phương pháp kiểm thử (BVA, kiểm thử lạm dụng an toàn, hành động bị cấm) mới tạo được.
 
-**Structural limitation:** The AI treats all physical device test cases as stateless — it does not model thermal states, time-dependent behavior, or real-world misuse. This is why edge cases like the no-basket dry-run, the 0:00 timer boundary, and the over-marinated food scenario are beyond AI's spontaneous generation capability. Human testers with physical device experience are still essential for safety-critical test design on embedded hardware.
+**Giới hạn mang tính cấu trúc:** AI xử lý tất cả test case thiết bị vật lý như thể không có trạng thái — AI không mô phỏng được trạng thái nhiệt, hành vi phụ thuộc thời gian, hay cách người dùng lạm dụng thiết bị trong thực tế. Đó là lý do tại sao các test case biên như chạy khô không có giỏ chiên, giá trị biên bộ đếm thời gian 0:00, hay kịch bản thức ăn ngâm quá mức — đều nằm ngoài khả năng tự tạo sinh của AI. Người kiểm thử có kinh nghiệm thực tế với thiết bị vật lý vẫn là yếu tố không thể thay thế trong thiết kế test an toàn cho phần cứng nhúng.
 
-**Overall assessment:** AI reduced implementation time significantly but required active supervision. Every AI output needed at minimum one round of human correction before it met the assignment's actual requirements.
-
----
-
-## Mandatory Disclosure {#mandatory-disclosure}
-
-AI tools (Claude claude-sonnet-4-6) were used to assist in generating: job posting table structure, defect descriptions and AI bias notes, test case templates, QA/QC mindmap draft, and prompt log. All AI-generated content was reviewed, corrected, and approved by me before inclusion. The following artifacts were produced entirely by me (no AI): device photo with student ID card, execution videos with voice narration, LinkedIn screenshots showing my account name, and GitHub Issues under my username. I confirm I did not use AI to generate any artifact in the prohibited category.
-
-> Full Mandatory Disclosure (AI-03) and AI-05 Checklist are in **[Appendix A — Prompt Log](appendix-a-prompt-log.md)**.
+**Đánh giá tổng thể:** AI giúp rút ngắn đáng kể thời gian thực hiện nhưng đòi hỏi giám sát chủ động từ người dùng. Mọi output của AI đều cần ít nhất một vòng chỉnh sửa thủ công trước khi đáp ứng đúng yêu cầu thực tế của bài tập.
 
 ---
+
+## Mandatory Disclosure
+
+Công cụ AI (Claude claude-sonnet-4-6) đã được sử dụng để hỗ trợ tạo ra: cấu trúc bảng tin tuyển dụng, mô tả lỗi và ghi chú thiên kiến AI, mẫu test case, bản nháp mindmap QA/QC, và nhật ký prompt. Toàn bộ nội dung do AI tạo ra đã được bản thân rà soát, chỉnh sửa và phê duyệt trước khi đưa vào bài. Các artifact sau đây được bản thân tự thực hiện hoàn toàn (không có AI): ảnh thiết bị kèm thẻ sinh viên, video thực thi có thuyết minh bằng giọng nói, ảnh chụp màn hình LinkedIn hiển thị tên tài khoản của tôi, và GitHub Issues dưới tên tài khoản của tôi. Tôi xác nhận không sử dụng AI để tạo bất kỳ artifact nào thuộc danh mục bị cấm.
+
 
 ## Self-Assessment {#self-assessment}
 
