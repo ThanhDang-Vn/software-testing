@@ -41,7 +41,25 @@
 | 9 | Quality Assurance Engineer | Quantum Movement | Ho Chi Minh City, Vietnam | Not listed | No | ~May 18, 2026 |
 | 10 | Junior QA Engineer (Manual + Automation) | DXC Technology | Ho Chi Minh City, Vietnam | Not listed | No | ~May 20, 2026 |
 
----
+
+
+## 📝 Note on Salary Transparency
+
+Currently, many companies do not publicly disclose salary information in their job postings. Candidates will only be informed of or able to negotiate salary directly with the company during the hiring process. As a result, some job listings in this report do not display specific compensation figures. However, based on research from reputable sources *(ref: [Lương kiểm thử phần mềm 2025 – Greenwich Vietnam](https://greenwich.edu.vn/luong-kiem-thu-phan-mem/))*, the following reflects **estimated average salary ranges for common Software Testing positions in Vietnam (2025)**:
+
+
+| Position | Experience Level | Estimated Monthly Salary (VND) |
+|----------|-----------------|-------------------------------|
+| **Fresher / Intern Tester** | < 1 year | 6,000,000 – 10,000,000 |
+| **Junior Tester** | 1 – 3 years | 10,000,000 – 15,000,000 |
+| **Middle Tester** | 3 – 5 years | 15,000,000 – 25,000,000 |
+| **Senior Tester** | 5+ years | 25,000,000 – 40,000,000 |
+| **Manual Tester** | All levels | 8,000,000 – 25,000,000 |
+| **Automation Tester** | 2+ years | 15,000,000 – 40,000,000 |
+| **QA Engineer** | 3+ years | 20,000,000 – 35,000,000 |
+| **QC Engineer** | 1 – 3 years | 7,000,000 – 12,000,000 |
+| **Test Lead** | 5+ years | 25,000,000 – 40,000,000 |
+| **Test Manager / QA Manager** | 7+ years | 30,000,000 – 50,000,000+ |
 
 ### Detailed Job Postings
 
