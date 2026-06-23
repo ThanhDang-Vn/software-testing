@@ -31,6 +31,7 @@
 | 15 | 06/06/2026 | Claude Sonnet 4.6 | "thêm phần ghi chú về salary vì nhiều job không có salary" | Bổ sung bảng ước tính lương theo vị trí/kinh nghiệm vào Yêu cầu 1 để giải thích các mục "Not listed" | report.md Yêu cầu 1 — bảng salary transparency |
 | 16 | 06/06/2026 | Claude Sonnet 4.6 | "tôi vừa sửa lại các testcase trong req3 bạn hãy đồng bộ vào bản tóm tắt kết quả kiểm thử đi" | Đồng bộ bảng Tóm Tắt Kết Quả Thực Thi Kiểm Thử với tên TC, kết quả và cờ video/lỗi mới nhất | report.md Yêu cầu 3 — bảng tóm tắt thực thi |
 | 17 | 06/06/2026 | Claude Sonnet 4.6 | "cập nhật lại appendix và ai audit report cho đúng với bản mới nhất" | Cập nhật nhật ký prompt, Artifact 3, checklist AI-05 và bảng tóm tắt AI Audit Report theo trạng thái hiện tại | appendix-a-prompt-log.md + report.md AI Audit Report |
+| 18 | 06/06/2026 | Claude Sonnet 4.6 | "vậy tạo file excel cho tôi đi" → "phải lấy test trong report" → "bỏ cột git issue còn lại oke rồi" → "cập nhật log audit" | Tạo file Excel HW01_TestCases.xlsx gồm 4 sheet (Test Cases, Execution Summary, Defect Report, Test Summary Report) từ dữ liệu thực tế trong report.md; cập nhật nhật ký audit | HW01_TestCases.xlsx |
 
 ---
 
@@ -71,10 +72,10 @@
 | Mục | Nội dung |
 |-----|---------|
 | **(1) Prompt + công cụ** | Claude Sonnet 4.6 · 17:30 24/05/2026 → "Implement requirement 3 — design 15 test cases for the Kangaroo electric rice cooker using this TC format: Objective / Input / Steps / Expected / Actual / Verdict. Include at least 3 edge cases that an AI tool could NOT generate without human physical-device knowledge." Đổi thiết bị lúc 10:20 03/06/2026 → "Switch the Req 3 device from rice cooker to air fryer. Rewrite all 15 test cases from scratch for the air fryer. Update device info, all TCs, edge case explanations, summary table, and video TC list. Edge cases must still be ≥3 cases AI cannot generate." |
-| **(2) Đầu ra của AI** | **Full output (bản nháp đầu — nồi chiên không dầu):** [`ai-output/artifact-3-test-cases-draft1.md`](ai-output/artifact-3-test-cases-draft1.md) — bản nháp AI tạo ra sau khi đổi sang Philips HD9252, gồm 15 TC với cột Actual/Verdict còn trống chờ thực thi. Lần đầu AI tạo cho nồi cơm điện (commit `0171a40`, xem `req3.md`). Sau khi thực thi thực tế ngày 06/06/2026, sinh viên cập nhật kết quả và phát hiện 4 lỗi. |
-| **(3) Kết luận** | **CHƯA HOÀN CHỈNH** (Yêu cầu 3 đã thực thi một phần) — AI không thể tự tạo ≥3 ca biên mà không có prompt phương pháp luận từ con người. 15/15 ca đã được thực thi trên thiết bị thực; tìm thấy 4 lỗi (TC05, TC06, TC11, TC12, TC13). Cột Actual/Verdict đã điền đầy đủ. Còn thiếu: ≥1 bug nữa để đủ ≥5 theo yêu cầu đề bài và GitHub Issues chưa log. |
-| **(4) Lý giải** | ISTQB CTFL 4.0 §4.2 (Phân tích Giá trị Biên) và §4.6 (Kỹ thuật Dựa trên Kinh nghiệm) phân biệt giữa thiết kế kiểm thử dựa trên đặc tả và dựa trên kinh nghiệm. AI giỏi các kỹ thuật dựa trên đặc tả (phân vùng tương đương trên các chế độ thiết bị đã ghi nhận) nhưng không thể áp dụng kỹ thuật dựa trên kinh nghiệm (đoán lỗi, kiểm thử dựa trên checklist) cho phần cứng vật lý nếu không được hướng dẫn tường minh. TC13 (an toàn nhiệt với thực phẩm ướt/tẩm ướp nhiều), TC14 (BVA biên hẹn giờ 0:00), và TC15 (ngắt nhiệt khi không có giỏ) đều đòi hỏi kiến thức lĩnh vực vật lý và lý luận mô hình lỗi mà hệ thống tạo văn bản không có. |
-| **(5) Sửa chữa của sinh viên** | Xác định 3 ca biên AI bỏ sót bằng cách áp dụng kỹ thuật kiểm thử dựa trên kinh nghiệm (ISTQB). Thêm TC13 (mất điện đột ngột), TC14 (giỏ chưa lắp hoàn toàn), TC15 (nhấn nút liên tục/spam). Chuyển thiết bị sang nồi chiên không dầu Philips HD9252 ngày 03/06/2026; viết lại toàn bộ 15 ca. Ngày 06/06/2026: thay TC06 thành kịch bản "Tăng thời gian khi đang nấu" phản ánh lỗi thực tế tìm được khi thực thi; cập nhật kết quả thực tế TC05; đồng bộ bảng tóm tắt thực thi với 15 TC đúng tên, đúng kết quả. Tổng kết thực thi: 11 PASS / 4 FAIL, 5 video, danh sách video TC01/TC05/TC06/TC14/TC15. |
+| **(2) Đầu ra của AI** | **Full output (bản nháp đầu — nồi chiên không dầu):** [`ai-output/artifact-3-test-cases-draft1.md`](ai-output/artifact-3-test-cases-draft1.md) — bản nháp AI tạo ra sau khi đổi sang Philips HD9252, gồm 15 TC với cột Actual/Verdict còn trống chờ thực thi. Lần đầu AI tạo cho nồi cơm điện (commit `0171a40`, xem `req3.md`). Sau khi thực thi thực tế ngày 06/06/2026, sinh viên bổ sung thêm 2 TC tự thiết kế (TC16, TC17) và cập nhật đầy đủ kết quả 17/17 TC; phát hiện 5 lỗi. |
+| **(3) Kết luận** | **CHƯA HOÀN CHỈNH** — AI không thể tự tạo ≥3 ca biên mà không có prompt phương pháp luận từ con người. 17/17 ca đã được thực thi trên thiết bị thực (Philips HD9252); tìm thấy 5 lỗi (BUG-01 đến BUG-05 từ TC05, TC06, TC11, TC12, TC13). Cột Actual/Verdict đã điền đầy đủ. AI tạo được 14 TC chức năng chuẩn; 3 edge case (TC06, TC16, TC17) do sinh viên tự thiết kế dựa trên kinh nghiệm sử dụng thiết bị thực. |
+| **(4) Lý giải** | ISTQB CTFL 4.0 §4.2 (Phân tích Giá trị Biên) và §4.6 (Kỹ thuật Dựa trên Kinh nghiệm) phân biệt giữa thiết kế kiểm thử dựa trên đặc tả và dựa trên kinh nghiệm. AI giỏi các kỹ thuật dựa trên đặc tả (phân vùng tương đương trên các chế độ thiết bị đã ghi nhận) nhưng không thể áp dụng kỹ thuật dựa trên kinh nghiệm cho phần cứng vật lý nếu không được hướng dẫn tường minh. TC06 (tăng thời gian khi đang nấu), TC16 (bấm khởi động khi chưa cắm điện), và TC17 (bật/tắt đèn chiếu sáng — tính năng riêng của Philips HD9252) đều đòi hỏi kiến thức thực tế về hành vi phần cứng cụ thể mà AI không có. |
+| **(5) Sửa chữa của sinh viên** | Xác định 3 ca biên AI bỏ sót bằng cách áp dụng kỹ thuật kiểm thử dựa trên kinh nghiệm (ISTQB §4.6): TC06 (thay đổi thông số giữa chừng khi đang nấu), TC16 (bấm nguồn khi chưa cắm điện — precondition AI luôn bỏ qua), TC17 (đèn chiếu sáng bên trong nồi — tính năng đặc thù model). Chuyển thiết bị sang Philips HD9252 ngày 03/06/2026; viết lại toàn bộ TC. Ngày 06/06/2026: thực thi 17 TC trên thiết bị thực; điền Actual/Verdict đầy đủ; ghi 5 defect lên GitHub Issues. Tổng kết thực thi: 12 PASS / 5 FAIL, 6 video (TC01, TC02, TC03, TC04, TC07, TC14). |
 
 ---
 
@@ -95,11 +96,11 @@
 | Kết luận | Số lượng | Sản phẩm |
 |----------|--------:|---------|
 | **HỢP LỆ** | 0 | — |
-| **CHƯA HOÀN CHỈNH** | 3 | Thị trường Việc làm (Yêu cầu 1), Lỗi Phần mềm (Yêu cầu 2), Ca Kiểm thử (Yêu cầu 3) |
+| **CHƯA HOÀN CHỈNH** | 4 | Thị trường Việc làm (Yêu cầu 1), Lỗi Phần mềm (Yêu cầu 2), Ca Kiểm thử (Yêu cầu 3), File Excel (HW01_TestCases.xlsx) |
 | **KHÔNG HỢP LỆ** | 1 | Sơ đồ Tư duy QA/QC (bản nháp đầu) |
-| **Tổng** | **4** | |
+| **Tổng** | **5** | |
 
-**HỢP LỆ: 0% · CHƯA HOÀN CHỈNH: 75% · KHÔNG HỢP LỆ: 25%**
+**HỢP LỆ: 0% · CHƯA HOÀN CHỈNH: 80% · KHÔNG HỢP LỆ: 20%**
 
 **Khi nào nên / không nên dùng AI cho công việc này?**
 

@@ -1,9 +1,9 @@
 # HW01 – QA/QC Jobs · 20 Defects · Test a Physical Product
 
 **Exercise ID:** HW01-AI
-**Student ID:** [YOUR_STUDENT_ID]
-**Full Name:** [YOUR_FULL_NAME]
-**Date:** 2026-05-24
+**Student ID:** 23127334
+**Full Name:** Nguyễn Thành Dâng
+**Date:** 2026-06-06
 **AI Tools Used:** Claude (claude-sonnet-4-6)
 
 ---
@@ -413,7 +413,9 @@ Vào tháng 2 năm 2024, nhóm ransomware ALPHV/BlackCat đã xâm nhập vào C
 - Diễn tập ứng phó sự cố cho cơ sở hạ tầng y tế quan trọng
 
 **AI Bias/Hallucination:**
-Khi được hỏi về tác động tài chính, Claude trích dẫn "thiệt hại 2,45 tỷ đô la" như thể được lấy từ nguồn BleepingComputer đã dẫn — nhưng bài viết đó chỉ nêu **872 triệu đô la** (theo điều trần của UnitedHealth tại Quốc hội quý 1 năm 2024). Con số 2,45 tỷ đô la đến từ báo cáo tài chính quý 3 năm 2024 không có trong URL được dẫn nguồn. AI đã kết hợp dữ liệu từ các mốc thời gian báo cáo khác nhau và trình bày con số cao hơn 3 lần so với nguồn được trích dẫn mà không hề cảnh báo về sự khác biệt.
+- **AI đã nói:** Claude trích dẫn "thiệt hại 2,45 tỷ đô la" như thể lấy từ nguồn BleepingComputer đã dẫn.
+- **Thực tế:** Bài viết đó chỉ nêu 872 triệu đô la (điều trần Quốc hội Q1/2024). Con số 2,45 tỷ đến từ báo cáo Q3/2024 — một nguồn khác không được trích dẫn.
+- **Rủi ro:** AI kết hợp số liệu từ nhiều mốc thời gian rồi trình bày như một con số duy nhất, cao hơn nguồn trích dẫn 3 lần mà không cảnh báo.
 
 ---
 
@@ -438,7 +440,9 @@ Một lỗ hổng SQL injection nghiêm trọng trong MOVEit Transfer của Prog
 - Xem lại nhật ký kiểm tra để phát hiện truy cập trái phép và dấu vết webshell
 
 **AI Bias/Hallucination:**
-Khi được hỏi về tác động của vụ vi phạm, Claude liệt kê các con số chính xác — "2.700 tổ chức," "93 triệu người" và "9,9 tỷ đô la (theo Emsisoft)" — không có con số nào xuất hiện trong khuyến cáo CISA AA23-158a được dẫn nguồn. Những số liệu này đến từ các bài báo riêng biệt (blog Emsisoft, BBC, Statista) không phải nguồn được khai báo. AI đã tổng hợp dữ liệu từ nhiều nguồn không được tiết lộ và trình bày chúng như thể xuất phát từ một khuyến cáo chính phủ duy nhất.
+- **AI đã nói:** Claude liệt kê "2.700 tổ chức," "93 triệu người," "9,9 tỷ đô la (Emsisoft)" và trình bày như thể xuất phát từ khuyến cáo CISA AA23-158a đã dẫn nguồn.
+- **Thực tế:** Không có con số nào trong số đó xuất hiện trong CISA AA23-158a — chúng đến từ blog Emsisoft, BBC và Statista.
+- **Rủi ro:** AI tổng hợp từ nhiều nguồn không khai báo, tạo ảo giác mọi số liệu đều được chính phủ xác nhận.
 
 ---
 
@@ -462,7 +466,9 @@ Một cuộc tấn công chuỗi cung ứng tinh vi được nhúng vào XZ Util
 - OpenSSF và Linux Foundation khởi động các sáng kiến xác minh danh tính nhà bảo trì mã nguồn mở
 
 **AI Bias/Hallucination:**
-Claude mô tả kẻ tấn công là "một hacker Trung Quốc được nhà nước bảo trợ" với độ tự tin cao. Quy kết này chưa được xác nhận chính thức — chưa có cơ quan nào đưa ra kết luận. AI đã trình bày suy đoán của cộng đồng bảo mật như một sự thật đã được xác lập, một dạng ảo giác phổ biến trong các câu hỏi về quy kết tấn công.
+- **AI đã nói:** Claude mô tả kẻ tấn công ("Jia Tan") là "hacker Trung Quốc được nhà nước bảo trợ" với độ tự tin cao.
+- **Thực tế:** Chưa có cơ quan chính thức nào xác nhận quy kết này — danh tính và tổ chức đứng sau vẫn chưa được kết luận.
+- **Rủi ro:** AI trình bày suy đoán của cộng đồng bảo mật như sự thật đã xác lập — dạng ảo giác phổ biến trong các câu hỏi về attribution.
 
 ---
 
@@ -487,7 +493,9 @@ Log4Shell, được công bố vào tháng 12 năm 2021, tiếp tục là một 
 - Triển khai quy tắc WAF để phát hiện và chặn các mẫu `${jndi:`
 
 **AI Bias/Hallucination:**
-Khi được hỏi quốc gia nào đã khai thác Log4Shell vào năm 2022, Claude nêu tên "Iran, Trung Quốc, Triều Tiên, Nga." Khuyến cáo CISA AA22-320A được dẫn nguồn **chỉ đề cập đến các tác nhân APT của Iran** — Trung Quốc, Triều Tiên và Nga không xuất hiện trong tài liệu đó. AI đã thêm ba quốc gia không có trong nguồn được trích dẫn, có thể dựa trên suy đoán từ các bài báo tin tức.
+- **AI đã nói:** Claude nêu "Iran, Trung Quốc, Triều Tiên, Nga" đều khai thác Log4Shell năm 2022.
+- **Thực tế:** Khuyến cáo CISA AA22-320A (nguồn được dẫn) chỉ đề cập tác nhân APT của **Iran** — ba quốc gia còn lại không xuất hiện trong tài liệu đó.
+- **Rủi ro:** AI thêm ba quốc gia không có căn cứ từ nguồn trích dẫn, có thể từ suy đoán tin tức tổng hợp.
 
 ---
 
@@ -510,7 +518,9 @@ Một lỗi trong hàm `BN_mod_sqrt()` của OpenSSL gây ra vòng lặp vô h�
 - Đối với OpenSSL 1.0.2 (đã kết thúc hỗ trợ): nâng cấp lên phiên bản được hỗ trợ; không có bản vá công khai
 
 **AI Bias/Hallucination:**
-ChatGPT mô tả lỗ hổng này cho phép "thực thi mã từ xa." CVE-2022-0778 là lỗ hổng từ chối dịch vụ — nó gây ra vòng lặp vô hạn/crash, không phải thực thi mã tùy ý. AI có thể đã nhầm lẫn với các lỗ hổng OpenSSL khác (ví dụ: Heartbleed), dẫn đến đánh giá mức độ nghiêm trọng bị thổi phồng có thể gây hiểu lầm trong quá trình ưu tiên xử lý.
+- **AI đã nói:** ChatGPT mô tả CVE-2022-0778 cho phép "thực thi mã từ xa (RCE)."
+- **Thực tế:** Đây là lỗ hổng từ chối dịch vụ (DoS) — gây vòng lặp vô hạn/crash, không thực thi mã tùy ý.
+- **Rủi ro:** AI có thể đã nhầm với Heartbleed hoặc lỗ hổng OpenSSL khác, dẫn đến đánh giá mức độ nghiêm trọng bị thổi phồng và ưu tiên vá lỗi sai.
 
 ---
 
@@ -535,7 +545,9 @@ Hai lỗ hổng kết hợp trong Microsoft Exchange Server: CVE-2022-41040 (Ser
 - Bật Extended Protection for Authentication (EPA) trên Exchange
 
 **AI Bias/Hallucination:**
-Khi được hỏi về mức độ nghiêm trọng của CVE-2022-41082, Claude báo cáo "Nghiêm trọng (CVSS 8.8)." Trang khuyến cáo MSRC thực tế ghi điểm là **CVSS 8.0** với mức độ nghiêm trọng được phân loại là **"Important"** — không phải Nghiêm trọng (Critical). AI đã ảo giác cả điểm số lẫn mức phân loại cùng một lúc, điều này sẽ khiến các nhóm bảo mật đánh giá quá cao mức độ ưu tiên vá lỗi.
+- **AI đã nói:** Claude báo cáo CVE-2022-41082 là "Nghiêm trọng (CVSS 8.8)."
+- **Thực tế:** MSRC ghi điểm **CVSS 8.0**, mức phân loại **"Important"** — không phải Critical.
+- **Rủi ro:** AI ảo giác cả điểm số lẫn mức phân loại cùng lúc, có thể khiến nhóm bảo mật đánh giá quá cao mức độ ưu tiên vá lỗi.
 
 ---
 
@@ -558,7 +570,9 @@ Một lỗi ghi ngoài giới hạn trong engine trình duyệt WebKit của App
 - Cập nhật qua Cài đặt > Cài đặt chung > Cập nhật phần mềm
 
 **AI Bias/Hallucination:**
-Claude khẳng định "CVE-2022-32893 được sử dụng riêng bởi phần mềm gián điệp Pegasus." Khuyến cáo của Apple xác nhận có khai thác trong thực tế nhưng không quy kết cho bất kỳ tác nhân đe dọa cụ thể nào. AI đã ảo giác một quy kết cụ thể (NSO Group / Pegasus) không được chứng minh trong công bố chính thức của Apple.
+- **AI đã nói:** Claude khẳng định CVE-2022-32893 "được sử dụng riêng bởi phần mềm gián điệp Pegasus (NSO Group)."
+- **Thực tế:** Apple xác nhận có khai thác trong thực tế nhưng không quy kết cho bất kỳ tác nhân cụ thể nào trong công bố chính thức.
+- **Rủi ro:** AI ảo giác về quy kết tác nhân — một suy đoán từ bối cảnh chung, không phải thông tin xác nhận.
 
 ---
 
@@ -583,7 +597,9 @@ Một lỗ hổng trong API của Twitter (được đưa vào qua thay đổi c
 - Triển khai giới hạn tốc độ API nghiêm ngặt hơn và bảo vệ chống liệt kê cho các endpoint tra cứu người dùng
 
 **AI Bias/Hallucination:**
-ChatGPT báo cáo vụ vi phạm ảnh hưởng đến "5,4 triệu địa chỉ email," bỏ qua việc số điện thoại cũng bị lộ. Công bố chính thức xác nhận cả số điện thoại LẪN địa chỉ email đều được dùng làm khóa tra cứu. Ảo giác một phần này đánh giá thấp tác động quyền riêng tư đối với những người dùng sử dụng số điện thoại cho xác thực hai yếu tố — chính xác là những người dùng có ý thức bảo mật nhất.
+- **AI đã nói:** ChatGPT báo cáo vụ vi phạm chỉ ảnh hưởng đến "5,4 triệu địa chỉ email."
+- **Thực tế:** Công bố chính thức xác nhận cả **số điện thoại lẫn email** đều bị dùng làm khóa tra cứu và bị lộ.
+- **Rủi ro:** Bỏ qua số điện thoại làm đánh giá thấp tác động — đặc biệt với người dùng dùng số điện thoại cho 2FA, đây chính là nhóm nhạy cảm nhất.
 
 ---
 
@@ -610,7 +626,9 @@ LastPass chịu hai giai đoạn tấn công: vào tháng 8 năm 2022 mã nguồ
 - LastPass tái cấu trúc kiến trúc lưu trữ đám mây và cải thiện quản lý bí mật
 
 **AI Bias/Hallucination:**
-Claude khẳng định "chính mật khẩu chính của LastPass đã bị lộ." Điều này không chính xác — mật khẩu chính không bao giờ được LastPass lưu trữ (kiến trúc zero-knowledge). Thứ bị lộ là các kho mã hóa, chỉ có thể giải mã bởi người biết mật khẩu chính. AI đã nhầm lẫn "dữ liệu kho bị đánh cắp" với "mật khẩu chính bị lộ" — một sự phân biệt quan trọng ảnh hưởng đến phản ứng đúng đắn của người dùng.
+- **AI đã nói:** Claude khẳng định "mật khẩu chính của LastPass đã bị lộ."
+- **Thực tế:** LastPass không bao giờ lưu trữ mật khẩu chính (kiến trúc zero-knowledge). Thứ bị đánh cắp là **kho mã hóa** — chỉ có thể giải mã nếu biết mật khẩu chính.
+- **Rủi ro:** Nhầm lẫn này ảnh hưởng trực tiếp đến hành động người dùng — ai nghe "mật khẩu chính bị lộ" sẽ phản ứng khác với "kho mã hóa bị đánh cắp."
 
 ---
 
@@ -637,7 +655,9 @@ Vào tháng 10 năm 2023, kẻ tấn công sử dụng thông tin xác thực b�
 - Giám sát phát hiện bất thường trên các mẫu truy cập hệ thống hỗ trợ
 
 **AI Bias/Hallucination:**
-Claude mô tả Cloudflare và BeyondTrust là nạn nhân downstream "bị xâm phạm" trong vụ vi phạm Okta, mặc dù cả hai công ty đều tuyên bố công khai rằng không có sự xâm phạm nào xảy ra. BeyondTrust báo cáo cuộc tấn công đã bị ngăn chặn và không có hệ thống nào bị truy cập, trong khi Cloudflare xác nhận không có hệ thống hay dữ liệu khách hàng nào bị ảnh hưởng. AI đã đảo ngược hoàn toàn kết quả thực tế của cả hai sự cố.
+- **AI đã nói:** Claude mô tả Cloudflare và BeyondTrust đều "bị xâm phạm" trong vụ vi phạm Okta.
+- **Thực tế:** Cả hai công ty tuyên bố công khai ngược lại — BeyondTrust đã ngăn chặn được, Cloudflare xác nhận không có hệ thống hay dữ liệu nào bị ảnh hưởng.
+- **Rủi ro:** AI đảo ngược hoàn toàn kết quả thực tế của cả hai sự cố, biến "phòng thủ thành công" thành "bị xâm phạm."
 
 ---
 
@@ -662,7 +682,9 @@ CVE-2023-38831 là một lỗ hổng nhầm lẫn đường dẫn trong RARLAB W
 - Xử lý tất cả tệp lưu trữ từ nguồn không đáng tin cậy như có khả năng độc hại bất kể phần mở rộng hiển thị
 
 **AI Bias/Hallucination:**
-AI mô tả CVE-2023-38831 là "lỗi hỏng bộ nhớ hoặc tràn bộ đệm trong engine phân tích của WinRAR." Thực tế đây là lỗi logic nhầm lẫn kiểu tệp — không có hỏng bộ nhớ. AI cũng nêu "nạn nhân phải trực tiếp thực thi tệp EXE," bỏ qua chi tiết quan trọng là khai thác được kích hoạt chỉ khi người dùng mở tệp có vẻ vô hại (PDF hoặc ảnh) bên trong kho lưu trữ.
+- **AI đã nói:** AI mô tả là "lỗi hỏng bộ nhớ/tràn bộ đệm" và khai thác cần "nạn nhân trực tiếp thực thi file EXE."
+- **Thực tế:** Đây là lỗi logic nhầm lẫn kiểu tệp (không có hỏng bộ nhớ). Khai thác được kích hoạt khi người dùng mở tệp **có vẻ vô hại** (PDF/ảnh) bên trong kho lưu trữ — không cần chạy EXE.
+- **Rủi ro:** Hai sai lầm cùng lúc làm hiểu sai cả kỹ thuật tấn công lẫn điều kiện khai thác, dẫn đến đánh giá rủi ro không chính xác.
 
 ---
 
@@ -688,7 +710,9 @@ CVE-2023-20198 là zero-day leo thang đặc quyền mức độ tối đa trong
 - Giám sát các tài khoản cục bộ mới được tạo với cấp đặc quyền 15
 
 **AI Bias/Hallucination:**
-Claude khẳng định CVE-2023-20198 "yêu cầu kẻ tấn công phải có thông tin xác thực chỉ đọc hợp lệ." Đặc điểm cốt lõi của lỗ hổng là hoàn toàn không cần xác thực — không cần thông tin xác thực, lừa đảo hay kỹ thuật xã hội nào là điều kiện tiên quyết. Sai lệch này đánh giá thấp nghiêm trọng mức độ phơi lộ bằng cách ngụ ý có điều kiện cần đánh cắp thông tin xác thực mà thực tế không tồn tại.
+- **AI đã nói:** Claude khẳng định CVE-2023-20198 "yêu cầu kẻ tấn công có thông tin xác thực chỉ đọc hợp lệ."
+- **Thực tế:** Đây là lỗ hổng **hoàn toàn không cần xác thực** — không cần credential, phishing hay social engineering nào cả.
+- **Rủi ro:** Ngụ ý có điều kiện tiên quyết (đánh cắp credential) mà thực tế không tồn tại, đánh giá thấp nghiêm trọng mức độ phơi lộ thực tế.
 
 ---
 
@@ -713,7 +737,9 @@ Một lỗ hổng nghiêm trọng trong Microsoft Outlook cho Windows cho phép 
 - Chặn cổng TCP 445 (SMB) ra ngoài tại firewall để ngăn chặn chuyển tiếp NTLM đến máy chủ bên ngoài
 
 **AI Bias/Hallucination:**
-ChatGPT mô tả lỗ hổng này yêu cầu "nạn nhân nhấp vào liên kết độc hại trong email." CVE-2023-23397 là lỗ hổng không cần tương tác — khai thác xảy ra khi Outlook xử lý thông báo email, trước bất kỳ tương tác nào của người dùng. Sai lệch này đánh giá thấp đáng kể mức độ rủi ro (zero-click vs. one-click là yếu tố quan trọng trong mô hình rủi ro và ưu tiên vá lỗi).
+- **AI đã nói:** ChatGPT mô tả khai thác yêu cầu "nạn nhân nhấp vào liên kết độc hại trong email."
+- **Thực tế:** CVE-2023-23397 là lỗ hổng **zero-click** — khai thác xảy ra ngay khi Outlook nhận và xử lý email, trước bất kỳ tương tác nào của người dùng.
+- **Rủi ro:** Zero-click vs. one-click là yếu tố quyết định trong mô hình rủi ro. Mô tả sai làm đánh giá thấp đáng kể mức độ nguy hiểm và ưu tiên vá lỗi.
 
 ---
 
@@ -739,7 +765,9 @@ Hai zero-day kết hợp trong Ivanti Connect Secure: CVE-2023-46805 (bypass xá
 - Coi như đã bị xâm phạm nếu có kết nối internet trong thời gian phơi lộ; cần điều tra pháp y đầy đủ
 
 **AI Bias/Hallucination:**
-Claude khẳng định "Ivanti phát hành bản vá trong vòng 48 giờ sau khi công bố zero-day." Trên thực tế, Ivanti mất khoảng 3 tuần để phát hành bản vá đầu tiên sau khi công bố (10 tháng 1 năm 2024). AI đã ảo giác về thời gian phản hồi, đánh giá thấp đáng kể khoảng thời gian hệ thống không được vá, làm sai lệch tốc độ phản hồi sự cố thực tế của Ivanti.
+- **AI đã nói:** Claude khẳng định "Ivanti phát hành bản vá trong vòng 48 giờ sau khi công bố zero-day."
+- **Thực tế:** Ivanti mất khoảng **3 tuần** để phát hành bản vá đầu tiên sau khi công bố ngày 10/1/2024.
+- **Rủi ro:** AI ảo giác thời gian phản hồi nhanh hơn thực tế hơn 10 lần, làm hiểu sai khoảng thời gian hệ thống thực sự không được vá.
 
 ---
 
@@ -764,7 +792,9 @@ CVE-2024-3400 là lỗ hổng chèn lệnh trong tính năng GlobalProtect của
 - Vô hiệu hóa GlobalProtect gateway/portal nếu không cần thiết về mặt vận hành cho đến khi vá xong
 
 **AI Bias/Hallucination:**
-Claude khẳng định "Prisma Access và Cloud NGFW cũng bị ảnh hưởng bởi CVE-2024-3400." Khuyến cáo của Palo Alto xác nhận rõ ràng cả hai sản phẩm đều KHÔNG bị ảnh hưởng — chỉ các thiết bị PAN-OS tại chỗ chạy GlobalProtect mới bị ảnh hưởng. AI đã ảo giác về phạm vi mở rộng có thể gây ra việc khắc phục khẩn cấp không cần thiết trên các sản phẩm đám mây không bị ảnh hưởng.
+- **AI đã nói:** Claude khẳng định "Prisma Access và Cloud NGFW cũng bị ảnh hưởng bởi CVE-2024-3400."
+- **Thực tế:** Khuyến cáo Palo Alto xác nhận rõ cả hai sản phẩm đám mây đó **KHÔNG bị ảnh hưởng** — chỉ thiết bị PAN-OS tại chỗ chạy GlobalProtect mới bị.
+- **Rủi ro:** Mở rộng phạm vi sai có thể gây khắc phục khẩn cấp không cần thiết trên các sản phẩm không liên quan, lãng phí nguồn lực ứng phó.
 
 ---
 
@@ -790,7 +820,9 @@ Vào ngày 20 tháng 3 năm 2023, một lỗi trong thư viện Redis client (re
 - Tăng cường cô lập dữ liệu giữa các phiên người dùng
 
 **AI Bias/Hallucination:**
-Claude khẳng định "chính model của OpenAI đã tạo ra dữ liệu riêng tư của người dùng từ dữ liệu huấn luyện." Lỗi thực sự hoàn toàn nằm ở logic caching tầng ứng dụng (điều kiện race condition trong redis-py) — không phải bản thân model. Model không "nhớ" hay "tạo ra" dữ liệu của người dùng khác. AI đã ảo giác về rò rỉ dữ liệu ở cấp model khi lỗi thực tế là một lỗi kỹ thuật phần mềm thông thường trong thư viện caching.
+- **AI đã nói:** Claude khẳng định "model của OpenAI tạo ra dữ liệu riêng tư của người dùng từ dữ liệu huấn luyện."
+- **Thực tế:** Lỗi nằm hoàn toàn ở tầng caching ứng dụng (race condition trong `redis-py`) — model không "nhớ" hay "tạo ra" dữ liệu của người dùng khác.
+- **Rủi ro:** AI ảo giác về rò rỉ ở cấp model (nỗi lo phổ biến về LLM) trong khi đây chỉ là lỗi kỹ thuật thông thường trong thư viện caching.
 
 ---
 
@@ -815,7 +847,9 @@ Trong vụ kiện liên bang Hoa Kỳ Mata v. Avianca Airlines, các luật sư 
 - OpenAI/các nhà cung cấp AI pháp lý đã thêm cảnh báo rõ ràng rằng ChatGPT có thể bịa đặt trích dẫn
 
 **AI Bias/Hallucination:**
-Claude đã đặt sai tên luật sư bị phạt là "Steven Schwartz hành động một mình." Thực tế, hai luật sư bị phạt: Steven A. Schwartz (người thực hiện nghiên cứu) và Peter LoDuca (luật sư nộp hồ sơ). Claude đã xóa bỏ một trong hai người bị phạt — thật trớ trêu khi chính lỗi này là về ảo giác AI trong bối cảnh pháp lý.
+- **AI đã nói:** Claude xác định luật sư bị phạt là "Steven Schwartz hành động một mình."
+- **Thực tế:** Hai luật sư bị phạt: **Steven A. Schwartz** (người dùng ChatGPT nghiên cứu) và **Peter LoDuca** (người nộp hồ sơ tòa án).
+- **Rủi ro:** AI xóa bỏ một trong hai bên bị kỷ luật — trớ trêu khi chính lỗi này nằm trong vụ án về ảo giác AI trong bối cảnh pháp lý.
 
 ---
 
@@ -842,7 +876,9 @@ Vào tháng 3 năm 2023, các kỹ sư bán dẫn Samsung đã sử dụng ChatG
 - Đào tạo nhân viên về điều khoản lưu giữ dữ liệu AI và rủi ro bảo vệ sở hữu trí tuệ
 
 **AI Bias/Hallucination:**
-Claude khẳng định "ChatGPT đã chủ động đánh cắp dữ liệu của Samsung qua một lỗ hổng bảo mật." Thực tế, nhân viên Samsung tự nguyện dán thông tin bí mật vào ChatGPT — không có khai thác, không có lỗ hổng, không có truy cập trái phép. AI đã đóng khung một lỗi quy trình/chính sách của con người thành một cuộc tấn công kỹ thuật, xác định sai nguyên nhân gốc rễ và kê đơn vá lỗi thay vì quản trị và đào tạo như giải pháp đúng đắn.
+- **AI đã nói:** Claude khẳng định "ChatGPT chủ động đánh cắp dữ liệu Samsung qua một lỗ hổng bảo mật."
+- **Thực tế:** Nhân viên Samsung **tự nguyện** dán thông tin bí mật vào ChatGPT — không có khai thác, không có lỗ hổng kỹ thuật, không có truy cập trái phép.
+- **Rủi ro:** AI đóng khung lỗi quy trình của con người thành cuộc tấn công kỹ thuật, kê đơn giải pháp sai (vá lỗi) thay vì giải pháp đúng (quản trị AI và đào tạo nhân viên).
 
 ---
 
@@ -868,7 +904,9 @@ Ngay sau khi Microsoft ra mắt Bing Chat (được hỗ trợ bởi GPT-4), cá
 - Không bao giờ chỉ dựa vào system prompt cho các ràng buộc quan trọng về bảo mật — sử dụng các biện pháp bảo vệ bằng code xác định
 
 **AI Bias/Hallucination:**
-Claude mô tả jailbreak Sydney là "một tính năng cố ý của Microsoft cho mục đích thử nghiệm." Nhân cách Sydney là tên mã nội bộ của Microsoft cho system prompt Bing Chat — không phải tính năng công khai hay cơ chế thử nghiệm có chủ đích. Người dùng phát hiện ra nó qua các prompt đối nghịch. AI đã ảo giác về một chủ ý vô hại trong khi thực tế là một tiết lộ bảo mật không có chủ đích.
+- **AI đã nói:** Claude mô tả nhân cách Sydney là "tính năng cố ý của Microsoft cho mục đích thử nghiệm."
+- **Thực tế:** "Sydney" là tên mã nội bộ của system prompt Bing Chat — không phải tính năng công khai. Người dùng tìm ra nó qua các prompt đối nghịch, không phải tính năng được thiết kế.
+- **Rủi ro:** AI ảo giác về chủ ý vô hại (Microsoft cố ý), che khuất thực tế đây là một tiết lộ bảo mật ngoài ý muốn.
 
 ---
 
@@ -895,7 +933,9 @@ Nghiên cứu học thuật (Pearce et al., "Asleep at the Keyboard," NYU 2022�
 - GitHub đã thêm Copilot Autofix (2024) để tự động đề xuất sửa lỗi bảo mật cho các mẫu được đánh dấu
 
 **AI Bias/Hallucination:**
-Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi ý code không an toàn." Không có bản sửa lỗi nào như vậy tồn tại — vấn đề cơ bản vốn có trong dữ liệu huấn luyện (code GitHub công khai có lỗ hổng bảo mật). GitHub đã thêm các lớp phát hiện (Copilot Autofix) đánh dấu các mẫu đã biết sau khi tạo ra. AI đã ảo giác về một giải pháp hoàn chỉnh cho vấn đề về cơ bản vẫn chưa được giải quyết, tạo ra sự tự tin sai lầm về bảo mật code được hỗ trợ bởi AI.
+- **AI đã nói:** Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi ý code không an toàn."
+- **Thực tế:** Không có bản sửa lỗi nào như vậy — vấn đề vốn có trong dữ liệu huấn luyện (code GitHub công khai chứa lỗ hổng). GitHub chỉ thêm **Copilot Autofix** để *phát hiện sau khi tạo*, không loại bỏ được nguồn gốc vấn đề.
+- **Rủi ro:** Ảo giác về giải pháp hoàn chỉnh tạo ra sự tự tin sai lầm, khiến người dùng bỏ qua kiểm tra bảo mật code do AI tạo ra.
 
 ---
 
@@ -980,7 +1020,7 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 
 ---
 
-#### TC06 – Tăng thời gian khi đang nấu
+#### TC06 – Tăng thời gian khi đang nấu  (Trường hợp biên)
 
 | Trường               | Chi tiết                                                               |
 | -------------------- | ---------------------------------------------------------------------- |
@@ -990,6 +1030,8 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 | **Kết quả mong đợi** | Thời gian sẽ được tăng lên               |
 | **Kết quả thực tế**  |      Thiết bị bíp còi cảnh báo không cho tăng nhiệt độ                                                                  |
 | **Kết luận**         | ⬜    Không đạt                                                                  |
+
+> **Vì sao AI bỏ sót trường hợp này:** AI tạo test case dựa trên luồng sử dụng tiêu chuẩn: cài đặt → khởi động → chờ hoàn thành. AI không xét tình huống người dùng muốn thay đổi thông số giữa chừng khi thiết bị đang hoạt động — đây là nhu cầu thực tế thường gặp (ví dụ thấy đồ ăn chưa chín nên muốn tăng thời gian) mà chỉ khi sử dụng thiết bị thực mới phát hiện được.
 
 ---
 
@@ -1071,12 +1113,7 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 
 ---
 
-#### ⚠️ CÁC TRƯỜNG HỢP BIÊN (AI KHÔNG THỂ TÌM RA)
-
----
-
-#### TC13 – Mất Điện Đột Ngột Khi Đang Nấu (Trường Hợp Biên)
-
+#### TC13 – Mất Điện Đột Ngột Khi Đang Nấu 
 | Trường               | Chi tiết                                                                        |
 | -------------------- | ------------------------------------------------------------------------------- |
 | **Mục tiêu**         | Xác minh hành vi khi nguồn điện bị ngắt đột ngột                                |
@@ -1086,11 +1123,8 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 | **Kết quả thực tế**  |        Thiết bị khởi động lại nhưng mất hết dữ liệu trước đó phải cài đặt lại                                                                         |
 | **Kết luận**         | ⬜      Không đạt                                                                         |
 
-> **Vì sao AI bỏ sót trường hợp này:** AI thường tạo test case dựa trên các tương tác giao diện. AI khó dự đoán các tình huống vật lý thực tế như mất điện đột ngột, vốn cần kiểm thử trực tiếp trên phần cứng.
 
----
-
-#### TC14 – Nấu Khi Giỏ Chưa Được Lắp Hoàn Toàn (Trường Hợp Biên)
+#### TC14 – Nấu Khi Giỏ Chưa Được Lắp Hoàn Toàn
 
 | Trường               | Chi tiết                                                  |
 | -------------------- | --------------------------------------------------------- |
@@ -1101,12 +1135,8 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 | **Kết quả thực tế**  |    không chọn nút khởi động được chứ không cảnh báo nếu chọn sẽ nghe tiếng bíp cảnh báo                                                      |
 | **Kết luận**         | ⬜              Đạt                                           |
 
-> **Vì sao AI bỏ sót trường hợp này:** AI thường giả định trạng thái nhị phân (giỏ có hoặc không). AI không xét tới các trạng thái vật lý không rõ ràng chỉ xuất hiện trong sử dụng thực tế.
-
----
-
-#### TC15 – Nhấn Nút Liên Tục / Spam Đầu Vào (Trường Hợp Biên)
-
+-
+#### TC15 – Nhấn Nút Liên Tục / Spam Đầu Vào 
 | Trường               | Chi tiết                                                                                   |
 | -------------------- | ------------------------------------------------------------------------------------------ |
 | **Mục tiêu**         | Xác minh tính ổn định khi các nút được nhấn liên tục                                       |
@@ -1116,7 +1146,37 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 | **Kết quả thực tế**  |         Màn hình ổn định, không treo hoặc hiển thị giá trị bất thường                                                                                   |
 | **Kết luận**         | ⬜                  Đạt                                                                        |
 
-> **Vì sao AI bỏ sót trường hợp này:** AI thường tập trung vào các tương tác đơn lẻ và chuẩn hóa. Kiểm thử tải đầu vào hỗn loạn trên phần cứng là tình huống thực tế mà AI dễ bỏ qua nếu không được yêu cầu rõ ràng.
+#### TC16 – Bấm khởi động khi chưa cắm điện (Trường Hợp Biên)
+
+| Trường | Chi tiết |
+|--------|---------|
+| **Mục tiêu** | Kiểm tra hành vi của thiết bị khi nhấn nút nguồn mà chưa cắm điện |
+| **Đầu vào** | Thiết bị chưa được cắm vào ổ điện |
+| **Các bước** | 1. Đảm bảo dây nguồn chưa cắm vào ổ điện 2. Nhấn nút nguồn trên thiết bị 3. Quan sát phản hồi |
+| **Kết quả mong đợi** | Thiết bị không phản hồi, màn hình không sáng, không có âm thanh |
+| **Kết quả thực tế** | Thiết bị không phản hồi, màn hình không sáng, không có âm thanh |
+| **Kết luận** | ⬜ Đạt |
+
+> **Vì sao AI bỏ sót trường hợp này:** AI luôn giả định thiết bị đã được cắm điện sẵn như một precondition ngầm định cho mọi test case. AI không xét tình huống người dùng thao tác trên thiết bị khi chưa có nguồn điện — đây là hành vi thực tế thường gặp (ví dụ trẻ em nghịch nút) mà chỉ người có kinh nghiệm sử dụng thiết bị thực mới nghĩ đến.
+
+---
+
+#### TC17 – Bật/tắt đèn chiếu sáng của nồi (Trường Hợp Biên)
+
+| Trường | Chi tiết |
+|--------|---------|
+| **Mục tiêu** | Kiểm tra chức năng bật/tắt đèn chiếu sáng bên trong nồi hoạt động đúng |
+| **Đầu vào** | Thiết bị đã cắm điện, nhấn nút đèn (🔆) |
+| **Các bước** | 1. Cắm điện và bật nguồn 2. Nhấn nút đèn (🔆) để bật 3. Quan sát đèn bên trong nồi 4. Nhấn lại nút đèn để tắt 5. Quan sát đèn tắt |
+| **Kết quả mong đợi** | Đèn bật sáng khi nhấn lần 1, tắt khi nhấn lần 2; trạng thái đèn thay đổi chính xác mỗi lần nhấn |
+| **Kết quả thực tế** | Đèn bật sáng khi nhấn lần 1, tắt khi nhấn lần 2; trạng thái đèn thay đổi chính xác mỗi lần nhấn |
+| **Kết luận** | ⬜ Đạt |
+
+> **Vì sao AI bỏ sót trường hợp này:** AI tập trung vào các chức năng chính của nồi chiên (nhiệt độ, hẹn giờ, quạt) và bỏ qua các tính năng phụ trợ như đèn chiếu sáng bên trong. Đèn là tính năng phụ thuộc vào model cụ thể (Philips HD9252 có nút đèn riêng) — AI không có thông tin chi tiết về phần cứng từng model nên không biết tính năng này tồn tại.
+
+![Screenshot AI conversation — AI không tạo TC16](img/req3/edge-case-1.png)
+
+![Screenshot AI conversation — AI không tạo TC17](img/req3/edge-case-2.png)
 
 ### Tóm Tắt Kết Quả Thực Thi Kiểm Thử
 
@@ -1127,20 +1187,22 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 | TC03    | Tăng Nhiệt Độ                          |      Yes      |    No     |   No    | Đạt        |
 | TC04    | Giảm Nhiệt Độ                          |      Yes      |    No     |   No    | Đạt        |
 | TC05    | Cài Đặt Bộ Hẹn Giờ                     |      Yes      |    Yes    |   Yes    | Không đạt        |
-| TC06    | Tăng thời gian khi đang nấu            |      Yes      |    Yes    |   Yes   | Không đạt  |
+| TC06 ⭐   | Tăng thời gian khi đang nấu            |      Yes      |    Yes    |   Yes   | Không đạt  |
 | TC07    | Tạm Dừng Và Tiếp Tục                   |      Yes      |    No     |   No    | Đạt        |
 | TC08    | Tháo Giỏ Khi Đang Nấu                  |      Yes      |    No     |   No    | Đạt        |
 | TC09    | Cảnh Báo Khi Hoàn Thành                |      Yes      |    No     |   No    | Đạt        |
 | TC10    | Tắt Nguồn Khi Đang Nấu                 |      Yes      |    No     |   No    | Đạt        |
 | TC11    | Giới Hạn Nhiệt Độ Tối Đa               |      Yes      |    No     |   Yes   | Không đạt  |
 | TC12    | Giới Hạn Nhiệt Độ Tối Thiểu            |      Yes      |    No     |   Yes   | Không đạt  |
-| TC13 ⭐  | Mất Điện Đột Ngột Khi Đang Nấu         |      Yes      |    No     |   Yes   | Không đạt  |
-| TC14 ⭐  | Nấu Khi Giỏ Chưa Được Lắp Hoàn Toàn   |      Yes      |    Yes    |   No    | Đạt        |
-| TC15 ⭐  | Nhấn Nút Liên Tục / Spam Đầu Vào       |      Yes      |    Yes    |   No    | Đạt        |
+| TC13   | Mất Điện Đột Ngột Khi Đang Nấu         |      Yes      |    No     |   Yes   | Không đạt  |
+| TC14   | Nấu Khi Giỏ Chưa Được Lắp Hoàn Toàn   |      Yes      |    Yes    |   No    | Đạt        |
+| TC15   | Nhấn Nút Liên Tục / Spam Đầu Vào       |      Yes      |    Yes    |   No    | Đạt        |
+| TC16 ⭐  | Bấm khởi động khi chưa cắm điện        |      Yes      |    No     |   No    | Đạt        |
+| TC17 ⭐  | Bật/tắt đèn chiếu sáng của nồi         |      Yes      |    No     |   No    | Đạt        |
 
----
 
 ### Video YouTube
+
 
 | # | TC# | YouTube Link | Duration |
 |---|-----|-------------|---------|
@@ -1149,7 +1211,7 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 | V3 | TC03 | [Video TC03](https://www.youtube.com/shorts/DH9anK0nrpY) | ≤60s |
 | V4 | TC04 | [Video TC04](https://www.youtube.com/shorts/DH9anK0nrpY) | ≤60s |
 | V5 | TC07 | [Video TC07](https://www.youtube.com/shorts/bWeIbCaRzLs) | ≤60s |
-| V6 | TC14 | [Video TC14](https://www.youtube.com/shorts/xxxxx) | ≤60s |
+| V6 | TC14 | [Video TC14](https://youtube.com/shorts/x6u1C93hVnA) | ≤60s |
 
 ---
 
@@ -1165,10 +1227,7 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 | **Kết quả mong đợi** | Màn hình hiển thị ký hiệu hoặc chỉ báo trực quan khi đạt thời gian tối đa cho phép |
 | **Kết quả thực tế** | Màn hình không thay đổi, chỉ phát tiếng bíp — người dùng không biết đã đạt giới hạn |
 | **Mức độ nghiêm trọng** | Thấp |
-| **Mức độ ưu tiên** | Thấp |
-| **Môi trường** | Philips HD9252, điện lưới 220V |
-| **Trạng thái** | Mới |
-| **GitHub Issue** | _(sẽ thêm sau)_ |
+| **Github issues** | https://github.com/ThanhDang-Vn/software-testing/issues/4|
 
 ---
 
@@ -1181,10 +1240,7 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 | **Kết quả mong đợi** | Thời gian nấu được tăng thêm như mong đợi của người dùng |
 | **Kết quả thực tế** | Thiết bị phát tiếng bíp cảnh báo, từ chối tăng thời gian, không hiển thị thông báo giải thích |
 | **Mức độ nghiêm trọng** | Trung bình |
-| **Mức độ ưu tiên** | Trung bình |
-| **Môi trường** | Philips HD9252, điện lưới 220V |
-| **Trạng thái** | Mới |
-| **GitHub Issue** | _(sẽ thêm sau)_ |
+| **Github issues** | https://github.com/ThanhDang-Vn/software-testing/issues/5|
 
 ---
 
@@ -1197,10 +1253,7 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 | **Kết quả mong đợi** | Màn hình hiển thị ký hiệu MAX hoặc chỉ báo giới hạn trực quan |
 | **Kết quả thực tế** | Chỉ phát tiếng bíp, không có chỉ báo trực quan — người dùng khó nhận biết đã đạt giới hạn |
 | **Mức độ nghiêm trọng** | Thấp |
-| **Mức độ ưu tiên** | Thấp |
-| **Môi trường** | Philips HD9252, điện lưới 220V |
-| **Trạng thái** | Mới |
-| **GitHub Issue** | _(sẽ thêm sau)_ |
+| **Github issues** | https://github.com/ThanhDang-Vn/software-testing/issues/6|
 
 ---
 
@@ -1213,11 +1266,7 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 | **Kết quả mong đợi** | Màn hình hiển thị ký hiệu MIN hoặc chỉ báo giới hạn trực quan |
 | **Kết quả thực tế** | Chỉ phát tiếng bíp, không có chỉ báo trực quan — người dùng khó nhận biết đã đạt giới hạn |
 | **Mức độ nghiêm trọng** | Thấp |
-| **Mức độ ưu tiên** | Thấp |
-| **Môi trường** | Philips HD9252, điện lưới 220V |
-| **Trạng thái** | Mới |
-| **GitHub Issue** | _(sẽ thêm sau)_ |
-
+| **Github issues** | https://github.com/ThanhDang-Vn/software-testing/issues/7|
 ---
 
 #### BUG-05 — Mất toàn bộ cài đặt sau khi mất điện đột ngột
@@ -1229,10 +1278,7 @@ Claude khẳng định "GitHub đã sửa Copilot để loại bỏ các gợi �
 | **Kết quả mong đợi** | Thiết bị khởi động lại an toàn và hiển thị lại cài đặt trước đó (180°C, thời gian còn lại) |
 | **Kết quả thực tế** | Thiết bị reset hoàn toàn về mặc định — người dùng phải cài đặt lại từ đầu |
 | **Mức độ nghiêm trọng** | Trung bình |
-| **Mức độ ưu tiên** | Cao |
-| **Môi trường** | Philips HD9252, điện lưới 220V |
-| **Trạng thái** | Mới |
-| **GitHub Issue** | _(sẽ thêm sau)_ |
+| **Github issues** | https://github.com/ThanhDang-Vn/software-testing/issues/8|
 
 **GitHub Issues Screenshot:**
 
