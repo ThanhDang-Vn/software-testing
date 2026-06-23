@@ -1,133 +1,95 @@
-# 01 — Phân tích Đặc tả: feature_A (FR-02 — Login & Account Lockout)
+# 01 — Specification Analysis: feature_A (FR-02 — Login & Account Lockout)
 
-> **Phạm vi bước này:** Chỉ phân tích đặc tả + suy ràng buộc thực tế từ code. **Chưa** thiết kế test case (sẽ làm ở `02_domain_testing.md` và `03_bva.md`).
+> **Scope:** Requirement/specification analysis only. No test cases. No BVA.
 
----
+**References:**
 
-## 0. Cách tiếp cận (kỹ thuật phân tích đặc tả)
-
-Trước khi áp dụng Domain Testing / BVA, ta phải hiểu **không gian đầu vào** của chức năng. Quy trình:
-
-1. **Đọc đặc tả nghiệp vụ** (SRS) để biết hệ thống *phải* làm gì → đây là "oracle" (kết quả mong đợi).
-2. **Đọc source code thật của SUT** để biết hệ thống *thực sự* làm gì → suy ra ràng buộc triển khai (kiểu dữ liệu, thứ tự kiểm tra, ngưỡng...).
-3. Với mỗi ràng buộc, **ghi rõ nguồn**: `[SPEC]` (lấy từ SRS) hay `[CODE]` (suy từ code). Khi `[SPEC]` ≠ `[CODE]` → đó là **điểm nóng** dễ phát sinh defect, sẽ được kiểm thử kỹ ở các bước sau.
-4. Tách **biến đầu vào trực tiếp** (người dùng nhập) khỏi **biến trạng thái phụ thuộc** (server lưu, chi phối hành vi) — vì miền giá trị và cách phân hoạch của hai loại này khác nhau.
-
-## Nguồn tham chiếu
-
-| Nhãn | Nguồn | Vị trí |
+| Label | Source | Location |
 | --- | --- | --- |
-| `[SPEC]` | SRS — FR-02 (Login & Lockout), FR-22 (Form), SEC-01/02 | `group05_eshop/README.md` |
-| `[CODE-BE]` | Endpoint đăng nhập | `group05_eshop/backend/server.js:32–66` |
-| `[CODE-DB]` | Schema bảng `users` + seed | `group05_eshop/backend/database.js:50–94` |
-| `[CODE-FE]` | Form đăng nhập (web) | `group05_eshop/frontend-web/src/pages/Login.jsx` |
-| `[CODE-CTX]` | Gửi request & lưu token | `group05_eshop/frontend-web/src/context/AuthContext.jsx` |
+| `[SPEC]` | SRS — FR-02, FR-22, SEC-01, SEC-02 | `group05_eshop/README.md` |
+| `[CODE-BE]` | Login endpoint | `group05_eshop/backend/server.js:32–66` |
+| `[CODE-DB]` | Users table schema + seed data | `group05_eshop/backend/database.js:50–94` |
+| `[CODE-FE]` | Login form (web) | `group05_eshop/frontend-web/src/pages/Login.jsx` |
+| `[CODE-CTX]` | Auth context (token storage) | `group05_eshop/frontend-web/src/context/AuthContext.jsx` |
 
 ---
 
-## 1. Mô tả chức năng & luồng nghiệp vụ chính
+## 1. Functional Description
 
-**Mục đích:** Xác thực người dùng bằng Email + Mật khẩu; cấp JWT cho phiên đăng nhập; chống dò mật khẩu bằng cơ chế khóa tài khoản tạm thời sau nhiều lần sai liên tiếp.
+**Purpose:** Authenticate users via Email + Password; issue a JWT token for session management; prevent brute-force attacks by temporarily locking accounts after consecutive failed attempts.
 
-**Luồng chính (happy path)** — `[SPEC]` FR-02 + `[CODE-BE]`:
-1. Người dùng nhập **Email** và **Mật khẩu**, bấm đăng nhập.
-2. Frontend gửi `POST /api/login` với body `{ email, password }` `[CODE-CTX]`.
-3. Backend tra cứu user theo email (`SELECT * FROM users WHERE email = ?`, parameterized) `[CODE-BE]`.
-4. Nếu user **đang bị khóa** (`locked_until` còn hiệu lực) → trả `403` "Tài khoản đã bị khóa..." (kiểm tra này chạy **trước** khi so mật khẩu).
-5. Nếu **mật khẩu đúng** → reset `login_attempts = 0`, `locked_until = NULL`, ký JWT `{ id, role }`, trả `200` kèm `token` + `user`.
-6. Frontend lưu token vào `localStorage`, đặt header `Authorization: Bearer <token>`, chuyển về trang Home `[CODE-CTX]`/`[CODE-FE]`.
+### Main Business Flow (step-by-step)
 
-**Luồng lỗi & khóa tài khoản (lockout)** — `[SPEC]` FR-02 + `[CODE-BE]`:
-- Email không tồn tại → `401` "Invalid email or password" (không tăng bộ đếm) `[CODE-BE]`.
-- Mật khẩu sai → tăng bộ đếm `login_attempts`; nếu đạt ngưỡng → đặt `locked_until`; trả `401` cùng thông báo chung (không lộ nguyên nhân) `[SPEC]`/`[CODE-BE]`.
-
----
-
-## 2. Biến đầu vào trực tiếp (Input Variables / Fields)
-
-### Biến 1 — `email`
-
-| Thuộc tính | Nội dung | Nguồn |
-| --- | --- | --- |
-| Kiểu dữ liệu | Chuỗi (TEXT). Cột `users.email TEXT`, không `UNIQUE`, không `NOT NULL` | `[CODE-DB]` |
-| Vai trò | Khóa tra cứu tài khoản; so khớp **chính xác chuỗi** qua `WHERE email = ?` | `[CODE-BE]` |
-| Ràng buộc định dạng (mong đợi) | Phải đúng định dạng email `user@domain.com`; field web phải dùng `type="email"` (validate HTML5) | `[SPEC]` FR-02, FR-22 |
-| Ràng buộc định dạng (thực tế) | **Không** validate định dạng ở backend; form web dùng `type="text"`, label ghi "Username", chỉ có `required` (HTML5 chặn rỗng) | `[CODE-BE]`, `[CODE-FE]` |
-| Phân biệt hoa/thường | So khớp `=` trên TEXT trong SQLite **phân biệt hoa thường** mặc định ⇒ `Test@eshop.com` ≠ `test@eshop.com` | `[CODE-BE/DB]` |
-| Khoảng trắng | Không trim ở backend ⇒ ` test@eshop.com ` không khớp | `[CODE-BE]` |
-| Độ dài min/max | Không quy định | — (thiếu) |
-| Giá trị **hợp lệ** nghiệp vụ | Email đã đăng ký, đúng case: `test@eshop.com`, `admin@eshop.com` | `[CODE-DB]` seed |
-| Giá trị **không hợp lệ** nghiệp vụ | Sai định dạng (`abc`, `a@b`), email chưa đăng ký, rỗng, sai case, có khoảng trắng thừa | suy luận |
-
-### Biến 2 — `password`
-
-| Thuộc tính | Nội dung | Nguồn |
-| --- | --- | --- |
-| Kiểu dữ liệu | Chuỗi (TEXT). Cột `users.password TEXT` lưu **plaintext** (vi phạm SEC-01) | `[CODE-DB]` |
-| Vai trò | So khớp xác thực: `user.password === password` (so sánh chuỗi tuyệt đối) | `[CODE-BE]` |
-| Ràng buộc (mong đợi) | Field web phải dùng `type="password"` (ẩn ký tự) | `[SPEC]` FR-22 |
-| Ràng buộc (thực tế) | Form web dùng `type="text"` ⇒ hiển thị rõ mật khẩu; chỉ có `required` | `[CODE-FE]` |
-| Phân biệt hoa/thường | Có (so sánh `===`) ⇒ `test1234!` ≠ `Test1234!` | `[CODE-BE]` |
-| Khoảng trắng | Không trim ⇒ `Test1234! ` (có space cuối) ≠ `Test1234!` | `[CODE-BE]` |
-| Độ dài / chính sách | Khi **đăng nhập** không kiểm tra độ mạnh (chính sách mật khẩu mạnh thuộc FR-01 — đăng ký) | `[SPEC]` |
-| Giá trị **hợp lệ** | Đúng tuyệt đối mật khẩu đã lưu: `Test1234!`, `Admin123!` | `[CODE-DB]` seed |
-| Giá trị **không hợp lệ** | Bất kỳ chuỗi không khớp, rỗng, sai case, thừa/thiếu ký tự, thừa khoảng trắng | suy luận |
-
----
-
-## 3. Biến phụ thuộc & điều kiện kết hợp (State variables)
-
-Hành vi đăng nhập không chỉ phụ thuộc 2 input trực tiếp mà còn vào **trạng thái tài khoản** lưu ở server. Đây là input gián tiếp, rất quan trọng cho phần BVA (ngưỡng khóa).
-
-| Biến trạng thái | Kiểu | Ý nghĩa | Nguồn |
+| Step | Actor | Action | System Response |
 | --- | --- | --- | --- |
-| `login_attempts` | INTEGER, default `0` | Số lần sai tích lũy của tài khoản | `[CODE-DB]` |
-| `locked_until` | DATETIME, nullable | Mốc thời gian hết khóa; còn hiệu lực nếu `now < locked_until` | `[CODE-DB]` |
+| 1 | User | Enters Email and Password on login form | — |
+| 2 | User | Clicks "Login" button | Frontend sends `POST /api/login` with `{ email, password }` `[CODE-CTX]` |
+| 3 | System | Looks up user by email | `SELECT * FROM users WHERE email = ?` (parameterized) `[CODE-BE]` |
+| 4a | System | Email not found | Return `401 "Invalid email or password"` — counter NOT incremented `[CODE-BE]` |
+| 4b | System | Email found → check lock status | If `locked_until` is set AND `now < locked_until` → return `403 "Tài khoản đã bị khóa"` `[CODE-BE]` |
+| 5a | System | Not locked → password matches | Reset `login_attempts = 0`, `locked_until = NULL`; sign JWT `{ id, role }`; return `200` with `{ token, user }` `[CODE-BE]` |
+| 5b | System | Not locked → password does NOT match | Increment `login_attempts += 2`; if `>= 3` → set `locked_until = now + 180s`; return `401` `[CODE-BE]` |
+| 6 | Frontend | On success | Store token in `localStorage`, set `Authorization: Bearer` header, redirect to Home `[CODE-CTX]` |
+| 7 | Frontend | On failure | Display generic error "Đăng nhập thất bại. Vui lòng kiểm tra lại." `[CODE-FE]` |
 
-**Thứ tự kiểm tra (logic kết hợp)** `[CODE-BE]`:
-```
-1. email tồn tại?           --(không)--> 401, KHÔNG tăng bộ đếm
-2. đang khóa? (now<locked)  --(có)----> 403 "Tài khoản đã bị khóa"  (kể cả khi mật khẩu đúng)
-3. mật khẩu đúng?           --(đúng)--> reset attempts=0, locked_until=NULL, cấp JWT, 200
-                            --(sai)---> attempts mới = attempts + 2; nếu >=3 thì khóa; 401
-```
+### Lockout Sub-flow
 
-**Ngưỡng & hằng số khóa — đối chiếu SPEC vs CODE (điểm nóng):**
-
-| Tham số | `[SPEC]` FR-02 | `[CODE-BE]` | Chênh lệch |
+| Step | Condition | Behavior | Source |
 | --- | --- | --- | --- |
-| Mức tăng mỗi lần sai | **+1** | **+2** (`login_attempts + 2`) | ❗ Code tăng gấp đôi ⇒ chuỗi 0→2→4, khóa kích hoạt sau **2 lần sai** thay vì 3 |
-| Ngưỡng khóa | `>= 3` lần sai liên tiếp | `newAttempts >= 3` | Ngưỡng số giống nhau, nhưng do bước +2 nên đạt sớm hơn |
-| Thời gian khóa | **30 giây** (demo) | **180000 ms = 180 giây (3 phút)** | ❗ Lệch 6× |
-| Phạm vi bộ đếm | "liên tiếp" của tài khoản | Theo tài khoản; reset khi đăng nhập đúng | Code không reset khi hết hạn khóa |
+| L1 | Wrong password entered | `login_attempts += 2` (SPEC says +1) | `[CODE-BE]` line 54 |
+| L2 | `login_attempts >= 3` | Set `locked_until = now + 180000ms` (SPEC says 30s) | `[CODE-BE]` line 56–57 |
+| L3 | Account locked, any login attempt | Return `403` — even if password is correct (priority check) | `[CODE-BE]` line 40–44 |
+| L4 | Lock expires (`now >= locked_until`) | Login allowed again, but `login_attempts` NOT reset (still high) | `[CODE-BE]` (no reset logic on expiry) |
+| L5 | Successful login after unlock | Reset `login_attempts = 0`, `locked_until = NULL` | `[CODE-BE]` line 48 |
 
-**Điều kiện kết hợp đáng chú ý cho thiết kế test sau này:**
-- (Mật khẩu đúng) × (đang khóa) ⇒ vẫn bị chặn `403` → cần test "đăng nhập đúng trong lúc đang khóa".
-- (Email không tồn tại) × (sai nhiều lần) ⇒ bộ đếm **không** tăng → không khóa với email lạ.
-- (Hết hạn khóa) × (`login_attempts` vẫn cao, ví dụ 4) ⇒ 1 lần sai kế tiếp → 6 → khóa lại ngay → cần test hành vi sau khi hết khóa.
+
+## 2. Input Fields
+
+### 2.1 Direct Input Fields (User-entered)
+
+| Field Name | Data Type | Required | Validation Rules | Valid Domain | Invalid Domain | Source |
+| --- | --- | --- | --- | --- | --- | --- |
+| `email` | String (email) | Yes (`required` on form) | SPEC: Must use `type="email"` (HTML5 format validation). CODE: form uses `type="text"` — no format validation on frontend. Backend: no format validation, exact string match via `WHERE email = ?` | RFC-compliant email that exists in DB with exact case match. Seed: `test@eshop.com`, `admin@eshop.com` | (1) Invalid format: missing `@`, missing domain, missing local part. (2) Empty / null. (3) Too long (1000+ chars). (4) Valid format but not in DB. (5) Valid format, exists but wrong case. (6) Contains whitespace (not trimmed) | `[SPEC]` FR-02, FR-22; `[CODE-BE]` line 35; `[CODE-FE]` line 30 |
+| `password` | String (password) | Yes (`required` on form) | SPEC: Must use `type="password"` (mask input). CODE: form uses `type="text"` — password visible. Backend: plaintext comparison `user.password === password`, case-sensitive, no trim | Exact match of stored password. Seed: `Test1234!` (for test user), `Admin123!` (for admin) | (1) Any string ≠ stored password. (2) Case mismatch (e.g., `test1234!`). (3) Extra whitespace. (4) Empty / null | `[SPEC]` FR-22; `[CODE-BE]` line 46; `[CODE-FE]` line 40 |
+
+### 2.2 State Variables (Server-side, affect behavior but not user-entered)
+
+| Field Name | Data Type | Default | Domain | Description | Source |
+| --- | --- | --- | --- | --- | --- |
+| `login_attempts` | INTEGER | `0` | 0, 2, 4, 6, ... (increments by 2 per failure) | Consecutive failed login counter. SPEC: should increment by 1 | `[CODE-DB]` line 56; `[CODE-BE]` line 54 |
+| `locked_until` | DATETIME | `NULL` | `NULL` (unlocked), future timestamp (locked), past timestamp (expired) | Account lock expiry time. Set when `login_attempts >= 3` | `[CODE-DB]` line 57; `[CODE-BE]` line 57 |
+
+### 2.3 Implicit Constraints (not in any single field definition)
+
+| Constraint | Description | SPEC | CODE | Match? |
+| --- | --- | --- | --- | --- |
+| Case sensitivity (email) | Whether `Test@` matches `test@` | Not specified | Case-sensitive (`WHERE email = ?` on TEXT) | ⚠️ Ambiguous — SPEC silent |
+| Case sensitivity (password) | Whether `test1234!` matches `Test1234!` | Not specified | Case-sensitive (`===` comparison) | ⚠️ Ambiguous — SPEC silent |
+| Whitespace trimming | Whether leading/trailing spaces are stripped | Not specified | No trimming on either field | ⚠️ Ambiguous — SPEC silent |
+| Counter increment | How much counter increases per failure | +1 per failure | +2 per failure (`login_attempts + 2`) | ❌ Mismatch |
+| Lock duration | How long account stays locked | 30 seconds (demo) | 180,000 ms = 180 seconds | ❌ Mismatch |
+| Lock threshold | When lockout triggers | ≥ 3 consecutive failures | `newAttempts >= 3` | ✅ Same number, but reached faster due to +2 |
+| Email input type | HTML input type for email field | `type="email"` | `type="text"` | ❌ Mismatch |
+| Password input type | HTML input type for password field | `type="password"` | `type="text"` (visible) | ❌ Mismatch |
+| Form heading | Login page title | Should say "Đăng nhập" | Says "Đăng Ký" (Register) | ❌ Mismatch |
+| Button label | Submit button text | Vietnamese expected | "Sign In" (English) | ❌ Mismatch |
+| Email field label | Label text | Should say "Email" | Says "Username" | ❌ Mismatch |
+| Lock error visibility | Whether user sees lock message | Should show appropriate error | Frontend catches error → shows generic message, hides backend's `403` lock message | ❌ Mismatch |
+| Password storage | How passwords are stored | Must NOT be plaintext (SEC-01) | Stored as plaintext in DB | ❌ Mismatch |
+| Login response data | What data is returned on success | Token only (implied) | Returns full `user` object including `password` field | ❌ Security leak |
+| JWT expiry | Token lifetime | Not specified | No `expiresIn` → token lives forever | ⚠️ Ambiguous — SPEC silent |
+| Counter scope (email not found) | Does counter increase for non-existent email? | "consecutive failed login" — ambiguous | No increment (returns 401 early before counter logic) | ⚠️ Ambiguous |
+| Counter reset on lock expiry | Does counter reset to 0 when lock expires? | Not specified | No — counter stays high, next failure re-locks immediately | ⚠️ Ambiguous |
 
 ---
 
-## 4. Điểm đặc tả KHÔNG rõ ràng / thiếu thông tin (nơi dễ phát sinh bug)
+## 3. Field Dependencies
 
-> Phần này gom (a) chỗ SRS **không định nghĩa** (mơ hồ) và (b) chỗ CODE **đã làm khác** SRS. Cả hai đều là vùng cần kiểm thử trọng điểm. Bug cụ thể sẽ được xác nhận qua thực thi (bước `04`) và lập báo cáo (bước `05`).
+| Field A | Field B | Dependency Type | Condition | Description |
+| --- | --- | --- | --- | --- |
+| `email` | `password` | **Sequential** | Email must resolve to a user before password is checked | Backend checks email first (`SELECT WHERE email`); if not found → `401` immediately, password is never evaluated |
+| `email` | `login_attempts` | **Lookup** | Email resolves to a user record that carries `login_attempts` | Counter is per-account; if email is not found, no account → no counter to increment |
+| `login_attempts` | `locked_until` | **Threshold trigger** | `login_attempts >= 3` triggers `locked_until = now + 180s` | Each wrong password adds +2 to counter; when crossing threshold, lock is set |
+| `locked_until` | `password` | **Priority / blocking** | If `locked_until` is active, password check is skipped entirely | Lock check runs BEFORE password comparison — even correct password → `403` |
+| `login_attempts` | success login | **Reset** | Successful login resets `login_attempts = 0` and `locked_until = NULL` | Counter only resets on successful login, NOT on lock expiry |
 
-**A. Đặc tả mơ hồ / thiếu (ambiguity):**
-1. **Phân biệt hoa/thường của email**: SRS không nói email có case-insensitive không. Code phân biệt ⇒ rủi ro UX.
-2. **Trim khoảng trắng**: SRS không quy định cắt space đầu/cuối cho email & mật khẩu.
-3. **Email không tồn tại có tính vào bộ đếm khóa không?** SRS chỉ nói "đăng nhập sai"; không rõ "sai" gồm cả email lạ hay chỉ sai mật khẩu. Code: chỉ sai-mật-khẩu mới tính.
-4. **Bộ đếm sau khi hết hạn khóa**: SRS không nói có reset `login_attempts` về 0 khi khóa hết hạn hay không.
-5. **Độ dài tối đa** của email/mật khẩu: không quy định ⇒ chưa rõ giá trị biên trên.
-6. **Hết hạn (expiry) của JWT**: SRS không nêu; code ký token **không có `expiresIn`** ⇒ token sống vĩnh viễn.
-7. **"Liên tiếp" (consecutive)**: SRS dùng từ "liên tiếp" nhưng code chỉ reset khi đăng nhập đúng — chưa rõ định nghĩa chính xác chuỗi "liên tiếp".
-
-**B. Triển khai khác đặc tả (chênh SPEC vs CODE — điểm nóng):**
-1. ❗ **Bộ đếm +2 thay vì +1** (`server.js:54`) ⇒ khóa sau ~2 lần sai (FR-02 yêu cầu +1, khóa từ lần thứ 3).
-2. ❗ **Thời gian khóa 180s thay vì 30s** (`server.js:57`).
-3. ❗ **Form web sai loại input**: email dùng `type="text"` (không phải `type="email"`), mật khẩu dùng `type="text"` (không ẩn) — vi phạm FR-22; label ghi "Username", tiêu đề trang ghi "Đăng Ký", nút "Sign In" (lẫn ngôn ngữ).
-4. ❗ **Lộ dữ liệu nhạy cảm**: phản hồi đăng nhập trả nguyên `user` (gồm cả cột `password` plaintext) — liên quan SEC-01.
-5. ❗ **Thông báo khóa không tới người dùng (web)**: `Login.jsx` bắt lỗi và hiển thị thông báo chung "Đăng nhập thất bại...", che mất message `403` "Tài khoản đã bị khóa" của backend ⇒ người dùng không biết đang bị khóa.
-
----
-
-*Kết thúc Bước 1 — Phân tích đặc tả feature_A. Bước kế tiếp (chờ xác nhận): phân hoạch miền (Domain Testing) trong `02_domain_testing.md`.*
