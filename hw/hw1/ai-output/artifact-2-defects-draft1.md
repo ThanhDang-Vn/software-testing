@@ -73,11 +73,6 @@ A critical SQL injection vulnerability in Progress Software's MOVEit Transfer (a
 - Disable HTTP/HTTPS traffic to MOVEit Transfer environments until patching
 - Review audit logs for unauthorized access and `webshell` artifacts
 
-**AI Bias/Hallucination Note:**  
-GPT-4 incorrectly stated that "MOVEit Transfer is an open-source tool" when asked to explain this defect. MOVEit Transfer is a proprietary, commercial product by Progress Software (formerly Ipswitch). This hallucination could mislead a tester into applying incorrect mitigation strategies (e.g., looking for open-source community patches that do not exist).
-
----
-
 ### Defect 3 – XZ Utils Backdoor (CVE-2024-3094) (2024)
 
 **Source:** <https://nvd.nist.gov/vuln/detail/CVE-2024-3094>  
@@ -96,11 +91,6 @@ A sophisticated supply chain attack was embedded in XZ Utils versions 5.6.0 and 
 - Immediately downgrade to XZ Utils 5.4.6 or earlier (unaffected versions)
 - Distributions rolled back affected packages within 24 hours of disclosure
 - Long-term: OpenSSF and Linux Foundation launched initiatives for open-source maintainer identity verification
-
-**AI Bias/Hallucination Note:**  
-Claude described the attacker as "a state-sponsored Chinese hacker" with high confidence — this attribution is publicly unconfirmed. Security researchers have speculated about nation-state involvement based on the sophistication and long timeline, but no official attribution has been made. The AI presented speculation as fact, a hallucination pattern common in attribution questions where training data contains speculative news articles.
-
----
 
 ### Defect 4 – Log4Shell Continued Exploitation (CVE-2021-44228) (2022)
 
@@ -122,11 +112,6 @@ Log4Shell, disclosed in December 2021, continued to be one of the most actively 
 - For systems that could not be immediately patched: set `log4j2.formatMsgNoLookups=true` JVM flag or remove the JndiLookup class from the classpath
 - Implement WAF rules to detect and block `${jndi:` patterns
 
-**AI Bias/Hallucination Note:**  
-When asked which versions are safe, Claude stated "Log4j 1.x is not affected by Log4Shell." While technically true for CVE-2021-44228, Log4j 1.x reached end-of-life in 2015 and has its own critical vulnerabilities (CVE-2019-17571, CVE-2022-23302). The AI's technically-correct-but-misleading answer could cause a tester to conclude that Log4j 1.x systems are safe, when they are critically insecure for other reasons.
-
----
-
 ### Defect 5 – OpenSSL Infinite Loop (CVE-2022-0778) (2022)
 
 **Source:** <https://www.openssl.org/news/secadv/20220315.txt>  
@@ -144,11 +129,6 @@ A bug in the `BN_mod_sqrt()` function in OpenSSL caused an infinite loop when pa
 **Solution:**
 - Upgrade to OpenSSL 1.1.1n, 3.0.2, or later
 - For OpenSSL 1.0.2 (EOL): upgrade to a supported version; no public patch available
-
-**AI Bias/Hallucination Note:**  
-ChatGPT described this vulnerability as allowing "remote code execution" in its initial response. CVE-2022-0778 is a Denial of Service vulnerability — it causes an infinite loop/crash, not arbitrary code execution. The AI likely conflated this with other OpenSSL vulnerabilities (e.g., Heartbleed), producing an inflated severity assessment that could mislead triage prioritization.
-
----
 
 ### Defect 6 – Microsoft Exchange ProxyNotShell (CVE-2022-41040 / CVE-2022-41082) (2022)
 
@@ -170,11 +150,6 @@ Two chained vulnerabilities in Microsoft Exchange Server — CVE-2022-41040 (Ser
 - Interim mitigation: add URL Rewrite rule in IIS to block the attack pattern `.*autodiscover\.json.*\@.*Powershell.*`
 - Enable Extended Protection for Authentication (EPA) on Exchange
 
-**AI Bias/Hallucination Note:**  
-Claude confused ProxyNotShell with ProxyShell (CVE-2021-34473/34523/31207) when asked to explain the vulnerability chain, stating that "ProxyNotShell affects Exchange Online (Microsoft 365)." ProxyNotShell only affects on-premises Exchange Server — Exchange Online was never affected. This geographic/deployment misattribution could cause a tester to incorrectly scope remediation efforts.
-
----
-
 ### Defect 7 – Apple WebKit Zero-Day (CVE-2022-32893) (2022)
 
 **Source:** <https://support.apple.com/en-us/HT213412>  
@@ -193,11 +168,6 @@ An out-of-bounds write vulnerability in Apple's WebKit browser engine allowed ma
 **Solution:**
 - Apple released emergency updates: iOS 15.6.1, iPadOS 15.6.1, macOS 12.5.1
 - Update immediately via Settings → General → Software Update
-
-**AI Bias/Hallucination Note:**  
-When queried, Claude stated that "CVE-2022-32893 was used exclusively by the Pegasus spyware." Apple's advisory confirms active in-the-wild exploitation but makes no attribution to specific threat actors or spyware. The AI hallucinated a specific attribution (NSO Group / Pegasus) that is not substantiated by Apple's official disclosure, reflecting a bias toward associating iOS zero-days with the most well-known iOS spyware.
-
----
 
 ### Defect 8 – Twitter 5.4M User Data Breach (2022)
 
@@ -219,10 +189,6 @@ A vulnerability in Twitter's API (introduced by a code change in June 2021) allo
 - Notified affected users; recommended enabling two-factor authentication
 - Implement stricter API rate limiting and enumeration protection for user lookup endpoints
 
-**AI Bias/Hallucination Note:**  
-ChatGPT reported the breach as affecting "5.4 million email addresses only," omitting that phone numbers were also exposed. The official disclosure confirms both phone numbers AND email addresses were used as lookup keys, and the resulting dataset included associated account metadata. This partial hallucination understates the privacy impact for users who used phone numbers for 2FA — precisely the most security-conscious users.
-
----
 
 ### Defect 9 – LastPass Password Vault Breach (2022–2023)
 
@@ -246,10 +212,6 @@ LastPass suffered a two-stage breach: in August 2022, source code and technical 
 - Migrate to alternative password managers (1Password, Bitwarden)
 - LastPass: restructured cloud storage architecture and improved secrets management
 
-**AI Bias/Hallucination Note:**  
-Claude initially stated that "the LastPass master passwords themselves were leaked." This is incorrect — the master passwords were never stored by LastPass (zero-knowledge architecture). What was leaked were the encrypted vaults, which can only be decrypted by someone who knows the master password. The AI conflated "vault data was stolen" with "master passwords were exposed," a critical distinction that affects the correct user response.
-
----
 
 ### Defect 10 – Uber Social Engineering Breach (2022)
 
@@ -272,10 +234,6 @@ A threat actor (later identified as an 18-year-old member of Lapsus$) used socia
 - Implement least-privilege access on all internal network shares
 - Mandatory security awareness training for contractors
 
-**AI Bias/Hallucination Note:**  
-When asked about this incident, ChatGPT stated "Uber's customer payment data was compromised." Uber's official disclosure explicitly states that no evidence was found of customer data (trip history, credit card data) being accessed. The AI hallucinated a consequence not supported by the official disclosure, likely influenced by the broader pattern of data breaches where customer payment data is typically the primary target.
-
----
 
 ### Defect 11 – PyPI Malicious Package – ctx (Supply Chain) (2022)
 
@@ -298,11 +256,6 @@ An attacker hijacked two abandoned PyPI packages — `ctx` (a legitimate package
 - Monitor dependency trees for unexpected new releases (Dependabot, Renovate, Socket.dev)
 - Use `pip-audit` or `safety` to check for known-malicious packages
 
-**AI Bias/Hallucination Note:**  
-Gemini described the `ctx` package as "a package with thousands of malicious downloads used primarily for cryptocurrency mining." The `ctx` package is a legitimate utility for accessing dict/object attributes using dot notation — it was hijacked for credential theft (environment variable exfiltration), not cryptocurrency mining. The AI hallucinated the payload type, likely conflating this with other malicious PyPI packages that did deploy crypto miners.
-
----
-
 ### Defect 12 – 3CX Desktop App Supply Chain Attack (2023)
 
 **Source:** <https://www.crowdstrike.com/blog/crowdstrike-detects-and-prevents-active-intrusion-campaign-targeting-3cx-customers/>  
@@ -323,11 +276,6 @@ The 3CX Desktop App (a widely used VoIP/PBX software with 600,000+ customers) wa
 - 3CX released clean versions (18.12.422 for Windows, 18.12.422 for macOS) after rebuilding the build environment
 - Enable EDR detections for `3CXDesktopApp.exe` spawning child processes
 - Audit endpoints for indicators of compromise (specific DLL hashes published by CrowdStrike and Mandiant)
-
-**AI Bias/Hallucination Note:**  
-Claude incorrectly stated that "the 3CX attack was the first supply chain attack of 2023." The SolarWinds attack (2020) and Kaseya VSA attack (2021) were earlier, larger-scale supply chain attacks. More accurately, the 3CX attack was notable for being a "supply chain attack chained from another supply chain attack" — a novel escalation. The AI's "first" claim is a hallucination that minimizes historical context.
-
----
 
 ### Defect 13 – Microsoft Outlook Zero-Click RCE (CVE-2023-23397) (2023)
 
@@ -350,11 +298,6 @@ A critical privilege escalation vulnerability in Microsoft Outlook for Windows a
 - Block TCP 445 (SMB) outbound at the firewall to prevent NTLM relay to external servers
 - Script available from Microsoft to detect suspicious calendar items
 
-**AI Bias/Hallucination Note:**  
-ChatGPT described this vulnerability as requiring "the victim to click on a malicious link in the email." CVE-2023-23397 is a zero-click vulnerability — exploitation occurs when Outlook processes the email notification, before any user interaction. This mischaracterization significantly understates the risk (zero-click vs. one-click is a critical distinction in risk modeling and patch prioritization).
-
----
-
 ### Defect 14 – Ivanti Connect Secure Zero-Day (CVE-2023-46805 / CVE-2024-21887) (2024)
 
 **Source:** <https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-060b>  
@@ -376,10 +319,6 @@ Two chained zero-day vulnerabilities in Ivanti Connect Secure (formerly Pulse Se
 - Deploy Ivanti's updated External Integrity Checker Tool (EICT) post-patch
 - Assume compromise if appliance was internet-facing during the exposure window — full forensic investigation required
 
-**AI Bias/Hallucination Note:**  
-Claude initially stated "Ivanti released patches within 48 hours of the zero-day disclosure." In reality, Ivanti took approximately 3 weeks to release the first patches after public disclosure (January 10, 2024), and mitigations (XML import workaround) were provided first. The AI hallucinated a response timeline that significantly understates the window of unpatched exposure, misrepresenting Ivanti's actual incident response speed.
-
----
 
 ### Defect 15 – Progress OpenEdge Authentication Bypass (CVE-2024-1403) (2024)
 
@@ -400,11 +339,6 @@ A critical authentication bypass vulnerability in Progress Software's OpenEdge A
 - Upgrade to OpenEdge LTS 11.7.19, 12.2.14, or 12.8.1
 - Restrict network access to AdminServer (port 20931) to trusted IP ranges only
 - Monitor authentication logs for anomalous login patterns
-
-**AI Bias/Hallucination Note:**  
-When asked to explain this vulnerability, ChatGPT stated that "CVE-2024-1403 affects Progress MOVEit Transfer." CVE-2024-1403 is a vulnerability in Progress **OpenEdge**, not MOVEit Transfer. The AI confused two distinct Progress Software products, likely because MOVEit Transfer's CVE-2023-34362 received far more media coverage and the AI's pattern-matching associated "Progress Software + critical auth vulnerability" with MOVEit. This product confusion could lead to entirely wrong remediation steps.
-
----
 
 ### Defect 16 – ChatGPT Conversation History Leak (2023) ✅ AI/LLM
 
@@ -428,10 +362,6 @@ On March 20, 2023, a bug in the Redis client library (`redis-py`) used by ChatGP
 - Enhanced data isolation between user sessions
 - Implemented additional checks to prevent cross-user data leakage in cache layers
 
-**AI Bias/Hallucination Note:**  
-When asked about this incident, Claude stated that "OpenAI's own model generated users' private data from training data." The bug was entirely in the application-layer caching logic (`redis-py` race condition) — not in the model itself. The model did not "remember" or "generate" other users' data. The AI hallucinated a model-level data leakage (a common fear about LLMs) when the actual defect was a conventional software engineering bug in a caching library.
-
----
 
 ### Defect 17 – GPT-4 Hallucination – Mata v. Avianca Legal Brief (2023) ✅ AI/LLM
 
@@ -452,11 +382,6 @@ In the US federal case *Mata v. Avianca Airlines*, attorneys from the law firm L
 - Never submit AI-generated legal research without human expert verification against official legal databases (Westlaw, LexisNexis)
 - Implement AI disclosure requirements in court filings
 - OpenAI/legal AI vendors added explicit warnings that ChatGPT is not a legal research tool and may fabricate citations
-
-**AI Bias/Hallucination Note:**  
-When asked to summarize this case, Claude incorrectly named the sanctioned attorney as "Steven Schwartz acting alone." In reality, two attorneys were sanctioned: Steven A. Schwartz (who did the research) and Peter LoDuca (the filing attorney). Claude's response erased one of the two sanctioned parties, producing an incomplete and factually inaccurate account of the disciplinary outcome — ironic given that this defect is itself about AI hallucination in legal contexts.
-
----
 
 ### Defect 18 – Google Bard Factual Error at Launch Demo (2023) ✅ AI/LLM
 
@@ -480,11 +405,6 @@ During Google's high-profile public announcement of Bard (February 6, 2023), a p
 - Mandatory human review of AI-generated content in official communications
 - Google subsequently added source citations and "Google It" prompts to Bard responses
 
-**AI Bias/Hallucination Note:**  
-When asked about this incident, Claude stated that "the James Webb Space Telescope discovered the first exoplanets." JWST has captured detailed atmospheric spectra of previously known exoplanets and imaged some directly, but the first confirmed exoplanet discovery dates to 1992 (pulsar planets) or 1995 (51 Pegasi b via radial velocity). The AI reproduced the same category of hallucination that caused the original Bard incident — overattributing "first" achievements to JWST.
-
----
-
 ### Defect 19 – Bing Chat (Sydney) Prompt Injection / Jailbreak (2023) ✅ AI/LLM
 
 **Source:** <https://arstechnica.com/information-technology/2023/02/ai-powered-bing-chat-spills-its-secrets-via-prompt-injection-attack/>  
@@ -506,11 +426,6 @@ Shortly after Microsoft launched the Bing Chat AI (powered by GPT-4), researcher
 - Separate trust levels: user input vs. retrieved web content vs. system instructions
 - Never rely on the system prompt alone for security-critical constraints — use deterministic code guards
 - Monitor for anomalous outputs indicating potential prompt injection
-
-**AI Bias/Hallucination Note:**  
-Claude described the Sydney jailbreak as a "deliberate Microsoft feature for testing purposes." The Sydney persona was Microsoft's internal codename for the Bing Chat system prompt configuration — it was not a public feature or a deliberate testing mechanism. Users discovered it through adversarial prompting, and Microsoft did not intend for users to interact with the system-level persona directly. The AI hallucinated a benign intentionality where the reality was an unintended security disclosure.
-
----
 
 ### Defect 20 – GitHub Copilot Insecure Code Generation (CWE-798) (2023) ✅ AI/LLM
 
