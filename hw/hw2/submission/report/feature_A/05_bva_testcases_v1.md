@@ -92,6 +92,3 @@
 - **Nominal gộp:** BVA-A-003 đại diện cho nominal case của cả 4 field (email, password, counter, locked_until) — giảm trùng lặp.
 - **DB manipulation:** BVA-A-011, BVA-A-012, BVA-A-015, BVA-A-018 yêu cầu set counter trực tiếp trong DB vì code không tạo ra các giá trị này trong normal flow.
 
----
-
-*Kết thúc STEP 5 — BVA Test Cases (v1). Chờ review.*

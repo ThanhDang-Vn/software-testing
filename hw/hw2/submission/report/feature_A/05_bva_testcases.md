@@ -88,7 +88,3 @@
 - **Unicode test:** BVA-A-026 only tests ë; should test more Vietnamese characters (à, ă, etc.) for thorough coverage.
 - **Integration:** No test combines 2+ boundaries (e.g., max email length + max password length simultaneously).
 - **Counter negative:** BVA-A-018 tests corruption (counter = -1), but unclear how system would reach this state.
-
----
-
-*Kết thúc STEP 5 — BVA Test Cases (Level 2). Chờ review.*

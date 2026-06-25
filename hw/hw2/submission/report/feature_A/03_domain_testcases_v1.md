@@ -92,12 +92,12 @@ Nguyên tắc **one-at-a-time**: khi test 1 biến ở lớp invalid, giữ các
 | **DT-A-010** | password | EC-P3 | Negative | Email: `test@eshop.com`, Password: `Test123!` (missing `4`), State: attempts=0, unlocked | `401 "Invalid email or password"`, `login_attempts` → 2 |
 | **DT-A-011** | password | EC-P4 | Negative | Email: `test@eshop.com`, Password: `Test1234! ` (trailing space), State: attempts=0, unlocked | `401 "Invalid email or password"`, `login_attempts` → 2 |
 | **DT-A-012** | password | EC-P5 | Negative | Email: `test@eshop.com`, Password: *(empty)*, State: attempts=0, unlocked | Form validation blocks (HTML5 `required`); if bypassed → `401`, `login_attempts` → 2 |
-| **DT-A-013** | state | EC-S2 | Negative | Email: `test@eshop.com`, Password: `Test1234!` (correct), State: attempts=4, locked_until=future | `401 "Tài khoản đã bị khóa"`, login blocked even with correct password |
+| **DT-A-013** | state | EC-S2 | Negative | Email: `test@eshop.com`, Password: `Test1234!` (correct), State: attempts=4, locked_until=future | `403 "Tài khoản đã bị khóa"`, login blocked even with correct password |
 | **DT-A-014** | state | EC-S3 | Positive | Email: `test@eshop.com`, Password: `Test1234!`, State: attempts=4, locked_until=past (expired) | `200 OK`, JWT token returned, `login_attempts` reset to 0, `locked_until` cleared |
 | **DT-A-015** | state + pw | EC-S1 + EC-P3 | Negative | Email: `test@eshop.com`, Password: `WrongPass!`, State: attempts=0, unlocked | `401`, `login_attempts` 0 → 2 (first failure, approaching threshold) |
 | **DT-A-016** | state + pw | EC-S1 + EC-P3 | Negative | Email: `test@eshop.com`, Password: `WrongPass!`, State: attempts=2, unlocked | `401`, `login_attempts` 2 → 4 (crosses threshold ≥ 3), account LOCKED |
 | **DT-A-017** | email (admin) | EC-E1 | Positive | Email: `admin@eshop.com`, Password: `Admin123!`, State: attempts=0, unlocked | `200 OK`, JWT token returned with `role: admin` |
-| **DT-A-018** | state | EC-S2 | Negative | Email: `test@eshop.com`, Password: `WrongPass!` (wrong), State: attempts=4, locked_until=future | `401 "Tài khoản đã bị khóa"`, counter stays at 4, lock persists |
+| **DT-A-018** | state | EC-S2 | Negative | Email: `test@eshop.com`, Password: `WrongPass!` (wrong), State: attempts=4, locked_until=future | `403 "Tài khoản đã bị khóa"`, counter stays at 4, lock persists |
 
 ---
 

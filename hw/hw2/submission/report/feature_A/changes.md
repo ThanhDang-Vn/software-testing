@@ -79,3 +79,71 @@
 | 6 | Tách BVA-A-014 (v0) → BVA-A-013 (correct pw) + BVA-A-014 (wrong pw → lock) | Issue #6 |
 | 7 | Xóa password nominal TC trùng, tổng từ 28 → 27 cases | Cleanup |
 | 8 | Thêm note DB manipulation cho các TC unreachable in normal flow (011, 012, 015, 018) | Clarity |
+
+---
+
+## 03_domain_testcases_v1: hotfix
+
+### Changes Applied
+
+| # | Change | Reason |
+|---|---|---|
+| 1 | DT-A-013: status code `401` → `403` cho locked account | Khớp với code: lock check trả về 403, không phải 401 |
+| 2 | DT-A-018: status code `401` → `403` cho locked account | Tương tự #1 |
+
+---
+
+## 06_detailed_testcases: v0 → v1
+
+### Review Issues (from v0)
+
+| # | Issue | Severity | Type |
+|---|---|---|---|
+| 1 | Domain TCs tự thêm 4 TC không có trong source 03 (DT-A-009 trùng happy path, 014 trùng 001, 016/017 không map) | High | Inconsistency |
+| 2 | DT-A-006 trong source 03 = email quá dài (EC-E6) nhưng 06 v0 map thành whitespace → thiếu EC-E6 | High | Missing Case |
+| 3 | DT-A-013/018: dùng `401` cho locked account, phải là `403` | High | Logic Error |
+| 4 | BVA thiếu BVA-A-012 (counter=1, wrong pw → exact threshold LOCK) | High | Missing Case |
+| 5 | BVA thiếu BVA-A-013 (counter=2, correct pw → 200, reset) | High | Missing Case |
+| 6 | BVA-A-016: test counter=4 + locked=future → bị lock che mất counter boundary | High | Logic Error |
+| 7 | BVA-A-009 nominal + BVA-A-019 NULL: đã gộp vào BVA-A-003 ở 05_v1 nhưng 06 v0 vẫn giữ | Medium | Inconsistency |
+| 8 | "Special Cases" section không phải BVA, cần đổi tên | Medium | Spec Misinterpretation |
+| 9 | Thống kê sai: Domain 22 + BVA 28 = 50, thực tế phải là Domain 18 + BVA 27 = 45 | Medium | Inconsistency |
+
+### Changes Applied (v1)
+
+| # | Change | Addresses |
+|---|---|---|
+| 1 | Xóa 4 TC Domain trùng/không có trong source, sync đúng 18 TC từ `03_domain_testcases_v1.md` | Issue #1 |
+| 2 | Thêm DT-A-006 = email quá dài (EC-E6), khớp với source 03_v1 | Issue #2 |
+| 3 | DT-A-013, DT-A-018: sửa `401` → `403` cho locked account | Issue #3 |
+| 4 | Thêm BVA-A-012 (counter=1, wrong pw → counter 1→3, exact threshold, LOCK triggered) | Issue #4 |
+| 5 | Thêm BVA-A-013 (counter=2, correct pw → 200, counter reset → 0) | Issue #5 |
+| 6 | BVA-A-016: đổi thành counter=4, locked=NULL, wrong pw → counter 4→6, re-lock triggered | Issue #6 |
+| 7 | Xóa BVA-A-009 nominal + BVA-A-019 NULL (đã gộp vào BVA-A-003) | Issue #7 |
+| 8 | Đổi "Special Cases" → "Supplementary Tests (non-BVA)" + disclaimer categorical values | Issue #8 |
+| 9 | Cập nhật thống kê: Domain 18 + BVA 27 = **45 TC** tổng, thêm cột Source | Issue #9 |
+
+---
+
+## 06_detailed_testcases_v1: hotfix — UI Validation
+
+### Review Issues
+
+| # | Issue | Severity | Type |
+|---|---|---|---|
+| 1 | FR-22 UI requirements (input type, label, heading) identified in 01_spec_analysis nhưng không có TC nào cover | High | Missing Case |
+
+### Changes Applied
+
+| # | Change | Addresses |
+|---|---|---|
+| 1 | Thêm Section C: UI Validation Test Cases (UI-A-001 → UI-A-008) | Issue #1 |
+| 2 | UI-A-001: input type="email" thay vì type="text" | FR-22 |
+| 3 | UI-A-002: input type="password" thay vì type="text" | FR-22 |
+| 4 | UI-A-003: label "Email" thay vì "Username" | FR-22 |
+| 5 | UI-A-004: heading "Đăng nhập" thay vì "Đăng Ký" | FR-22 |
+| 6 | UI-A-005: button text Vietnamese consistency | FR-22 |
+| 7 | UI-A-006: lock error message visible khi bị khóa | FR-22 |
+| 8 | UI-A-007: error message position above submit button | FR-22 |
+| 9 | UI-A-008: required field asterisks | FR-22 |
+| 10 | Cập nhật thống kê: 45 → **53 TC** (18 DT + 27 BVA + 8 UI) | Cleanup |
