@@ -1,0 +1,383 @@
+*   commit f8f74fd119c8f0505797009ccccacb70d9e9d910
+|\  Merge: 69ecba1 3a414d3
+| | Author: Thanh_Dang <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sat Jun 6 21:01:45 2026 +0700
+| | 
+| |     Merge pull request #10 from ThanhDang-Vn/homework1
+| |     
+| |     Homework1
+| | 
+| * commit 3a414d329095d166203391529ea5dde288f0c59d
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sat Jun 6 21:00:46 2026 +0700
+| | 
+| |     fix(hw1/req3): expand defect reports with full bug report fields
+| |     
+| |     Restructure BUG-01 to BUG-05 from simple table rows to full vertical
+| |     bug report entries including: steps to reproduce, expected/actual behavior,
+| |     severity, priority, environment, and status fields.
+| | 
+| |  hw/hw1/report.md | 121 +++++++++++++++++++++++++++++++++++++++------------
+| |  1 file changed, 93 insertions(+), 28 deletions(-)
+| | 
+| * commit 6fdd0bdb09b0d2bf68c95b89adae2494db4f4462
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sat Jun 6 20:37:49 2026 +0700
+| | 
+| |     docs(hw1/audit): add full AI output files and update appendix AI audit report
+| |     
+| |     - Create ai-output/ folder with 4 artifact files extracted from git history
+| |     - artifact-1: Req1 first draft (with non-LinkedIn entries) from commit 015357e
+| |     - artifact-2: Req2 first draft (with broken links) from commit 2c2ddd4
+| |     - artifact-3: Req3 air fryer draft (before execution) from commit bf7d891
+| |     - artifact-4: mindmap full output (current mindmap.md copy)
+| |     - Update appendix artifact (2) sections to link to full output files
+| |     - Update appendix prompt log entries 15-17 for latest session
+| |     - Update AI Audit Report summary table in report.md
+| |     - Add BUG-01 to BUG-05 in Defects Found During Execution table
+| | 
+| |  hw/hw1/ai-output/artifact-1-job-market-draft1.md | 299 +++++++++++
+| |  hw/hw1/ai-output/artifact-2-defects-draft1.md    | 527 +++++++++++++++++++
+| |  hw/hw1/ai-output/artifact-3-test-cases-draft1.md | 320 +++++++++++
+| |  hw/hw1/ai-output/artifact-4-mindmap-draft1.md    |  61 +++
+| |  hw/hw1/appendix-a-prompt-log.md                  | 187 +++----
+| |  hw/hw1/report.md                                 | 503 +++++++++---------
+| |  6 files changed, 1554 insertions(+), 343 deletions(-)
+| | 
+* | commit 69ecba10a4aa8d5efd3726fffc50c1e71ffcd1d2
+|\| Merge: 1c36553 c5ccf76
+| | Author: Thanh_Dang <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sat Jun 6 17:11:57 2026 +0700
+| | 
+| |     Merge pull request #9 from ThanhDang-Vn/homework1
+| |     
+| |     Homework1
+| | 
+| * commit c5ccf764615fe6407fb57914cca01be3dd0cd183
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sat Jun 6 17:11:21 2026 +0700
+| | 
+| |     feat(hw1): add device image and git issue images
+| | 
+| |  .gitignore                       |   3 +-
+| |  hw/hw1/img/req3/device.jpg       | Bin 0 -> 242234 bytes
+| |  hw/hw1/img/req3/github-issue.png | Bin 0 -> 310816 bytes
+| |  hw/hw1/report.pdf                | Bin 0 -> 4395691 bytes
+| |  hw/hw1/verify/req2-1.md          | 219 ++++++++++++++++++++++++
+| |  hw/hw1/verify/req2-2.md          | 237 +++++++++++++++++++++++++
+| |  hw/hw1/verify/req2-3.md          | 323 +++++++++++++++++++++++++++++++++++
+| |  7 files changed, 781 insertions(+), 1 deletion(-)
+| | 
+| * commit abb20a874836450fe1778e60e7715ce05b786836
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sat Jun 6 16:57:57 2026 +0700
+| | 
+| |     feat(hw1/req3): update test cases with actual results and sync execution summary
+| |     
+| |     - Update TC05 and TC06 actual results and verdicts after physical device execution
+| |     - Localize Req 2 section headers and overview table to Vietnamese
+| |     - Sync execution summary table: correct TC names, verdicts, video and bug flags
+| |     - Fix GitHub Issues screenshot path reference
+| |     - Expand appendix prompt log with full verbatim prompts and policy note
+| | 
+| |  hw/hw1/appendix-a-prompt-log.md |  160 ++---
+| |  hw/hw1/report.md                | 1112 +++++++++++++++++------------------
+| |  2 files changed, 638 insertions(+), 634 deletions(-)
+| | 
+| * commit 0b619475d84986e7224a3db5f19b714811abcfd6
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sat Jun 6 16:56:35 2026 +0700
+| | 
+| |     feat(hw1/req1): add salary transparency note with estimated VND ranges
+| |     
+| |     Add market salary note explaining why many postings list "Not listed",
+| |     with a reference table of estimated monthly salary ranges by role and
+| |     experience level sourced from Greenwich Vietnam 2025 data.
+| | 
+| |  hw/hw1/report.md | 20 +++++++++++++++++++-
+| |  1 file changed, 19 insertions(+), 1 deletion(-)
+| | 
+| * commit 3744f67ee13a7a734364c0d5c519f5dfc14d2fbb
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Fri Jun 5 07:55:05 2026 +0700
+| | 
+| |     feat(hw1/mindmap): correct previous version and add mistakes
+| | 
+| |  hw/hw1/mindmap.md | 22 ++++++++++++++++++++--
+| |  1 file changed, 20 insertions(+), 2 deletions(-)
+| | 
+| * commit f5ad2b494058fe0afac545c73626488b8040515d
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Fri Jun 5 07:52:16 2026 +0700
+| | 
+| |     feat(hw1): add QA/QC role mindmap create by AI
+| | 
+| |  hw/hw1/mindmap.md | 194 +++++++++++---------------------------------------
+| |  1 file changed, 42 insertions(+), 152 deletions(-)
+| | 
+* | commit 1c365536094a137bd936ff5b4a2e8750414a78fe
+|\| Merge: d7cc89c add63a6
+| | Author: Thanh_Dang <ntdang23@clc.fitus.edu.vn>
+| | Date:   Wed Jun 3 10:09:23 2026 +0700
+| | 
+| |     Merge pull request #3 from ThanhDang-Vn/homework1
+| |     
+| |     Homework1
+| | 
+| * commit add63a67f56cba109e67fc21ebbde5cd2d73e09d
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Wed Jun 3 10:06:07 2026 +0700
+| | 
+| |     feat(docs): add homework policies and homework 1
+| | 
+| |  .gitignore                                         |   1 +
+| |  hw/___2026.Homework.Policies.pdf                   | Bin 0 -> 169510 bytes
+| |  .../2026.HW01.Jobs.Defects.PhysicalProduct_En.pdf  | Bin 0 -> 471275 bytes
+| |  3 files changed, 1 insertion(+)
+| | 
+| * commit e0be81f49706aa9365cbb78194a9fdc22701798e
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Wed Jun 3 10:03:30 2026 +0700
+| | 
+| |     docs(hw1/audit): update prompt log for device switch and req2 verify session
+| |     
+| |     - Add prompt #13: verify defects 1-5 sources + hallucination notes (03/06/2026)
+| |     - Add prompt #14: rewrite req3 from rice cooker to air fryer (03/06/2026)
+| |     - Update Artifact 3 audit entry to reflect air fryer device and new TCs
+| | 
+| |  hw/hw1/appendix-a-prompt-log.md | 16 ++++++++--------
+| |  1 file changed, 8 insertions(+), 8 deletions(-)
+| | 
+| * commit bf7d8914dbe92a5d4c202f643383e4b17a5c25c8
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Wed Jun 3 10:02:59 2026 +0700
+| | 
+| |     feat(hw1/req3): switch device to air fryer, rewrite all 15 test cases
+| |     
+| |     - Replace electric rice cooker (Kangaroo) with air fryer as test device
+| |     - Rewrite all 15 TCs: fry frozen fries, temp adjustment, timer, preheat,
+| |       roast chicken, cancel mid-cycle, basket auto-pause, reheat, bake,
+| |       max temp, shake reminder, back-to-back cycles
+| |     - New edge cases: wet/marinated food safety (TC13), timer 0:00 BVA (TC14),
+| |       run without basket thermal safety (TC15)
+| |     - Update video list to TC01/TC05/TC06/TC14/TC15
+| |     - Update AI Audit summary table and AI Critique for new device
+| |     - Fix MOVEit patch versions in Req 2: 2021.0.7/2021.1.5/2022.0.5/2022.1.6/2023.0.2
+| | 
+| |  hw/hw1/report.md | 208 +++++++++++++++++++++++++--------------------------
+| |  hw/hw1/req3.md   | 200 ++++++++++++++++++++++++-------------------------
+| |  2 files changed, 204 insertions(+), 204 deletions(-)
+| | 
+* | commit d7cc89c103143df5eb313f5c0c098d1663fe10d9
+|\| Merge: 702da1a 2806d5c
+| | Author: Thanh_Dang <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sun May 24 14:18:17 2026 +0700
+| | 
+| |     Merge pull request #2 from ThanhDang-Vn/homework1
+| |     
+| |     Homework1
+| | 
+| * commit 2806d5c1ed70191f02430c19e1e1f0ef23515b9b
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sun May 24 14:14:34 2026 +0700
+| | 
+| |     feat(hw1): add mindmap, prompt log, AI audit report, and AI critique
+| |     
+| |     - mindmap.md: QA/QC role mindmap aligned to ISTQB Fundamental Test
+| |       Process with 7 phases, competency breakdown, principles table, and
+| |       AI impact section; annotates 3 mistakes from AI-generated first draft
+| |     - appendix-a-prompt-log.md: AI-02 prompt log with 12 timestamped
+| |       entries, 4-artifact AI audit report (5-section each), AI-03 mandatory
+| |       disclosure, and AI-05 self-checklist
+| |     - report.md: replaced placeholder AI Audit Report and AI Critique
+| |       sections with complete content (~260-word critique + summary table);
+| |       updated Mandatory Disclosure with reference to Appendix A
+| | 
+| |  hw/hw1/appendix-a-prompt-log.md | 112 ++++++++++++++++++++++++++
+| |  hw/hw1/mindmap.md               | 153 ++++++++++++++++++++++++++++++++++++
+| |  hw/hw1/report.md                |  26 +++++-
+| |  3 files changed, 288 insertions(+), 3 deletions(-)
+| | 
+| * commit 0171a40d8f22cc54187070a2304cad0cdc2890f9
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sun May 24 14:14:34 2026 +0700
+| | 
+| |     feat(hw1/req3): add 15 test cases for Kangaroo electric rice cooker
+| |     
+| |     Replaces previous placeholder test cases with full Requirement 3:
+| |     - Device: Kangaroo electric rice cooker (model/serial to be filled)
+| |     - TC01–TC12: normal function coverage (cook, quick cook, reheat, timer,
+| |       porridge, steam, keep-warm, cancel, brown rice, yogurt, standalone
+| |       reheat, manual time adjustment)
+| |     - TC13–TC15: 3 edge cases AI could not generate (open lid mid-cook,
+| |       timer set to 0:00 boundary, empty pot dry-run thermal safety)
+| |     - Execution summary table, YouTube video link placeholders, defect table
+| |     - req3.md retained as standalone verification copy
+| | 
+| |  hw/hw1/report.md | 283 ++++++++++++++++++++++++++++++++++++++++++++++++++-
+| |  hw/hw1/req3.md   | 282 ++++++++++++++++++++++++++++++++++++++++++++++++++
+| |  2 files changed, 564 insertions(+), 1 deletion(-)
+| | 
+| * commit 5776180e3a259edbb1c3d8d181710faf51738e1a
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sun May 24 14:14:34 2026 +0700
+| | 
+| |     feat(hw1/req2): rewrite report - replace defects 1,10,11,12,15,18 with working-link alternatives
+| | 
+| |  hw/hw1/report.md | 769 ++++++++++++++++++++++++++-------------------------
+| |  1 file changed, 395 insertions(+), 374 deletions(-)
+| | 
+| * commit 2c2ddd438232accc7ae90c5550074dc970547681
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sun May 24 14:14:34 2026 +0700
+| | 
+| |     feat(hw1/req2): add 20 software defects 2022-2026 (5 AI/LLM defects, each with AI bias/hallucination note)
+| | 
+| |  hw/hw1/report.md | 542 +++++++++++++++++++++++++++++++++++++++++++++++++++
+| |  1 file changed, 542 insertions(+)
+| | 
+| * commit be6e3ee18e7d5954c2c743302f8424ef03b7e654
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sun May 24 14:14:33 2026 +0700
+| | 
+| |     feat(hw1/req1): attach 10 LinkedIn job screenshots (req1-01.png to req1-10.png)
+| | 
+| |  hw/hw1/img/req1/req1-01.png | Bin 0 -> 484371 bytes
+| |  hw/hw1/img/req1/req1-02.png | Bin 0 -> 459271 bytes
+| |  hw/hw1/img/req1/req1-03.png | Bin 0 -> 464000 bytes
+| |  hw/hw1/img/req1/req1-04.png | Bin 0 -> 498530 bytes
+| |  hw/hw1/img/req1/req1-05.png | Bin 0 -> 537841 bytes
+| |  hw/hw1/img/req1/req1-06.png | Bin 0 -> 556142 bytes
+| |  hw/hw1/img/req1/req1-07.png | Bin 0 -> 529547 bytes
+| |  hw/hw1/img/req1/req1-08.png | Bin 0 -> 546847 bytes
+| |  hw/hw1/img/req1/req1-09.png | Bin 0 -> 519119 bytes
+| |  hw/hw1/img/req1/req1-10.png | Bin 0 -> 584570 bytes
+| |  hw/hw1/report.md            |  40 ++++++++++++++++++++++++++++++----------
+| |  11 files changed, 30 insertions(+), 10 deletions(-)
+| | 
+| * commit 49e001cd47274e73fcfe92e9a19b3c01c698decc
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sun May 24 14:14:33 2026 +0700
+| | 
+| |     feat(hw1/req1): replace all postings with LinkedIn-only jobs (10 postings, 5 AI/LLM roles)
+| | 
+| |  hw/hw1/report.md | 343 ++++++++++++++++++++++++++-------------------------
+| |  1 file changed, 177 insertions(+), 166 deletions(-)
+| | 
+| * commit 015357edfb30445125a178b3d67b35cb7a80b989
+|/  Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+|   Date:   Sun May 24 14:14:33 2026 +0700
+|   
+|       feat(hw1/req1): add QA/QC job market 2026+ section with 10 postings (4 AI/LLM roles) and AI impact analysis
+|   
+|    hw/hw1/report.md | 321 +++++++++++++++++++++++++++++++++++++++++++++++++++
+|    1 file changed, 321 insertions(+)
+|   
+| * commit c6d84ef2736db4889bf0cef0ddb8f3dc3af99c64
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sun May 24 14:07:33 2026 +0700
+| | 
+| |     feat(hw1): add mindmap, prompt log, AI audit report, and AI critique
+| |     
+| |     - mindmap.md: QA/QC role mindmap aligned to ISTQB Fundamental Test
+| |       Process with 7 phases, competency breakdown, principles table, and
+| |       AI impact section; annotates 3 mistakes from AI-generated first draft
+| |     - appendix-a-prompt-log.md: AI-02 prompt log with 12 timestamped
+| |       entries, 4-artifact AI audit report (5-section each), AI-03 mandatory
+| |       disclosure, and AI-05 self-checklist
+| |     - report.md: replaced placeholder AI Audit Report and AI Critique
+| |       sections with complete content (~260-word critique + summary table);
+| |       updated Mandatory Disclosure with reference to Appendix A
+| |     
+| |     Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>
+| | 
+| |  hw/hw1/appendix-a-prompt-log.md | 112 ++++++++++++++++++++++++++
+| |  hw/hw1/mindmap.md               | 153 ++++++++++++++++++++++++++++++++++++
+| |  hw/hw1/report.md                |  26 +++++-
+| |  3 files changed, 288 insertions(+), 3 deletions(-)
+| | 
+| * commit 3c19844f6e30a48b9f09b6f45799bf0f80828691
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sun May 24 14:05:03 2026 +0700
+| | 
+| |     feat(hw1/req3): add 15 test cases for Kangaroo electric rice cooker
+| |     
+| |     Replaces previous placeholder test cases with full Requirement 3:
+| |     - Device: Kangaroo electric rice cooker (model/serial to be filled)
+| |     - TC01–TC12: normal function coverage (cook, quick cook, reheat, timer,
+| |       porridge, steam, keep-warm, cancel, brown rice, yogurt, standalone
+| |       reheat, manual time adjustment)
+| |     - TC13–TC15: 3 edge cases AI could not generate (open lid mid-cook,
+| |       timer set to 0:00 boundary, empty pot dry-run thermal safety)
+| |     - Execution summary table, YouTube video link placeholders, defect table
+| |     - req3.md retained as standalone verification copy
+| |     
+| |     Co-Authored-By: Claude Sonnet 4.6 <noreply@anthropic.com>
+| | 
+| |  hw/hw1/report.md | 283 ++++++++++++++++++++++++++++++++++++++++++++++++++-
+| |  hw/hw1/req3.md   | 282 ++++++++++++++++++++++++++++++++++++++++++++++++++
+| |  2 files changed, 564 insertions(+), 1 deletion(-)
+| | 
+| * commit 0f0f3e883e691ebd020da5d798c4c899818789ab
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sun May 24 09:37:55 2026 +0700
+| | 
+| |     feat(hw1/req2): rewrite report - replace defects 1,10,11,12,15,18 with working-link alternatives
+| | 
+| |  hw/hw1/report.md | 769 ++++++++++++++++++++++++++-------------------------
+| |  1 file changed, 395 insertions(+), 374 deletions(-)
+| | 
+| * commit c7867817f879ed205dea4e05d0910b81a5417d95
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sun May 24 08:56:59 2026 +0700
+| | 
+| |     feat(hw1/req2): add 20 software defects 2022-2026 (5 AI/LLM defects, each with AI bias/hallucination note)
+| | 
+| |  hw/hw1/report.md | 542 +++++++++++++++++++++++++++++++++++++++++++++++++++
+| |  1 file changed, 542 insertions(+)
+| | 
+| * commit 0793213e865016ee6f4b4dfe9c8dc33cc38c48a8
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sun May 24 08:49:51 2026 +0700
+| | 
+| |     feat(hw1/req1): attach 10 LinkedIn job screenshots (req1-01.png to req1-10.png)
+| | 
+| |  hw/hw1/img/req1/req1-01.png | Bin 0 -> 484371 bytes
+| |  hw/hw1/img/req1/req1-02.png | Bin 0 -> 459271 bytes
+| |  hw/hw1/img/req1/req1-03.png | Bin 0 -> 464000 bytes
+| |  hw/hw1/img/req1/req1-04.png | Bin 0 -> 498530 bytes
+| |  hw/hw1/img/req1/req1-05.png | Bin 0 -> 537841 bytes
+| |  hw/hw1/img/req1/req1-06.png | Bin 0 -> 556142 bytes
+| |  hw/hw1/img/req1/req1-07.png | Bin 0 -> 529547 bytes
+| |  hw/hw1/img/req1/req1-08.png | Bin 0 -> 546847 bytes
+| |  hw/hw1/img/req1/req1-09.png | Bin 0 -> 519119 bytes
+| |  hw/hw1/img/req1/req1-10.png | Bin 0 -> 584570 bytes
+| |  hw/hw1/report.md            |  40 ++++++++++++++++++++++++++++++----------
+| |  11 files changed, 30 insertions(+), 10 deletions(-)
+| | 
+| * commit bcd45ce67d580b3182226fd6a0c46aa1213f30bc
+| | Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+| | Date:   Sun May 24 08:35:53 2026 +0700
+| | 
+| |     feat(hw1/req1): replace all postings with LinkedIn-only jobs (10 postings, 5 AI/LLM roles)
+| | 
+| |  hw/hw1/report.md | 343 ++++++++++++++++++++++++++-------------------------
+| |  1 file changed, 177 insertions(+), 166 deletions(-)
+| | 
+| * commit 2db196187f646b65b8fb67fbae023d0a1f9614ab
+|/  Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+|   Date:   Sun May 24 07:55:10 2026 +0700
+|   
+|       feat(hw1/req1): add QA/QC job market 2026+ section with 10 postings (4 AI/LLM roles) and AI impact analysis
+|   
+|    hw/hw1/report.md | 321 +++++++++++++++++++++++++++++++++++++++++++++++++++
+|    1 file changed, 321 insertions(+)
+| 
+* commit 702da1ac17bd6891a5e6236b67fcba3f4319cdde
+  Author: ThanhDang-Vn <ntdang23@clc.fitus.edu.vn>
+  Date:   Sat May 23 20:38:33 2026 +0700
+  
+      first commit
+  
+   README.md | 1 +
+   1 file changed, 1 insertion(+)
