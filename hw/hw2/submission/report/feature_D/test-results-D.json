@@ -1,0 +1,297 @@
+{
+  "summary": {
+    "total": 41,
+    "passed": 24,
+    "failed": 17,
+    "passRate": "58.5"
+  },
+  "results": [
+    {
+      "id": "DT-D-001",
+      "desc": "Add to cart qty='3' (số dương bình thường)",
+      "status": "PASS",
+      "expected": "qty=3, alert",
+      "actual": "qty=3"
+    },
+    {
+      "id": "DT-D-002",
+      "desc": "Add to cart qty='1' (biên dưới)",
+      "status": "PASS",
+      "expected": "qty=1",
+      "actual": "qty=1"
+    },
+    {
+      "id": "DT-D-003",
+      "desc": "Add to cart qty='999' (số lớn)",
+      "status": "PASS",
+      "expected": "qty=999",
+      "actual": "qty=999"
+    },
+    {
+      "id": "DT-D-004",
+      "desc": "Add to cart từ product card (default qty=1)",
+      "status": "PASS",
+      "expected": "qty=1 (default)",
+      "actual": "qty=1"
+    },
+    {
+      "id": "DT-D-005",
+      "desc": "Add to cart qty='' (rỗng) — fallback 1",
+      "status": "PASS",
+      "expected": "qty=1 (fallback)",
+      "actual": "qty=1"
+    },
+    {
+      "id": "DT-D-006",
+      "desc": "Add to cart qty='0' — fallback 1",
+      "status": "PASS",
+      "expected": "qty=1 (fallback)",
+      "actual": "qty=1"
+    },
+    {
+      "id": "DT-D-007",
+      "desc": "Add to cart qty='-5' (âm) — fallback 1",
+      "status": "PASS",
+      "expected": "qty=1 (fallback)",
+      "actual": "qty=1"
+    },
+    {
+      "id": "DT-D-008",
+      "desc": "Add to cart qty='abc' (non-numeric) — fallback 1",
+      "status": "PASS",
+      "expected": "qty=1 (fallback)",
+      "actual": "qty=1"
+    },
+    {
+      "id": "DT-D-009",
+      "desc": "Add to cart qty='2.7' (thập phân) — parseInt→2",
+      "status": "PASS",
+      "expected": "qty=2 (parseInt lấy phần nguyên)",
+      "actual": "qty=2"
+    },
+    {
+      "id": "DT-D-010",
+      "desc": "Cart inline edit qty='2' → expected 2 (CODE: 3 — off-by-one)",
+      "status": "FAIL",
+      "expected": "qty=2",
+      "actual": "qty=3 (BUG: parsed+1)"
+    },
+    {
+      "id": "DT-D-011",
+      "desc": "Cart inline edit qty='1' → expected 1 (CODE: 2 — off-by-one)",
+      "status": "FAIL",
+      "expected": "qty=1",
+      "actual": "qty=2 (BUG: parsed+1)"
+    },
+    {
+      "id": "DT-D-012",
+      "desc": "Cart inline edit qty='50' → expected 50 (CODE: 51 — off-by-one)",
+      "status": "FAIL",
+      "expected": "qty=50",
+      "actual": "qty=51 (BUG: parsed+1)"
+    },
+    {
+      "id": "DT-D-013",
+      "desc": "Cart inline edit qty='' → fallback 1",
+      "status": "PASS",
+      "expected": "qty=1 (fallback)",
+      "actual": "qty=1"
+    },
+    {
+      "id": "DT-D-014",
+      "desc": "Cart inline edit qty='0' → SPEC: remove item (CODE: fallback 1)",
+      "status": "FAIL",
+      "expected": "item removed (qty=0)",
+      "actual": "qty=1 (CODE: fallback 1, không xóa)"
+    },
+    {
+      "id": "DT-D-015",
+      "desc": "Cart inline edit qty='-3' → fallback 1",
+      "status": "PASS",
+      "expected": "qty=1 (fallback)",
+      "actual": "qty=1"
+    },
+    {
+      "id": "DT-D-016",
+      "desc": "Cart inline edit qty='xyz' → fallback 1",
+      "status": "PASS",
+      "expected": "qty=1 (fallback)",
+      "actual": "qty=1"
+    },
+    {
+      "id": "DT-D-017",
+      "desc": "Thêm sản phẩm mới (chưa có trong giỏ) → thêm dòng mới",
+      "status": "PASS",
+      "expected": "cart.length=1, id match",
+      "actual": "length=1, id=2"
+    },
+    {
+      "id": "DT-D-018",
+      "desc": "Thêm sản phẩm đã có trong giỏ → tăng quantity, không thêm dòng",
+      "status": "PASS",
+      "expected": "length=1, qty=5",
+      "actual": "length=1, qty=5"
+    },
+    {
+      "id": "DT-D-019",
+      "desc": "Thêm lần lượt 3 sản phẩm khác nhau → 3 dòng",
+      "status": "PASS",
+      "expected": "cart.length=3",
+      "actual": "length=3"
+    },
+    {
+      "id": "DT-D-020",
+      "desc": "Xem giỏ hàng có items — list hiển thị đủ fields",
+      "status": "PASS",
+      "expected": "2 items với price+qty",
+      "actual": "items=2, price=true, qty=true"
+    },
+    {
+      "id": "DT-D-021",
+      "desc": "Giỏ rỗng — SPEC: hình minh họa + text (CODE: chỉ text)",
+      "status": "FAIL",
+      "expected": "Có hình minh họa (SPEC FR-07)",
+      "actual": "Không có Image component trong empty state (CODE)"
+    },
+    {
+      "id": "DT-D-022",
+      "desc": "Tổng tiền tính đúng: A×2 + B×3",
+      "status": "PASS",
+      "expected": "total=350000",
+      "actual": "total=350000"
+    },
+    {
+      "id": "DT-D-023",
+      "desc": "Xóa item khỏi giỏ (còn items) — SPEC: confirm dialog (CODE: xóa trực tiếp)",
+      "status": "FAIL",
+      "expected": "Hiển thị dialog xác nhận trước khi xóa (SPEC FR-07)",
+      "actual": "Không có confirm dialog — xóa trực tiếp (CODE App.js:630)"
+    },
+    {
+      "id": "DT-D-024",
+      "desc": "Xóa item cuối — giỏ thành rỗng (SPEC: confirm dialog trước)",
+      "status": "FAIL",
+      "expected": "Confirm dialog + cart rỗng",
+      "actual": "cart rỗng: true, confirm dialog: false"
+    },
+    {
+      "id": "DT-D-025",
+      "desc": "UI: nút +/- chỉnh quantity — SPEC: nút +/- (CODE: TextInput)",
+      "status": "FAIL",
+      "expected": "Nút + và − (SPEC FR-07)",
+      "actual": "TextInput keyboardType='numeric' (CODE App.js:611)"
+    },
+    {
+      "id": "DT-D-026",
+      "desc": "UI: nhãn tổng tiền — SPEC: 'Tổng cộng' (CODE: 'Tổng tạm tính')",
+      "status": "FAIL",
+      "expected": "\"Tổng cộng\"",
+      "actual": "\"Tổng tạm tính\" (CODE App.js:638)"
+    },
+    {
+      "id": "DT-D-027",
+      "desc": "UI empty state — SPEC: hình minh họa (CODE: không có Image)",
+      "status": "FAIL",
+      "expected": "Image/icon minh họa (SPEC FR-07)",
+      "actual": "Không có <Image> (CODE App.js:594-599)"
+    },
+    {
+      "id": "BVA-D-001",
+      "desc": "Product Detail quantity Min-1 (0) input='0'",
+      "status": "PASS",
+      "expected": "qty=1",
+      "actual": "qty=1"
+    },
+    {
+      "id": "BVA-D-002",
+      "desc": "Product Detail quantity Min (1) input='1'",
+      "status": "PASS",
+      "expected": "qty=1",
+      "actual": "qty=1"
+    },
+    {
+      "id": "BVA-D-003",
+      "desc": "Product Detail quantity Min+1 (2) input='2'",
+      "status": "PASS",
+      "expected": "qty=2",
+      "actual": "qty=2"
+    },
+    {
+      "id": "BVA-D-004",
+      "desc": "Product Detail quantity Nominal (5) input='5'",
+      "status": "PASS",
+      "expected": "qty=5",
+      "actual": "qty=5"
+    },
+    {
+      "id": "BVA-D-005",
+      "desc": "Product Detail quantity Max-1 (998) input='998'",
+      "status": "PASS",
+      "expected": "qty=998",
+      "actual": "qty=998"
+    },
+    {
+      "id": "BVA-D-006",
+      "desc": "Product Detail quantity Max (999) input='999'",
+      "status": "PASS",
+      "expected": "qty=999",
+      "actual": "qty=999"
+    },
+    {
+      "id": "BVA-D-007",
+      "desc": "Product Detail quantity Max+1 (1000) input='1000'",
+      "status": "PASS",
+      "expected": "qty=1000",
+      "actual": "qty=1000"
+    },
+    {
+      "id": "BVA-D-008",
+      "desc": "Cart Inline Edit quantity Min-1 (0) input='0'",
+      "status": "FAIL",
+      "expected": "item removed (qty=0)",
+      "actual": "qty=1 (CODE: fallback 1, không xóa item)"
+    },
+    {
+      "id": "BVA-D-009",
+      "desc": "Cart Inline Edit quantity Min (1) input='1'",
+      "status": "FAIL",
+      "expected": "qty=1",
+      "actual": "qty=2 (BUG: parsed+1)"
+    },
+    {
+      "id": "BVA-D-010",
+      "desc": "Cart Inline Edit quantity Min+1 (2) input='2'",
+      "status": "FAIL",
+      "expected": "qty=2",
+      "actual": "qty=3 (BUG: parsed+1)"
+    },
+    {
+      "id": "BVA-D-011",
+      "desc": "Cart Inline Edit quantity Nominal (5) input='5'",
+      "status": "FAIL",
+      "expected": "qty=5",
+      "actual": "qty=6 (BUG: parsed+1)"
+    },
+    {
+      "id": "BVA-D-012",
+      "desc": "Cart Inline Edit quantity Max-1 (998) input='998'",
+      "status": "FAIL",
+      "expected": "qty=998",
+      "actual": "qty=999 (BUG: parsed+1)"
+    },
+    {
+      "id": "BVA-D-013",
+      "desc": "Cart Inline Edit quantity Max (999) input='999'",
+      "status": "FAIL",
+      "expected": "qty=999",
+      "actual": "qty=1000 (BUG: parsed+1)"
+    },
+    {
+      "id": "BVA-D-014",
+      "desc": "Cart Inline Edit quantity Max+1 (1000) input='1000'",
+      "status": "FAIL",
+      "expected": "qty=1000",
+      "actual": "qty=1001 (BUG: parsed+1)"
+    }
+  ]
+}
