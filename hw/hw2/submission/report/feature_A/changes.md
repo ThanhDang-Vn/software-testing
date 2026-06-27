@@ -4,6 +4,98 @@
 
 ---
 
+## 03_domain_testcases: v1 → v2
+
+### Review Issues (from v1)
+
+| # | Issue | Severity | Type |
+|---|---|---|---|
+| 1 | DT-A-002 (case mismatch) và DT-A-008 (email not in DB): cùng code path, cùng outcome → `401`, no counter | High | Redundancy |
+| 2 | DT-A-003 (no @) và DT-A-004 (no domain): cùng invalid format behavior, cùng outcome → `401`, no counter | High | Redundancy |
+| 3 | DT-A-006 (email too long): expected `401` hoặc `500` — không xác định; không có behavioral boundary → không phải domain TC | Medium | Misclassification |
+| 4 | DT-A-009, DT-A-010, DT-A-011: cả 3 đều là wrong password → `401`, counter +2. Chỉ cần 1 representative | High | Redundancy |
+| 5 | DT-A-015 (counter 0→2): subsumed bởi DT-A-016 (counter 2→4, LOCK). Không thêm hành vi mới | Medium | Redundancy |
+| 6 | DT-A-018 (locked + wrong pw): cùng behavior với DT-A-013 (locked + correct pw → 403). Lock check xảy ra trước password check | High | Redundancy |
+
+### Changes Applied (v2)
+
+| # | Change | Addresses |
+|---|---|---|
+| 1 | Gộp DT-A-002 vào DT-A-008 (same user-not-found behavior) | Issue #1 |
+| 2 | Gộp DT-A-004 vào DT-A-003 (same invalid format behavior) | Issue #2 |
+| 3 | Reclassify DT-A-006 sang robustness testing, bỏ khỏi domain TCs | Issue #3 |
+| 4 | Gộp DT-A-009, DT-A-011 vào DT-A-010 (1 representative cho wrong password) | Issue #4 |
+| 5 | Bỏ DT-A-015 — threshold crossing DT-A-016 đã bao gồm counter increment | Issue #5 |
+| 6 | Gộp DT-A-018 vào DT-A-013 (locked → 403 bất kể password) | Issue #6 |
+| 7 | Giữ nguyên TC IDs của các TCs còn lại để traceability | Cleanup |
+| 8 | Tổng: 18 TC → **11 TC**. Coverage: 15/15 active ECs | Result |
+
+---
+
+## 06_detailed_testcases: v1 → v2
+
+### Review Issues (from v1)
+
+| # | Issue | Severity | Type |
+|---|---|---|---|
+| 1 | BVA section gồm 27 TC nhưng phần lớn test email/password length — không có behavioral boundary trong code | High | Spec Misinterpretation |
+| 2 | Các TC BVA-A-001→010 (email/password length) không có expected behavior khác nhau → không phải BVA đúng nghĩa | High | Spec Misinterpretation |
+| 3 | Nhiều TC BVA thừa: INT_MAX, -1 corruption, far past, far future → thuộc stress/edge testing, không BVA | Medium | Overgeneralization |
+
+### Changes Applied (v2)
+
+| # | Change | Addresses |
+|---|---|---|
+| 1 | Bỏ toàn bộ BVA email length (BVA-A-001→006) và password length (BVA-A-007→010) | Issue #1, #2 |
+| 2 | Giữ lại chỉ `login_attempts` threshold (2, 3, 4) và `locked_until` time (now-1, now, now+1) | Issue #3 |
+| 3 | BVA section: 27 TC → 6 TC | Cleanup |
+| 4 | Tổng: 53 TC → **32 TC** (18 DT + 6 BVA + 8 UI) | Cleanup |
+
+---
+
+## 05_bva_testcases: v1 → v2
+
+### Review Issues (from v1)
+
+| # | Issue | Severity | Type |
+|---|---|---|---|
+| 1 | 10 TC đầu test độ dài email/password — backend không enforce constraint nào nên không có behavioral boundary | High | Spec Misinterpretation |
+| 2 | 5 TC supplementary (non-BVA) đặt trong file BVA — không thuộc phạm vi BVA | Medium | Spec Misinterpretation |
+| 3 | Các TC counter: INT_MAX, -1 corruption không có ý nghĩa BVA thực tế | Medium | Overgeneralization |
+
+### Changes Applied (v2)
+
+| # | Change | Addresses |
+|---|---|---|
+| 1 | Bỏ toàn bộ email/password length TCs (BVA-A-001→010) | Issue #1 |
+| 2 | Bỏ supplementary non-BVA TCs (BVA-A-025→027) | Issue #2 |
+| 3 | Bỏ các TC counter extreme (INT_MAX, -1) và locked_until extreme (far past, far future) | Issue #3 |
+| 4 | Giữ lại 6 TC: counter (stored=2, 3, 4) + locked_until (now-1, now, now+1) | Core |
+| 5 | Renumber: BVA-A-001 → BVA-A-006 | Cleanup |
+
+---
+
+## 04_bva_table: v1 → v2
+
+### Review Issues (from v1)
+
+| # | Issue | Severity | Type |
+|---|---|---|---|
+| 1 | Field 1 (email length) và Field 2 (password length) không có behavioral boundary trong code — backend không enforce bất kỳ length constraint nào | High | Spec Misinterpretation |
+| 2 | Field 3 (login_attempts) có quá nhiều điểm (0, 1, 2, 3, 4, INT_MAX, -1) — chỉ cần 3 điểm quanh threshold | Medium | Overgeneralization |
+| 3 | Field 4 (locked_until) có quá nhiều điểm (NULL, past, now-1, now, now+1, future, DB max) — chỉ cần 3 điểm quanh now | Medium | Overgeneralization |
+
+### Changes Applied (v2)
+
+| # | Change | Addresses |
+|---|---|---|
+| 1 | Bỏ hoàn toàn Field 1 (email length) và Field 2 (password length) | Issue #1 |
+| 2 | Field 3: thu gọn còn 3 điểm — threshold-1 (stored=2), threshold (stored=3), threshold+1 (stored=4) | Issue #2 |
+| 3 | Field 4: thu gọn còn 3 điểm — now-1, now, now+1 | Issue #3 |
+| 4 | Tổng: 4 fields → 2 fields, 20+ boundary points → 6 boundary points | Cleanup |
+
+---
+
 ## 03_domain_testcases: v0 → v1
 
 ### Review Issues (from v0)

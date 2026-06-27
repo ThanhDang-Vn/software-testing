@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(grep -v -E '\\\\.\\(png|jpg|svg|pdf|pptx\\)$')"
+      "Bash(grep -v -E '\\\\.\\(png|jpg|svg|pdf|pptx\\)$')",
+      "Bash(curl:*)"
     ]
   }
 }

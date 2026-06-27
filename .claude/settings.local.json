@@ -56,7 +56,12 @@
       "WebFetch(domain:cyberscoop.com)",
       "WebFetch(domain:www.techrepublic.com)",
       "WebFetch(domain:www.govinfosecurity.com)",
-      "Bash(bash script_test.sh)"
+      "Bash(bash script_test.sh)",
+      "Bash(node server.js)",
+      "Bash(curl -s http://localhost:3000/api/products)",
+      "Bash(node:*)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)"
     ]
   }
 }

@@ -61,25 +61,3 @@
 | UI-C-008 | Frontend không có UI để Edit danh mục (SPEC vs CODE gap) | Admin logged in, tab Danh mục | 1. Quan sát bảng danh mục 2. Tìm nút Edit/Sửa | — | SPEC chỉ nói "Thêm / Xem / Xóa" → không cần Edit UI. Nhưng backend có PUT endpoint → gap document. |
 | UI-C-009 | Tab order trên form thêm danh mục (FR-21) | Admin logged in, tab Danh mục | 1. Press Tab từ input "Tên danh mục mới" 2. Kiểm tra focus chuyển đến nút "Thêm mới" | — | Focus di chuyển theo thứ tự: Input → Button (trên xuống dưới, trái sang phải) |
 | UI-C-010 | Responsive — bảng danh mục trên mobile viewport | Admin logged in, tab Danh mục | 1. Resize browser 375×812 2. Quan sát bảng, nút, form | — | Bảng không bị tràn, nút Xóa vẫn hiển thị và clickable |
-
----
-
-## E. Summary
-
-| Metric | Value |
-| --- | --- |
-| Gaps phát hiện | 10 |
-| TCs bổ sung | 7 (4 Domain + 3 UI) |
-| Cause: Prompt Quality | 2 (20%) |
-| Cause: AI Limitation | 7 (70%) |
-| Cause: Feature Complexity | 1 (10%) |
-| Assumptions made | 5 |
-| High-risk assumptions | 1 (Assumption #1: unique name — ảnh hưởng 3 bugs) |
-
-### Điểm yếu chính:
-
-1. **Bỏ sót security testing** — loại bỏ JWT/Role theo yêu cầu nhưng SEC-03 là requirement rõ ràng. Nên giữ ít nhất 1 TC kiểm tra authorization.
-2. **Test script logic lỗi** — GAP-03: `resetDB()` qua API tạo categories mới (id khác), nhưng seed products vẫn trỏ category_id cũ → DT-C-023 kết quả "0 products linked" không chính xác.
-3. **Chỉ test backend, thiếu frontend render** — XSS test chỉ kiểm tra backend lưu tag, chưa verify frontend có escape không.
-4. **Thiếu edge cases encoding** — emoji, null bytes, SQL injection qua name chưa được test.
-5. **Assumption về unique name chưa chắc chắn** — SPEC không nói rõ "unique". Nếu SPEC cho phép trùng → 3 bugs (BUG-C-005, BUG-C-008) cần xem lại.
