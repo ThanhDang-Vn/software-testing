@@ -1,0 +1,2 @@
+- sửa lại ai-output đang bị sai [] 
+- check lại ai hallucination của requirement 2 [] 

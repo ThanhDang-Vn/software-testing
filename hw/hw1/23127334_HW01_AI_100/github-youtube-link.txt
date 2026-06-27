@@ -1,0 +1,5 @@
+tc01: https://www.youtube.com/shorts/HfsBBp0TVtE
+tc02 + tc03 + tc04: https://www.youtube.com/shorts/DH9anK0nrpY
+tc07: https://www.youtube.com/shorts/bWeIbCaRzLs
+tc14: https://youtube.com/shorts/x6u1C93hVnA
+github link: https://github.com/ThanhDang-Vn/software-testing

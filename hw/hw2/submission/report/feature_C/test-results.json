@@ -1,0 +1,338 @@
+[
+  {
+    "tcId": "DT-C-001",
+    "description": "Tạo category với tên tiếng Việt hợp lệ",
+    "expected": "200 OK, category created, xuất hiện trong GET list",
+    "actual": "Status: 200, In list: true, Response: {\"message\":\"Category created\",\"id\":60}",
+    "status": "PASS"
+  },
+  {
+    "tcId": "DT-C-002",
+    "description": "Tạo category với tên ASCII đơn giản",
+    "expected": "200 OK, category created",
+    "actual": "Status: 200, Response: {\"message\":\"Category created\",\"id\":61}",
+    "status": "PASS"
+  },
+  {
+    "tcId": "DT-C-003",
+    "description": "Tạo category với tên 1 ký tự",
+    "expected": "200 OK, category created",
+    "actual": "Status: 200, Response: {\"message\":\"Category created\",\"id\":62}",
+    "status": "PASS"
+  },
+  {
+    "tcId": "DT-C-004",
+    "description": "Tạo category với tên rất dài (1000 chars)",
+    "expected": "200 OK, category created",
+    "actual": "Status: 200, Name stored correctly: true",
+    "status": "PASS"
+  },
+  {
+    "tcId": "DT-C-005",
+    "description": "Tạo category với tên chứa ký tự đặc biệt",
+    "expected": "200 OK, ký tự đặc biệt lưu đúng",
+    "actual": "Status: 200, Stored correctly: true",
+    "status": "PASS"
+  },
+  {
+    "tcId": "DT-C-006",
+    "description": "Tạo category trùng tên danh mục đã tồn tại",
+    "expected": "Expected: 400/409 — tên trùng. (SPEC: tên nên unique)",
+    "actual": "Status: 200, Duplicates in DB: 2, Response: {\"message\":\"Category created\",\"id\":65}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "DT-C-007",
+    "description": "Tạo category với tên rỗng",
+    "expected": "400 Bad Request — tên không được rỗng",
+    "actual": "Status: 200, Response: {\"message\":\"Category created\",\"id\":66}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "DT-C-008",
+    "description": "Tạo category không gửi field name",
+    "expected": "400 Bad Request — thiếu field name",
+    "actual": "Status: 200, Response: {\"message\":\"Category created\",\"id\":67}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "DT-C-009",
+    "description": "Tạo category với tên chỉ whitespace",
+    "expected": "400 Bad Request — whitespace-only coi như rỗng",
+    "actual": "Status: 200, Response: {\"message\":\"Category created\",\"id\":68}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "DT-C-010",
+    "description": "Tạo category với HTML/script tag (XSS)",
+    "expected": "400 hoặc sanitize — không lưu HTML/script tag",
+    "actual": "Status: 200, Raw script stored in DB: true, Response: {\"message\":\"Category created\",\"id\":69}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "DT-C-011",
+    "description": "Update tên category hợp lệ",
+    "expected": "200 OK, GET trả về tên mới",
+    "actual": "Status: 200, Name updated: true",
+    "status": "PASS"
+  },
+  {
+    "tcId": "DT-C-012",
+    "description": "Update tên category trùng danh mục khác",
+    "expected": "Expected: 400/409 — tên trùng danh mục khác",
+    "actual": "Status: 200, Response: {\"message\":\"Category updated\"}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "DT-C-013",
+    "description": "Update tên category thành rỗng",
+    "expected": "400 Bad Request — tên không được rỗng",
+    "actual": "Status: 200, Response: {\"message\":\"Category updated\"}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "DT-C-014",
+    "description": "Update category không gửi field name",
+    "expected": "400 Bad Request — thiếu field name",
+    "actual": "Status: 200, Response: {\"message\":\"Category updated\"}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "DT-C-015",
+    "description": "Xóa category tồn tại",
+    "expected": "200 OK, category biến mất khỏi GET list",
+    "actual": "Status: 200, Removed from list: true",
+    "status": "PASS"
+  },
+  {
+    "tcId": "DT-C-016",
+    "description": "Xóa category không tồn tại (id=9999)",
+    "expected": "404 Not Found",
+    "actual": "Status: 200, Response: {\"message\":\"Category deleted\"}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "DT-C-017",
+    "description": "Xóa category với id=0",
+    "expected": "400/404 — id=0 không hợp lệ",
+    "actual": "Status: 200, Response: {\"message\":\"Category deleted\"}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "DT-C-018",
+    "description": "Xóa category với id âm",
+    "expected": "400/404 — id âm không hợp lệ",
+    "actual": "Status: 200, Response: {\"message\":\"Category deleted\"}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "DT-C-019",
+    "description": "Xóa category với id non-numeric",
+    "expected": "400 Bad Request — id phải là số",
+    "actual": "Status: 200, Response: {\"message\":\"Category deleted\"}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "DT-C-020",
+    "description": "Xóa category thiếu id param",
+    "expected": "400/404 — thiếu id parameter",
+    "actual": "Status: 404, Method matched: DELETE /api/categories/",
+    "status": "PASS"
+  },
+  {
+    "tcId": "DT-C-021",
+    "description": "Update category không tồn tại (id=9999)",
+    "expected": "404 Not Found",
+    "actual": "Status: 200, Response: {\"message\":\"Category updated\"}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "DT-C-022",
+    "description": "Xóa category không có products liên kết",
+    "expected": "200 OK, category deleted, không side effect",
+    "actual": "Status: 200, Removed: true",
+    "status": "PASS"
+  },
+  {
+    "tcId": "DT-C-023",
+    "description": "Xóa category có products liên kết",
+    "expected": "400/409 Conflict — không cho xóa khi có products liên kết",
+    "actual": "Status: 200, Products linked before: 0, Orphan products after delete: 0, Response: {\"message\":\"Category deleted\"}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "DT-C-024",
+    "description": "GET danh sách khi có dữ liệu seed",
+    "expected": "200 OK, trả về array 3 objects",
+    "actual": "Status: 200, Count: 3, Data: [\"Điện thoại\",\"Laptop\",\"Phụ kiện\"]",
+    "status": "PASS"
+  },
+  {
+    "tcId": "DT-C-025",
+    "description": "GET danh sách khi DB rỗng",
+    "expected": "200 OK, trả về array rỗng []",
+    "actual": "Status: 200, Data: []",
+    "status": "PASS"
+  },
+  {
+    "tcId": "DT-C-026",
+    "description": "Tạo 2 category cùng tên (duplicate)",
+    "expected": "Lần 1: 200 OK. Lần 2: 400/409 — tên trùng",
+    "actual": "Lần 1: 200, Lần 2: 200, Duplicates in DB: 2",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "BVA-C-001",
+    "description": "Create: name length Min-1 (0 chars)",
+    "expected": "400 — tên không được rỗng",
+    "actual": "Status: 200, Response: {\"message\":\"Category created\",\"id\":94}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "BVA-C-002",
+    "description": "Create: name length Min (1 char)",
+    "expected": "200 OK, category created",
+    "actual": "Status: 200, Response: {\"message\":\"Category created\",\"id\":95}",
+    "status": "PASS"
+  },
+  {
+    "tcId": "BVA-C-003",
+    "description": "Create: name length Min+1 (2 chars)",
+    "expected": "200 OK, category created",
+    "actual": "Status: 200",
+    "status": "PASS"
+  },
+  {
+    "tcId": "BVA-C-004",
+    "description": "Create: name length Nominal (7 chars)",
+    "expected": "200 OK, category created",
+    "actual": "Status: 200",
+    "status": "PASS"
+  },
+  {
+    "tcId": "BVA-C-005",
+    "description": "Update: name length Min-1 (0 chars)",
+    "expected": "400 — tên không được rỗng",
+    "actual": "Status: 200, Response: {\"message\":\"Category updated\"}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "BVA-C-006",
+    "description": "Update: name length Min (1 char)",
+    "expected": "200 OK, category updated",
+    "actual": "Status: 200",
+    "status": "PASS"
+  },
+  {
+    "tcId": "BVA-C-007",
+    "description": "Update: name length Min+1 (2 chars)",
+    "expected": "200 OK, category updated",
+    "actual": "Status: 200",
+    "status": "PASS"
+  },
+  {
+    "tcId": "BVA-C-008",
+    "description": "Update: name length Nominal (11 chars)",
+    "expected": "200 OK, category updated",
+    "actual": "Status: 200",
+    "status": "PASS"
+  },
+  {
+    "tcId": "BVA-C-009",
+    "description": "id Min-1 (0) — Delete",
+    "expected": "404 — id=0 không tồn tại",
+    "actual": "Status: 200, Response: {\"message\":\"Category deleted\"}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "BVA-C-010",
+    "description": "id Min (101) — Delete",
+    "expected": "200 OK, category deleted",
+    "actual": "Status: 200, Removed: true",
+    "status": "PASS"
+  },
+  {
+    "tcId": "BVA-C-011",
+    "description": "id Min+1 (102) — Delete",
+    "expected": "200 OK, category deleted",
+    "actual": "Status: 200",
+    "status": "PASS"
+  },
+  {
+    "tcId": "BVA-C-012",
+    "description": "id Nominal (105) — Update",
+    "expected": "200 OK, category updated",
+    "actual": "Status: 200",
+    "status": "PASS"
+  },
+  {
+    "tcId": "BVA-C-013",
+    "description": "id Max-1 (105) — Verify exists",
+    "expected": "200 OK, category tồn tại trong response",
+    "actual": "Exists: true, Categories: [104,105,106]",
+    "status": "PASS"
+  },
+  {
+    "tcId": "BVA-C-014",
+    "description": "id Max (106) — Delete",
+    "expected": "200 OK, category deleted",
+    "actual": "Status: 200",
+    "status": "PASS"
+  },
+  {
+    "tcId": "BVA-C-015",
+    "description": "id Max+1 (106) — Delete",
+    "expected": "404 — id không tồn tại",
+    "actual": "Status: 200, Response: {\"message\":\"Category deleted\"}",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "UI-C-001",
+    "description": "Tab \"Danh mục\" highlight khi được chọn (FR-21)",
+    "expected": "Tab có highlight để phân biệt với tab khác",
+    "actual": "Classes: cursor-pointer hover:text-blue-300 text-blue-400, Highlighted: true",
+    "status": "PASS"
+  },
+  {
+    "tcId": "UI-C-002",
+    "description": "Tiêu đề \"Quản lý Danh mục\" có thẻ heading (FR-21)",
+    "expected": "Có tiêu đề heading, mỗi trang chỉ 1 thẻ h1",
+    "actual": "h1 count: 1, h2 text: \"Quản lý Danh mục\", Has correct heading: true",
+    "status": "PASS"
+  },
+  {
+    "tcId": "UI-C-003",
+    "description": "Trường bắt buộc có dấu \"*\" (FR-22)",
+    "expected": "Trường bắt buộc phải có ký hiệu * bên cạnh nhãn",
+    "actual": "Has * in form: false, Input has required attr: null",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "UI-C-004",
+    "description": "Nút \"Thêm mới\" dùng màu xanh dương (FR-21)",
+    "expected": "Nút có background màu xanh dương",
+    "actual": "Classes: bg-blue-600 text-white px-4 py-2 rounded, Is blue: true",
+    "status": "PASS"
+  },
+  {
+    "tcId": "UI-C-005",
+    "description": "Nút \"Xóa\" dùng màu đỏ (FR-21)",
+    "expected": "Nút Xóa có background màu đỏ",
+    "actual": "Button exists: true, Classes: bg-red-500 text-white px-2 py-1 rounded text-sm, Is red: true",
+    "status": "PASS"
+  },
+  {
+    "tcId": "UI-C-006",
+    "description": "Xóa danh mục phải có dialog xác nhận (FR-24)",
+    "expected": "Hiển thị dialog xác nhận trước khi xóa",
+    "actual": "Dialog appeared: false, Deleted without confirm: true",
+    "status": "FAIL"
+  },
+  {
+    "tcId": "UI-C-007",
+    "description": "Trang danh mục rỗng hiển thị empty state (FR-24)",
+    "expected": "Hiển thị empty state với icon và message thân thiện",
+    "actual": "Has empty message: false, Has empty icon/illustration: false",
+    "status": "FAIL"
+  }
+]
