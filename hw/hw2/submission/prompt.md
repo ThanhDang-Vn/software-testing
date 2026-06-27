@@ -24,7 +24,6 @@ Now start with feature_A.
   * Constraints from specification
   * Constraints inferred from source code (if needed)
 
-
 ## TASKS
 
 ### 1. Functional Description

@@ -1,159 +1,414 @@
-# STEP 7 — Bug Report: FR-14 Category Management (CRUD)
+# 08 — Bug Report: feature_C (FR-14 — Category Management CRUD)
 
 ---
 
-## A. Bug Report Table
+### BUG-C-001 — Tạo category với tên rỗng không bị reject
 
-| Bug ID | Title | Severity | Priority | Pre-condition | Steps to Reproduce | Actual Result | Expected Result | Related TC ID | Screenshot |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BUG-C-001 | Tạo category với tên rỗng không bị reject | High | High | Admin authenticated | 1. `POST /api/categories` với body `{name: ""}` | 200 OK, category created với name="" | 400 Bad Request — "Tên danh mục là bắt buộc, không được để trống" (FR-14) | DT-C-007, BVA-C-001 | `screenshots/bug-clarify/BUG-C-001.png` · `screenshots/bug-test/rest-01.png` |
-| BUG-C-002 | Tạo category không gửi field name không bị reject | High | High | Admin authenticated | 1. `POST /api/categories` với body `{}` | 200 OK, category created với name=null | 400 Bad Request — thiếu field bắt buộc | DT-C-008 | `screenshots/bug-clarify/BUG-C-002.png` · `screenshots/bug-test/rest-02.png` |
-| BUG-C-003 | Tạo category với tên whitespace-only không bị reject | Medium | Medium | Admin authenticated | 1. `POST /api/categories` với body `{name: "   "}` | 200 OK, category created với name="   " | 400 Bad Request — whitespace-only coi như rỗng | DT-C-009 | `screenshots/bug-clarify/BUG-C-003.png` · `screenshots/bug-test/rest-03.png` |
-| BUG-C-004 | XSS injection qua tên danh mục — script tag lưu nguyên trong DB | Critical | Critical | Admin authenticated | 1. `POST /api/categories` với body `{name: "<script>alert(1)</script>"}` 2. `GET /api/categories` kiểm tra | 200 OK, `<script>alert(1)</script>` lưu nguyên trong DB | 400 hoặc sanitize — không cho lưu HTML/script tag | DT-C-010 | `screenshots/bug-clarify/BUG-C-004.png` · `screenshots/bug-test/rest-04.png` |
-| BUG-C-005 | Cho phép tạo category trùng tên | Medium | Medium | Admin authenticated, seed có "Điện thoại" | 1. `POST /api/categories` với body `{name: "Điện thoại"}` | 200 OK, tạo thêm 1 category cùng tên "Điện thoại" với id mới | 400/409 Conflict — tên đã tồn tại | DT-C-006, DT-C-026 | `screenshots/bug-clarify/BUG-C-005.png` · `screenshots/bug-test/rest-05.png` |
-| BUG-C-006 | Update tên category thành rỗng không bị reject | High | High | Admin authenticated, category id=3 tồn tại | 1. `PUT /api/categories/3` với body `{name: ""}` | 200 OK, name set thành "" | 400 Bad Request — tên không được rỗng | DT-C-013, BVA-C-005 | `screenshots/bug-clarify/BUG-C-006.png` · `screenshots/bug-test/rest-06.png` |
-| BUG-C-007 | Update category không gửi field name không bị reject | High | High | Admin authenticated, category id=3 tồn tại | 1. `PUT /api/categories/3` với body `{}` | 200 OK, name set thành null | 400 Bad Request — thiếu field bắt buộc | DT-C-014 | `screenshots/bug-clarify/BUG-C-007.png` · `screenshots/bug-test/rest-07.png` |
-| BUG-C-008 | Update tên category trùng danh mục khác không bị reject | Medium | Medium | Admin authenticated, category id=3 tồn tại, seed có "Laptop" | 1. `PUT /api/categories/3` với body `{name: "Laptop"}` | 200 OK, tên cập nhật thành "Laptop" (trùng với danh mục id=2) | 400/409 Conflict — tên trùng | DT-C-012 | `screenshots/bug-clarify/BUG-C-008.png` · `screenshots/bug-test/rest-08.png` |
-| BUG-C-009 | DELETE/PUT category với id không tồn tại trả 200 OK (silent no-op) | Medium | High | Admin authenticated | 1. `DELETE /api/categories/9999` | 200 OK, `{message: "Category deleted"}` dù không có category id=9999 | 404 Not Found | DT-C-016, DT-C-021, BVA-C-015 | `screenshots/bug-clarify/BUG-C-009.png` · `screenshots/bug-test/rest-09.png` |
-| BUG-C-010 | DELETE/PUT category với id=0 trả 200 OK | Medium | Medium | Admin authenticated | 1. `DELETE /api/categories/0` | 200 OK, `{message: "Category deleted"}` | 400/404 — id=0 không hợp lệ (AUTOINCREMENT từ 1) | DT-C-017, BVA-C-009 | `screenshots/bug-clarify/BUG-C-010.png` · `screenshots/bug-test/rest-10.png` |
-| BUG-C-011 | DELETE/PUT category với id âm trả 200 OK | Medium | Medium | Admin authenticated | 1. `DELETE /api/categories/-1` | 200 OK, `{message: "Category deleted"}` | 400/404 — id âm không hợp lệ | DT-C-018 | `screenshots/bug-clarify/BUG-C-011.png` · `screenshots/bug-test/rest-11.png` |
-| BUG-C-012 | DELETE/PUT category với id non-numeric trả 200 OK | Medium | Medium | Admin authenticated | 1. `DELETE /api/categories/abc` | 200 OK, `{message: "Category deleted"}` | 400 Bad Request — id phải là số | DT-C-019 | `screenshots/bug-clarify/BUG-C-012.png` · `screenshots/bug-test/rest-12.png` |
-| BUG-C-013 | Xóa category có products liên kết không bị chặn — orphan products | High | High | Category id=1 có products dùng category_id=1 | 1. `DELETE /api/categories/1` 2. `GET /api/products` | 200 OK, category xóa thành công. Products có category_id=1 trở thành orphan. | 400/409 Conflict — không cho xóa khi có products liên kết | DT-C-023 | `screenshots/bug-clarify/BUG-C-013.png` · `screenshots/bug-test/rest-13.png` |
-| BUG-C-014 | Trường bắt buộc "Tên danh mục" không có ký hiệu `*` (FR-22) | Low | Medium | Admin logged in, tab Danh mục | 1. Quan sát form thêm danh mục | Không có `*` bên cạnh nhãn. Input không có attribute `required`. | Trường bắt buộc phải có `*` (FR-22) | UI-C-003 | `screenshots/bug-test/ui-c-003-required-field.png` |
-| BUG-C-015 | Xóa danh mục không có dialog xác nhận (FR-24) | Medium | High | Admin logged in, tab Danh mục, có ít nhất 1 category | 1. Click nút "Xóa" bên cạnh 1 danh mục | Category bị xóa ngay lập tức mà không hỏi xác nhận. | Hiển thị confirm dialog trước khi xóa | UI-C-006 | `screenshots/bug-test/ui-c-006-delete-confirm.png` |
-| BUG-C-016 | Trang danh mục rỗng không có empty state (FR-24) | Low | Low | Admin logged in, tab Danh mục, DB rỗng | 1. Xóa hết categories 2. Quan sát giao diện | Bảng trống, không có message/icon thân thiện. | Hiển thị empty state với icon + message (FR-24) | UI-C-007 | `screenshots/bug-test/ui-c-007-empty-state.png` |
+**Severity:** High
+**Priority:** High
 
----
+**Steps to reproduce**
 
-## B. Bug Summary by Severity
+1. Login admin, lấy JWT
+2. `POST /api/categories` với body `{name: ""}`
 
-| Severity | Count | Bug IDs |
-| --- | --- | --- |
-| Critical | 1 | BUG-C-004 (XSS) |
-| High | 5 | BUG-C-001, BUG-C-002, BUG-C-006, BUG-C-007, BUG-C-013 |
-| Medium | 8 | BUG-C-003, BUG-C-005, BUG-C-008, BUG-C-009, BUG-C-010, BUG-C-011, BUG-C-012, BUG-C-015 |
-| Low | 2 | BUG-C-014, BUG-C-016 |
-| **Total** | **16** | |
+**Actual**
+`200 OK`, category created với name=""
+
+**Expected**
+`400 Bad Request` — "Tên danh mục không được để trống" (FR-14)
+
+**Notes**
+Backend không validate name. Related TC: DT-C-007, BVA-C-001
+
+**Screenshot**
+![BUG-C-001](screenshots/bug-clarify/BUG-C-001.png)
+![BUG-C-001-test](screenshots/bug-test/rest-01.png)
 
 ---
 
-## C. Root Cause Analysis
+### BUG-C-002 — Tạo category không gửi field name không bị reject
 
-| Root Cause | Bug IDs | Count | Description |
-| --- | --- | --- | --- |
-| **Không validate input `name`** | BUG-C-001→004, BUG-C-006→008 | 7 | Backend không kiểm tra name rỗng, null, whitespace, XSS, trùng lặp |
-| **Không validate `id` param** | BUG-C-009→012 | 4 | Backend không kiểm tra id tồn tại, kiểu dữ liệu, giá trị hợp lệ. SQLite silent no-op. |
-| **Không có referential integrity** | BUG-C-005, BUG-C-008, BUG-C-013 | 3 | DB schema thiếu UNIQUE constraint trên `name`, thiếu FOREIGN KEY/ON DELETE cho products |
-| **Frontend thiếu UI requirements** | BUG-C-014→016 | 3 | Không implement FR-22 (required `*`), FR-24 (confirm dialog, empty state) |
+**Severity:** High
+**Priority:** High
+
+**Steps to reproduce**
+
+1. Login admin, lấy JWT
+2. `POST /api/categories` với body `{}`
+
+**Actual**
+`200 OK`, category created với name=null
+
+**Expected**
+`400 Bad Request` — thiếu field bắt buộc
+
+**Notes**
+Related TC: DT-C-008
+
+**Screenshot**
+![BUG-C-002](screenshots/bug-clarify/BUG-C-002.png)
+![BUG-C-002-test](screenshots/bug-test/rest-02.png)
 
 ---
 
-## D. GitHub Issue Templates
+### BUG-C-003 — Tạo category với tên whitespace-only không bị reject
 
-### BUG-C-004: XSS injection qua tên danh mục
+**Severity:** Medium
+**Priority:** Medium
 
-```markdown
-**Title:** [BUG][FR-14] XSS injection — script tag lưu nguyên trong category name
+**Steps to reproduce**
+
+1. Login admin, lấy JWT
+2. `POST /api/categories` với body `{name: "   "}`
+
+**Actual**
+`200 OK`, category created với name="   "
+
+**Expected**
+`400 Bad Request` — whitespace-only coi như rỗng
+
+**Notes**
+Related TC: DT-C-009
+
+**Screenshot**
+![BUG-C-003](screenshots/bug-clarify/BUG-C-003.png)
+![BUG-C-003-test](screenshots/bug-test/rest-03.png)
+
+---
+
+### BUG-C-004 — XSS injection qua tên danh mục
 
 **Severity:** Critical
 **Priority:** Critical
 
-**Description:**
-POST `/api/categories` với `{name: "<script>alert(1)</script>"}` được chấp nhận và lưu nguyên trong DB. Khi frontend render tên danh mục, script có thể thực thi → XSS attack.
+**Steps to reproduce**
 
-**Steps to Reproduce:**
-1. Login as admin
-2. `curl -X POST http://localhost:3000/api/categories -H "Content-Type: application/json" -H "Authorization: Bearer <token>" -d '{"name": "<script>alert(1)</script>"}'`
-3. `curl http://localhost:3000/api/categories` → tên chứa script tag
+1. Login admin, lấy JWT
+2. `POST /api/categories` với body `{name: "<script>alert(1)</script>"}`
+3. `GET /api/categories` → kiểm tra
 
-**Expected:** 400 Bad Request hoặc sanitize HTML tags
-**Actual:** 200 OK, script tag lưu nguyên
+**Actual**
+`200 OK`, `<script>alert(1)</script>` lưu nguyên trong DB
 
-**Related TC:** DT-C-010
-```
+**Expected**
+`400 Bad Request` hoặc sanitize — không cho lưu HTML/script tag
 
-### BUG-C-001: Tạo category với tên rỗng
+**Notes**
+Khi frontend render tên danh mục, script có thể thực thi → XSS attack. Related TC: DT-C-010
 
-```markdown
-**Title:** [BUG][FR-14] Category với name="" được tạo thành công — vi phạm SPEC
+**Screenshot**
+![BUG-C-004](screenshots/bug-clarify/BUG-C-004.png)
+![BUG-C-004-test](screenshots/bug-test/rest-04.png)
+
+---
+
+### BUG-C-005 — Cho phép tạo category trùng tên
+
+**Severity:** Medium
+**Priority:** Medium
+
+**Steps to reproduce**
+
+1. Login admin, lấy JWT
+2. `POST /api/categories` với body `{name: "Điện thoại"}` (seed đã có)
+
+**Actual**
+`200 OK`, tạo thêm category cùng tên "Điện thoại" với id mới
+
+**Expected**
+`400/409 Conflict` — tên đã tồn tại
+
+**Notes**
+DB thiếu UNIQUE constraint trên `name`. Related TC: DT-C-006, DT-C-026
+
+**Screenshot**
+![BUG-C-005](screenshots/bug-clarify/BUG-C-005.png)
+![BUG-C-005-test](screenshots/bug-test/rest-05.png)
+
+---
+
+### BUG-C-006 — Update tên category thành rỗng không bị reject
 
 **Severity:** High
 **Priority:** High
 
-**Description:**
-FR-14 SPEC: "Tên danh mục là bắt buộc, không được để trống". Nhưng POST `/api/categories` với `{name: ""}` trả 200 OK và tạo category rỗng.
+**Steps to reproduce**
 
-**Steps to Reproduce:**
-1. `curl -X POST http://localhost:3000/api/categories -H "Content-Type: application/json" -H "Authorization: Bearer <token>" -d '{"name": ""}'`
+1. Login admin, lấy JWT
+2. `PUT /api/categories/3` với body `{name: ""}`
 
-**Expected:** 400 Bad Request
-**Actual:** 200 OK, `{message: "Category created", id: N}`
+**Actual**
+`200 OK`, name set thành ""
 
-**Related TC:** DT-C-007, BVA-C-001
-```
+**Expected**
+`400 Bad Request` — tên không được rỗng
 
-### BUG-C-013: Xóa category có products liên kết
+**Notes**
+Related TC: DT-C-013, BVA-C-005
 
-```markdown
-**Title:** [BUG][FR-14] Xóa category có products liên kết → orphan products
+**Screenshot**
+![BUG-C-006](screenshots/bug-clarify/BUG-C-006.png)
+![BUG-C-006-test](screenshots/bug-test/rest-06.png)
+
+---
+
+### BUG-C-007 — Update category không gửi field name không bị reject
 
 **Severity:** High
 **Priority:** High
 
-**Description:**
-DELETE `/api/categories/:id` không kiểm tra có products nào dùng `category_id` đó. Sau khi xóa, products trở thành orphan — `category_id` trỏ đến category không tồn tại.
+**Steps to reproduce**
 
-**Steps to Reproduce:**
-1. Seed DB (category id=1 "Điện thoại" có products liên kết)
-2. `curl -X DELETE http://localhost:3000/api/categories/1 -H "Authorization: Bearer <token>"`
-3. `curl http://localhost:3000/api/products` → products vẫn có category_id=1
+1. Login admin, lấy JWT
+2. `PUT /api/categories/3` với body `{}`
 
-**Expected:** 400/409 Conflict — không cho xóa
-**Actual:** 200 OK, category xóa, products thành orphan
+**Actual**
+`200 OK`, name set thành null
 
-**Related TC:** DT-C-023
-```
+**Expected**
+`400 Bad Request` — thiếu field bắt buộc
 
-### BUG-C-009: DELETE/PUT id không tồn tại trả 200 OK
+**Notes**
+Related TC: DT-C-014
 
-```markdown
-**Title:** [BUG][FR-14] DELETE/PUT category với id không tồn tại trả 200 OK — silent no-op
+**Screenshot**
+![BUG-C-007](screenshots/bug-clarify/BUG-C-007.png)
+![BUG-C-007-test](screenshots/bug-test/rest-07.png)
+
+---
+
+### BUG-C-008 — Update tên category trùng danh mục khác không bị reject
+
+**Severity:** Medium
+**Priority:** Medium
+
+**Steps to reproduce**
+
+1. Login admin, lấy JWT
+2. `PUT /api/categories/3` với body `{name: "Laptop"}` (id=2 đã có tên "Laptop")
+
+**Actual**
+`200 OK`, tên cập nhật thành "Laptop" (trùng)
+
+**Expected**
+`400/409 Conflict` — tên trùng
+
+**Notes**
+Related TC: DT-C-012
+
+**Screenshot**
+![BUG-C-008](screenshots/bug-clarify/BUG-C-008.png)
+![BUG-C-008-test](screenshots/bug-test/rest-08.png)
+
+---
+
+### BUG-C-009 — DELETE/PUT với id không tồn tại trả 200 OK (silent no-op)
 
 **Severity:** Medium
 **Priority:** High
 
-**Description:**
-Backend không kiểm tra `this.changes` (số rows affected) sau DELETE/UPDATE. Khi id không tồn tại, SQLite trả 0 rows affected nhưng backend vẫn trả success.
+**Steps to reproduce**
 
-**Steps to Reproduce:**
-1. `curl -X DELETE http://localhost:3000/api/categories/9999 -H "Authorization: Bearer <token>"`
-2. Response: `{message: "Category deleted"}` dù id=9999 không tồn tại
+1. Login admin, lấy JWT
+2. `DELETE /api/categories/9999`
 
-**Expected:** 404 Not Found
-**Actual:** 200 OK
+**Actual**
+`200 OK`, `{message: "Category deleted"}` dù không có id=9999
 
-**Related TC:** DT-C-016, DT-C-021, BVA-C-015
-```
+**Expected**
+`404 Not Found`
 
-### BUG-C-015: Xóa danh mục không có confirm dialog
+**Notes**
+Backend không check `this.changes` sau DELETE/UPDATE. Related TC: DT-C-016, DT-C-021, BVA-C-015
 
-```markdown
-**Title:** [BUG][FR-24] Xóa danh mục không hiển thị dialog xác nhận
+**Screenshot**
+![BUG-C-009](screenshots/bug-clarify/BUG-C-009.png)
+![BUG-C-009-test](screenshots/bug-test/rest-09.png)
+
+---
+
+### BUG-C-010 — DELETE/PUT với id=0 trả 200 OK
+
+**Severity:** Medium
+**Priority:** Medium
+
+**Steps to reproduce**
+
+1. Login admin, lấy JWT
+2. `DELETE /api/categories/0`
+
+**Actual**
+`200 OK`, `{message: "Category deleted"}`
+
+**Expected**
+`400/404` — id=0 không hợp lệ (AUTOINCREMENT từ 1)
+
+**Notes**
+Related TC: DT-C-017, BVA-C-009
+
+**Screenshot**
+![BUG-C-010](screenshots/bug-clarify/BUG-C-010.png)
+![BUG-C-010-test](screenshots/bug-test/rest-10.png)
+
+---
+
+### BUG-C-011 — DELETE/PUT với id âm trả 200 OK
+
+**Severity:** Medium
+**Priority:** Medium
+
+**Steps to reproduce**
+
+1. Login admin, lấy JWT
+2. `DELETE /api/categories/-1`
+
+**Actual**
+`200 OK`, `{message: "Category deleted"}`
+
+**Expected**
+`400/404` — id âm không hợp lệ
+
+**Notes**
+Related TC: DT-C-018
+
+**Screenshot**
+![BUG-C-011](screenshots/bug-clarify/BUG-C-011.png)
+![BUG-C-011-test](screenshots/bug-test/rest-11.png)
+
+---
+
+### BUG-C-012 — DELETE/PUT với id non-numeric trả 200 OK
+
+**Severity:** Medium
+**Priority:** Medium
+
+**Steps to reproduce**
+
+1. Login admin, lấy JWT
+2. `DELETE /api/categories/abc`
+
+**Actual**
+`200 OK`, `{message: "Category deleted"}`
+
+**Expected**
+`400 Bad Request` — id phải là số
+
+**Notes**
+Related TC: DT-C-019
+
+**Screenshot**
+![BUG-C-012](screenshots/bug-clarify/BUG-C-012.png)
+![BUG-C-012-test](screenshots/bug-test/rest-12.png)
+
+---
+
+### BUG-C-013 — Xóa category có products liên kết → orphan products
+
+**Severity:** High
+**Priority:** High
+
+**Steps to reproduce**
+
+1. Login admin, lấy JWT
+2. `DELETE /api/categories/1` (seed: category "Điện thoại" có products dùng category_id=1)
+3. `GET /api/products` → kiểm tra
+
+**Actual**
+`200 OK`, category xóa thành công. Products có category_id=1 trở thành orphan
+
+**Expected**
+`400/409 Conflict` — không cho xóa khi có products liên kết
+
+**Notes**
+DB thiếu FOREIGN KEY / ON DELETE constraint. Related TC: DT-C-023
+
+**Screenshot**
+![BUG-C-013](screenshots/bug-clarify/BUG-C-013.png)
+![BUG-C-013-test](screenshots/bug-test/rest-13.png)
+
+---
+
+### BUG-C-014 — Trường bắt buộc "Tên danh mục" không có ký hiệu `*`
+
+**Severity:** Low
+**Priority:** Medium
+
+**Steps to reproduce**
+
+1. Login admin
+2. Vào tab "Danh mục"
+3. Quan sát form thêm danh mục
+
+**Actual**
+Không có `*` bên cạnh nhãn. Input không có attribute `required`
+
+**Expected**
+Trường bắt buộc phải có `*` (FR-22)
+
+**Notes**
+Related TC: UI-C-003
+
+**Screenshot**
+![BUG-C-014](screenshots/bug-test/ui-c-003-required-field.png)
+
+---
+
+### BUG-C-015 — Xóa danh mục không có dialog xác nhận
 
 **Severity:** Medium
 **Priority:** High
 
-**Description:**
-FR-24: "Khi xóa item phải có dialog xác nhận". Nhưng click nút "Xóa" → category bị xóa ngay lập tức mà không hỏi user.
+**Steps to reproduce**
 
-**Steps to Reproduce:**
 1. Login admin → tab "Danh mục"
-2. Click nút "Xóa" (đỏ) bên cạnh 1 danh mục
-3. Category biến mất ngay — không có confirm dialog
+2. Click nút "Xóa" bên cạnh 1 danh mục
 
-**Expected:** Hiển thị confirm dialog trước khi xóa
-**Actual:** Xóa ngay lập tức
+**Actual**
+Category bị xóa ngay lập tức — không có confirm dialog
 
-**Related TC:** UI-C-006
-**Screenshot:** `screenshots/ui-c-006-delete-confirm.png`
-```
+**Expected**
+Hiển thị confirm dialog trước khi xóa (FR-24)
+
+**Notes**
+Related TC: UI-C-006
+
+**Screenshot**
+![BUG-C-015](screenshots/bug-test/ui-c-006-delete-confirm.png)
+
+---
+
+### BUG-C-016 — Trang danh mục rỗng không có empty state
+
+**Severity:** Low
+**Priority:** Low
+
+**Steps to reproduce**
+
+1. Login admin → tab "Danh mục"
+2. Xóa hết categories
+3. Quan sát giao diện
+
+**Actual**
+Bảng trống, không có message/icon thân thiện
+
+**Expected**
+Hiển thị empty state với icon + message (FR-24)
+
+**Notes**
+Related TC: UI-C-007
+
+**Screenshot**
+![BUG-C-016](screenshots/bug-test/ui-c-007-empty-state.png)
+
+---
+
+## Thống kê
+
+| Severity | Count | Bug IDs |
+| --- | --- | --- |
+| Critical | 1 | BUG-C-004 |
+| High | 5 | BUG-C-001, BUG-C-002, BUG-C-006, BUG-C-007, BUG-C-013 |
+| Medium | 8 | BUG-C-003, BUG-C-005, BUG-C-008, BUG-C-009, BUG-C-010, BUG-C-011, BUG-C-012, BUG-C-015 |
+| Low | 2 | BUG-C-014, BUG-C-016 |
+| **Tổng** | **16** | |

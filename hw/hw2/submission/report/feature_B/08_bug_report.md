@@ -2,77 +2,36 @@
 
 ---
 
-## Bug Report Table
+### BUG-B-001 — User cancel được order khi status=shipping (vi phạm SPEC FR-10)
 
-| Bug ID | Title | Severity | Pre-condition | Steps | Actual | Expected | TC ID | Screenshot |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| BUG-B-001 | User can cancel order when status=shipping (violates SPEC FR-10) | High | Order status=shipping, owned by user | 1. Login as test user 2. GET /api/orders/my-orders 3. PUT /api/orders/{id}/cancel (where status=shipping) | `200` OK, order status updated to canceled | `400 "Cannot cancel this order"` (SPEC: User cannot cancel shipping orders) | DT-B-012 | `screenshots/BUG-B-001.png` |
+**Severity:** High
+**Priority:** High
 
----
+**Steps to reproduce**
 
-## GitHub Issue Template
+1. Login as `test@eshop.com`
+2. Tạo/có order với `status=shipping`
+3. Vào Profile → Lịch sử đơn hàng
+4. Bấm "Hủy đơn" trên order đang giao
 
-**Title:** `[BUG] Order History — User can cancel order with status=shipping (violates SPEC FR-10)`
+**Actual**
+`200 OK`, order status cập nhật thành `canceled`
 
-```markdown
-## Description
-When a user attempts to cancel an order with `status=shipping`, the system allows the cancel operation and returns `200 OK`. However, according to SPEC FR-10: "When an order has status=shipping, User is NOT permitted to cancel it (only Admin can)". This is a business logic violation.
+**Expected**
+`400 "Cannot cancel this order"` — SPEC FR-10: User không được phép hủy khi đang giao (chỉ Admin)
 
-## Severity
-High
+**Notes**
+Root cause: `server.js` line 329 — condition chỉ block `delivered` và `canceled`, thiếu `shipping`. Ảnh hưởng business logic: user bypass được quyền Admin. Related TC: DT-B-012
 
-## Reproduce
-1. Login as test@eshop.com
-2. GET /api/orders/my-orders (retrieve order with status=shipping)
-3. PUT /api/orders/{orderId}/cancel (use the shipping order's ID)
-4. Observe response
-
-## Expected
-`400 "Cannot cancel this order"` or similar error message, order status remains unchanged.
-
-## Actual
-`200 OK`, order status is updated to `canceled`.
-
-## Root Cause
-`backend/server.js` line 329:
-```javascript
-if (order.status === "delivered" || order.status === "canceled") {
-  return res.status(400).json({ error: "Cannot cancel this order." });
-}
-```
-
-The condition only blocks `delivered` and `canceled` statuses. According to SPEC FR-10, it should also block `shipping`:
-```javascript
-if (order.status === "delivered" || order.status === "canceled" || order.status === "shipping") {
-  // ...
-}
-```
-
-## Related TC
-DT-B-012
-
-## Test Environment
-- Backend: Node.js + Express @ localhost:3000
-- Database: SQLite
-- Date: 2026-06-25
-
-## Impact
-- **Business Logic:** Violates order state machine requirement (FR-10)
-- **User Permission:** User can override Admin-only action (cancel shipping order)
-- **Data Integrity:** Shipped order can be retroactively canceled without Admin approval
-
-## Screenshot
-[Attach screenshots/BUG-B-001.png showing:
-1. Order list with order in "shipping" status
-2. Response from PUT /api/orders/{id}/cancel with status=200
-3. Updated order status showing "canceled"]
-```
+**Screenshot**
+![BUG-B-001_before](screenshots/BUG-B-001_before.png)
+![BUG-B-001_after](screenshots/BUG-B-001_after.png)
 
 ---
 
-## Summary
+## Thống kê
 
 | Severity | Count | Bug IDs |
 | --- | --- | --- |
 | High | 1 | BUG-B-001 |
-| **Total** | **1** | |
+| **Tổng** | **1** | |

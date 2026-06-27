@@ -1,250 +1,134 @@
 # 08 — Bug Report: feature_A (FR-02 — Login & Account Lockout)
 
-> **Scope:** Ghi nhận các defect phát hiện từ 5 FAIL TC trong `07_execution.md` Section C (UI Validation).
->
-> **Môi trường:**
-> - Frontend: React @ `http://localhost:5173`
-> - Backend: Node.js + Express @ `http://localhost:3000`
-> - Browser: Chrome 130+
-> - OS: Windows 11 Home 10.0.26200
-> - Date: 2026-06-25
+---
+
+### BUG-A-001 — Email input dùng `type="text"` thay vì `type="email"`
+
+**Severity:** Medium
+**Priority:** Medium
+
+**Steps to reproduce**
+
+1. Mở `/login`
+2. Nhấn F12 → Inspect trường nhập Email
+3. Kiểm tra attribute `type`
+
+**Actual**
+`type="text"` — không có HTML5 email validation (browser không kiểm tra format `@`, `.`)
+
+**Expected**
+`type="email"` — browser tự validate format email trước khi submit
+
+**Notes**
+Root cause: `Login.jsx` line 30. Related TC: UI-A-001
+
+**Screenshot**
+![BUG-A-001](screenshots/BUG-A-001.png)
 
 ---
 
-## A. Bug Report Table
+### BUG-A-002 — Password field hiển thị plaintext
 
-| Bug ID | Title | Severity | Priority | Pre-condition | Steps to Reproduce | Actual Result | Expected Result | Related TC ID | Screenshot | GitHub Issue Link |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **BUG-A-001** | Email input dùng `type="text"` thay vì `type="email"` | Medium | Medium | Frontend web chạy tại `:5173` | 1. Mở `http://localhost:5173/login` 2. Nhấn F12 mở DevTools 3. Inspect trường nhập Email 4. Kiểm tra attribute `type` | `type="text"` — không có HTML5 email validation (thiếu kiểm tra format `@`, `.`) | `type="email"` — browser tự validate format email trước khi submit | UI-A-001 | `screenshots/BUG-A-001.png` | |
-| **BUG-A-002** | Password input dùng `type="text"` — hiển thị plaintext trên màn hình | Medium | High | Frontend web chạy | 1. Mở `http://localhost:5173/login` 2. Nhập password bất kỳ vào trường Mật khẩu 3. Quan sát ký tự trên màn hình | Password hiển thị dạng plaintext (rõ từng ký tự), `type="text"` | Password phải bị ẩn (dots/asterisks), `type="password"` | UI-A-002 | `screenshots/BUG-A-002.png` | |
-| **BUG-A-003** | Label trường email ghi "Username" thay vì "Email" | Low | Low | Frontend web chạy | 1. Mở `http://localhost:5173/login` 2. Đọc label phía trên trường nhập đầu tiên | Label ghi "Username" | Label phải ghi "Email" (đúng với data type và backend field name) | UI-A-003 | `screenshots/BUG-A-003.png` | |
-| **BUG-A-004** | Heading trang Login ghi "Đăng Ký" thay vì "Đăng nhập" | High | High | Frontend web chạy | 1. Mở `http://localhost:5173/login` 2. Đọc heading (h2) ở đầu form | Heading ghi "Đăng Ký" — gây nhầm lẫn với chức năng Register | Heading phải ghi "Đăng nhập" (đúng chức năng Login) | UI-A-004 | `screenshots/BUG-A-004.png` | |
-| **BUG-A-005** | Frontend không hiển thị thông báo khóa tài khoản cụ thể (403 vs 401) | Medium | Medium | Frontend + Backend chạy. Set DB: `counter=4`, `locked_until=future` | 1. Mở `http://localhost:5173/login` 2. Nhập email `test@eshop.com` + password `Test1234!` (correct) 3. Bấm Sign In 4. Quan sát thông báo lỗi | Hiển thị "Đăng nhập thất bại. Vui lòng kiểm tra lại." (message chung cho cả 401 lẫn 403) | Hiển thị "Tài khoản đã bị khóa. Vui lòng thử lại sau." (message cụ thể từ API 403 response) | UI-A-006 | `screenshots/BUG-A-005.png` | |
+**Severity:** Medium
+**Priority:** High
 
----
+**Steps to reproduce**
 
-## B. GitHub Issue Templates
+1. Mở `/login`
+2. Nhập password bất kỳ
+3. Quan sát field password
 
-> Paste nội dung bên dưới vào từng GitHub Issue. **Nhớ đính kèm screenshot tương ứng vào mỗi issue.**
+**Actual**
+Password hiển thị rõ từng ký tự (plaintext)
 
----
+**Expected**
+Password phải được mask (••••••), sử dụng `type="password"`
 
-### BUG-A-001
+**Notes**
+Ảnh hưởng đến bảo mật (shoulder surfing). Root cause: `Login.jsx` line 40. Related TC: UI-A-002
 
-**Title:** `[BUG] Login — Email input dùng type="text" thay vì type="email"`
-
-**Body:**
-
-```markdown
-## Mô tả
-Trường nhập Email trên trang Login sử dụng `type="text"` thay vì `type="email"`, dẫn đến thiếu HTML5 email validation (browser không kiểm tra format `@`, `.` trước khi submit).
-
-## Severity / Priority
-- **Severity:** Medium
-- **Priority:** Medium
-
-## Môi trường
-- Frontend: React @ `http://localhost:5173`
-- Browser: Chrome 130+
-- OS: Windows 11
-
-## Steps to Reproduce
-1. Mở `http://localhost:5173/login`
-2. Nhấn F12 mở DevTools
-3. Inspect trường nhập Email
-4. Kiểm tra attribute `type`
-
-## Expected Result
-`type="email"` — browser tự validate format email trước khi submit.
-
-## Actual Result
-`type="text"` — không có HTML5 email format validation.
-
-## Root Cause
-`Login.jsx` line 30: `<input type="text" ...>` thay vì `<input type="email" ...>`.
-
-## Related TC
-UI-A-001
-
-## Screenshot
-<!-- Đính kèm screenshots/BUG-A-001.png -->
-```
+**Screenshot**
+![BUG-A-002_1](screenshots/BUG-A-002_1.png)
+![BUG-A-002_2](screenshots/BUG-A-002_2.png)
 
 ---
 
-### BUG-A-002
+### BUG-A-003 — Label trường email ghi "Username" thay vì "Email"
 
-**Title:** `[BUG] Login — Password hiển thị plaintext (type="text" thay vì type="password")`
+**Severity:** Low
+**Priority:** Low
 
-**Body:**
+**Steps to reproduce**
 
-```markdown
-## Mô tả
-Trường nhập Password trên trang Login sử dụng `type="text"`, khiến password hiển thị rõ trên màn hình thay vì bị ẩn bằng dots/asterisks. Đây là lỗi bảo mật UI nghiêm trọng — người xung quanh có thể nhìn thấy password (shoulder surfing).
-
-## Severity / Priority
-- **Severity:** Medium
-- **Priority:** High
-
-## Môi trường
-- Frontend: React @ `http://localhost:5173`
-- Browser: Chrome 130+
-- OS: Windows 11
-
-## Steps to Reproduce
-1. Mở `http://localhost:5173/login`
-2. Nhập password bất kỳ vào trường Mật khẩu (ví dụ: `Test1234!`)
-3. Quan sát ký tự hiển thị trên màn hình
-
-## Expected Result
-Password bị ẩn (hiển thị dạng `•••••••••`), `type="password"`.
-
-## Actual Result
-Password hiển thị plaintext rõ từng ký tự, `type="text"`.
-
-## Root Cause
-`Login.jsx` line 40: `<input type="text" ...>` thay vì `<input type="password" ...>`.
-
-## Related TC
-UI-A-002
-
-## Screenshot
-<!-- Đính kèm screenshots/BUG-A-002.png -->
-```
-
----
-
-### BUG-A-003
-
-**Title:** `[BUG] Login — Label ghi "Username" thay vì "Email"`
-
-**Body:**
-
-```markdown
-## Mô tả
-Label trường nhập email trên trang Login ghi "Username" nhưng backend và logic thực tế yêu cầu nhập email address. Gây nhầm lẫn cho user.
-
-## Severity / Priority
-- **Severity:** Low
-- **Priority:** Low
-
-## Môi trường
-- Frontend: React @ `http://localhost:5173`
-- Browser: Chrome 130+
-- OS: Windows 11
-
-## Steps to Reproduce
-1. Mở `http://localhost:5173/login`
+1. Mở `/login`
 2. Đọc label phía trên trường nhập đầu tiên
 
-## Expected Result
-Label ghi "Email".
+**Actual**
+Label ghi "Username"
 
-## Actual Result
-Label ghi "Username".
+**Expected**
+Label ghi "Email" (đúng với data type và backend field name)
 
-## Root Cause
-`Login.jsx` line 28: `<label>Username</label>` thay vì `<label>Email</label>`.
+**Notes**
+Root cause: `Login.jsx` line 28. Related TC: UI-A-003
 
-## Related TC
-UI-A-003
-
-## Screenshot
-<!-- Đính kèm screenshots/BUG-A-003.png -->
-```
+**Screenshot**
+![BUG-A-003](screenshots/BUG-A-003.png)
 
 ---
 
-### BUG-A-004
+### BUG-A-004 — Heading trang Login ghi "Đăng Ký" thay vì "Đăng nhập"
 
-**Title:** `[BUG] Login — Heading ghi "Đăng Ký" thay vì "Đăng nhập"`
+**Severity:** High
+**Priority:** High
 
-**Body:**
+**Steps to reproduce**
 
-```markdown
-## Mô tả
-Heading (h2) trang Login ghi "Đăng Ký" — đây là text dành cho trang Register, không phải Login. Gây nhầm lẫn nghiêm trọng: user tưởng đang ở trang đăng ký thay vì đăng nhập.
-
-## Severity / Priority
-- **Severity:** High
-- **Priority:** High
-
-## Môi trường
-- Frontend: React @ `http://localhost:5173`
-- Browser: Chrome 130+
-- OS: Windows 11
-
-## Steps to Reproduce
-1. Mở `http://localhost:5173/login`
+1. Mở `/login`
 2. Đọc heading (h2) ở đầu form
 
-## Expected Result
-Heading ghi "Đăng nhập".
+**Actual**
+Heading ghi "Đăng Ký" — gây nhầm lẫn với chức năng Register
 
-## Actual Result
-Heading ghi "Đăng Ký".
+**Expected**
+Heading ghi "Đăng nhập" (đúng chức năng Login)
 
-## Root Cause
-`Login.jsx` line 24: `<h2>Đăng Ký</h2>` thay vì `<h2>Đăng nhập</h2>`.
+**Notes**
+User tưởng đang ở trang đăng ký thay vì đăng nhập. Root cause: `Login.jsx` line 24. Related TC: UI-A-004
 
-## Related TC
-UI-A-004
-
-## Screenshot
-<!-- Đính kèm screenshots/BUG-A-004.png -->
-```
+**Screenshot**
+![BUG-A-004](screenshots/BUG-A-004.png)
 
 ---
 
-### BUG-A-005
+### BUG-A-005 — Frontend không phân biệt lỗi khóa tài khoản (403) vs sai mật khẩu (401)
 
-**Title:** `[BUG] Login — Frontend không phân biệt lỗi khóa tài khoản (403) vs sai mật khẩu (401)`
+**Severity:** Medium
+**Priority:** Medium
 
-**Body:**
+**Steps to reproduce**
 
-```markdown
-## Mô tả
-Khi tài khoản bị khóa (API trả 403 với message "Tài khoản đã bị khóa"), frontend hiển thị thông báo chung "Đăng nhập thất bại. Vui lòng kiểm tra lại." — giống hệt khi sai mật khẩu (401). User bị khóa không biết lý do và không biết cần chờ bao lâu.
-
-## Severity / Priority
-- **Severity:** Medium
-- **Priority:** Medium
-
-## Môi trường
-- Frontend: React @ `http://localhost:5173`
-- Backend: Node.js + Express @ `http://localhost:3000`
-- Browser: Chrome 130+
-- OS: Windows 11
-
-## Pre-condition
-Set DB: `UPDATE users SET login_attempts=4, locked_until='2099-12-31T23:59:59.000Z' WHERE email='test@eshop.com';`
-
-## Steps to Reproduce
-1. Mở `http://localhost:5173/login`
-2. Nhập email `test@eshop.com`
-3. Nhập password `Test1234!` (correct password)
+1. Set DB: `UPDATE users SET login_attempts=4, locked_until='2099-12-31T23:59:59.000Z' WHERE email='test@eshop.com'`
+2. Mở `/login`
+3. Nhập email `test@eshop.com` + password `Test1234!`
 4. Bấm Sign In
-5. Quan sát thông báo lỗi hiển thị
+5. Quan sát thông báo lỗi
 
-## Expected Result
-Hiển thị "Tài khoản đã bị khóa. Vui lòng thử lại sau." (message cụ thể từ API 403).
+**Actual**
+Hiển thị "Đăng nhập thất bại. Vui lòng kiểm tra lại." (message chung cho cả 401 lẫn 403)
 
-## Actual Result
-Hiển thị "Đăng nhập thất bại. Vui lòng kiểm tra lại." (message chung, không phân biệt 401 vs 403).
+**Expected**
+Hiển thị "Tài khoản đã bị khóa. Vui lòng thử lại sau." (message cụ thể từ API 403)
 
-## Root Cause
-`Login.jsx` line 17-18: `catch (err) { setError('Đăng nhập thất bại...') }` — catch chung, không đọc `err.response.status` hay `err.response.data.error` để hiển thị message cụ thể.
+**Notes**
+User bị khóa không biết lý do, không biết cần chờ bao lâu. Root cause: `Login.jsx` line 17-18 catch chung, không đọc `err.response.data.error`. Related TC: UI-A-006
 
-## Related TC
-UI-A-006
-
-## Screenshot
-<!-- Đính kèm screenshots/BUG-A-005.png -->
-```
+**Screenshot**
+![BUG-A-005](screenshots/BUG-A-005.png)
 
 ---
 
-## Thống kê Bug
+## Thống kê
 
 | Severity | Count | Bug IDs |
 | --- | --- | --- |

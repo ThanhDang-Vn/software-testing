@@ -1,0 +1,7 @@
+- create git issue 
+- complete report templete 
+- review feature A & B 
+- screenshot bug for feature A & B 
+- add reason why changes 
+- commit change [0]
+- screenshot for feature D [0]
