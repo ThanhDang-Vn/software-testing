@@ -1,0 +1,208 @@
+### ============================================
+### FR-14 Category CRUD — Bug Reproduction
+### Extension: REST Client (humao.rest-client)
+### Yêu cầu: Backend đang chạy trên localhost:3000
+### Cách dùng: Click "Send Request" phía trên mỗi request
+### ============================================
+
+### --- STEP 0: Login lấy token ---
+
+# @name login
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+  "email": "admin@eshop.com",
+  "password": "Admin123!"
+}
+
+###
+
+@token = {{login.response.body.token}}
+
+### ============================================
+### BUG-C-001 (HIGH) — Tạo category tên rỗng
+### Expected: 400 Bad Request
+### SPEC: "Tên danh mục là bắt buộc, không được để trống"
+### ============================================
+
+POST http://localhost:3000/api/categories
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": ""
+}
+
+###
+
+### ============================================
+### BUG-C-002 (HIGH) — Tạo category không gửi field name
+### Expected: 400 Bad Request
+### ============================================
+
+POST http://localhost:3000/api/categories
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{}
+
+###
+
+### ============================================
+### BUG-C-003 (MEDIUM) — Tạo category tên whitespace-only
+### Expected: 400 Bad Request
+### ============================================
+
+POST http://localhost:3000/api/categories
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "   "
+}
+
+###
+
+### ============================================
+### BUG-C-004 (CRITICAL) — XSS injection qua tên danh mục
+### Expected: 400 hoặc sanitize
+### ============================================
+
+POST http://localhost:3000/api/categories
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "<script>alert(1)</script>"
+}
+
+###
+
+### ============================================
+### BUG-C-005 (MEDIUM) — Tạo category trùng tên đã tồn tại
+### Expected: 400/409 Conflict
+### Seed đã có "Điện thoại"
+### ============================================
+
+POST http://localhost:3000/api/categories
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Điện thoại"
+}
+
+###
+
+### ============================================
+### BUG-C-006 (HIGH) — Update tên category thành rỗng
+### Expected: 400 Bad Request
+### ============================================
+
+PUT http://localhost:3000/api/categories/3
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": ""
+}
+
+###
+
+### ============================================
+### BUG-C-007 (HIGH) — Update không gửi field name
+### Expected: 400 Bad Request
+### ============================================
+
+PUT http://localhost:3000/api/categories/3
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{}
+
+###
+
+### ============================================
+### BUG-C-008 (MEDIUM) — Update tên trùng danh mục khác
+### Expected: 400/409 Conflict
+### ============================================
+
+PUT http://localhost:3000/api/categories/3
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Laptop"
+}
+
+###
+
+GET http://localhost:3000/api/categories/
+Authorization: Bearer {{token}}
+###
+
+### ============================================
+### BUG-C-009 (MEDIUM) — DELETE id không tồn tại → 200 OK
+### Expected: 404 Not Found
+### ============================================
+
+DELETE http://localhost:3000/api/categories/9999
+Authorization: Bearer {{token}}
+
+###
+
+### ============================================
+### BUG-C-010 (MEDIUM) — DELETE id=0 → 200 OK
+### Expected: 400/404
+### ============================================
+
+DELETE http://localhost:3000/api/categories/0
+Authorization: Bearer {{token}}
+
+###
+
+### ============================================
+### BUG-C-011 (MEDIUM) — DELETE id âm → 200 OK
+### Expected: 400/404
+### ============================================
+
+DELETE http://localhost:3000/api/categories/-1
+Authorization: Bearer {{token}}
+
+###
+
+### ============================================
+### BUG-C-012 (MEDIUM) — DELETE id non-numeric → 200 OK
+### Expected: 400 Bad Request
+### ============================================
+
+DELETE http://localhost:3000/api/categories/abc
+Authorization: Bearer {{token}}
+
+###
+
+### ============================================
+### BUG-C-013 (HIGH) — Xóa category có products liên kết
+### Expected: 400/409 Conflict
+### Seed category id=1 "Điện thoại" có products
+### ============================================
+
+# Bước 1: Xóa category id=1
+DELETE http://localhost:3000/api/categories/1
+Authorization: Bearer {{token}}
+
+###
+
+# Bước 2: Verify — products vẫn còn category_id=1 (orphan)
+GET http://localhost:3000/api/products
+
+###
+
+### ============================================
+### VERIFY: Xem danh sách categories sau khi test
+### ============================================
+
+GET http://localhost:3000/api/categories
+
+###
