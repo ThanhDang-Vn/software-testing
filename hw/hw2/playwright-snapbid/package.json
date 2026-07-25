@@ -1,0 +1,16 @@
+{
+  "name": "playwright-snapbid",
+  "version": "1.0.0",
+  "description": "Kiem thu tu dong web cho SnapBid bang Playwright (seminar Automation for Web)",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen https://snapbid-online-auction.vercel.app/"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0"
+  }
+}
