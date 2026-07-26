@@ -1,0 +1,281 @@
+{
+  "environment": {
+    "testedAt": "2026-07-26T08:05:55.125Z",
+    "browser": "Chromium (Playwright)",
+    "viewport": "1280×800; 320×640; portrait/landscape variants",
+    "frontend": "http://127.0.0.1:5173",
+    "backend": "http://127.0.0.1:3000"
+  },
+  "results": {
+    "GUI-L-001": {
+      "status": "Failed",
+      "actual": "Found 0 h1 elements; visible h2 text is \"Đăng Ký\".",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-L-001.png"
+    },
+    "GUI-L-002": {
+      "status": "Failed",
+      "actual": "Mixed-language labels are visible: \"Username\" and \"Sign In\".",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-L-002.png"
+    },
+    "GUI-L-003": {
+      "status": "Passed",
+      "actual": "No overlap detected in the desktop Login card.",
+      "notes": "",
+      "evidence": ""
+    },
+    "GUI-L-004": {
+      "status": "Passed",
+      "actual": "No horizontal overflow at 320 px (320/320).",
+      "notes": "",
+      "evidence": ""
+    },
+    "GUI-L-005": {
+      "status": "Failed",
+      "actual": "The light-blue “Quên mật khẩu?” link (#3B82F6 on white) is approximately 3.68:1, below WCAG AA 4.5:1 for normal text.",
+      "notes": "Computed-color contrast measurement in Chromium.",
+      "evidence": "failed-screenshots/GUI-L-005.png"
+    },
+    "GUI-L-006": {
+      "status": "Failed",
+      "actual": "Targets below 44×44: EShop 70×32; Giỏ hàng 64×24; Đăng nhập 78×24; Đăng ký 58×24; INPUT 382×42; INPUT 382×42; Quên mật khẩu? 102×19; Sign In 382×40; Đăng ký ngay 85×19.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-L-006.png"
+    },
+    "GUI-L-007": {
+      "status": "Failed",
+      "actual": "Email/Username control uses type=\"text\".",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-L-007.png"
+    },
+    "GUI-L-008": {
+      "status": "Failed",
+      "actual": "Password control uses type=\"text\" and exposes the entered value.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-L-008.png"
+    },
+    "GUI-L-009": {
+      "status": "Failed",
+      "actual": "Required markers are absent from labels: Username | Mật khẩu.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-L-009.png"
+    },
+    "GUI-L-010": {
+      "status": "Failed",
+      "actual": "Login labels have no for/id association and do not wrap their inputs.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-L-010.png"
+    },
+    "GUI-L-011A": {
+      "status": "Failed",
+      "actual": "No two-field visible validation summary/inline messages; detected 0 explicit error elements.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-L-011A.png"
+    },
+    "GUI-L-013": {
+      "status": "Failed",
+      "actual": "Observed focus order: EShopGiỏ hàngĐăng nhậpĐăng kýĐăng KýUsernameMật khẩuQuên mật khẩu?Sign InChưa có tài khoản? Đăng ký ngay© 2026 EShop SUT. Dành cho mục đích kiểm thử. → Sign In → EShop → Giỏ hàng → Đăng nhập.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-L-013.png"
+    },
+    "GUI-L-014": {
+      "status": "Passed",
+      "actual": "Every tested interactive element exposes a focus indicator.",
+      "notes": "",
+      "evidence": ""
+    },
+    "GUI-L-020": {
+      "status": "Failed",
+      "actual": "Autocomplete tokens are [null,null] instead of email/current-password.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-L-020.png"
+    },
+    "GUI-L-021": {
+      "status": "Passed",
+      "actual": "No horizontal clipping detected at 200% page scale.",
+      "notes": "",
+      "evidence": ""
+    },
+    "GUI-L-023": {
+      "status": "Passed",
+      "actual": "Exploratory RTL run produced no overlap or unreachable controls.",
+      "notes": "",
+      "evidence": ""
+    },
+    "GUI-L-024A": {
+      "status": "Failed",
+      "actual": "Submit remains enabled and shows no pending indicator during repeated activation.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-L-024A.png"
+    },
+    "GUI-L-025": {
+      "status": "Failed",
+      "actual": "No explicit inline error, error summary, aria-invalid, or aria-describedby association is rendered for either required field.",
+      "notes": "DOM and accessibility-attribute inspection after empty submission.",
+      "evidence": "failed-screenshots/GUI-L-025.png"
+    },
+    "GUI-L-026": {
+      "status": "Failed",
+      "actual": "The dynamically inserted credential error has no role=alert, aria-live, or equivalent live-region semantics.",
+      "notes": "DOM inspection after failed credential submission.",
+      "evidence": "failed-screenshots/GUI-L-026.png"
+    },
+    "GUI-L-027": {
+      "status": "Passed",
+      "actual": "All focused Login controls remain inside the viewport at desktop/mobile sizes.",
+      "notes": "",
+      "evidence": ""
+    },
+    "GUI-L-028": {
+      "status": "Passed",
+      "actual": "No horizontal overflow with WCAG text-spacing overrides.",
+      "notes": "",
+      "evidence": ""
+    },
+    "GUI-L-029": {
+      "status": "Passed",
+      "actual": "All Login controls remained available in portrait 390×844 and landscape 844×390.",
+      "notes": "",
+      "evidence": ""
+    },
+    "GUI-L-030": {
+      "status": "Passed",
+      "actual": "Exploratory dark preference run retained visible Login content and controls.",
+      "notes": "",
+      "evidence": ""
+    },
+    "GUI-O-002A": {
+      "status": "Passed",
+      "actual": "5 rows each display ID, date, total, and status.",
+      "notes": "",
+      "evidence": ""
+    },
+    "GUI-O-004": {
+      "status": "Passed",
+      "actual": "Order IDs displayed newest first: 5, 4, 3, 2, 1.",
+      "notes": "",
+      "evidence": ""
+    },
+    "GUI-O-005": {
+      "status": "Failed",
+      "actual": "Non-Vietnamese/ambiguous currency format: 550,000 ₫, 450,000 ₫, 350,000 ₫, 250,000 ₫, 150,000 ₫.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-O-005.png"
+    },
+    "GUI-O-006": {
+      "status": "Failed",
+      "actual": "Dates render with browser-default US ordering such as 7/26/2026 instead of deterministic Vietnamese day/month/year formatting.",
+      "notes": "Observed across all five seeded order rows in Chromium.",
+      "evidence": "failed-screenshots/GUI-O-006.png"
+    },
+    "GUI-O-007": {
+      "status": "Passed",
+      "actual": "All five Vietnamese statuses displayed.",
+      "notes": "",
+      "evidence": ""
+    },
+    "GUI-O-008": {
+      "status": "Passed",
+      "actual": "Each visible status has readable text and a distinct badge color.",
+      "notes": "",
+      "evidence": ""
+    },
+    "GUI-O-010": {
+      "status": "Failed",
+      "actual": "No confirmation dialog; cancel request executes immediately and only a result alert appears.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-O-010.png"
+    },
+    "GUI-O-011": {
+      "status": "Failed",
+      "actual": "Keyboard activates cancel but no confirmation dialog exists.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-O-011.png"
+    },
+    "GUI-O-012": {
+      "status": "Failed",
+      "actual": "Only profile greeting \"Chào, Test User\" leads to history; Order History is not named in navigation.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-O-012.png"
+    },
+    "GUI-O-013": {
+      "status": "Failed",
+      "actual": "Current Profile/History navigation has no aria-current or active-state marker.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-O-013.png"
+    },
+    "GUI-O-016": {
+      "status": "Failed",
+      "actual": "No loading indicator during a 1.2-second delayed order request.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-O-016.png"
+    },
+    "GUI-O-018": {
+      "status": "Passed",
+      "actual": "Every status badge includes a Vietnamese text label independent of color.",
+      "notes": "",
+      "evidence": ""
+    },
+    "GUI-O-019": {
+      "status": "Failed",
+      "actual": "Table has 5 column headers but 0 caption elements.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-O-019.png"
+    },
+    "GUI-O-020": {
+      "status": "Failed",
+      "actual": "Order table causes page-wide horizontal clipping at 320 px.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-O-020.png"
+    },
+    "GUI-O-021": {
+      "status": "Failed",
+      "actual": "Order History clips horizontally at 200% scale.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-O-021.png"
+    },
+    "GUI-O-022": {
+      "status": "Failed",
+      "actual": "API failure is shown as \"Lịch sử đơn hàng\" with no retry action.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-O-022.png"
+    },
+    "GUI-O-024A": {
+      "status": "Passed",
+      "actual": "Visible result alert: \"Hủy đơn thành công!\".",
+      "notes": "",
+      "evidence": ""
+    },
+    "GUI-O-025": {
+      "status": "Failed",
+      "actual": "The Order History table has no caption and exposes no dedicated accessible table name.",
+      "notes": "DOM/table semantic inspection.",
+      "evidence": "failed-screenshots/GUI-O-025.png"
+    },
+    "GUI-O-026": {
+      "status": "Blocked",
+      "actual": "Requires a real screen-reader reading-order check at desktop and mobile widths.",
+      "notes": "Requires manual assistive-technology or OS-level execution.",
+      "evidence": ""
+    },
+    "GUI-O-027": {
+      "status": "Failed",
+      "actual": "No cancel confirmation dialog exists, so dialog focus containment/return cannot be satisfied.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-O-027.png"
+    },
+    "GUI-O-028": {
+      "status": "Failed",
+      "actual": "Wide table has no localized horizontal-scroll container.",
+      "notes": "",
+      "evidence": "failed-screenshots/GUI-O-028.png"
+    },
+    "GUI-O-029": {
+      "status": "Blocked",
+      "actual": "Requires a real screen-reader status-message announcement check.",
+      "notes": "Requires manual assistive-technology or OS-level execution.",
+      "evidence": ""
+    }
+  }
+}
