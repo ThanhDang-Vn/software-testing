@@ -1,0 +1,23 @@
+# Final Validation
+
+- [ ] Main report exists in Markdown and PDF.
+- [x] GUI checklist design has more than 40 items (45).
+- [x] All IA groups are represented.
+- [x] All 45 checklist items have an execution status (15 Passed, 28 Failed, 2 Blocked).
+- [x] Every Failed GUI item has notes and a screenshot.
+- [x] Every genuine GUI bug appears in Markdown and GitHub Issues (#18–#29).
+- [ ] Pilot evidence exists and protocol is marked READY.
+- [ ] Seven real participant session evidence sets exist.
+- [ ] Participant table contains verifiable masked contacts.
+- [ ] All ten SUS answers and score exist for every participant.
+- [ ] Findings are grouped and severity-ranked.
+- [x] Three real platforms were tested (Chrome, Firefox, Safari/iOS via BrowserStack).
+- [x] Cross-platform screenshots contain required identity information. Seven BrowserStack captures (`chrome1/2.png`, `firefox1/2.png`, `safari1/2/3.png`) show the SUT tunnel URL, the OS/browser/device, and the identity `23127334@hcmus.edu.vn`; each platform's Order-History shot also shows the full name "Nguyễn Thành Dâng".
+- [x] AI Audit exists in Markdown.
+- [ ] AI Audit exists in PDF and includes all later interactions.
+- [ ] AI Critique is 200–300 words and exists in Markdown and PDF.
+- [ ] Real Git commit log exists.
+- [ ] Agent Skill and two demo links exist.
+- [x] README contains working self-assessment and test summary.
+- [ ] `TBD` is replaced by a three-digit final grade.
+- [ ] Final ZIP follows `<StudentID>_HW03_AI_GUIUsability_<000-100>.zip`.
