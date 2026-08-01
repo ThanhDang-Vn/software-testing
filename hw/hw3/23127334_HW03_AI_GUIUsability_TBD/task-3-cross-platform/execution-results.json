@@ -1,0 +1,55 @@
+{
+  "executedAt": "2026-08-01T14:05:00.000Z",
+  "sut": "http://localhost:5173",
+  "tunnelFrontend": "https://spy-layers-watershed-basics.trycloudflare.com",
+  "tunnelBackend": "cloudflare quick tunnel to http://localhost:3000",
+  "platform": "BrowserStack Live (trial)",
+  "flow": "Login -> Ho so (Profile) -> Lich su don hang (Order History, FR-11)",
+  "identityAccount": { "email": "23127334@hcmus.edu.vn", "fullName": "Nguyễn Thành Dâng" },
+  "requiredIdentityOverlay": "23127334@hcmus.edu.vn",
+  "results": [
+    {
+      "browser": "Google Chrome", "version": "147.0", "osDevice": "macOS desktop (1528x794)",
+      "environment": "BrowserStack Live", "screen": "Login", "result": "Rendered correctly",
+      "screenshot": "screenshots/chrome1.png",
+      "identityOverlayInShot": "23127334@hcmus.edu.vn (Username field)", "identityOverlayCompliant": true
+    },
+    {
+      "browser": "Google Chrome", "version": "147.0", "osDevice": "macOS desktop",
+      "environment": "BrowserStack Live", "screen": "Order History", "result": "Rendered correctly; 5 orders",
+      "screenshot": "screenshots/chrome2.png",
+      "identityOverlayInShot": "23127334@hcmus.edu.vn + full name Nguyễn Thành Dâng", "identityOverlayCompliant": true
+    },
+    {
+      "browser": "Mozilla Firefox", "version": "144.0", "osDevice": "Windows 11 desktop",
+      "environment": "BrowserStack Live", "screen": "Login", "result": "Rendered correctly",
+      "screenshot": "screenshots/firefox1.png",
+      "identityOverlayInShot": "23127334@hcmus.edu.vn (Username field)", "identityOverlayCompliant": true
+    },
+    {
+      "browser": "Mozilla Firefox", "version": "145.0", "osDevice": "Windows 11 desktop",
+      "environment": "BrowserStack Live", "screen": "Order History", "result": "Rendered correctly; 5 orders",
+      "screenshot": "screenshots/firefox2.png",
+      "identityOverlayInShot": "23127334@hcmus.edu.vn + full name Nguyễn Thành Dâng", "identityOverlayCompliant": true
+    },
+    {
+      "browser": "Safari", "version": "iOS 26.4", "osDevice": "Apple iPhone 17",
+      "environment": "BrowserStack Live", "screen": "Login", "result": "Rendered correctly (mobile reflow)",
+      "screenshot": "screenshots/safari1.png",
+      "identityOverlayInShot": "23127334@hcmus.edu.vn (Username field)", "identityOverlayCompliant": true
+    },
+    {
+      "browser": "Safari", "version": "iOS 27.0", "osDevice": "Apple iPhone 16",
+      "environment": "BrowserStack Live", "screen": "Order History (table, scrolled)", "result": "Rendered correctly; 5 orders",
+      "screenshot": "screenshots/safari2.png",
+      "identityOverlayInShot": "SUT tunnel URL only (scrolled past email)", "identityOverlayCompliant": false
+    },
+    {
+      "browser": "Safari", "version": "iOS 27.0", "osDevice": "Apple iPhone 16",
+      "environment": "BrowserStack Live", "screen": "Profile + Order History", "result": "Rendered correctly; 5 orders",
+      "screenshot": "screenshots/safari3.png",
+      "identityOverlayInShot": "23127334@hcmus.edu.vn + full name Nguyễn Thành Dâng", "identityOverlayCompliant": true
+    }
+  ],
+  "note": "Three real platforms including genuine Safari on iOS. Each platform has at least one Order-History screenshot showing both the student ID (email) and full name."
+}
