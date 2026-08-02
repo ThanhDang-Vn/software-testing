@@ -5,12 +5,12 @@
 
 ## Student
 
-| Field | Value |
-| --- | --- |
-| Student ID | 23127334 |
-| Full name | Nguyễn Thành Dâng |
+| Field         | Value                 |
+| ------------- | --------------------- |
+| Student ID    | 23127334              |
+| Full name     | Nguyễn Thành Dâng     |
 | Email overlay | 23127334@hcmus.edu.vn |
-| SUT | `eshop-sut` |
+| SUT           | `eshop-sut`           |
 
 ## Confirmed scope
 
@@ -26,37 +26,36 @@
 
 ## Current status
 
-| Metric | Value |
-| --- | ---: |
-| Screens designed | 2 |
-| Usability flows designed | 1 |
-| Checklist items in v0 / current v1 | 32 / 45 |
-| Checklist items executed | 45 |
-| Passed / Failed / Blocked | 15 / 28 / 2 |
-| Confirmed bugs | 12 |
-| Official participants completed | 7 / 7 |
-| Browser engines executed with valid evidence | 3 / 3 |
+| Metric                                            |                                                Value |
+| ------------------------------------------------- | ---------------------------------------------------: |
+| Screens designed                                  |                                                    2 |
+| Usability flows designed                          |                                                    1 |
+| Checklist items in v0 / current v1                |                                              32 / 45 |
+| Checklist items executed                          |                                                   45 |
+| Passed / Failed / Blocked                         |                                          15 / 28 / 2 |
+| Confirmed bugs                                    |                                                   12 |
+| Official participants completed                   |                                                7 / 7 |
+| Browser engines executed with valid evidence      |                                                3 / 3 |
 | Strict Chrome + Firefox + Safari/Android coverage | 3 / 3 (Chrome, Firefox, Safari/iOS via BrowserStack) |
 
 Cross-platform screenshots (Task 3) and the seven usability sessions (Task 2) are
 included and documented under `task-3-cross-platform/` and `task-2-usability/`.
-Remaining items (PDF exports, masked participant contacts, self-assessed grade) are
+Remaining items (PDF exports, Agent-Skill demo videos, self-assessed grade) are
 finalised separately.
 
 ## Self-assessment
 
-| Criterion | Maximum | Self-assessed |
-| --- | ---: | ---: |
-| Task 1 — GUI checklist | 30 | TBD |
-| Task 2 — Usability evaluation | 40 | TBD |
-| Task 3 — Cross-platform | 20 | TBD |
-| Agent Skill | 10 | TBD |
-| **Total** | **100** | **TBD** |
+| Criterion                     | Maximum | Self-assessed |
+| ----------------------------- | ------: | ------------: |
+| Task 1 — GUI checklist        |      30 |           TBD |
+| Task 2 — Usability evaluation |      40 |           TBD |
+| Task 3 — Cross-platform       |      20 |           TBD |
+| Agent Skill                   |      10 |           TBD |
+| **Total**                     | **100** |       **TBD** |
 
 ## Demo videos
 
-- GUI screen demonstration: pending real recording.
-- Usability-flow demonstration: pending real recording.
+- Using agent skill for GUI and usability testing screen demonstration: https://youtu.be/r_z3Ltvl75w
 
 ## AI-use records
 
