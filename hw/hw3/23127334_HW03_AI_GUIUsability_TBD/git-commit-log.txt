@@ -1,6 +1,15 @@
 # HW03 Git Commit Log
 # Command: git log --date=iso --pretty=format:"%h | %ad | %an | %s" -- hw/hw3/23127334_HW03_AI_GUIUsability_TBD
 
+47c43a0 | 2026-08-02 08:26:47 +0700 | ThanhDang-Vn | docs(hw3): update README (demo video, status, self-assessment)
+81b8c5d | 2026-08-02 08:26:47 +0700 | ThanhDang-Vn | chore(hw3): add supporting automation scripts
+afe0af1 | 2026-08-02 08:26:47 +0700 | ThanhDang-Vn | test(hw3): update Task 1 bug report and GitHub issue links
+d5993b1 | 2026-08-02 08:26:46 +0700 | ThanhDang-Vn | test(hw3): regenerate participant and SUS workbooks
+f799349 | 2026-08-02 08:26:46 +0700 | ThanhDang-Vn | test(hw3): add agent skill and demo video index to submission
+1ea6bd6 | 2026-08-02 08:26:46 +0700 | ThanhDang-Vn | docs(hw3): add AI critique (200-300 words)
+d917c37 | 2026-08-02 08:26:46 +0700 | ThanhDang-Vn | docs(hw3): write usability results and analysis into main report
+6d779be | 2026-08-02 08:26:46 +0700 | ThanhDang-Vn | test(hw3): add 15 cross-platform test cases mapped to screenshots
+c6971b4 | 2026-08-01 21:34:18 +0700 | ThanhDang-Vn | docs(hw3): update git commit log
 72f0190 | 2026-08-01 21:33:54 +0700 | ThanhDang-Vn | docs(hw3): update AI audit report, critique, and prompt history
 31562b0 | 2026-08-01 21:33:54 +0700 | ThanhDang-Vn | docs(hw3): sync main report, README, and final validation with results
 55711fe | 2026-08-01 21:33:53 +0700 | ThanhDang-Vn | test(hw3): add cross-platform screenshots (Chrome, Firefox, Safari) and results

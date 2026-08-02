@@ -66,3 +66,35 @@ Safari coverage — no WebKit-on-Windows substitution.
 - The `/login` route renders the heading **"Đăng Ký"** (Register) on all three
   platforms even though it is the sign-in form — a consistent label defect, not a
   platform-specific one.
+
+## Cross-platform test cases (CP-T01–CP-T15)
+
+Fifteen atomic checks over the Login and Order-History screens across the three
+platforms. Because the flow renders almost identically on every browser, several
+checks are verified from the **same** screenshot — the screenshot is shared
+evidence, not duplicated per case. Result: **14 Passed / 1 Failed**.
+
+| ID | Screen / check | Platform | Expected | Evidence | Result |
+| --- | --- | --- | --- | --- | --- |
+| CP-T01 | Blue EShop header + centered auth card render | Chrome / macOS | Header and card visible, centered | `chrome1.png` | Pass |
+| CP-T02 | Auth card (title, Username, Mật khẩu, Sign In) renders | Firefox / Win 11 | All controls present | `firefox1.png` | Pass |
+| CP-T03 | Login layout reflows to narrow viewport | Safari / iOS | Card fits mobile width | `safari1.png` | Pass |
+| CP-T04 | Username field accepts and displays the identity email | Chrome / macOS | `23127334@hcmus.edu.vn` shown | `chrome1.png` | Pass |
+| CP-T05 | "Đăng ký ngay" link + Sign In button present | Firefox / Win 11 | Both visible | `firefox1.png` | Pass |
+| CP-T06 | Login heading label consistent across platforms | Chrome/Firefox/Safari | Same label on all | `chrome1.png`, `firefox1.png`, `safari1.png` | Pass* |
+| CP-T07 | Profile two-column layout (form + Lịch sử đơn hàng) | Chrome / macOS | Two columns render | `chrome2.png` | Pass |
+| CP-T08 | Profile reflows to stacked layout on mobile | Safari / iOS | Form stacks above table | `safari3.png` | Pass |
+| CP-T09 | Order table shows 5 headers (Mã ĐH/Ngày đặt/Tổng tiền/Trạng thái/Thao tác) | Chrome / macOS | All 5 headers | `chrome2.png` | Pass |
+| CP-T10 | Order table renders 5 rows with correct data | Firefox / Win 11 | Rows #10–#6 correct | `firefox2.png` | Pass |
+| CP-T11 | Status badges render for all 5 states with color | Chrome / macOS | 5 badges styled | `chrome2.png` | Pass |
+| CP-T12 | "Hủy đơn" button on non-delivered / non-canceled rows | Firefox / Win 11 | Button present where valid | `firefox2.png` | Pass |
+| CP-T13 | Identity email shown in "Email (Không đổi)" | Safari / iOS | Email visible in profile | `safari3.png` | Pass |
+| CP-T14 | Header greeting shows full name | Chrome / macOS | "Chào, Nguyễn Thành Dâng" | `chrome2.png` | Pass |
+| CP-T15 | Order table horizontal overflow on narrow mobile | Safari / iOS | Should stay within viewport | `safari2.png` | **Fail** |
+
+\* CP-T06 passes as a *consistency* check (the label is identical on all platforms)
+but the label itself ("Đăng Ký" on the sign-in page) is the Task-1 defect.
+CP-T15 fails: on the narrow mobile viewport the order table forces horizontal
+page scrolling — the responsive defect already noted, confirmed as consistent
+mobile behaviour rather than a one-platform break.
+

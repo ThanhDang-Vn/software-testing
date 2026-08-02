@@ -12,8 +12,9 @@
 | Main viewport | 1280×800 |
 | Additional coverage | 320×640, 200% scale, portrait/landscape, RTL and dark preference |
 
-GitHub Issue URLs remain pending until the student provides the target
-repository. Each bug below is grounded in an executed Failed checklist item.
+All confirmed bugs were reported to
+`https://github.com/ThanhDang-Vn/software-testing/issues` with the `homework3`
+label. Each bug below is grounded in an executed Failed checklist item.
 
 ## BUG-GUI-001 — Login screen is mislabeled and mixes Vietnamese with English
 
@@ -27,7 +28,7 @@ repository. Each bug below is grounded in an executed Failed checklist item.
 | Actual | No `h1`; heading is “Đăng Ký”; “Username” and “Sign In” remain English. |
 | Severity | Major |
 | Evidence | `failed-screenshots/GUI-L-001.png`, `GUI-L-002.png` |
-| GitHub Issue | Pending |
+| GitHub Issue | https://github.com/ThanhDang-Vn/software-testing/issues/18 |
 
 ## BUG-GUI-002 — Login text contrast and pointer targets fail accessibility thresholds
 
@@ -41,7 +42,7 @@ repository. Each bug below is grounded in an executed Failed checklist item.
 | Actual | Blue text links fall below 4.5:1; several navigation/form links and controls are below 44 px high. |
 | Severity | Major |
 | Evidence | `failed-screenshots/GUI-L-005.png`, `GUI-L-006.png` |
-| GitHub Issue | Pending |
+| GitHub Issue | https://github.com/ThanhDang-Vn/software-testing/issues/19 |
 
 ## BUG-GUI-003 — Login inputs expose incorrect semantics
 
@@ -55,7 +56,7 @@ repository. Each bug below is grounded in an executed Failed checklist item.
 | Actual | Both inputs use `type=text`; password is visible; autocomplete tokens are absent. |
 | Severity | Critical |
 | Evidence | `failed-screenshots/GUI-L-007.png`, `GUI-L-008.png`, `GUI-L-020.png` |
-| GitHub Issue | Pending |
+| GitHub Issue | https://github.com/ThanhDang-Vn/software-testing/issues/20 |
 
 ## BUG-GUI-004 — Required-field labels and errors are not accessible
 
@@ -69,7 +70,7 @@ repository. Each bug below is grounded in an executed Failed checklist item.
 | Actual | No required markers or label `for/id`; no two-field inline errors; credential error has no alert/live-region semantics. |
 | Severity | Major |
 | Evidence | `failed-screenshots/GUI-L-009.png`, `GUI-L-010.png`, `GUI-L-011A.png`, `GUI-L-025.png`, `GUI-L-026.png` |
-| GitHub Issue | Pending |
+| GitHub Issue | https://github.com/ThanhDang-Vn/software-testing/issues/21 |
 
 ## BUG-GUI-005 — Positive tabindex breaks Login focus order
 
@@ -83,7 +84,7 @@ repository. Each bug below is grounded in an executed Failed checklist item.
 | Actual | Submit receives focus before the normal document-order controls. |
 | Severity | Major |
 | Evidence | `failed-screenshots/GUI-L-013.png` |
-| GitHub Issue | Pending |
+| GitHub Issue | https://github.com/ThanhDang-Vn/software-testing/issues/22 |
 
 ## BUG-GUI-006 — Login submit provides no pending state
 
@@ -97,7 +98,7 @@ repository. Each bug below is grounded in an executed Failed checklist item.
 | Actual | Button remains enabled and unchanged. |
 | Severity | Major |
 | Evidence | `failed-screenshots/GUI-L-024A.png` |
-| GitHub Issue | Pending |
+| GitHub Issue | https://github.com/ThanhDang-Vn/software-testing/issues/23 |
 
 ## BUG-GUI-007 — Order currency and date formats are not localized for Vietnamese users
 
@@ -111,7 +112,7 @@ repository. Each bug below is grounded in an executed Failed checklist item.
 | Actual | Values use browser-default comma grouping such as `550,000 ₫`; dates use US ordering such as `7/26/2026`. |
 | Severity | Minor |
 | Evidence | `failed-screenshots/GUI-O-005.png`, `GUI-O-006.png` |
-| GitHub Issue | Pending |
+| GitHub Issue | https://github.com/ThanhDang-Vn/software-testing/issues/24 |
 
 ## BUG-GUI-008 — Cancel order executes without a confirmation dialog
 
@@ -125,7 +126,7 @@ repository. Each bug below is grounded in an executed Failed checklist item.
 | Actual | Cancellation executes immediately; only a result alert appears. No modal or dialog focus behavior exists. |
 | Severity | Critical |
 | Evidence | `failed-screenshots/GUI-O-010.png`, `GUI-O-011.png`, `GUI-O-027.png` |
-| GitHub Issue | Pending |
+| GitHub Issue | https://github.com/ThanhDang-Vn/software-testing/issues/25 |
 
 ## BUG-GUI-009 — Order History is difficult to discover and current navigation is not indicated
 
@@ -139,7 +140,7 @@ repository. Each bug below is grounded in an executed Failed checklist item.
 | Actual | Only “Chào, Test User” links to Profile/History; no `aria-current` or selected/active state is exposed. |
 | Severity | Major |
 | Evidence | `failed-screenshots/GUI-O-012.png`, `GUI-O-013.png` |
-| GitHub Issue | Pending |
+| GitHub Issue | https://github.com/ThanhDang-Vn/software-testing/issues/26 |
 
 ## BUG-GUI-010 — Order History has no loading or recoverable error state
 
@@ -153,7 +154,7 @@ repository. Each bug below is grounded in an executed Failed checklist item.
 | Actual | No loading indicator; failed request has no explicit error or retry action. |
 | Severity | Major |
 | Evidence | `failed-screenshots/GUI-O-016.png`, `GUI-O-022.png` |
-| GitHub Issue | Pending |
+| GitHub Issue | https://github.com/ThanhDang-Vn/software-testing/issues/27 |
 
 ## BUG-GUI-011 — Order table has no accessible caption
 
@@ -167,7 +168,7 @@ repository. Each bug below is grounded in an executed Failed checklist item.
 | Actual | Five column headers exist, but no `<caption>` or dedicated accessible table name exists. |
 | Severity | Major |
 | Evidence | `failed-screenshots/GUI-O-019.png`, `GUI-O-025.png` |
-| GitHub Issue | Pending |
+| GitHub Issue | https://github.com/ThanhDang-Vn/software-testing/issues/28 |
 
 ## BUG-GUI-012 — Order table causes page-wide horizontal overflow
 
@@ -181,7 +182,7 @@ repository. Each bug below is grounded in an executed Failed checklist item.
 | Actual | The page clips/scrolls horizontally and the table has no localized scroll container. |
 | Severity | Major |
 | Evidence | `failed-screenshots/GUI-O-020.png`, `GUI-O-021.png`, `GUI-O-028.png` |
-| GitHub Issue | Pending |
+| GitHub Issue | https://github.com/ThanhDang-Vn/software-testing/issues/29 |
 
 ## Summary
 

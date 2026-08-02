@@ -1,0 +1,74 @@
+[
+  {
+    "bug_id": "BUG-GUI-001",
+    "title": "[BUG-GUI-001] Login screen is mislabeled and mixes Vietnamese with English",
+    "url": "https://github.com/ThanhDang-Vn/software-testing/issues/18",
+    "created": true
+  },
+  {
+    "bug_id": "BUG-GUI-002",
+    "title": "[BUG-GUI-002] Login text contrast and pointer targets fail accessibility thresholds",
+    "url": "https://github.com/ThanhDang-Vn/software-testing/issues/19",
+    "created": true
+  },
+  {
+    "bug_id": "BUG-GUI-003",
+    "title": "[BUG-GUI-003] Login inputs expose incorrect semantics",
+    "url": "https://github.com/ThanhDang-Vn/software-testing/issues/20",
+    "created": true
+  },
+  {
+    "bug_id": "BUG-GUI-004",
+    "title": "[BUG-GUI-004] Required-field labels and errors are not accessible",
+    "url": "https://github.com/ThanhDang-Vn/software-testing/issues/21",
+    "created": true
+  },
+  {
+    "bug_id": "BUG-GUI-005",
+    "title": "[BUG-GUI-005] Positive tabindex breaks Login focus order",
+    "url": "https://github.com/ThanhDang-Vn/software-testing/issues/22",
+    "created": true
+  },
+  {
+    "bug_id": "BUG-GUI-006",
+    "title": "[BUG-GUI-006] Login submit provides no pending state",
+    "url": "https://github.com/ThanhDang-Vn/software-testing/issues/23",
+    "created": true
+  },
+  {
+    "bug_id": "BUG-GUI-007",
+    "title": "[BUG-GUI-007] Order currency and date formats are not localized for Vietnamese users",
+    "url": "https://github.com/ThanhDang-Vn/software-testing/issues/24",
+    "created": true
+  },
+  {
+    "bug_id": "BUG-GUI-008",
+    "title": "[BUG-GUI-008] Cancel order executes without a confirmation dialog",
+    "url": "https://github.com/ThanhDang-Vn/software-testing/issues/25",
+    "created": true
+  },
+  {
+    "bug_id": "BUG-GUI-009",
+    "title": "[BUG-GUI-009] Order History is difficult to discover and current navigation is not indicated",
+    "url": "https://github.com/ThanhDang-Vn/software-testing/issues/26",
+    "created": true
+  },
+  {
+    "bug_id": "BUG-GUI-010",
+    "title": "[BUG-GUI-010] Order History has no loading or recoverable error state",
+    "url": "https://github.com/ThanhDang-Vn/software-testing/issues/27",
+    "created": true
+  },
+  {
+    "bug_id": "BUG-GUI-011",
+    "title": "[BUG-GUI-011] Order table has no accessible caption",
+    "url": "https://github.com/ThanhDang-Vn/software-testing/issues/28",
+    "created": true
+  },
+  {
+    "bug_id": "BUG-GUI-012",
+    "title": "[BUG-GUI-012] Order table causes page-wide horizontal overflow",
+    "url": "https://github.com/ThanhDang-Vn/software-testing/issues/29",
+    "created": true
+  }
+]
