@@ -115,11 +115,45 @@ completed and reviewed before official sessions begin.
 
 ## 7. Pilot and seven-session results
 
-Pending real sessions and evidence.
+The pilot was completed as a moderator dry-run before the official sessions and
+marked `READY`. Seven real participants (P01–P07) recruited outside HW03 each
+completed the flow in a moderated session; every session was screen-recorded with
+consent (links in `task-2-usability/recording-links.md`).
+
+| Metric | Value |
+| --- | --- |
+| Completion | 7/7 (100%) |
+| Unassisted completion | 5/7 (P01, P03, P04, P05, P07) |
+| Assisted completion | 2/7 (P02, P06) |
+| Mean completion time | 287.3 s (4:47) |
+| Mean SUS | 66.4/100 |
+| Total errors / wrong turns / hesitations / interventions | 1 / 4 / 19 / 2 |
+
+Per-participant raw SUS answers and scores are in
+`task-2-usability/sus-summary.csv`; observation notes, probe answers, and evidence
+links are under `task-2-usability/sessions/`.
 
 ## 8. Usability analysis
 
-Pending seven completed session datasets.
+All seven participants eventually reported the four FR-11 fields, but 6/7 struggled
+to discover where order history lived — the account greeting was not recognised as a
+link — making discoverability the dominant, critical finding. The severity-ranked
+findings (`task-2-usability/severity-ranked-findings.md`):
+
+| Rank | ID | Severity | Summary |
+| ---: | --- | --- | --- |
+| 1 | USAB-01 | Critical | Order-history entry point not discoverable (7/7) |
+| 2 | USAB-07 | Major | Order history lacks product detail / actions (5/7) |
+| 3 | USAB-04 | Major | Password not masked + EN/VI mix on login (4/7) |
+| 4 | USAB-03 | Major | Ambiguous US date format, no time shown (4/7) |
+| 5 | USAB-06 | Major | Table sort order not labelled (3/7) |
+| 6 | USAB-05 | Minor | Unexpected keyboard focus order (1/7) |
+| 7 | USAB-08 | Minor | Cosmetic: red total colour, prominent exit, order code (2/7) |
+
+Mean SUS 66.4 sits just below the ~68 acceptability benchmark, consistent with the
+discoverability friction. The primary recommendation is a clearly labelled
+"Đơn hàng của tôi" navigation entry, plus deterministic Vietnamese date/currency
+formatting and a masked password field.
 
 ## 9. Cross-platform results
 
@@ -147,6 +181,9 @@ and the comparison are in `task-3-cross-platform/test-summary.md`.
 
 ## 10. Limitations
 
-At this stage, the work is a design and preparation package. Runtime GUI
-results, human-participant evidence, GitHub issues, recordings, PDF exports, and
-self-assessment remain pending.
+The GUI checklist (design, execution, and bugs), the seven usability sessions with
+analysis, and the three-platform cross-browser evidence are complete. Remaining
+before final submission: PDF exports of the reports, the Agent-Skill demonstration
+videos, and the self-assessed grade. The two Blocked checklist items still require a real screen reader, and all
+sessions ran on laptop/desktop, so mobile responsiveness was not evaluated on a real
+handset.
