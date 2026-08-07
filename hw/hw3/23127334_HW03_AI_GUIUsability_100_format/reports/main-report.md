@@ -1,13 +1,18 @@
 # Main Report — HW03 GUI and Usability Testing
 
+**Student ID:** 23127334
+**Name:** Nguyễn Thành Dâng
+**Exercise ID:** HW02
+**Date:** 2026-06-28
+
 ## 1. Scope and environment
 
 The SUT is the local `eshop-sut` repository. The web frontend runs at
 `http://localhost:5173` and the API at `http://localhost:3000`.
 
-| Scope | Route | Requirements |
-| --- | --- | --- |
-| Login | `/login` | FR-02, FR-21–FR-24 |
+| Scope                          | Route      | Requirements       |
+| ------------------------------ | ---------- | ------------------ |
+| Login                          | `/login`   | FR-02, FR-21–FR-24 |
 | Order History (inside Profile) | `/profile` | FR-11, FR-21–FR-24 |
 
 The selected usability flow is: sign in with a supplied account, independently
@@ -86,12 +91,12 @@ against the running local frontend and backend. Test setup created five orders
 through authenticated APIs so all five visible order-status labels could be
 assessed.
 
-| Result | Count |
-| --- | ---: |
-| Passed | 15 |
-| Failed | 28 |
-| Blocked | 2 |
-| Total | 45 |
+| Result  | Count |
+| ------- | ----: |
+| Passed  |    15 |
+| Failed  |    28 |
+| Blocked |     2 |
+| Total   |    45 |
 
 Failed items contain an actual result, note, screenshot, and consolidated Bug
 ID. The two Blocked items require a real screen reader to verify reading order
@@ -120,14 +125,14 @@ marked `READY`. Seven real participants (P01–P07) recruited outside HW03 each
 completed the flow in a moderated session; every session was screen-recorded with
 consent (links in `task-2-usability/recording-links.md`).
 
-| Metric | Value |
-| --- | --- |
-| Completion | 7/7 (100%) |
-| Unassisted completion | 5/7 (P01, P03, P04, P05, P07) |
-| Assisted completion | 2/7 (P02, P06) |
-| Mean completion time | 287.3 s (4:47) |
-| Mean SUS | 66.4/100 |
-| Total errors / wrong turns / hesitations / interventions | 1 / 4 / 19 / 2 |
+| Metric                                                   | Value                         |
+| -------------------------------------------------------- | ----------------------------- |
+| Completion                                               | 7/7 (100%)                    |
+| Unassisted completion                                    | 5/7 (P01, P03, P04, P05, P07) |
+| Assisted completion                                      | 2/7 (P02, P06)                |
+| Mean completion time                                     | 287.3 s (4:47)                |
+| Mean SUS                                                 | 66.4/100                      |
+| Total errors / wrong turns / hesitations / interventions | 1 / 4 / 19 / 2                |
 
 Per-participant raw SUS answers and scores are in
 `task-2-usability/sus-summary.csv`; observation notes, probe answers, and evidence
@@ -140,15 +145,15 @@ to discover where order history lived — the account greeting was not recognise
 link — making discoverability the dominant, critical finding. The severity-ranked
 findings (`task-2-usability/severity-ranked-findings.md`):
 
-| Rank | ID | Severity | Summary |
-| ---: | --- | --- | --- |
-| 1 | USAB-01 | Critical | Order-history entry point not discoverable (7/7) |
-| 2 | USAB-07 | Major | Order history lacks product detail / actions (5/7) |
-| 3 | USAB-04 | Major | Password not masked + EN/VI mix on login (4/7) |
-| 4 | USAB-03 | Major | Ambiguous US date format, no time shown (4/7) |
-| 5 | USAB-06 | Major | Table sort order not labelled (3/7) |
-| 6 | USAB-05 | Minor | Unexpected keyboard focus order (1/7) |
-| 7 | USAB-08 | Minor | Cosmetic: red total colour, prominent exit, order code (2/7) |
+| Rank | ID      | Severity | Summary                                                      |
+| ---: | ------- | -------- | ------------------------------------------------------------ |
+|    1 | USAB-01 | Critical | Order-history entry point not discoverable (7/7)             |
+|    2 | USAB-07 | Major    | Order history lacks product detail / actions (5/7)           |
+|    3 | USAB-04 | Major    | Password not masked + EN/VI mix on login (4/7)               |
+|    4 | USAB-03 | Major    | Ambiguous US date format, no time shown (4/7)                |
+|    5 | USAB-06 | Major    | Table sort order not labelled (3/7)                          |
+|    6 | USAB-05 | Minor    | Unexpected keyboard focus order (1/7)                        |
+|    7 | USAB-08 | Minor    | Cosmetic: red total colour, prominent exit, order code (2/7) |
 
 Mean SUS 66.4 sits just below the ~68 acceptability benchmark, consistent with the
 discoverability friction. The primary recommendation is a clearly labelled
@@ -165,11 +170,11 @@ tunnel URL, and the student identity `23127334@hcmus.edu.vn` (typed into Usernam
 login; shown as the Profile email plus the greeting "Chào, Nguyễn Thành Dâng" and
 "Họ Tên" field on the Order-History screens).
 
-| Platform | OS / device | Screens | Screenshots | Result |
-| --- | --- | --- | --- | --- |
-| Google Chrome 147 | macOS desktop | Login; Order History | `chrome1.png`; `chrome2.png` | Rendered correctly |
-| Mozilla Firefox 144–145 | Windows 11 desktop | Login; Order History | `firefox1.png`; `firefox2.png` | Rendered correctly |
-| Safari (iOS) | iPhone 17 / iOS 26.4; iPhone 16 / iOS 27.0 | Login; Order History | `safari1.png`; `safari2.png`; `safari3.png` | Rendered correctly (mobile reflow) |
+| Platform                | OS / device                                | Screens              | Screenshots                                 | Result                             |
+| ----------------------- | ------------------------------------------ | -------------------- | ------------------------------------------- | ---------------------------------- |
+| Google Chrome 147       | macOS desktop                              | Login; Order History | `chrome1.png`; `chrome2.png`                | Rendered correctly                 |
+| Mozilla Firefox 144–145 | Windows 11 desktop                         | Login; Order History | `firefox1.png`; `firefox2.png`              | Rendered correctly                 |
+| Safari (iOS)            | iPhone 17 / iOS 26.4; iPhone 16 / iOS 27.0 | Login; Order History | `safari1.png`; `safari2.png`; `safari3.png` | Rendered correctly (mobile reflow) |
 
 The Safari coverage is a genuine Safari-on-iOS run, satisfying the strict "Chrome,
 Firefox, and Safari" requirement without a WebKit-on-Windows substitute. The flow

@@ -61,7 +61,13 @@
       "Bash(curl -s http://localhost:3000/api/products)",
       "Bash(node:*)",
       "Bash(npm init:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(gh issue create --title '[BUG-A-003] Label trường email ghi \"Username\" thay vì \"Email\"' --label bug,feature_A,severity:low --assignee ThanhDang-Vn --body ':*)",
+      "Read(//c/Users/dn156/source/software-testing/software-testing/hw/hw2/submission/delivery/report/feature_A//**)",
+      "Read(//c/Users/dn156/source/software-testing/software-testing/hw/hw2/submission/delivery/report/feature_B//**)",
+      "Read(//c/Users/dn156/source/software-testing/software-testing/hw/hw2/submission/delivery/report/feature_D//**)",
+      "Bash(npx playwright:*)",
+      "Bash(curl -s http://localhost:5173)"
     ]
   }
 }

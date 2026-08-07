@@ -1,0 +1,32 @@
+# HW03 Git Commit Log
+# Student: Nguyễn Thành Dâng (23127334)
+# Repository: https://github.com/ThanhDang-Vn/software-testing (branch: homework3)
+# Command: git log --date=iso --pretty=format:"%h | %ad | %an | %s" -- hw/hw3/23127334_HW03_AI_GUIUsability_100
+# One commit per step of the testing procedure (checklist design, execution,
+# bug logging, each usability step, cross-platform, and analysis).
+
+7131363 | 2026-08-02 08:27:54 +0700 | ThanhDang-Vn | docs(hw3): update git commit log
+47c43a0 | 2026-08-02 08:26:47 +0700 | ThanhDang-Vn | docs(hw3): update README (demo video, status, self-assessment)
+81b8c5d | 2026-08-02 08:26:47 +0700 | ThanhDang-Vn | chore(hw3): add supporting automation scripts
+afe0af1 | 2026-08-02 08:26:47 +0700 | ThanhDang-Vn | test(hw3): update Task 1 bug report and GitHub issue links
+d5993b1 | 2026-08-02 08:26:46 +0700 | ThanhDang-Vn | test(hw3): regenerate participant and SUS workbooks
+f799349 | 2026-08-02 08:26:46 +0700 | ThanhDang-Vn | test(hw3): add agent skill and demo video index to submission
+1ea6bd6 | 2026-08-02 08:26:46 +0700 | ThanhDang-Vn | docs(hw3): add AI critique (200-300 words)
+d917c37 | 2026-08-02 08:26:46 +0700 | ThanhDang-Vn | docs(hw3): write usability results and analysis into main report
+6d779be | 2026-08-02 08:26:46 +0700 | ThanhDang-Vn | test(hw3): add 15 cross-platform test cases mapped to screenshots
+c6971b4 | 2026-08-01 21:34:18 +0700 | ThanhDang-Vn | docs(hw3): update git commit log
+72f0190 | 2026-08-01 21:33:54 +0700 | ThanhDang-Vn | docs(hw3): update AI audit report, critique, and prompt history
+31562b0 | 2026-08-01 21:33:54 +0700 | ThanhDang-Vn | docs(hw3): sync main report, README, and final validation with results
+55711fe | 2026-08-01 21:33:53 +0700 | ThanhDang-Vn | test(hw3): add cross-platform screenshots (Chrome, Firefox, Safari) and results
+4f15fa7 | 2026-08-01 21:33:53 +0700 | ThanhDang-Vn | test(hw3): add Task 3 cross-platform test summary and screenshot index
+9d3ec11 | 2026-08-01 21:33:35 +0700 | ThanhDang-Vn | test(hw3): add usability workbook generation script
+236f7db | 2026-08-01 21:33:35 +0700 | ThanhDang-Vn | test(hw3): summarise SUS scores and severity-ranked usability findings
+4ef6b8b | 2026-08-01 21:33:35 +0700 | ThanhDang-Vn | test(hw3): add participant list and consented recording links
+dc3c796 | 2026-08-01 21:33:34 +0700 | ThanhDang-Vn | test(hw3): add P01-P07 SUS responses and session evidence links
+524b6b8 | 2026-08-01 21:33:17 +0700 | ThanhDang-Vn | test(hw3): record P01-P07 observation notes and probe answers
+672e640 | 2026-08-01 21:33:17 +0700 | ThanhDang-Vn | test(hw3): add Task 2 pilot session notes
+35e721e | 2026-08-01 21:33:16 +0700 | ThanhDang-Vn | test(hw3): add Task 2 instruments (SUS questionnaire, observation template)
+12051d5 | 2026-08-01 21:33:16 +0700 | ThanhDang-Vn | test(hw3): add Task 2 usability design (objective, scenario, consent, script)
+c588c6a | 2026-07-26 15:35:23 +0700 | ThanhDang-Vn | test(hw03): execute GUI checklist and report defects
+19836fa | 2026-07-26 15:34:04 +0700 | ThanhDang-Vn | test(hw03): add human-reviewed GUI checklist v1
+29b4438 | 2026-07-26 15:23:42 +0700 | ThanhDang-Vn | test(hw03): add initial AI GUI checklist v0
