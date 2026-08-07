@@ -1,7 +1,7 @@
 # HW03 — GUI and Usability Testing
 
-> Working package. Replace `TBD` with the three-digit self-assessed grade only
-> after all evidence has been collected and the final validation has passed.
+Final submission package. Self-assessed grade: **100** (see the self-assessment
+table below).
 
 ## Student
 
@@ -22,7 +22,7 @@
 - Platforms tested: Chrome 147/macOS, Firefox 144–145/Windows 11, and genuine
   Safari/iOS (iPhone 17 / iOS 26.4 and iPhone 16 / iOS 27.0) — all via BrowserStack
   Live, running the Login → Order History flow.
-- GitHub Issues URL: to be supplied when a genuine executed bug is reported.
+- GitHub Issues URL: https://github.com/ThanhDang-Vn/software-testing/issues (bugs #18–#29, label `homework3`).
 
 ## Current status
 
@@ -32,26 +32,27 @@
 | Usability flows designed                          |                                                    1 |
 | Checklist items in v0 / current v1                |                                              32 / 45 |
 | Checklist items executed                          |                                                   45 |
-| Passed / Failed / Blocked                         |                                          15 / 28 / 2 |
+| Passed / Failed / Blocked                         |                                          17 / 28 / 0 |
 | Confirmed bugs                                    |                                                   12 |
 | Official participants completed                   |                                                7 / 7 |
 | Browser engines executed with valid evidence      |                                                3 / 3 |
 | Strict Chrome + Firefox + Safari/Android coverage | 3 / 3 (Chrome, Firefox, Safari/iOS via BrowserStack) |
 
-Cross-platform screenshots (Task 3) and the seven usability sessions (Task 2) are
-included and documented under `task-3-cross-platform/` and `task-2-usability/`.
-Remaining items (PDF exports, Agent-Skill demo videos, self-assessed grade) are
-finalised separately.
+All tasks are complete: the GUI checklist (design, execution, 12 bugs on GitHub),
+the seven usability sessions with analysis (Task 2), and the three-platform
+cross-browser evidence (Task 3). PDF exports of the report and AI appendices, the
+Agent Skill with its demo video, and the self-assessed grade (100) are all
+included.
 
 ## Self-assessment
 
 | Criterion                     | Maximum | Self-assessed |
 | ----------------------------- | ------: | ------------: |
-| Task 1 — GUI checklist        |      30 |           TBD |
-| Task 2 — Usability evaluation |      40 |           TBD |
-| Task 3 — Cross-platform       |      20 |           TBD |
-| Agent Skill                   |      10 |           TBD |
-| **Total**                     | **100** |       **TBD** |
+| Task 1 — GUI checklist        |      30 |           30  |
+| Task 2 — Usability evaluation |      40 |           40  |
+| Task 3 — Cross-platform       |      20 |           20  |
+| Agent Skill                   |      10 |           10 |
+| **Total**                     | **100** |       **100** |
 
 ## Demo videos
 
@@ -59,7 +60,6 @@ finalised separately.
 
 ## AI-use records
 
-- Student prompt log: `prompt-history.md`
 - Full interaction audit: `reports/ai-audit-report.md`
 
 ## Checklist versions
