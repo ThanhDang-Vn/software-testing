@@ -1,0 +1,4 @@
+interface:
+  display_name: "Playwright Evidence Workflow"
+  short_description: "Build and audit traceable Playwright test evidence"
+  default_prompt: "Review this Playwright feature, run evidence safely across three browsers, classify failures, verify reports, and identify mandatory human-review decisions."
