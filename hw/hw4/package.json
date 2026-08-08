@@ -1,0 +1,23 @@
+{
+  "name": "hw04-playwright-automation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "typecheck": "tsc --noEmit",
+    "test:list": "playwright test --list",
+    "test:fr02": "playwright test tests/fr02-login-lockout.spec.ts",
+    "test:fr11": "playwright test tests/fr11-order-history.spec.ts",
+    "test:fr14": "playwright test tests/fr14-category-crud.spec.ts",
+    "test:matrix": "node scripts/run-matrix.mjs",
+    "test:matrix:fr02": "node scripts/run-matrix.mjs",
+    "report:verify": "node scripts/verify-reports.mjs",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.0"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "standard-orders": {
+    "orders": [
+      {"id":12,"total_amount":1500000,"status":"pending","created_at":"2026-06-24T10:00:00Z"},
+      {"id":11,"total_amount":500000,"status":"confirmed","created_at":"2026-06-23T10:00:00Z"},
+      {"id":10,"total_amount":100000,"status":"shipping","created_at":"2026-06-22T10:00:00Z"},
+      {"id":9,"total_amount":100000,"status":"delivered","created_at":"2026-06-21T10:00:00Z"},
+      {"id":8,"total_amount":100000,"status":"canceled","created_at":"2026-06-20T10:00:00Z"}
+    ],
+    "expectedFirstOrderId": 12,
+    "expectedRawDate": "2026-06-24T10:00:00Z",
+    "expectedTotalAmount": 1500000,
+    "expectedStatusLabels": ["Chờ xác nhận", "Đã xác nhận", "Đang giao", "Đã giao", "Đã hủy"],
+    "expectedStatusClassCount": 5,
+    "expectedCancelButtonCount": 2,
+    "nonCancellableOrderIds": [10, 9, 8]
+  }
+}
