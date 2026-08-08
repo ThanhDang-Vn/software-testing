@@ -4,4 +4,11 @@
 note.md
 
 # Homework 4 (belongs on homework4 branch, not homework3)
-hw/hw4/
+hw/hw4/.git/
+hw/hw4/node_modules/
+hw/hw4/reports/
+hw/hw4/test-results/
+hw/hw4/submission/
+hw/hw4/23127334_HW04_AI_Automation_100/
+hw/hw4/*.zip
+hw/hw4/*.log
