@@ -1,0 +1,29 @@
+HW04 Git Commit Audit — 2026-08-08
+
+Repository: C:/Users/dn156/source/software-testing/software-testing
+Branch: homework4
+Scope: hw/hw4
+
+Result against the strict HW04 history requirement: FAIL
+
+State before the final audit-record commit:
+- Total meaningful HW04 commits: 8
+- Strictly valid commits that change .spec.ts/.spec.js or an equivalent test script: 3
+- Distinct real commit days: 1 (2026-08-08)
+- Requirement: at least 8 valid test-script commits across at least 4 days
+
+Commit evidence:
+1. 31ec1e7 | 2026-08-08T09:57:23+07:00 | chore(hw4): bootstrap Playwright automation workspace
+2. e4c0c09 | 2026-08-08T09:58:13+07:00 | test(fr02): add data-driven login lockout coverage [strict-valid]
+3. f6eca02 | 2026-08-08T10:01:47+07:00 | test(fr11): cover order history and ownership rules [strict-valid]
+4. 1b8498f | 2026-08-08T10:03:15+07:00 | test(fr14): automate category CRUD authorization cases [strict-valid]
+5. bb3683b | 2026-08-08T10:08:19+07:00 | feat(hw4): add matrix execution and report verification
+6. e470c6d | 2026-08-08T10:08:34+07:00 | feat(hw4): add reusable Playwright evidence skill
+7. 69e281f | 2026-08-08T10:09:15+07:00 | docs(hw4): document evidence defects and human review
+8. 3cf45d2 | 2026-08-08T10:10:23+07:00 | docs(hw4): add assignment workflow and reference materials
+
+Notes:
+- The final audit-record commit containing this file is documentation-only and does not count as a strict-valid test-script commit.
+- No commit was backdated, no empty commit was created, and no history was fabricated.
+- The branch was first pushed to origin/homework4 after commit 3cf45d2.
+- Future genuine test changes on future real calendar days are required to satisfy the 8-commit/4-day rule.
