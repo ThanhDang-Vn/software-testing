@@ -1,0 +1,624 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Users\\dn156\\AppData\\Local\\Volta\\tools\\image\\node\\20.20.2\\node.exe",
+      "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/fr11-order-history.spec.ts",
+      "--project",
+      "webkit"
+    ],
+    "configFile": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\playwright.config.ts",
+    "rootDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/test-results/webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/test-results/webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/test-results/webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "reports\\html\\fr11-order-history\\webkit",
+          "title": "Run by: 23127334 | FR-11 Order History View | webkit | 2026-08-08T01:42:16.727Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\reports\\json\\fr11-order-history\\webkit.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr11-order-history.spec.ts",
+      "file": "fr11-order-history.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-11 Order History View",
+          "file": "fr11-order-history.spec.ts",
+          "line": 77,
+          "column": 6,
+          "specs": [
+            {
+              "title": "FR11-TC-001 Authenticated user receives an order array",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 917,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:42:19.153Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5657df7d5c98eb3c5950-8a4badd0a6aea3db8bd7",
+              "file": "fr11-order-history.spec.ts",
+              "line": 79,
+              "column": 5
+            },
+            {
+              "title": "FR11-TC-002 Request without a token is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 557,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:42:20.340Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5657df7d5c98eb3c5950-8de043449a5a4fe1e6d8",
+              "file": "fr11-order-history.spec.ts",
+              "line": 79,
+              "column": 5
+            },
+            {
+              "title": "FR11-TC-003 Malformed token is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 442,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:42:20.920Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5657df7d5c98eb3c5950-87c0eee04678a3c58b71",
+              "file": "fr11-order-history.spec.ts",
+              "line": 79,
+              "column": 5
+            },
+            {
+              "title": "FR11-TC-004 Order records expose the required FR-11 fields",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 435,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:42:21.390Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5657df7d5c98eb3c5950-49e76e547b8ab0e6e1c7",
+              "file": "fr11-order-history.spec.ts",
+              "line": 79,
+              "column": 5
+            },
+            {
+              "title": "FR11-TC-005 Orders are returned newest ID first",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 470,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:42:21.844Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5657df7d5c98eb3c5950-d43fb14041326a29826b",
+              "file": "fr11-order-history.spec.ts",
+              "line": 79,
+              "column": 5
+            },
+            {
+              "title": "FR11-TC-006 Profile displays the order-history heading",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1432,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:42:22.336Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5657df7d5c98eb3c5950-5a3e4a8c822e94747527",
+              "file": "fr11-order-history.spec.ts",
+              "line": 79,
+              "column": 5
+            },
+            {
+              "title": "FR11-TC-007 An empty order list has a helpful message",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1829,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:42:23.791Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5657df7d5c98eb3c5950-5280c273bf10d75ff786",
+              "file": "fr11-order-history.spec.ts",
+              "line": 79,
+              "column": 5
+            },
+            {
+              "title": "FR11-TC-008 Order ID is displayed with a hash prefix",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1781,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:42:25.650Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5657df7d5c98eb3c5950-966bd657d0eb7eb8b547",
+              "file": "fr11-order-history.spec.ts",
+              "line": 79,
+              "column": 5
+            },
+            {
+              "title": "FR11-TC-009 Order date is localized instead of raw ISO",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1728,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:42:27.460Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5657df7d5c98eb3c5950-df2524dfe881deba2c03",
+              "file": "fr11-order-history.spec.ts",
+              "line": 79,
+              "column": 5
+            },
+            {
+              "title": "FR11-TC-010 Total uses thousands separators and dong symbol",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1387,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:42:29.211Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5657df7d5c98eb3c5950-d7e322814c0e99e559cf",
+              "file": "fr11-order-history.spec.ts",
+              "line": 79,
+              "column": 5
+            },
+            {
+              "title": "FR11-TC-011 All statuses are translated and color differentiated",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2141,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:42:30.619Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5657df7d5c98eb3c5950-2388a8d8c05d0642525c",
+              "file": "fr11-order-history.spec.ts",
+              "line": 79,
+              "column": 5
+            },
+            {
+              "title": "FR11-TC-012 Cancel is available only before an order reaches shipping",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 7143,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Hủy đơn' })\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m3\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Hủy đơn' })\u001b[22m\n\u001b[2m    13 × locator resolved to 3 elements\u001b[22m\n\u001b[2m       - unexpected value \"3\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Hủy đơn' })\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m3\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Hủy đơn' })\u001b[22m\n\u001b[2m    13 × locator resolved to 3 elements\u001b[22m\n\u001b[2m       - unexpected value \"3\"\u001b[22m\n\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr11-order-history.spec.ts:169:69",
+                        "location": {
+                          "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr11-order-history.spec.ts",
+                          "column": 69,
+                          "line": 169
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 167 |\u001b[39m       }\n \u001b[90m 168 |\u001b[39m       \u001b[36mif\u001b[39m (item\u001b[33m.\u001b[39maction \u001b[33m===\u001b[39m \u001b[32m'ui-actions'\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 169 |\u001b[39m         \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Hủy đơn'\u001b[39m }))\u001b[33m.\u001b[39mtoHaveCount(\n \u001b[90m     |\u001b[39m                                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 170 |\u001b[39m           fixture\u001b[33m.\u001b[39mexpectedCancelButtonCount\n \u001b[90m 171 |\u001b[39m         )\u001b[33m;\u001b[39m\n \u001b[90m 172 |\u001b[39m         \u001b[36mfor\u001b[39m (\u001b[36mconst\u001b[39m orderId \u001b[36mof\u001b[39m fixture\u001b[33m.\u001b[39mnonCancellableOrderIds) {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr11-order-history.spec.ts",
+                            "column": 69,
+                            "line": 169
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('button', { name: 'Hủy đơn' })\nExpected: \u001b[32m2\u001b[39m\nReceived: \u001b[31m3\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('button', { name: 'Hủy đơn' })\u001b[22m\n\u001b[2m    13 × locator resolved to 3 elements\u001b[22m\n\u001b[2m       - unexpected value \"3\"\u001b[22m\n\n\n  167 |       }\n  168 |       if (item.action === 'ui-actions') {\n> 169 |         await expect(page.getByRole('button', { name: 'Hủy đơn' })).toHaveCount(\n      |                                                                     ^\n  170 |           fixture.expectedCancelButtonCount\n  171 |         );\n  172 |         for (const orderId of fixture.nonCancellableOrderIds) {\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr11-order-history.spec.ts:169:69"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:42:32.796Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr11-order-history-FR-11-O-f8b0c-e-an-order-reaches-shipping-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr11-order-history-FR-11-O-f8b0c-e-an-order-reaches-shipping-webkit\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr11-order-history-FR-11-O-f8b0c-e-an-order-reaches-shipping-webkit\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr11-order-history-FR-11-O-f8b0c-e-an-order-reaches-shipping-webkit\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr11-order-history.spec.ts",
+                        "column": 69,
+                        "line": 169
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5657df7d5c98eb3c5950-dc4d77651520a32292d5",
+              "file": "fr11-order-history.spec.ts",
+              "line": 79,
+              "column": 5
+            },
+            {
+              "title": "FR11-TC-013 A customer cannot see an order owned by another customer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 559,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:42:41.132Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5657df7d5c98eb3c5950-1b1acc4f4b9bdc32f66c",
+              "file": "fr11-order-history.spec.ts",
+              "line": 79,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-08T01:42:17.611Z",
+    "duration": 24246.976000000002,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

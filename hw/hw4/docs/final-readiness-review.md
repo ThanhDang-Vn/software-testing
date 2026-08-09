@@ -1,37 +1,33 @@
-# Final Readiness Review — ZIP 100
+# Final Readiness Review — 2026-08-09
 
-ZIP: `23127334_HW04_AI_Automation_100.zip`  
-Verified size before final audit synchronization: 19,146,752 bytes (18.26 MiB)  
-Decision: **NOT READY**
+Target folder: `23127334_HW04_AI_Automation_100/`  
+Planned ZIP: `23127334_HW04_AI_Automation_100.zip`  
+Decision: **NOT READY — student finishing actions remain**
 
 ## Verified PASS
 
-- ZIP opens and extracts; temporary extraction was removed afterward.
-- Root contains `README.md`, `links.md`, `automation/`, `documents/`, `evidence/`, `reports/`.
-- 44 logical cases and 132 recorded executions (92 passed, 40 failed, 0 skipped).
-- Exactly 9 top-level HTML reports; extracted-ZIP verifier passed all label/feature/browser/timestamp/count checks.
-- Four current PDFs have valid PDF headers; AI critique is 281 words.
-- No `node_modules`, runtime log, obsolete nested submission archive, or file larger than 20 MB.
-  Playwright `trace.zip` files and hashed ZIP attachments under report `data/` are required trace
-  assets and are intentionally retained.
-- Eight GitHub Issues #33–#40 exist and were verified with labels `bug` and `hw4`.
-- Validated reusable Agent Skill is included.
+- Correct top-level structure: `README.md`, `links.md`, `automation/`, `documents/`, `evidence/`, `reports/`.
+- 44 logical cases and 132 recorded executions: 92 passed, 40 failed, 0 skipped.
+- Exactly 9 independent feature/browser HTML reports and 9 JSON results.
+- All 9 manifest entries verify Student ID, feature, browser, ISO timestamp and counts.
+- Demo video for Agent Skill and E2E flow is recorded at https://youtu.be/e-_aoQkVflk.
+- Eight GitHub Issues #33–#40 exist with labels `bug` and `hw4`.
+- Local Markdown bug report embeds eight genuine screenshots.
+- Validated reusable Agent Skill and REST reproduction file are included.
+- `node_modules` and temporary execution outputs are excluded from the final folder after cleanup.
 
-## P0 blockers
+## Remaining blockers
 
-1. Demo video URL is still TODO. A self-assessed 15/15 cannot be supported without the real video.
-2. Git requirement is still 0 valid HW04 commits over 0 days because `hw/hw4/` is ignored by the
-   parent repository. It does not meet 8 valid test-script commits over at least 4 days.
+1. **Git history:** only 3 commits change test specs, all on 2026-08-08. This does not satisfy at
+   least 8 valid test-script commits across at least 4 real days. Do not backdate or fabricate it.
+2. **GitHub screenshot:** Issue #35 has no GitHub-hosted attachment as of this audit. Attach
+   `evidence/bug-screenshots/bug-03-generic-lock-feedback.png` manually.
+3. **PDF export:** the final folder intentionally contains no PDFs yet. Export current Markdown to
+   `main-report.pdf`, `ai-audit-report.pdf`, `ai-critique.pdf`, and `bug-report.pdf` before ZIP.
+4. **ZIP verification:** create the ZIP only after the three items above, then confirm it opens and
+   every uploaded part is below the Moodle 20 MB per-file limit.
 
-## Consistency note
+## Honest self-assessment note
 
-The student explicitly selected self-assessed grade 100, so the filename and self-assessment table
-use 100. This is a self-assessment, not a verified rubric score. README/main report continue to
-disclose the missing demo and Git evidence; those claims must not be removed.
-
-## Remaining student actions
-
-- Record/upload the authentic 5–7 minute demo and replace the TODO URL.
-- Resolve tracking for HW04 and build authentic future test-script history; do not backdate.
-- Rebuild and reverify the ZIP after either change.
-- Upload/submit manually only after the two blockers are resolved.
+The student explicitly selected 100, so the folder/ZIP name and self-assessment table use `100`.
+That is a self-assessment, not a verified instructor score, and does not override the blockers above.

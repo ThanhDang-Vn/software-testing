@@ -1,0 +1,206 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: fr02-login-lockout.spec.ts >> FR-02 Login & Account Lockout >> FR02-TC-009 [ui-contract] Email control uses native email validation
+- Location: tests\fr02-login-lockout.spec.ts:119:5
+
+# Error details
+
+```
+Error: expect(locator).toHaveAttribute(expected) failed
+
+Locator:  locator('form').getByText('Username', { exact: true }).locator('..').locator('input')
+Expected: "email"
+Received: "text"
+Timeout:  5000ms
+
+Call log:
+  - Expect "toHaveAttribute" with timeout 5000ms
+  - waiting for locator('form').getByText('Username', { exact: true }).locator('..').locator('input')
+    14 × locator resolved to <input value="" required="" type="text" class="w-full border p-2 rounded"/>
+       - unexpected value "text"
+
+```
+
+```yaml
+- textbox
+```
+
+# Test source
+
+```ts
+  61  |   if (raw === undefined) throw new Error(`${item.id}: email or emailTemplate is required`);
+  62  |   return item.emailDecoration === 'spaces' ? ` ${raw} ` : raw;
+  63  | }
+  64  | 
+  65  | function casePassword(item: LoginLockoutCase): string {
+  66  |   const profile: PasswordProfile | undefined = item.credentialProfile ?? item.passwordProfile;
+  67  |   if (!profile) throw new Error(`${item.id}: credentialProfile or passwordProfile is required`);
+  68  |   if (profile === 'customer' || profile === 'admin') {
+  69  |     return credentialValue(profile, 'password', item.id);
+  70  |   }
+  71  |   if (profile === 'synthetic-valid') return validPassword(item.id);
+  72  |   if (profile === 'synthetic-wrong') return wrongPassword(item.id);
+  73  |   if (profile === 'case-changed') return validPassword(item.id).toLowerCase();
+  74  |   return '';
+  75  | }
+  76  | 
+  77  | function expectedUserName(item: LoginLockoutCase): string {
+  78  |   if (!item.expectedUserProfile) {
+  79  |     throw new Error(`${item.id}: expectedUserProfile is required`);
+  80  |   }
+  81  |   return credentialValue(item.expectedUserProfile, 'userName', item.id);
+  82  | }
+  83  | 
+  84  | async function registerAccount(request: APIRequestContext, email: string): Promise<void> {
+  85  |   const response = await request.post(`${backendUrl}/api/register`, {
+  86  |     data: {
+  87  |       name: requiredEnvironment('FR02_SYNTHETIC_USER_NAME', 'FR-02 setup'),
+  88  |       email: email.trim(),
+  89  |       password: validPassword('FR-02 setup')
+  90  |     }
+  91  |   });
+  92  |   expect(response.ok(), `Unable to register isolated account ${email}`).toBe(true);
+  93  | }
+  94  | 
+  95  | async function loginApi(
+  96  |   request: APIRequestContext,
+  97  |   email: string,
+  98  |   password: string
+  99  | ): Promise<number> {
+  100 |   const response = await request.post(`${backendUrl}/api/login`, {
+  101 |     data: { email, password }
+  102 |   });
+  103 |   return response.status();
+  104 | }
+  105 | 
+  106 | async function failLogin(page: Page, email: string, caseId: string): Promise<void> {
+  107 |   const login = new LoginPage(page);
+  108 |   await login.open();
+  109 |   await login.submitCredentials(email, wrongPassword(caseId));
+  110 |   await expect(login.errorMessage()).toBeVisible();
+  111 | }
+  112 | 
+  113 | function target(page: LoginPage, field: FieldName) {
+  114 |   return field === 'email' ? page.email : page.password;
+  115 | }
+  116 | 
+  117 | test.describe('FR-02 Login & Account Lockout', () => {
+  118 |   for (const item of cases) {
+  119 |     test(`${item.id} [${item.category}] ${item.description}`, async ({ page, request }) => {
+  120 |       const login = new LoginPage(page);
+  121 | 
+  122 |       switch (item.action) {
+  123 |         case 'login': {
+  124 |           await login.open();
+  125 |           await login.submitCredentials(caseEmail(item), casePassword(item));
+  126 |           await expect(page).toHaveURL(new RegExp(`${item.expectedUrl}$`));
+  127 |           await expect(page.getByText(`Chào, ${expectedUserName(item)}`)).toBeVisible();
+  128 |           const token = await page.evaluate(() => localStorage.getItem('token'));
+  129 |           expect(token).toEqual(expect.any(String));
+  130 |           break;
+  131 |         }
+  132 | 
+  133 |         case 'invalid-login': {
+  134 |           const email = caseEmail(item);
+  135 |           if (item.emailTemplate) await registerAccount(request, email);
+  136 |           await login.open();
+  137 |           await login.submitCredentials(email, casePassword(item));
+  138 |           await expect(login.errorMessage()).toHaveText(item.expectedError ?? '');
+  139 |           await expect(page).toHaveURL(/\/login$/);
+  140 |           break;
+  141 |         }
+  142 | 
+  143 |         case 'required-field': {
+  144 |           if (!item.field) throw new Error(`${item.id}: field is required`);
+  145 |           await login.open();
+  146 |           await login.submitCredentials(caseEmail(item), casePassword(item));
+  147 |           const field = target(login, item.field);
+  148 |           await expect(field).toHaveAttribute('required', '');
+  149 |           const validationMessage = await field.evaluate(
+  150 |             (element: HTMLInputElement) => element.validationMessage
+  151 |           );
+  152 |           expect(Boolean(validationMessage)).toBe(item.expectedValidationMessage);
+  153 |           await expect(page).toHaveURL(/\/login$/);
+  154 |           break;
+  155 |         }
+  156 | 
+  157 |         case 'input-contract': {
+  158 |           if (!item.field) throw new Error(`${item.id}: field is required`);
+  159 |           await login.open();
+  160 |           const field = target(login, item.field);
+> 161 |           await expect(field).toHaveAttribute('type', item.expectedType ?? '');
+      |                               ^ Error: expect(locator).toHaveAttribute(expected) failed
+  162 |           if (item.expectedRequired) await expect(field).toHaveAttribute('required', '');
+  163 |           break;
+  164 |         }
+  165 | 
+  166 |         case 'failures-then-success': {
+  167 |           const email = caseEmail(item);
+  168 |           await registerAccount(request, email);
+  169 |           for (let attempt = 0; attempt < (item.failedAttempts ?? 0); attempt += 1) {
+  170 |             await failLogin(page, email, item.id);
+  171 |           }
+  172 |           await login.open();
+  173 |           await login.submitCredentials(email, validPassword(item.id));
+  174 |           await expect(page).toHaveURL(new RegExp(`${item.expectedUrl}$`));
+  175 |           break;
+  176 |         }
+  177 | 
+  178 |         case 'lock-after-failures': {
+  179 |           const email = caseEmail(item);
+  180 |           await registerAccount(request, email);
+  181 |           for (let attempt = 0; attempt < (item.failedAttempts ?? 0); attempt += 1) {
+  182 |             expect(await loginApi(request, email, wrongPassword(item.id))).toBe(401);
+  183 |           }
+  184 |           expect(await loginApi(request, email, validPassword(item.id))).toBe(item.expectedStatus);
+  185 |           break;
+  186 |         }
+  187 | 
+  188 |         case 'locked-message': {
+  189 |           const email = caseEmail(item);
+  190 |           await registerAccount(request, email);
+  191 |           for (let attempt = 0; attempt < (item.failedAttempts ?? 0); attempt += 1) {
+  192 |             await loginApi(request, email, wrongPassword(item.id));
+  193 |           }
+  194 |           await login.open();
+  195 |           await login.submitCredentials(email, validPassword(item.id));
+  196 |           await expect(login.errorMessage()).toHaveText(item.expectedError ?? '');
+  197 |           break;
+  198 |         }
+  199 | 
+  200 |         case 'lock-expiry': {
+  201 |           const email = caseEmail(item);
+  202 |           await registerAccount(request, email);
+  203 |           for (let attempt = 0; attempt < (item.failedAttempts ?? 0); attempt += 1) {
+  204 |             await loginApi(request, email, wrongPassword(item.id));
+  205 |           }
+  206 |           const unlockDeadline = Date.now() + (item.waitMilliseconds ?? 31_000);
+  207 |           // This is the FR-02 business lock window, not a UI synchronization delay.
+  208 |           // Polling the clock keeps the reason explicit and avoids Playwright's discouraged fixed sleep.
+  209 |           await expect.poll(() => Date.now(), {
+  210 |             message: `${item.id}: wait for the configured account-lock window to expire`,
+  211 |             timeout: (item.waitMilliseconds ?? 31_000) + 5_000,
+  212 |             intervals: [1_000]
+  213 |           }).toBeGreaterThanOrEqual(unlockDeadline);
+  214 |           await login.open();
+  215 |           await login.submitCredentials(email, validPassword(item.id));
+  216 |           await expect(page).toHaveURL(new RegExp(`${item.expectedUrl}$`));
+  217 |           break;
+  218 |         }
+  219 | 
+  220 |         default: {
+  221 |           const exhaustive: never = item.action;
+  222 |           throw new Error(`Unsupported action: ${exhaustive}`);
+  223 |         }
+  224 |       }
+  225 |     });
+  226 |   }
+  227 | });
+  228 | 
+```

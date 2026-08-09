@@ -1,0 +1,969 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Users\\dn156\\AppData\\Local\\Volta\\tools\\image\\node\\20.20.2\\node.exe",
+      "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/fr14-category-crud.spec.ts",
+      "--project",
+      "webkit"
+    ],
+    "configFile": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\playwright.config.ts",
+    "rootDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/test-results/webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/test-results/webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/test-results/webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "reports\\html\\fr14-category-crud\\webkit",
+          "title": "Run by: 23127334 | FR-14 Category Management CRUD | webkit | 2026-08-08T01:44:04.023Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\reports\\json\\fr14-category-crud\\webkit.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr14-category-crud.spec.ts",
+      "file": "fr14-category-crud.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-14 Category Management CRUD",
+          "file": "fr14-category-crud.spec.ts",
+          "line": 61,
+          "column": 6,
+          "specs": [
+            {
+              "title": "FR14-TC-001 Public category list is an array",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 700,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:44:06.478Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f8efae7125d4baf5814d-db8e532f599df8f8d963",
+              "file": "fr14-category-crud.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "FR14-TC-002 Admin creates a valid ASCII category",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 643,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:44:07.325Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f8efae7125d4baf5814d-53d0803b083c161940a3",
+              "file": "fr14-category-crud.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "FR14-TC-003 Admin creates a valid Vietnamese category",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 618,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:44:07.994Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f8efae7125d4baf5814d-46208d8785dfa1e0feab",
+              "file": "fr14-category-crud.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "FR14-TC-004 One-character category name is accepted",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 579,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:44:08.636Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f8efae7125d4baf5814d-21dd54bebd9b0a541372",
+              "file": "fr14-category-crud.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "FR14-TC-005 Empty category name is rejected",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 700,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts:136:37",
+                        "location": {
+                          "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                          "column": 37,
+                          "line": 136
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 134 |\u001b[39m             }\n \u001b[90m 135 |\u001b[39m           }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 136 |\u001b[39m           expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(item\u001b[33m.\u001b[39mexpectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 137 |\u001b[39m         }\n \u001b[90m 138 |\u001b[39m         \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 139 |\u001b[39m       }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                            "column": 37,
+                            "line": 136
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  134 |             }\n  135 |           }\n> 136 |           expect(response.status()).toBe(item.expectedStatus);\n      |                                     ^\n  137 |         }\n  138 |         return;\n  139 |       }\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts:136:37"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:44:09.239Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-dc027-y-category-name-is-rejected-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-dc027-y-category-name-is-rejected-webkit\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-dc027-y-category-name-is-rejected-webkit\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-dc027-y-category-name-is-rejected-webkit\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                        "column": 37,
+                        "line": 136
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f8efae7125d4baf5814d-4d09eb96691e2b1310b4",
+              "file": "fr14-category-crud.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "FR14-TC-006 Missing category name is rejected",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 631,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts:136:37",
+                        "location": {
+                          "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                          "column": 37,
+                          "line": 136
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 134 |\u001b[39m             }\n \u001b[90m 135 |\u001b[39m           }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 136 |\u001b[39m           expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(item\u001b[33m.\u001b[39mexpectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 137 |\u001b[39m         }\n \u001b[90m 138 |\u001b[39m         \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 139 |\u001b[39m       }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                            "column": 37,
+                            "line": 136
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  134 |             }\n  135 |           }\n> 136 |           expect(response.status()).toBe(item.expectedStatus);\n      |                                     ^\n  137 |         }\n  138 |         return;\n  139 |       }\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts:136:37"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:44:10.894Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-e6508-g-category-name-is-rejected-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-e6508-g-category-name-is-rejected-webkit\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-e6508-g-category-name-is-rejected-webkit\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-e6508-g-category-name-is-rejected-webkit\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                        "column": 37,
+                        "line": 136
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f8efae7125d4baf5814d-7fb30ec6d3a09ed39cf6",
+              "file": "fr14-category-crud.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "FR14-TC-007 Whitespace-only category name is rejected",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 830,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts:136:37",
+                        "location": {
+                          "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                          "column": 37,
+                          "line": 136
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 134 |\u001b[39m             }\n \u001b[90m 135 |\u001b[39m           }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 136 |\u001b[39m           expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(item\u001b[33m.\u001b[39mexpectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 137 |\u001b[39m         }\n \u001b[90m 138 |\u001b[39m         \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 139 |\u001b[39m       }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                            "column": 37,
+                            "line": 136
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  134 |             }\n  135 |           }\n> 136 |           expect(response.status()).toBe(item.expectedStatus);\n      |                                     ^\n  137 |         }\n  138 |         return;\n  139 |       }\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts:136:37"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:44:12.549Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-a0600-y-category-name-is-rejected-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-a0600-y-category-name-is-rejected-webkit\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-a0600-y-category-name-is-rejected-webkit\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-a0600-y-category-name-is-rejected-webkit\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                        "column": 37,
+                        "line": 136
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f8efae7125d4baf5814d-a49b0cfbac830ae4bcf0",
+              "file": "fr14-category-crud.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "FR14-TC-008 Create without authentication is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 809,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:44:14.716Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f8efae7125d4baf5814d-ed0496d9be75737bf1b6",
+              "file": "fr14-category-crud.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "FR14-TC-009 Deleting an unknown category returns not found",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 621,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts:136:37",
+                        "location": {
+                          "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                          "column": 37,
+                          "line": 136
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 134 |\u001b[39m             }\n \u001b[90m 135 |\u001b[39m           }\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 136 |\u001b[39m           expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(item\u001b[33m.\u001b[39mexpectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 137 |\u001b[39m         }\n \u001b[90m 138 |\u001b[39m         \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 139 |\u001b[39m       }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                            "column": 37,
+                            "line": 136
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m404\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  134 |             }\n  135 |           }\n> 136 |           expect(response.status()).toBe(item.expectedStatus);\n      |                                     ^\n  137 |         }\n  138 |         return;\n  139 |       }\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts:136:37"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:44:15.649Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-8c994--category-returns-not-found-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-8c994--category-returns-not-found-webkit\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-8c994--category-returns-not-found-webkit\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-8c994--category-returns-not-found-webkit\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                        "column": 37,
+                        "line": 136
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f8efae7125d4baf5814d-6809d85477e023671d4e",
+              "file": "fr14-category-crud.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "FR14-TC-010 Category tab has a descriptive heading",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1317,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:44:17.291Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f8efae7125d4baf5814d-5bfd1424f9594f0ae2aa",
+              "file": "fr14-category-crud.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "FR14-TC-011 New category name is visibly and natively required",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 7437,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByPlaceholder('Tên danh mục mới')\nExpected: \u001b[32m\"\"\u001b[39m\nReceived: serializes to the same string\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByPlaceholder('Tên danh mục mới')\u001b[22m\n\u001b[2m    13 × locator resolved to <input value=\"\" type=\"text\" placeholder=\"Tên danh mục mới\" class=\"border p-2 rounded flex-1\"/>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByPlaceholder('Tên danh mục mới')\nExpected: \u001b[32m\"\"\u001b[39m\nReceived: serializes to the same string\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByPlaceholder('Tên danh mục mới')\u001b[22m\n\u001b[2m    13 × locator resolved to <input value=\"\" type=\"text\" placeholder=\"Tên danh mục mới\" class=\"border p-2 rounded flex-1\"/>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts:149:29",
+                        "location": {
+                          "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                          "column": 29,
+                          "line": 149
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 147 |\u001b[39m       \u001b[36mif\u001b[39m (item\u001b[33m.\u001b[39maction \u001b[33m===\u001b[39m \u001b[32m'ui-required'\u001b[39m) {\n \u001b[90m 148 |\u001b[39m         \u001b[36mconst\u001b[39m input \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByPlaceholder(\u001b[32m'Tên danh mục mới'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 149 |\u001b[39m         \u001b[36mawait\u001b[39m expect(input)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'required'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m''\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 150 |\u001b[39m         \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/Tên danh mục mới.*\\*/\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 151 |\u001b[39m       }\n \u001b[90m 152 |\u001b[39m       \u001b[36mif\u001b[39m (item\u001b[33m.\u001b[39maction \u001b[33m===\u001b[39m \u001b[32m'ui-create-view'\u001b[39m \u001b[33m&&\u001b[39m uniqueName) {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                            "column": 29,
+                            "line": 149
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByPlaceholder('Tên danh mục mới')\nExpected: \u001b[32m\"\"\u001b[39m\nReceived: serializes to the same string\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByPlaceholder('Tên danh mục mới')\u001b[22m\n\u001b[2m    13 × locator resolved to <input value=\"\" type=\"text\" placeholder=\"Tên danh mục mới\" class=\"border p-2 rounded flex-1\"/>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n\n\n  147 |       if (item.action === 'ui-required') {\n  148 |         const input = page.getByPlaceholder('Tên danh mục mới');\n> 149 |         await expect(input).toHaveAttribute('required', '');\n      |                             ^\n  150 |         await expect(page.getByText(/Tên danh mục mới.*\\*/)).toBeVisible();\n  151 |       }\n  152 |       if (item.action === 'ui-create-view' && uniqueName) {\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts:149:29"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:44:18.707Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-7bf42-sibly-and-natively-required-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-7bf42-sibly-and-natively-required-webkit\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-7bf42-sibly-and-natively-required-webkit\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-7bf42-sibly-and-natively-required-webkit\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                        "column": 29,
+                        "line": 149
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f8efae7125d4baf5814d-3c94f95b3929ad84c6ef",
+              "file": "fr14-category-crud.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "FR14-TC-012 Exploratory observation records whether delete asks for confirmation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [
+                    {
+                      "type": "exploratory",
+                      "description": "Confirmation is observed for usability only; FR-14 does not require it."
+                    },
+                    {
+                      "type": "observation",
+                      "description": "Delete confirmation observed: false"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2264,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:44:27.412Z",
+                      "annotations": [
+                        {
+                          "type": "exploratory",
+                          "description": "Confirmation is observed for usability only; FR-14 does not require it."
+                        },
+                        {
+                          "type": "observation",
+                          "description": "Delete confirmation observed: false"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f8efae7125d4baf5814d-8ce394ef0a15239ef401",
+              "file": "fr14-category-crud.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "FR14-TC-013 Admin deletes a category and it no longer appears in the list",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 590,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:44:29.807Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f8efae7125d4baf5814d-d4e51087ef9d59d57015",
+              "file": "fr14-category-crud.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "FR14-TC-014 Admin creates a category through the UI and sees it in the table",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2199,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:44:30.430Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f8efae7125d4baf5814d-54979b41020a77ee4ea4",
+              "file": "fr14-category-crud.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "FR14-TC-015 Admin deletes the intended category through the UI",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2823,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:44:32.658Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f8efae7125d4baf5814d-318ff30f7e67aef976fa",
+              "file": "fr14-category-crud.spec.ts",
+              "line": 63,
+              "column": 5
+            },
+            {
+              "title": "FR14-TC-016 A customer token cannot create a category",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 890,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts:92:35",
+                        "location": {
+                          "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                          "column": 35,
+                          "line": 92
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 90 |\u001b[39m         })\u001b[33m;\u001b[39m\n \u001b[90m 91 |\u001b[39m         \u001b[36mawait\u001b[39m cleanupCategory(request\u001b[33m,\u001b[39m uniqueName)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 92 |\u001b[39m         expect(response\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(item\u001b[33m.\u001b[39mexpectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 93 |\u001b[39m         \u001b[36mreturn\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 94 |\u001b[39m       }\n \u001b[90m 95 |\u001b[39m       \u001b[36mif\u001b[39m (item\u001b[33m.\u001b[39maction \u001b[33m===\u001b[39m \u001b[32m'api-delete-success'\u001b[39m) {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                            "column": 35,
+                            "line": 92
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m403\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n  90 |         });\n  91 |         await cleanupCategory(request, uniqueName);\n> 92 |         expect(response.status()).toBe(item.expectedStatus);\n     |                                   ^\n  93 |         return;\n  94 |       }\n  95 |       if (item.action === 'api-delete-success') {\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts:92:35"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:44:35.507Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-b7f50-en-cannot-create-a-category-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-b7f50-en-cannot-create-a-category-webkit\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-b7f50-en-cannot-create-a-category-webkit\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr14-category-crud-FR-14-C-b7f50-en-cannot-create-a-category-webkit\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr14-category-crud.spec.ts",
+                        "column": 35,
+                        "line": 92
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f8efae7125d4baf5814d-17a1aeb059d536245bca",
+              "file": "fr14-category-crud.spec.ts",
+              "line": 63,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-08T01:44:05.212Z",
+    "duration": 31425.264,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}

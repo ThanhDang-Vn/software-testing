@@ -1,0 +1,415 @@
+{
+  "studentId": "23127334",
+  "startedAt": "2026-08-08T01:36:49.180Z",
+  "finishedAt": "2026-08-08T01:44:37.453Z",
+  "results": [
+    {
+      "feature": "FR-02 Login & Account Lockout",
+      "browser": "chromium",
+      "startedAt": "2026-08-08T01:36:49.181Z",
+      "exitCode": 1,
+      "report": "reports\\html\\fr02-login-lockout\\chromium\\index.html",
+      "reportExists": true,
+      "jsonReport": "reports\\json\\fr02-login-lockout\\chromium.json",
+      "counts": {
+        "passed": 9,
+        "failed": 6,
+        "skipped": 0,
+        "durationMs": 78198,
+        "total": 15,
+        "failureSignatures": [
+          {
+            "title": "FR02-TC-009 [ui-contract] Email control uses native email validation",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          },
+          {
+            "title": "FR02-TC-010 [ui-contract] Password control masks its value",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          },
+          {
+            "title": "FR02-TC-012 [boundary] Two consecutive failed attempts remain below the lock threshold",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          },
+          {
+            "title": "FR02-TC-013 [boundary] Third consecutive failed attempt locks the account",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          },
+          {
+            "title": "FR02-TC-014 [negative] Locked account receives an appropriate non-revealing message",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          },
+          {
+            "title": "FR02-TC-015 [edge] Account is usable after the specified 30 second lock expires",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          }
+        ]
+      },
+      "label": "Run by: 23127334",
+      "labelVerified": true,
+      "visibleTitle": "Run by: 23127334 | FR-02 Login & Account Lockout | chromium | 2026-08-08T01:36:49.181Z",
+      "metadataVerified": true,
+      "countsVerified": true
+    },
+    {
+      "feature": "FR-02 Login & Account Lockout",
+      "browser": "firefox",
+      "startedAt": "2026-08-08T01:38:17.081Z",
+      "exitCode": 1,
+      "report": "reports\\html\\fr02-login-lockout\\firefox\\index.html",
+      "reportExists": true,
+      "jsonReport": "reports\\json\\fr02-login-lockout\\firefox.json",
+      "counts": {
+        "passed": 9,
+        "failed": 6,
+        "skipped": 0,
+        "durationMs": 86432,
+        "total": 15,
+        "failureSignatures": [
+          {
+            "title": "FR02-TC-009 [ui-contract] Email control uses native email validation",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          },
+          {
+            "title": "FR02-TC-010 [ui-contract] Password control masks its value",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          },
+          {
+            "title": "FR02-TC-012 [boundary] Two consecutive failed attempts remain below the lock threshold",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          },
+          {
+            "title": "FR02-TC-013 [boundary] Third consecutive failed attempt locks the account",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          },
+          {
+            "title": "FR02-TC-014 [negative] Locked account receives an appropriate non-revealing message",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          },
+          {
+            "title": "FR02-TC-015 [edge] Account is usable after the specified 30 second lock expires",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          }
+        ]
+      },
+      "label": "Run by: 23127334",
+      "labelVerified": true,
+      "visibleTitle": "Run by: 23127334 | FR-02 Login & Account Lockout | firefox | 2026-08-08T01:38:17.081Z",
+      "metadataVerified": true,
+      "countsVerified": true
+    },
+    {
+      "feature": "FR-02 Login & Account Lockout",
+      "browser": "webkit",
+      "startedAt": "2026-08-08T01:39:59.993Z",
+      "exitCode": 1,
+      "report": "reports\\html\\fr02-login-lockout\\webkit\\index.html",
+      "reportExists": true,
+      "jsonReport": "reports\\json\\fr02-login-lockout\\webkit.json",
+      "counts": {
+        "passed": 9,
+        "failed": 6,
+        "skipped": 0,
+        "durationMs": 83272,
+        "total": 15,
+        "failureSignatures": [
+          {
+            "title": "FR02-TC-009 [ui-contract] Email control uses native email validation",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          },
+          {
+            "title": "FR02-TC-010 [ui-contract] Password control masks its value",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          },
+          {
+            "title": "FR02-TC-012 [boundary] Two consecutive failed attempts remain below the lock threshold",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          },
+          {
+            "title": "FR02-TC-013 [boundary] Third consecutive failed attempt locks the account",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          },
+          {
+            "title": "FR02-TC-014 [negative] Locked account receives an appropriate non-revealing message",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          },
+          {
+            "title": "FR02-TC-015 [edge] Account is usable after the specified 30 second lock expires",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          }
+        ]
+      },
+      "label": "Run by: 23127334",
+      "labelVerified": true,
+      "visibleTitle": "Run by: 23127334 | FR-02 Login & Account Lockout | webkit | 2026-08-08T01:39:59.993Z",
+      "metadataVerified": true,
+      "countsVerified": true
+    },
+    {
+      "feature": "FR-11 Order History View",
+      "browser": "chromium",
+      "startedAt": "2026-08-08T01:41:31.660Z",
+      "exitCode": 1,
+      "report": "reports\\html\\fr11-order-history\\chromium\\index.html",
+      "reportExists": true,
+      "jsonReport": "reports\\json\\fr11-order-history\\chromium.json",
+      "counts": {
+        "passed": 12,
+        "failed": 1,
+        "skipped": 0,
+        "durationMs": 11386,
+        "total": 13,
+        "failureSignatures": [
+          {
+            "title": "FR11-TC-012 Cancel is available only before an order reaches shipping",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          }
+        ]
+      },
+      "label": "Run by: 23127334",
+      "labelVerified": true,
+      "visibleTitle": "Run by: 23127334 | FR-11 Order History View | chromium | 2026-08-08T01:41:31.660Z",
+      "metadataVerified": true,
+      "countsVerified": true
+    },
+    {
+      "feature": "FR-11 Order History View",
+      "browser": "firefox",
+      "startedAt": "2026-08-08T01:41:47.504Z",
+      "exitCode": 1,
+      "report": "reports\\html\\fr11-order-history\\firefox\\index.html",
+      "reportExists": true,
+      "jsonReport": "reports\\json\\fr11-order-history\\firefox.json",
+      "counts": {
+        "passed": 12,
+        "failed": 1,
+        "skipped": 0,
+        "durationMs": 22144,
+        "total": 13,
+        "failureSignatures": [
+          {
+            "title": "FR11-TC-012 Cancel is available only before an order reaches shipping",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          }
+        ]
+      },
+      "label": "Run by: 23127334",
+      "labelVerified": true,
+      "visibleTitle": "Run by: 23127334 | FR-11 Order History View | firefox | 2026-08-08T01:41:47.504Z",
+      "metadataVerified": true,
+      "countsVerified": true
+    },
+    {
+      "feature": "FR-11 Order History View",
+      "browser": "webkit",
+      "startedAt": "2026-08-08T01:42:16.727Z",
+      "exitCode": 1,
+      "report": "reports\\html\\fr11-order-history\\webkit\\index.html",
+      "reportExists": true,
+      "jsonReport": "reports\\json\\fr11-order-history\\webkit.json",
+      "counts": {
+        "passed": 12,
+        "failed": 1,
+        "skipped": 0,
+        "durationMs": 20821,
+        "total": 13,
+        "failureSignatures": [
+          {
+            "title": "FR11-TC-012 Cancel is available only before an order reaches shipping",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          }
+        ]
+      },
+      "label": "Run by: 23127334",
+      "labelVerified": true,
+      "visibleTitle": "Run by: 23127334 | FR-11 Order History View | webkit | 2026-08-08T01:42:16.727Z",
+      "metadataVerified": true,
+      "countsVerified": true
+    },
+    {
+      "feature": "FR-14 Category Management CRUD",
+      "browser": "chromium",
+      "startedAt": "2026-08-08T01:42:42.637Z",
+      "exitCode": 1,
+      "report": "reports\\html\\fr14-category-crud\\chromium\\index.html",
+      "reportExists": true,
+      "jsonReport": "reports\\json\\fr14-category-crud\\chromium.json",
+      "counts": {
+        "passed": 10,
+        "failed": 6,
+        "skipped": 0,
+        "durationMs": 13474,
+        "total": 16,
+        "failureSignatures": [
+          {
+            "title": "FR14-TC-005 Empty category name is rejected",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          },
+          {
+            "title": "FR14-TC-006 Missing category name is rejected",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          },
+          {
+            "title": "FR14-TC-007 Whitespace-only category name is rejected",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          },
+          {
+            "title": "FR14-TC-009 Deleting an unknown category returns not found",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          },
+          {
+            "title": "FR14-TC-011 New category name is visibly and natively required",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          },
+          {
+            "title": "FR14-TC-016 A customer token cannot create a category",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          }
+        ]
+      },
+      "label": "Run by: 23127334",
+      "labelVerified": true,
+      "visibleTitle": "Run by: 23127334 | FR-14 Category Management CRUD | chromium | 2026-08-08T01:42:42.637Z",
+      "metadataVerified": true,
+      "countsVerified": true
+    },
+    {
+      "feature": "FR-14 Category Management CRUD",
+      "browser": "firefox",
+      "startedAt": "2026-08-08T01:43:05.641Z",
+      "exitCode": 1,
+      "report": "reports\\html\\fr14-category-crud\\firefox\\index.html",
+      "reportExists": true,
+      "jsonReport": "reports\\json\\fr14-category-crud\\firefox.json",
+      "counts": {
+        "passed": 9,
+        "failed": 7,
+        "skipped": 0,
+        "durationMs": 38895,
+        "total": 16,
+        "failureSignatures": [
+          {
+            "title": "FR14-TC-005 Empty category name is rejected",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          },
+          {
+            "title": "FR14-TC-006 Missing category name is rejected",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          },
+          {
+            "title": "FR14-TC-007 Whitespace-only category name is rejected",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          },
+          {
+            "title": "FR14-TC-008 Create without authentication is rejected",
+            "status": "failed",
+            "error": "Error: browserContext.close: Protocol error (Browser.removeBrowserContext): can't access property \"_maybeDontRestoreTabs\", this._windows[aWindow.__SSi] is undefined"
+          },
+          {
+            "title": "FR14-TC-009 Deleting an unknown category returns not found",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          },
+          {
+            "title": "FR14-TC-011 New category name is visibly and natively required",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          },
+          {
+            "title": "FR14-TC-016 A customer token cannot create a category",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          }
+        ]
+      },
+      "label": "Run by: 23127334",
+      "labelVerified": true,
+      "visibleTitle": "Run by: 23127334 | FR-14 Category Management CRUD | firefox | 2026-08-08T01:43:05.641Z",
+      "metadataVerified": true,
+      "countsVerified": true
+    },
+    {
+      "feature": "FR-14 Category Management CRUD",
+      "browser": "webkit",
+      "startedAt": "2026-08-08T01:44:04.023Z",
+      "exitCode": 1,
+      "report": "reports\\html\\fr14-category-crud\\webkit\\index.html",
+      "reportExists": true,
+      "jsonReport": "reports\\json\\fr14-category-crud\\webkit.json",
+      "counts": {
+        "passed": 10,
+        "failed": 6,
+        "skipped": 0,
+        "durationMs": 23651,
+        "total": 16,
+        "failureSignatures": [
+          {
+            "title": "FR14-TC-005 Empty category name is rejected",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          },
+          {
+            "title": "FR14-TC-006 Missing category name is rejected",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          },
+          {
+            "title": "FR14-TC-007 Whitespace-only category name is rejected",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          },
+          {
+            "title": "FR14-TC-009 Deleting an unknown category returns not found",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          },
+          {
+            "title": "FR14-TC-011 New category name is visibly and natively required",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed"
+          },
+          {
+            "title": "FR14-TC-016 A customer token cannot create a category",
+            "status": "failed",
+            "error": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m"
+          }
+        ]
+      },
+      "label": "Run by: 23127334",
+      "labelVerified": true,
+      "visibleTitle": "Run by: 23127334 | FR-14 Category Management CRUD | webkit | 2026-08-08T01:44:04.023Z",
+      "metadataVerified": true,
+      "countsVerified": true
+    }
+  ],
+  "reportVerificationAt": "2026-08-08T02:14:36.992Z"
+}
