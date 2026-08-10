@@ -1,0 +1,99 @@
+{
+  "info": {
+    "_postman_id": "aca882e1-e8f5-4f31-a167-231273340006",
+    "name": "Mini Products API - 23127334",
+    "description": "Data-driven contract and functional tests for GET /api/products.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "apiPath",
+      "value": "/api/products"
+    }
+  ],
+  "item": [
+    {
+      "name": "[MINI] Get products (data-driven)",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.request.headers.upsert({",
+              "  key: 'X-Student-Id',",
+              "  value: pm.environment.get('studentId')",
+              "});",
+              "console.log('[MINI] tc_id=' + pm.iterationData.get('tc_id') + ', X-Student-Id=' + pm.environment.get('studentId'));"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const tcId = pm.iterationData.get('tc_id');",
+              "const expectedStatus = Number(pm.iterationData.get('expected_status'));",
+              "const expectedCount = Number(pm.iterationData.get('expected_count'));",
+              "const fragment = String(pm.iterationData.get('expected_name_fragment') || '').toLowerCase();",
+              "",
+              "pm.test(`[${tcId}] Functional: status is ${expectedStatus}`, () => {",
+              "  pm.response.to.have.status(expectedStatus);",
+              "});",
+              "",
+              "pm.test(`[${tcId}] Functional: X-Student-Id was sent`, () => {",
+              "  pm.expect(pm.request.headers.get('X-Student-Id')).to.eql(pm.environment.get('studentId'));",
+              "});",
+              "",
+              "pm.test(`[${tcId}] Functional: response is JSON`, () => {",
+              "  pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');",
+              "});",
+              "",
+              "pm.test(`[${tcId}] Performance: response time is under 1000 ms`, () => {",
+              "  pm.expect(pm.response.responseTime).to.be.below(1000);",
+              "});",
+              "",
+              "const body = pm.response.json();",
+              "pm.test(`[${tcId}] Contract: body is an array with the expected size`, () => {",
+              "  pm.expect(body).to.be.an('array');",
+              "  pm.expect(body.length).to.eql(expectedCount);",
+              "});",
+              "",
+              "const productSchema = {",
+              "  type: 'object',",
+              "  required: ['id', 'name', 'price', 'description', 'imageUrl', 'category_id'],",
+              "  properties: {",
+              "    id: { type: 'integer', minimum: 1 },",
+              "    name: { type: 'string' },",
+              "    price: { type: 'integer', minimum: 0 },",
+              "    description: { type: 'string' },",
+              "    imageUrl: { type: 'string' },",
+              "    category_id: { type: 'integer', minimum: 1 }",
+              "  }",
+              "};",
+              "pm.test(`[${tcId}] Contract: every product matches schema`, () => {",
+              "  body.forEach(product => pm.expect(product).to.have.jsonSchema(productSchema));",
+              "});",
+              "",
+              "pm.test(`[${tcId}] Functional: search result matches the query`, () => {",
+              "  if (fragment && body.length > 0) {",
+              "    body.forEach(product => pm.expect(product.name.toLowerCase()).to.include(fragment));",
+              "  } else if (fragment) {",
+              "    pm.expect(body).to.be.empty;",
+              "  }",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}{{apiPath}}{{querySuffix}}",
+        "description": "Uses querySuffix and expected values from iteration data. The pre-request script injects X-Student-Id."
+      },
+      "response": []
+    }
+  ]
+}
