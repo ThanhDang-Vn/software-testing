@@ -66,11 +66,11 @@ function validateFr11(item: SuiteCase): void {
 function validateFr14(item: SuiteCase): void {
   const actionsRequiringStatus = new Set([
     'api-list', 'api-create', 'api-empty', 'api-whitespace', 'api-no-token',
-    'api-delete-missing', 'api-delete-success', 'api-customer-token'
+    'api-delete-missing', 'api-delete-success', 'api-customer-token', 'api-update'
   ]);
   const actionsRequiringName = new Set([
     'api-create', 'api-whitespace', 'api-no-token', 'api-delete-success',
-    'api-customer-token', 'ui-delete-observation', 'ui-create-view', 'ui-delete-success'
+    'api-customer-token', 'api-update', 'ui-delete-observation', 'ui-create-view', 'ui-delete-success'
   ]);
   if (actionsRequiringStatus.has(item.action)) requireStatus('FR-14', item);
   if (actionsRequiringName.has(item.action)) requireName('FR-14', item);

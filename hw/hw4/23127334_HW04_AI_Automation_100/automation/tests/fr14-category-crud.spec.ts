@@ -110,6 +110,33 @@ test.describe('FR-14 Category Management CRUD', () => {
         );
         return;
       }
+      if (item.action === 'api-update') {
+        const token = await adminToken(request);
+        const headers = { Authorization: `Bearer ${token}` };
+        const originalName = `${item.name}-${runId}-${item.id}`;
+        const updatedName = `${item.name}Renamed-${runId}-${item.id}`;
+        const creation = await request.post(`${api}/api/categories`, {
+          headers,
+          data: { name: originalName }
+        });
+        expect(creation.ok()).toBe(true);
+        const { id } = (await creation.json()) as { id: number };
+        try {
+          const update = await request.put(`${api}/api/categories/${id}`, {
+            headers,
+            data: { name: updatedName }
+          });
+          expect(update.status()).toBe(item.expectedStatus);
+          const categories = (await (await request.get(`${api}/api/categories`)).json()) as Array<{ id: number; name: string }>;
+          expect(categories).toEqual(
+            expect.arrayContaining([expect.objectContaining({ id, name: updatedName })])
+          );
+          expect(categories.find(category => category.id === id)?.name).not.toBe(originalName);
+        } finally {
+          await request.delete(`${api}/api/categories/${id}`, { headers });
+        }
+        return;
+      }
       if (item.action.startsWith('api-')) {
         const headers: Record<string, string> = {};
         if (item.action !== 'api-no-token') headers.Authorization = `Bearer ${await adminToken(request)}`;

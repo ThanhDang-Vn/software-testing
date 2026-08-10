@@ -3,3 +3,7 @@
 .claude
 note.md
 
+# Never commit installed dependencies or transient test output
+node_modules/
+hw/hw4/**/test-results/
+

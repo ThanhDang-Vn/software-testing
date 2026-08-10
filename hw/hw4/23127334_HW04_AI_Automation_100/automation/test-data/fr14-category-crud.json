@@ -14,5 +14,6 @@
   {"id":"FR14-TC-013","action":"api-delete-success","description":"Admin deletes a category and it no longer appears in the list","name":"DeleteApi","expectedStatus":200},
   {"id":"FR14-TC-014","action":"ui-create-view","description":"Admin creates a category through the UI and sees it in the table","name":"CreateViewUi"},
   {"id":"FR14-TC-015","action":"ui-delete-success","description":"Admin deletes the intended category through the UI","name":"DeleteUi"},
-  {"id":"FR14-TC-016","action":"api-customer-token","description":"A customer token cannot create a category","name":"CustomerForbidden","expectedStatus":403}
+  {"id":"FR14-TC-016","action":"api-customer-token","description":"A customer token cannot create a category","name":"CustomerForbidden","expectedStatus":403},
+  {"id":"FR14-TC-017","action":"api-update","description":"Admin updates a category name and the change persists","name":"UpdateApi","expectedStatus":200}
 ]
