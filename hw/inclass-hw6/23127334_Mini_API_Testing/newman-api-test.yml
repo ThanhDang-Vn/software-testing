@@ -14,6 +14,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Checkout pinned eshop provider
+        shell: bash
+        run: |
+          git clone https://github.com/ttbhanh/eshop-sut.git hw/eshop-sut
+          git -C hw/eshop-sut checkout 85af3ba875c88283615e22cb108f13e2fccaf0e9
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
