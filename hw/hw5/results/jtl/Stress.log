@@ -1,0 +1,783 @@
+2026-08-12 19:53:39,808 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2026-08-12 19:53:39,823 INFO o.a.j.JMeter: Loading user properties from: C:\Users\dn156\tools\apache-jmeter-5.6.3\bin\user.properties
+2026-08-12 19:53:39,824 INFO o.a.j.JMeter: Loading system properties from: C:\Users\dn156\tools\apache-jmeter-5.6.3\bin\system.properties
+2026-08-12 19:53:39,829 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2026-08-12 19:53:39,829 INFO o.a.j.JMeter: Version 5.6.3
+2026-08-12 19:53:39,829 INFO o.a.j.JMeter: java.version=21.0.8
+2026-08-12 19:53:39,829 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2026-08-12 19:53:39,829 INFO o.a.j.JMeter: os.name=Windows 11
+2026-08-12 19:53:39,829 INFO o.a.j.JMeter: os.arch=amd64
+2026-08-12 19:53:39,831 INFO o.a.j.JMeter: os.version=10.0
+2026-08-12 19:53:39,831 INFO o.a.j.JMeter: file.encoding=UTF-8
+2026-08-12 19:53:39,831 INFO o.a.j.JMeter: java.awt.headless=true
+2026-08-12 19:53:39,831 INFO o.a.j.JMeter: Max memory     =1073741824
+2026-08-12 19:53:39,831 INFO o.a.j.JMeter: Available Processors =20
+2026-08-12 19:53:39,840 INFO o.a.j.JMeter: Default Locale=English (EN)
+2026-08-12 19:53:39,840 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2026-08-12 19:53:39,840 INFO o.a.j.JMeter: JMeterHome=C:\Users\dn156\tools\apache-jmeter-5.6.3
+2026-08-12 19:53:39,840 INFO o.a.j.JMeter: user.dir  =C:\Users\dn156\source\software-testing\software-testing\hw\hw5
+2026-08-12 19:53:39,841 INFO o.a.j.JMeter: PWD       =C:\Users\dn156\source\software-testing\software-testing\hw\hw5
+2026-08-12 19:53:39,842 INFO o.a.j.JMeter: IP: 172.20.10.4 Name: Tony FullName: Tony
+2026-08-12 19:53:39,854 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'C:\Users\dn156\source\software-testing\software-testing\hw\hw5\results\html\Stress'
+2026-08-12 19:53:39,856 INFO o.a.j.s.FileServer: Default base='C:\Users\dn156\source\software-testing\software-testing\hw\hw5'
+2026-08-12 19:53:39,858 INFO o.a.j.s.FileServer: Set new base='C:\Users\dn156\source\software-testing\software-testing\hw\hw5\testplans'
+2026-08-12 19:53:40,025 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2026-08-12 19:53:40,059 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2026-08-12 19:53:40,063 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2026-08-12 19:53:40,066 INFO o.a.j.s.SaveService: Loading file: testplans\23127334_Stress_20260811.jmx
+2026-08-12 19:53:40,128 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-12 19:53:40,128 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-12 19:53:40,128 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-12 19:53:40,128 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-12 19:53:40,128 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2026-08-12 19:53:40,129 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2026-08-12 19:53:40,225 INFO o.a.j.JMeter: Creating summariser <summary>
+2026-08-12 19:53:40,230 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
+2026-08-12 19:53:40,230 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: results/jtl/Stress.jtl
+2026-08-12 19:53:40,230 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: C:\Users\dn156\tools\apache-jmeter-5.6.3\bin\reportgenerator.properties
+2026-08-12 19:53:40,231 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
+2026-08-12 19:53:40,234 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
+2026-08-12 19:53:40,236 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
+2026-08-12 19:53:40,236 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
+2026-08-12 19:53:40,238 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
+2026-08-12 19:53:40,238 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
+2026-08-12 19:53:40,238 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
+2026-08-12 19:53:40,238 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
+2026-08-12 19:53:40,238 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
+2026-08-12 19:53:40,238 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
+2026-08-12 19:53:40,242 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 19:53:40,242 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 19:53:40,242 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 19:53:40,242 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 19:53:40,242 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 19:53:40,242 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 19:53:40,245 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 19:53:40,245 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 19:53:40,246 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 19:53:40,246 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 19:53:40,247 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
+2026-08-12 19:53:40,248 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
+2026-08-12 19:53:40,248 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
+2026-08-12 19:53:40,248 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
+2026-08-12 19:53:40,248 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
+2026-08-12 19:53:40,249 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
+2026-08-12 19:53:40,269 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2026-08-12 19:53:40,270 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-08-12 19:53:40,270 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-08-12 19:53:40,277 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2026-08-12 19:53:40,277 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2026-08-12 19:53:40,552 INFO o.a.j.JMeter: Running test (1786539220552)
+2026-08-12 19:53:40,568 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Stress step 1 - add 50 VU
+2026-08-12 19:53:40,568 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group Stress step 1 - add 50 VU.
+2026-08-12 19:53:40,569 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-08-12 19:53:40,569 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=50 ramp-up=10 delayedStart=false
+2026-08-12 19:53:40,586 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-1
+2026-08-12 19:53:40,588 INFO o.a.j.s.FileServer: Stored: ../data/products.csv
+2026-08-12 19:53:40,603 INFO o.a.j.s.FileServer: Stored: ../data/users.csv
+2026-08-12 19:53:40,609 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2026-08-12 19:53:40,609 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : Stress step 2 - add 50 VU
+2026-08-12 19:53:40,609 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group Stress step 2 - add 50 VU.
+2026-08-12 19:53:40,609 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-08-12 19:53:40,609 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=50 ramp-up=10 delayedStart=false
+2026-08-12 19:53:40,634 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2026-08-12 19:53:40,634 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : Stress step 3 - add 50 VU
+2026-08-12 19:53:40,634 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group Stress step 3 - add 50 VU.
+2026-08-12 19:53:40,634 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-08-12 19:53:40,635 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=50 ramp-up=10 delayedStart=false
+2026-08-12 19:53:40,663 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2026-08-12 19:53:40,664 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 4 : Stress step 4 - add 50 VU
+2026-08-12 19:53:40,664 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group Stress step 4 - add 50 VU.
+2026-08-12 19:53:40,664 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-08-12 19:53:40,664 INFO o.a.j.t.ThreadGroup: Starting thread group... number=4 threads=50 ramp-up=10 delayedStart=false
+2026-08-12 19:53:40,686 INFO o.a.j.t.ThreadGroup: Started thread group number 4
+2026-08-12 19:53:40,686 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 5 : Stress step 5 - add 50 VU
+2026-08-12 19:53:40,686 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group Stress step 5 - add 50 VU.
+2026-08-12 19:53:40,686 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-08-12 19:53:40,686 INFO o.a.j.t.ThreadGroup: Starting thread group... number=5 threads=50 ramp-up=10 delayedStart=false
+2026-08-12 19:53:40,701 INFO o.a.j.t.ThreadGroup: Started thread group number 5
+2026-08-12 19:53:40,701 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 6 : Stress step 6 - add 50 VU
+2026-08-12 19:53:40,701 INFO o.a.j.e.StandardJMeterEngine: Starting 50 threads for group Stress step 6 - add 50 VU.
+2026-08-12 19:53:40,701 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-08-12 19:53:40,701 INFO o.a.j.t.ThreadGroup: Starting thread group... number=6 threads=50 ramp-up=10 delayedStart=false
+2026-08-12 19:53:40,726 INFO o.a.j.t.ThreadGroup: Started thread group number 6
+2026-08-12 19:53:40,728 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2026-08-12 19:53:40,783 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-2
+2026-08-12 19:53:40,987 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-3
+2026-08-12 19:53:41,180 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-4
+2026-08-12 19:53:41,380 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-5
+2026-08-12 19:53:41,579 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-6
+2026-08-12 19:53:41,757 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = Tony
+2026-08-12 19:53:41,764 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2026-08-12 19:53:41,764 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2026-08-12 19:53:41,766 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2026-08-12 19:53:41,766 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2026-08-12 19:53:41,766 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2026-08-12 19:53:41,777 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-7
+2026-08-12 19:53:41,976 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-8
+2026-08-12 19:53:42,176 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-9
+2026-08-12 19:53:42,375 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-10
+2026-08-12 19:53:42,572 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-11
+2026-08-12 19:53:42,772 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-12
+2026-08-12 19:53:42,972 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-13
+2026-08-12 19:53:43,172 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-14
+2026-08-12 19:53:43,373 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-15
+2026-08-12 19:53:43,572 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-16
+2026-08-12 19:53:43,770 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-17
+2026-08-12 19:53:43,972 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-18
+2026-08-12 19:53:44,170 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-19
+2026-08-12 19:53:44,372 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-20
+2026-08-12 19:53:44,571 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-21
+2026-08-12 19:53:44,770 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-22
+2026-08-12 19:53:44,972 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-23
+2026-08-12 19:53:45,171 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-24
+2026-08-12 19:53:45,371 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-25
+2026-08-12 19:53:45,570 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-26
+2026-08-12 19:53:45,770 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-27
+2026-08-12 19:53:45,972 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-28
+2026-08-12 19:53:46,171 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-29
+2026-08-12 19:53:46,370 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-30
+2026-08-12 19:53:46,570 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-31
+2026-08-12 19:53:46,771 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-32
+2026-08-12 19:53:46,970 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-33
+2026-08-12 19:53:47,171 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-34
+2026-08-12 19:53:47,369 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-35
+2026-08-12 19:53:47,571 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-36
+2026-08-12 19:53:47,592 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2026-08-12 19:53:47,592 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2026-08-12 19:53:47,771 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-37
+2026-08-12 19:53:47,970 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-38
+2026-08-12 19:53:48,171 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-39
+2026-08-12 19:53:48,371 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-40
+2026-08-12 19:53:48,572 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-41
+2026-08-12 19:53:48,771 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-42
+2026-08-12 19:53:48,971 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-43
+2026-08-12 19:53:49,171 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-44
+2026-08-12 19:53:49,369 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-45
+2026-08-12 19:53:49,571 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-46
+2026-08-12 19:53:49,770 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-47
+2026-08-12 19:53:49,969 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-48
+2026-08-12 19:53:50,171 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-49
+2026-08-12 19:53:50,370 INFO o.a.j.t.JMeterThread: Thread started: Stress step 1 - add 50 VU 1-50
+2026-08-12 19:54:00,008 INFO o.a.j.r.Summariser: summary +    531 in 00:00:19 =   27.3/s Avg:     4 Min:     1 Max:    43 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2026-08-12 19:54:30,052 INFO o.a.j.r.Summariser: summary +   1065 in 00:00:30 =   35.4/s Avg:    10 Min:     1 Max:   324 Err:     0 (0.00%) Active: 50 Started: 50 Finished: 0
+2026-08-12 19:54:30,052 INFO o.a.j.r.Summariser: summary =   1596 in 00:00:50 =   32.2/s Avg:     8 Min:     1 Max:   324 Err:     0 (0.00%)
+2026-08-12 19:54:40,610 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-1
+2026-08-12 19:54:40,810 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-2
+2026-08-12 19:54:41,010 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-3
+2026-08-12 19:54:41,210 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-4
+2026-08-12 19:54:41,410 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-5
+2026-08-12 19:54:41,610 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-6
+2026-08-12 19:54:41,811 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-7
+2026-08-12 19:54:42,010 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-8
+2026-08-12 19:54:42,210 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-9
+2026-08-12 19:54:42,410 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-10
+2026-08-12 19:54:42,609 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-11
+2026-08-12 19:54:42,810 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-12
+2026-08-12 19:54:43,011 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-13
+2026-08-12 19:54:43,213 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-14
+2026-08-12 19:54:43,412 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-15
+2026-08-12 19:54:43,611 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-16
+2026-08-12 19:54:43,812 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-17
+2026-08-12 19:54:44,011 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-18
+2026-08-12 19:54:44,210 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-19
+2026-08-12 19:54:44,411 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-20
+2026-08-12 19:54:44,611 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-21
+2026-08-12 19:54:44,812 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-22
+2026-08-12 19:54:45,012 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-23
+2026-08-12 19:54:45,212 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-24
+2026-08-12 19:54:45,411 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-25
+2026-08-12 19:54:45,611 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-26
+2026-08-12 19:54:45,811 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-27
+2026-08-12 19:54:46,011 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-28
+2026-08-12 19:54:46,211 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-29
+2026-08-12 19:54:46,411 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-30
+2026-08-12 19:54:46,611 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-31
+2026-08-12 19:54:46,810 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-32
+2026-08-12 19:54:47,010 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-33
+2026-08-12 19:54:47,211 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-34
+2026-08-12 19:54:47,412 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-35
+2026-08-12 19:54:47,612 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-36
+2026-08-12 19:54:47,812 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-37
+2026-08-12 19:54:48,012 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-38
+2026-08-12 19:54:48,211 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-39
+2026-08-12 19:54:48,411 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-40
+2026-08-12 19:54:48,612 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-41
+2026-08-12 19:54:48,811 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-42
+2026-08-12 19:54:49,010 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-43
+2026-08-12 19:54:49,212 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-44
+2026-08-12 19:54:49,410 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-45
+2026-08-12 19:54:49,610 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-46
+2026-08-12 19:54:49,810 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-47
+2026-08-12 19:54:50,009 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-48
+2026-08-12 19:54:50,210 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-49
+2026-08-12 19:54:50,409 INFO o.a.j.t.JMeterThread: Thread started: Stress step 2 - add 50 VU 2-50
+2026-08-12 19:55:00,000 INFO o.a.j.r.Summariser: summary +   1610 in 00:00:30 =   53.8/s Avg:     4 Min:     1 Max:    33 Err:     0 (0.00%) Active: 100 Started: 100 Finished: 0
+2026-08-12 19:55:00,001 INFO o.a.j.r.Summariser: summary =   3206 in 00:01:19 =   40.4/s Avg:     6 Min:     1 Max:   324 Err:     0 (0.00%)
+2026-08-12 19:55:30,026 INFO o.a.j.r.Summariser: summary +   2134 in 00:00:30 =   71.1/s Avg:     5 Min:     0 Max:    71 Err:     0 (0.00%) Active: 100 Started: 100 Finished: 0
+2026-08-12 19:55:30,026 INFO o.a.j.r.Summariser: summary =   5340 in 00:01:49 =   48.8/s Avg:     6 Min:     0 Max:   324 Err:     0 (0.00%)
+2026-08-12 19:55:40,636 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-1
+2026-08-12 19:55:40,837 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-2
+2026-08-12 19:55:41,037 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-3
+2026-08-12 19:55:41,237 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-4
+2026-08-12 19:55:41,437 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-5
+2026-08-12 19:55:41,637 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-6
+2026-08-12 19:55:41,837 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-7
+2026-08-12 19:55:42,035 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-8
+2026-08-12 19:55:42,236 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-9
+2026-08-12 19:55:42,435 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-10
+2026-08-12 19:55:42,636 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-11
+2026-08-12 19:55:42,837 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-12
+2026-08-12 19:55:43,035 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-13
+2026-08-12 19:55:43,235 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-14
+2026-08-12 19:55:43,435 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-15
+2026-08-12 19:55:43,635 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-16
+2026-08-12 19:55:43,838 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-17
+2026-08-12 19:55:44,036 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-18
+2026-08-12 19:55:44,237 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-19
+2026-08-12 19:55:44,438 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-20
+2026-08-12 19:55:44,637 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-21
+2026-08-12 19:55:44,835 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-22
+2026-08-12 19:55:45,037 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-23
+2026-08-12 19:55:45,236 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-24
+2026-08-12 19:55:45,436 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-25
+2026-08-12 19:55:45,636 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-26
+2026-08-12 19:55:45,837 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-27
+2026-08-12 19:55:46,037 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-28
+2026-08-12 19:55:46,235 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-29
+2026-08-12 19:55:46,437 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-30
+2026-08-12 19:55:46,637 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-31
+2026-08-12 19:55:46,837 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-32
+2026-08-12 19:55:47,037 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-33
+2026-08-12 19:55:47,237 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-34
+2026-08-12 19:55:47,438 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-35
+2026-08-12 19:55:47,638 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-36
+2026-08-12 19:55:47,838 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-37
+2026-08-12 19:55:48,037 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-38
+2026-08-12 19:55:48,238 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-39
+2026-08-12 19:55:48,436 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-40
+2026-08-12 19:55:48,636 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-41
+2026-08-12 19:55:48,837 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-42
+2026-08-12 19:55:49,037 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-43
+2026-08-12 19:55:49,237 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-44
+2026-08-12 19:55:49,437 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-45
+2026-08-12 19:55:49,637 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-46
+2026-08-12 19:55:49,836 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-47
+2026-08-12 19:55:50,037 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-48
+2026-08-12 19:55:50,237 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-49
+2026-08-12 19:55:50,435 INFO o.a.j.t.JMeterThread: Thread started: Stress step 3 - add 50 VU 3-50
+2026-08-12 19:56:00,006 INFO o.a.j.r.Summariser: summary +   2669 in 00:00:30 =   89.0/s Avg:     6 Min:     0 Max:    58 Err:     0 (0.00%) Active: 150 Started: 150 Finished: 0
+2026-08-12 19:56:00,006 INFO o.a.j.r.Summariser: summary =   8009 in 00:02:19 =   57.4/s Avg:     6 Min:     0 Max:   324 Err:     0 (0.00%)
+2026-08-12 19:56:30,003 INFO o.a.j.r.Summariser: summary +   3204 in 00:00:30 =  106.8/s Avg:     8 Min:     0 Max:    75 Err:     0 (0.00%) Active: 150 Started: 150 Finished: 0
+2026-08-12 19:56:30,003 INFO o.a.j.r.Summariser: summary =  11213 in 00:02:49 =   66.2/s Avg:     7 Min:     0 Max:   324 Err:     0 (0.00%)
+2026-08-12 19:56:40,681 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-1
+2026-08-12 19:56:40,868 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-2
+2026-08-12 19:56:41,070 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-3
+2026-08-12 19:56:41,287 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-4
+2026-08-12 19:56:41,488 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-5
+2026-08-12 19:56:41,690 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-6
+2026-08-12 19:56:41,889 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-7
+2026-08-12 19:56:42,094 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-8
+2026-08-12 19:56:42,295 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-9
+2026-08-12 19:56:42,479 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-10
+2026-08-12 19:56:42,681 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-11
+2026-08-12 19:56:42,882 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-12
+2026-08-12 19:56:43,084 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-13
+2026-08-12 19:56:43,285 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-14
+2026-08-12 19:56:43,484 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-15
+2026-08-12 19:56:43,687 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-16
+2026-08-12 19:56:43,876 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-17
+2026-08-12 19:56:44,078 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-18
+2026-08-12 19:56:44,280 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-19
+2026-08-12 19:56:44,481 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-20
+2026-08-12 19:56:44,684 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-21
+2026-08-12 19:56:44,887 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-22
+2026-08-12 19:56:45,088 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-23
+2026-08-12 19:56:45,289 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-24
+2026-08-12 19:56:45,486 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-25
+2026-08-12 19:56:45,686 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-26
+2026-08-12 19:56:45,872 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-27
+2026-08-12 19:56:46,075 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-28
+2026-08-12 19:56:46,277 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-29
+2026-08-12 19:56:46,478 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-30
+2026-08-12 19:56:46,678 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-31
+2026-08-12 19:56:46,878 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-32
+2026-08-12 19:56:47,081 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-33
+2026-08-12 19:56:47,284 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-34
+2026-08-12 19:56:47,486 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-35
+2026-08-12 19:56:47,690 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-36
+2026-08-12 19:56:47,888 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-37
+2026-08-12 19:56:48,089 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-38
+2026-08-12 19:56:48,291 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-39
+2026-08-12 19:56:48,478 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-40
+2026-08-12 19:56:48,677 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-41
+2026-08-12 19:56:48,890 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-42
+2026-08-12 19:56:49,091 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-43
+2026-08-12 19:56:49,292 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-44
+2026-08-12 19:56:49,491 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-45
+2026-08-12 19:56:49,692 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-46
+2026-08-12 19:56:49,877 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-47
+2026-08-12 19:56:50,081 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-48
+2026-08-12 19:56:50,282 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-49
+2026-08-12 19:56:50,483 INFO o.a.j.t.JMeterThread: Thread started: Stress step 4 - add 50 VU 4-50
+2026-08-12 19:57:00,003 INFO o.a.j.r.Summariser: summary +   3670 in 00:00:30 =  122.3/s Avg:    35 Min:     1 Max:   418 Err:     0 (0.00%) Active: 200 Started: 200 Finished: 0
+2026-08-12 19:57:00,003 INFO o.a.j.r.Summariser: summary =  14883 in 00:03:19 =   74.6/s Avg:    14 Min:     0 Max:   418 Err:     0 (0.00%)
+2026-08-12 19:57:30,002 INFO o.a.j.r.Summariser: summary +   4228 in 00:00:30 =  140.9/s Avg:    16 Min:     1 Max:   101 Err:     0 (0.00%) Active: 200 Started: 200 Finished: 0
+2026-08-12 19:57:30,002 INFO o.a.j.r.Summariser: summary =  19111 in 00:03:49 =   83.3/s Avg:    14 Min:     0 Max:   418 Err:     0 (0.00%)
+2026-08-12 19:57:40,690 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-1
+2026-08-12 19:57:40,893 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-2
+2026-08-12 19:57:41,095 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-3
+2026-08-12 19:57:41,298 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-4
+2026-08-12 19:57:41,500 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-5
+2026-08-12 19:57:41,688 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-6
+2026-08-12 19:57:41,890 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-7
+2026-08-12 19:57:42,094 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-8
+2026-08-12 19:57:42,300 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-9
+2026-08-12 19:57:42,487 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-10
+2026-08-12 19:57:42,687 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-11
+2026-08-12 19:57:42,901 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-12
+2026-08-12 19:57:43,089 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-13
+2026-08-12 19:57:43,305 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-14
+2026-08-12 19:57:43,508 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-15
+2026-08-12 19:57:43,709 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-16
+2026-08-12 19:57:43,911 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-17
+2026-08-12 19:57:44,116 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-18
+2026-08-12 19:57:44,301 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-19
+2026-08-12 19:57:44,503 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-20
+2026-08-12 19:57:44,707 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-21
+2026-08-12 19:57:44,907 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-22
+2026-08-12 19:57:45,120 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-23
+2026-08-12 19:57:45,311 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-24
+2026-08-12 19:57:45,513 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-25
+2026-08-12 19:57:45,703 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-26
+2026-08-12 19:57:45,902 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-27
+2026-08-12 19:57:46,107 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-28
+2026-08-12 19:57:46,307 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-29
+2026-08-12 19:57:46,507 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-30
+2026-08-12 19:57:46,707 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-31
+2026-08-12 19:57:46,910 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-32
+2026-08-12 19:57:47,111 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-33
+2026-08-12 19:57:47,298 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-34
+2026-08-12 19:57:47,500 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-35
+2026-08-12 19:57:47,700 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-36
+2026-08-12 19:57:47,898 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-37
+2026-08-12 19:57:48,098 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-38
+2026-08-12 19:57:48,297 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-39
+2026-08-12 19:57:48,495 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-40
+2026-08-12 19:57:48,695 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-41
+2026-08-12 19:57:48,895 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-42
+2026-08-12 19:57:49,097 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-43
+2026-08-12 19:57:49,296 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-44
+2026-08-12 19:57:49,494 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-45
+2026-08-12 19:57:49,694 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-46
+2026-08-12 19:57:49,893 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-47
+2026-08-12 19:57:50,093 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-48
+2026-08-12 19:57:50,292 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-49
+2026-08-12 19:57:50,492 INFO o.a.j.t.JMeterThread: Thread started: Stress step 5 - add 50 VU 5-50
+2026-08-12 19:58:00,005 INFO o.a.j.r.Summariser: summary +   4783 in 00:00:30 =  159.4/s Avg:     9 Min:     0 Max:   200 Err:     0 (0.00%) Active: 250 Started: 250 Finished: 0
+2026-08-12 19:58:00,007 INFO o.a.j.r.Summariser: summary =  23894 in 00:04:19 =   92.1/s Avg:    13 Min:     0 Max:   418 Err:     0 (0.00%)
+2026-08-12 19:58:30,001 INFO o.a.j.r.Summariser: summary +   5382 in 00:00:30 =  179.4/s Avg:     6 Min:     0 Max:   131 Err:     0 (0.00%) Active: 250 Started: 250 Finished: 0
+2026-08-12 19:58:30,001 INFO o.a.j.r.Summariser: summary =  29276 in 00:04:49 =  101.1/s Avg:    12 Min:     0 Max:   418 Err:     0 (0.00%)
+2026-08-12 19:58:40,703 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-1
+2026-08-12 19:58:40,904 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-2
+2026-08-12 19:58:41,103 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-3
+2026-08-12 19:58:41,302 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-4
+2026-08-12 19:58:41,503 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-5
+2026-08-12 19:58:41,703 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-6
+2026-08-12 19:58:41,903 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-7
+2026-08-12 19:58:42,103 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-8
+2026-08-12 19:58:42,303 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-9
+2026-08-12 19:58:42,503 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-10
+2026-08-12 19:58:42,704 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-11
+2026-08-12 19:58:42,904 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-12
+2026-08-12 19:58:43,103 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-13
+2026-08-12 19:58:43,304 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-14
+2026-08-12 19:58:43,502 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-15
+2026-08-12 19:58:43,702 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-16
+2026-08-12 19:58:43,902 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-17
+2026-08-12 19:58:44,103 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-18
+2026-08-12 19:58:44,303 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-19
+2026-08-12 19:58:44,502 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-20
+2026-08-12 19:58:44,702 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-21
+2026-08-12 19:58:44,903 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-22
+2026-08-12 19:58:45,104 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-23
+2026-08-12 19:58:45,304 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-24
+2026-08-12 19:58:45,504 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-25
+2026-08-12 19:58:45,702 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-26
+2026-08-12 19:58:45,903 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-27
+2026-08-12 19:58:46,103 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-28
+2026-08-12 19:58:46,304 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-29
+2026-08-12 19:58:46,503 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-30
+2026-08-12 19:58:46,702 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-31
+2026-08-12 19:58:46,904 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-32
+2026-08-12 19:58:47,104 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-33
+2026-08-12 19:58:47,303 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-34
+2026-08-12 19:58:47,504 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-35
+2026-08-12 19:58:47,703 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-36
+2026-08-12 19:58:47,906 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-37
+2026-08-12 19:58:48,118 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-38
+2026-08-12 19:58:48,319 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-39
+2026-08-12 19:58:48,504 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-40
+2026-08-12 19:58:48,703 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-41
+2026-08-12 19:58:48,904 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-42
+2026-08-12 19:58:49,122 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-43
+2026-08-12 19:58:49,307 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-44
+2026-08-12 19:58:49,506 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-45
+2026-08-12 19:58:49,707 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-46
+2026-08-12 19:58:49,907 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-47
+2026-08-12 19:58:50,107 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-48
+2026-08-12 19:58:50,308 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-49
+2026-08-12 19:58:50,509 INFO o.a.j.t.JMeterThread: Thread started: Stress step 6 - add 50 VU 6-50
+2026-08-12 19:59:00,001 INFO o.a.j.r.Summariser: summary +   5894 in 00:00:30 =  196.5/s Avg:     7 Min:     0 Max:   106 Err:     0 (0.00%) Active: 300 Started: 300 Finished: 0
+2026-08-12 19:59:00,001 INFO o.a.j.r.Summariser: summary =  35170 in 00:05:19 =  110.1/s Avg:    11 Min:     0 Max:   418 Err:     0 (0.00%)
+2026-08-12 19:59:30,001 INFO o.a.j.r.Summariser: summary +   6405 in 00:00:30 =  213.5/s Avg:     6 Min:     0 Max:    56 Err:     0 (0.00%) Active: 300 Started: 300 Finished: 0
+2026-08-12 19:59:30,001 INFO o.a.j.r.Summariser: summary =  41575 in 00:05:49 =  119.0/s Avg:    10 Min:     0 Max:   418 Err:     0 (0.00%)
+2026-08-12 19:59:45,790 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-13
+2026-08-12 19:59:46,642 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-45
+2026-08-12 19:59:46,818 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-27
+2026-08-12 19:59:47,239 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-25
+2026-08-12 19:59:47,405 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-38
+2026-08-12 19:59:47,472 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-6
+2026-08-12 19:59:47,600 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-39
+2026-08-12 19:59:47,602 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-21
+2026-08-12 19:59:47,625 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-46
+2026-08-12 19:59:47,648 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-4
+2026-08-12 19:59:47,833 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-20
+2026-08-12 19:59:47,833 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-5
+2026-08-12 19:59:47,845 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-43
+2026-08-12 19:59:47,973 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-9
+2026-08-12 19:59:48,025 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-24
+2026-08-12 19:59:48,039 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-24
+2026-08-12 19:59:48,052 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-11
+2026-08-12 19:59:48,135 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-6
+2026-08-12 19:59:48,143 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-41
+2026-08-12 19:59:48,198 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-25
+2026-08-12 19:59:48,199 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-27
+2026-08-12 19:59:48,202 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-42
+2026-08-12 19:59:48,271 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-4
+2026-08-12 19:59:48,306 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-23
+2026-08-12 19:59:48,405 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-50
+2026-08-12 19:59:48,436 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-2
+2026-08-12 19:59:48,438 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-16
+2026-08-12 19:59:48,449 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-47
+2026-08-12 19:59:48,467 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-38
+2026-08-12 19:59:48,506 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-1
+2026-08-12 19:59:48,530 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-4
+2026-08-12 19:59:48,532 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-8
+2026-08-12 19:59:48,560 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-4
+2026-08-12 19:59:48,577 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-39
+2026-08-12 19:59:48,579 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-17
+2026-08-12 19:59:48,588 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-7
+2026-08-12 19:59:48,607 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-15
+2026-08-12 19:59:48,621 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-47
+2026-08-12 19:59:48,669 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-20
+2026-08-12 19:59:48,698 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-7
+2026-08-12 19:59:48,711 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-37
+2026-08-12 19:59:48,719 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-7
+2026-08-12 19:59:48,724 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-37
+2026-08-12 19:59:48,736 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-3
+2026-08-12 19:59:48,741 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-31
+2026-08-12 19:59:48,786 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-5
+2026-08-12 19:59:48,805 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-32
+2026-08-12 19:59:48,828 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-13
+2026-08-12 19:59:48,856 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-13
+2026-08-12 19:59:48,882 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-30
+2026-08-12 19:59:48,883 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-11
+2026-08-12 19:59:48,891 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-45
+2026-08-12 19:59:48,932 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-40
+2026-08-12 19:59:48,949 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-12
+2026-08-12 19:59:48,986 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-16
+2026-08-12 19:59:48,990 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-43
+2026-08-12 19:59:49,006 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-23
+2026-08-12 19:59:49,070 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-37
+2026-08-12 19:59:49,081 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-25
+2026-08-12 19:59:49,085 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-36
+2026-08-12 19:59:49,086 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-2
+2026-08-12 19:59:49,092 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-18
+2026-08-12 19:59:49,104 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-40
+2026-08-12 19:59:49,115 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-26
+2026-08-12 19:59:49,124 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-25
+2026-08-12 19:59:49,152 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-47
+2026-08-12 19:59:49,153 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-44
+2026-08-12 19:59:49,205 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-34
+2026-08-12 19:59:49,209 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-35
+2026-08-12 19:59:49,224 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-20
+2026-08-12 19:59:49,245 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-19
+2026-08-12 19:59:49,246 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-40
+2026-08-12 19:59:49,256 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-1
+2026-08-12 19:59:49,261 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-49
+2026-08-12 19:59:49,275 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-15
+2026-08-12 19:59:49,291 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-38
+2026-08-12 19:59:49,301 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-31
+2026-08-12 19:59:49,318 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-44
+2026-08-12 19:59:49,318 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-48
+2026-08-12 19:59:49,318 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-49
+2026-08-12 19:59:49,318 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-18
+2026-08-12 19:59:49,337 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-27
+2026-08-12 19:59:49,360 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-29
+2026-08-12 19:59:49,378 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-9
+2026-08-12 19:59:49,392 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-42
+2026-08-12 19:59:49,395 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-33
+2026-08-12 19:59:49,399 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-3
+2026-08-12 19:59:49,402 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-6
+2026-08-12 19:59:49,422 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-18
+2026-08-12 19:59:49,424 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-12
+2026-08-12 19:59:49,462 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-24
+2026-08-12 19:59:49,487 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-46
+2026-08-12 19:59:49,491 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-41
+2026-08-12 19:59:49,493 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-22
+2026-08-12 19:59:49,516 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-50
+2026-08-12 19:59:49,519 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-30
+2026-08-12 19:59:49,520 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-42
+2026-08-12 19:59:49,522 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-16
+2026-08-12 19:59:49,523 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-50
+2026-08-12 19:59:49,528 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-35
+2026-08-12 19:59:49,540 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-29
+2026-08-12 19:59:49,540 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-26
+2026-08-12 19:59:49,544 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-28
+2026-08-12 19:59:49,545 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-2
+2026-08-12 19:59:49,568 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-17
+2026-08-12 19:59:49,586 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-24
+2026-08-12 19:59:49,593 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-7
+2026-08-12 19:59:49,594 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-35
+2026-08-12 19:59:49,596 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-47
+2026-08-12 19:59:49,597 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-34
+2026-08-12 19:59:49,607 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-19
+2026-08-12 19:59:49,618 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-28
+2026-08-12 19:59:49,628 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-17
+2026-08-12 19:59:49,635 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-44
+2026-08-12 19:59:49,650 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-39
+2026-08-12 19:59:49,654 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-40
+2026-08-12 19:59:49,676 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-38
+2026-08-12 19:59:49,676 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-48
+2026-08-12 19:59:49,677 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-28
+2026-08-12 19:59:49,678 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-18
+2026-08-12 19:59:49,692 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-34
+2026-08-12 19:59:49,715 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-43
+2026-08-12 19:59:49,717 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-37
+2026-08-12 19:59:49,724 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-46
+2026-08-12 19:59:49,728 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-33
+2026-08-12 19:59:49,737 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-36
+2026-08-12 19:59:49,738 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-50
+2026-08-12 19:59:49,748 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-31
+2026-08-12 19:59:49,765 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-48
+2026-08-12 19:59:49,771 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-36
+2026-08-12 19:59:49,772 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-21
+2026-08-12 19:59:49,783 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-46
+2026-08-12 19:59:49,786 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-33
+2026-08-12 19:59:49,795 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-20
+2026-08-12 19:59:49,806 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-32
+2026-08-12 19:59:49,807 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-19
+2026-08-12 19:59:49,822 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-6
+2026-08-12 19:59:49,832 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-36
+2026-08-12 19:59:49,840 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-3
+2026-08-12 19:59:49,855 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-27
+2026-08-12 19:59:49,855 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-5
+2026-08-12 19:59:49,866 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-14
+2026-08-12 19:59:49,877 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-48
+2026-08-12 19:59:49,884 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-15
+2026-08-12 19:59:49,895 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-48
+2026-08-12 19:59:49,916 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-37
+2026-08-12 19:59:49,918 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-12
+2026-08-12 19:59:49,927 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-36
+2026-08-12 19:59:49,932 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-47
+2026-08-12 19:59:49,940 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-41
+2026-08-12 19:59:49,947 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-25
+2026-08-12 19:59:49,953 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-19
+2026-08-12 19:59:49,966 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-13
+2026-08-12 19:59:49,969 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-32
+2026-08-12 19:59:49,989 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-30
+2026-08-12 19:59:49,989 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-30
+2026-08-12 19:59:49,995 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-9
+2026-08-12 19:59:50,002 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-44
+2026-08-12 19:59:50,008 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-2
+2026-08-12 19:59:50,011 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-11
+2026-08-12 19:59:50,013 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-43
+2026-08-12 19:59:50,013 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-1
+2026-08-12 19:59:50,015 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-5
+2026-08-12 19:59:50,017 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-32
+2026-08-12 19:59:50,018 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-24
+2026-08-12 19:59:50,021 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-9
+2026-08-12 19:59:50,024 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-34
+2026-08-12 19:59:50,049 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-14
+2026-08-12 19:59:50,055 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-45
+2026-08-12 19:59:50,055 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-26
+2026-08-12 19:59:50,058 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-23
+2026-08-12 19:59:50,063 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-15
+2026-08-12 19:59:50,066 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-22
+2026-08-12 19:59:50,070 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-3
+2026-08-12 19:59:50,072 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-33
+2026-08-12 19:59:50,075 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-7
+2026-08-12 19:59:50,094 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-8
+2026-08-12 19:59:50,103 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-50
+2026-08-12 19:59:50,104 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-16
+2026-08-12 19:59:50,104 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-41
+2026-08-12 19:59:50,112 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-10
+2026-08-12 19:59:50,113 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-6
+2026-08-12 19:59:50,114 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-25
+2026-08-12 19:59:50,115 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-46
+2026-08-12 19:59:50,119 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-8
+2026-08-12 19:59:50,132 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-28
+2026-08-12 19:59:50,140 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-33
+2026-08-12 19:59:50,141 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-15
+2026-08-12 19:59:50,141 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-12
+2026-08-12 19:59:50,152 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-20
+2026-08-12 19:59:50,153 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-3
+2026-08-12 19:59:50,155 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-10
+2026-08-12 19:59:50,156 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-12
+2026-08-12 19:59:50,157 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-45
+2026-08-12 19:59:50,160 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-14
+2026-08-12 19:59:50,160 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-10
+2026-08-12 19:59:50,163 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-14
+2026-08-12 19:59:50,166 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-22
+2026-08-12 19:59:50,175 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-48
+2026-08-12 19:59:50,183 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-32
+2026-08-12 19:59:50,185 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-42
+2026-08-12 19:59:50,186 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-30
+2026-08-12 19:59:50,196 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-4
+2026-08-12 19:59:50,204 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-5
+2026-08-12 19:59:50,205 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-6
+2026-08-12 19:59:50,207 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-22
+2026-08-12 19:59:50,214 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-26
+2026-08-12 19:59:50,217 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-49
+2026-08-12 19:59:50,218 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-29
+2026-08-12 19:59:50,218 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-21
+2026-08-12 19:59:50,219 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-22
+2026-08-12 19:59:50,220 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-2
+2026-08-12 19:59:50,231 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-17
+2026-08-12 19:59:50,233 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-34
+2026-08-12 19:59:50,234 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-2
+2026-08-12 19:59:50,237 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-3
+2026-08-12 19:59:50,240 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-10
+2026-08-12 19:59:50,242 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-39
+2026-08-12 19:59:50,248 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-44
+2026-08-12 19:59:50,254 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-18
+2026-08-12 19:59:50,264 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-9
+2026-08-12 19:59:50,264 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-23
+2026-08-12 19:59:50,272 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-34
+2026-08-12 19:59:50,281 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-1
+2026-08-12 19:59:50,288 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-28
+2026-08-12 19:59:50,293 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-40
+2026-08-12 19:59:50,299 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-22
+2026-08-12 19:59:50,303 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-31
+2026-08-12 19:59:50,305 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-23
+2026-08-12 19:59:50,305 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-41
+2026-08-12 19:59:50,314 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-14
+2026-08-12 19:59:50,315 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-8
+2026-08-12 19:59:50,328 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-35
+2026-08-12 19:59:50,342 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-17
+2026-08-12 19:59:50,356 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-5
+2026-08-12 19:59:50,360 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-10
+2026-08-12 19:59:50,360 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-31
+2026-08-12 19:59:50,363 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-17
+2026-08-12 19:59:50,370 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-50
+2026-08-12 19:59:50,372 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-16
+2026-08-12 19:59:50,383 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-45
+2026-08-12 19:59:50,387 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-1
+2026-08-12 19:59:50,392 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-49
+2026-08-12 19:59:50,396 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-35
+2026-08-12 19:59:50,397 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-43
+2026-08-12 19:59:50,397 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-7
+2026-08-12 19:59:50,402 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-26
+2026-08-12 19:59:50,411 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-23
+2026-08-12 19:59:50,417 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-47
+2026-08-12 19:59:50,429 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-8
+2026-08-12 19:59:50,430 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-49
+2026-08-12 19:59:50,433 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-11
+2026-08-12 19:59:50,440 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-10
+2026-08-12 19:59:50,440 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-9
+2026-08-12 19:59:50,441 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-42
+2026-08-12 19:59:50,458 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-36
+2026-08-12 19:59:50,458 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-4
+2026-08-12 19:59:50,465 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-18
+2026-08-12 19:59:50,481 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-41
+2026-08-12 19:59:50,484 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-33
+2026-08-12 19:59:50,484 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-40
+2026-08-12 19:59:50,491 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-20
+2026-08-12 19:59:50,495 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-49
+2026-08-12 19:59:50,495 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-42
+2026-08-12 19:59:50,497 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-11
+2026-08-12 19:59:50,503 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-27
+2026-08-12 19:59:50,515 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-24
+2026-08-12 19:59:50,518 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-29
+2026-08-12 19:59:50,528 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-12
+2026-08-12 19:59:50,531 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-11
+2026-08-12 19:59:50,532 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-26
+2026-08-12 19:59:50,544 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-39
+2026-08-12 19:59:50,544 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-28
+2026-08-12 19:59:50,547 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-14
+2026-08-12 19:59:50,551 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-16
+2026-08-12 19:59:50,553 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-43
+2026-08-12 19:59:50,554 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-13
+2026-08-12 19:59:50,562 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-44
+2026-08-12 19:59:50,563 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-15
+2026-08-12 19:59:50,575 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-19
+2026-08-12 19:59:50,582 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-29
+2026-08-12 19:59:50,582 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-29
+2026-08-12 19:59:50,585 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-37
+2026-08-12 19:59:50,591 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 1 - add 50 VU 1-21
+2026-08-12 19:59:50,598 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-38
+2026-08-12 19:59:50,598 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 2 - add 50 VU 2-45
+2026-08-12 19:59:50,605 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-35
+2026-08-12 19:59:50,611 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-31
+2026-08-12 19:59:50,622 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 4 - add 50 VU 4-13
+2026-08-12 19:59:50,644 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-21
+2026-08-12 19:59:50,650 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress step 3 - add 50 VU 3-1
+2026-08-12 19:59:50,650 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-1
+2026-08-12 19:59:50,657 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress step 3 - add 50 VU 3-27
+2026-08-12 19:59:50,657 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 3 - add 50 VU 3-27
+2026-08-12 19:59:50,659 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-30
+2026-08-12 19:59:50,671 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-19
+2026-08-12 19:59:50,672 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-21
+2026-08-12 19:59:50,672 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-39
+2026-08-12 19:59:50,674 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 5 - add 50 VU 5-32
+2026-08-12 19:59:50,685 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-38
+2026-08-12 19:59:50,686 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-8
+2026-08-12 19:59:50,726 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Stress step 6 - add 50 VU 6-46
+2026-08-12 19:59:50,726 INFO o.a.j.t.JMeterThread: Thread finished: Stress step 6 - add 50 VU 6-46
+2026-08-12 19:59:50,726 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2026-08-12 19:59:50,726 INFO o.a.j.s.FileServer: Close: ../data/products.csv
+2026-08-12 19:59:50,728 INFO o.a.j.s.FileServer: Close: ../data/users.csv
+2026-08-12 19:59:50,732 INFO o.a.j.r.Summariser: summary +   4501 in 00:00:21 =  217.1/s Avg:     6 Min:     0 Max:    54 Err:     0 (0.00%) Active: 0 Started: 300 Finished: 300
+2026-08-12 19:59:50,732 INFO o.a.j.r.Summariser: summary =  46076 in 00:06:10 =  124.5/s Avg:    10 Min:     0 Max:   418 Err:     0 (0.00%)
+2026-08-12 19:59:50,733 INFO o.a.j.JMeter: Generating Dashboard
+2026-08-12 19:59:50,733 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
+2026-08-12 19:59:50,745 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
+2026-08-12 19:59:51,600 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
+2026-08-12 19:59:51,600 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
+2026-08-12 19:59:51,602 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
+2026-08-12 19:59:51,603 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
+2026-08-12 19:59:51,618 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
+2026-08-12 19:59:51,621 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
+2026-08-12 19:59:51,621 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
+2026-08-12 19:59:51,621 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
+2026-08-12 19:59:51,992 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
+2026-08-12 19:59:51,993 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
+2026-08-12 19:59:51,995 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
+2026-08-12 19:59:51,995 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
+2026-08-12 19:59:52,331 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
+2026-08-12 19:59:52,333 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 322532 samples
+2026-08-12 19:59:52,333 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
+2026-08-12 19:59:52,333 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
+2026-08-12 19:59:52,333 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
+2026-08-12 19:59:52,334 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
+2026-08-12 19:59:52,334 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
+2026-08-12 19:59:52,334 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
+2026-08-12 19:59:52,335 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
+2026-08-12 19:59:52,338 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
+2026-08-12 19:59:52,338 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
+2026-08-12 19:59:52,338 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
+2026-08-12 19:59:52,338 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 691140 samples
+2026-08-12 19:59:52,338 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 138228 samples
+2026-08-12 19:59:52,338 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 46076 samples
+2026-08-12 19:59:52,338 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 46076 samples produced in 1s 575 ms on channel 0
+2026-08-12 19:59:52,338 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
+2026-08-12 19:59:52,415 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
+2026-08-12 19:59:52,415 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
+2026-08-12 19:59:52,416 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
+2026-08-12 19:59:52,416 INFO o.a.j.r.d.JsonExporter: Checking output folder
+2026-08-12 19:59:52,416 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to C:\Users\dn156\source\software-testing\software-testing\hw\hw5\results\html\Stress\statistics.json
+2026-08-12 19:59:52,459 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
+2026-08-12 19:59:52,463 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: C:\Users\dn156\source\software-testing\software-testing\hw\hw5\results\html\Stress
+2026-08-12 19:59:52,573 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: C:\Users\dn156\source\software-testing\software-testing\hw\hw5\results\html\Stress, creating folder structure
+2026-08-12 19:59:52,575 INFO o.a.j.r.d.TemplateVisitor: Copying folder from 'C:\Users\dn156\tools\apache-jmeter-5.6.3\bin\report-template' to 'C:\Users\dn156\source\software-testing\software-testing\hw\hw5\results\html\Stress', got message: C:\Users\dn156\source\software-testing\software-testing\hw\hw5\results\html\Stress, found non empty folder with following content [C:\Users\dn156\source\software-testing\software-testing\hw\hw5\results\html\Stress\statistics.json], will be ignored
+2026-08-12 19:59:52,955 INFO o.a.j.JMeter: Dashboard generated

@@ -1,0 +1,765 @@
+2026-08-12 20:00:00,408 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2026-08-12 20:00:00,425 INFO o.a.j.JMeter: Loading user properties from: C:\Users\dn156\tools\apache-jmeter-5.6.3\bin\user.properties
+2026-08-12 20:00:00,426 INFO o.a.j.JMeter: Loading system properties from: C:\Users\dn156\tools\apache-jmeter-5.6.3\bin\system.properties
+2026-08-12 20:00:00,433 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2026-08-12 20:00:00,433 INFO o.a.j.JMeter: Version 5.6.3
+2026-08-12 20:00:00,433 INFO o.a.j.JMeter: java.version=21.0.8
+2026-08-12 20:00:00,433 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2026-08-12 20:00:00,434 INFO o.a.j.JMeter: os.name=Windows 11
+2026-08-12 20:00:00,434 INFO o.a.j.JMeter: os.arch=amd64
+2026-08-12 20:00:00,434 INFO o.a.j.JMeter: os.version=10.0
+2026-08-12 20:00:00,434 INFO o.a.j.JMeter: file.encoding=UTF-8
+2026-08-12 20:00:00,434 INFO o.a.j.JMeter: java.awt.headless=true
+2026-08-12 20:00:00,434 INFO o.a.j.JMeter: Max memory     =1073741824
+2026-08-12 20:00:00,434 INFO o.a.j.JMeter: Available Processors =20
+2026-08-12 20:00:00,443 INFO o.a.j.JMeter: Default Locale=English (EN)
+2026-08-12 20:00:00,443 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2026-08-12 20:00:00,444 INFO o.a.j.JMeter: JMeterHome=C:\Users\dn156\tools\apache-jmeter-5.6.3
+2026-08-12 20:00:00,444 INFO o.a.j.JMeter: user.dir  =C:\Users\dn156\source\software-testing\software-testing\hw\hw5
+2026-08-12 20:00:00,444 INFO o.a.j.JMeter: PWD       =C:\Users\dn156\source\software-testing\software-testing\hw\hw5
+2026-08-12 20:00:00,446 INFO o.a.j.JMeter: IP: 172.20.10.4 Name: Tony FullName: Tony
+2026-08-12 20:00:00,457 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'C:\Users\dn156\source\software-testing\software-testing\hw\hw5\results\html\Spike'
+2026-08-12 20:00:00,459 INFO o.a.j.s.FileServer: Default base='C:\Users\dn156\source\software-testing\software-testing\hw\hw5'
+2026-08-12 20:00:00,460 INFO o.a.j.s.FileServer: Set new base='C:\Users\dn156\source\software-testing\software-testing\hw\hw5\testplans'
+2026-08-12 20:00:00,618 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2026-08-12 20:00:00,652 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2026-08-12 20:00:00,655 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2026-08-12 20:00:00,658 INFO o.a.j.s.SaveService: Loading file: testplans\23127334_Spike_20260811.jmx
+2026-08-12 20:00:00,722 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-12 20:00:00,722 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-12 20:00:00,722 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-12 20:00:00,722 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-12 20:00:00,722 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2026-08-12 20:00:00,722 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2026-08-12 20:00:00,795 INFO o.a.j.JMeter: Creating summariser <summary>
+2026-08-12 20:00:00,798 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
+2026-08-12 20:00:00,800 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: results/jtl/Spike.jtl
+2026-08-12 20:00:00,800 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: C:\Users\dn156\tools\apache-jmeter-5.6.3\bin\reportgenerator.properties
+2026-08-12 20:00:00,801 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
+2026-08-12 20:00:00,805 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
+2026-08-12 20:00:00,807 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
+2026-08-12 20:00:00,807 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
+2026-08-12 20:00:00,808 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
+2026-08-12 20:00:00,808 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
+2026-08-12 20:00:00,808 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
+2026-08-12 20:00:00,808 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
+2026-08-12 20:00:00,808 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
+2026-08-12 20:00:00,808 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
+2026-08-12 20:00:00,812 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 20:00:00,812 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 20:00:00,812 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 20:00:00,812 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 20:00:00,812 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 20:00:00,813 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 20:00:00,813 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 20:00:00,813 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 20:00:00,813 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 20:00:00,813 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-12 20:00:00,814 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
+2026-08-12 20:00:00,814 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
+2026-08-12 20:00:00,814 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
+2026-08-12 20:00:00,814 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
+2026-08-12 20:00:00,814 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
+2026-08-12 20:00:00,814 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
+2026-08-12 20:00:00,826 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2026-08-12 20:00:00,827 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-08-12 20:00:00,827 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-08-12 20:00:00,831 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2026-08-12 20:00:00,831 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2026-08-12 20:00:01,082 INFO o.a.j.JMeter: Running test (1786539601082)
+2026-08-12 20:00:01,097 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Spike - baseline 10 VU
+2026-08-12 20:00:01,097 INFO o.a.j.e.StandardJMeterEngine: Starting 10 threads for group Spike - baseline 10 VU.
+2026-08-12 20:00:01,097 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-08-12 20:00:01,097 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=10 ramp-up=5 delayedStart=false
+2026-08-12 20:00:01,111 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2026-08-12 20:00:01,111 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : Spike - burst +290 VU
+2026-08-12 20:00:01,111 INFO o.a.j.e.StandardJMeterEngine: Starting 290 threads for group Spike - burst +290 VU.
+2026-08-12 20:00:01,112 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-08-12 20:00:01,112 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=290 ramp-up=5 delayedStart=false
+2026-08-12 20:00:01,112 INFO o.a.j.t.JMeterThread: Thread started: Spike - baseline 10 VU 1-1
+2026-08-12 20:00:01,114 INFO o.a.j.s.FileServer: Stored: ../data/products.csv
+2026-08-12 20:00:01,137 INFO o.a.j.s.FileServer: Stored: ../data/users.csv
+2026-08-12 20:00:01,279 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2026-08-12 20:00:01,279 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2026-08-12 20:00:01,608 INFO o.a.j.t.JMeterThread: Thread started: Spike - baseline 10 VU 1-2
+2026-08-12 20:00:02,108 INFO o.a.j.t.JMeterThread: Thread started: Spike - baseline 10 VU 1-3
+2026-08-12 20:00:02,331 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = Tony
+2026-08-12 20:00:02,337 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2026-08-12 20:00:02,338 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2026-08-12 20:00:02,338 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2026-08-12 20:00:02,338 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2026-08-12 20:00:02,338 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2026-08-12 20:00:02,489 INFO o.a.j.r.Summariser: summary +      1 in 00:00:01 =    0.7/s Avg:    40 Min:    40 Max:    40 Err:     0 (0.00%) Active: 3 Started: 3 Finished: 0
+2026-08-12 20:00:02,607 INFO o.a.j.t.JMeterThread: Thread started: Spike - baseline 10 VU 1-4
+2026-08-12 20:00:03,107 INFO o.a.j.t.JMeterThread: Thread started: Spike - baseline 10 VU 1-5
+2026-08-12 20:00:03,607 INFO o.a.j.t.JMeterThread: Thread started: Spike - baseline 10 VU 1-6
+2026-08-12 20:00:04,104 INFO o.a.j.t.JMeterThread: Thread started: Spike - baseline 10 VU 1-7
+2026-08-12 20:00:04,603 INFO o.a.j.t.JMeterThread: Thread started: Spike - baseline 10 VU 1-8
+2026-08-12 20:00:05,103 INFO o.a.j.t.JMeterThread: Thread started: Spike - baseline 10 VU 1-9
+2026-08-12 20:00:05,601 INFO o.a.j.t.JMeterThread: Thread started: Spike - baseline 10 VU 1-10
+2026-08-12 20:00:07,653 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2026-08-12 20:00:07,653 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2026-08-12 20:00:30,013 INFO o.a.j.r.Summariser: summary +    190 in 00:00:28 =    6.9/s Avg:     5 Min:     1 Max:    21 Err:     0 (0.00%) Active: 10 Started: 10 Finished: 0
+2026-08-12 20:00:30,013 INFO o.a.j.r.Summariser: summary =    191 in 00:00:29 =    6.6/s Avg:     5 Min:     1 Max:    40 Err:     0 (0.00%)
+2026-08-12 20:01:00,041 INFO o.a.j.r.Summariser: summary +    216 in 00:00:30 =    7.2/s Avg:     5 Min:     1 Max:    21 Err:     0 (0.00%) Active: 10 Started: 10 Finished: 0
+2026-08-12 20:01:00,041 INFO o.a.j.r.Summariser: summary =    407 in 00:00:59 =    6.9/s Avg:     5 Min:     1 Max:    40 Err:     0 (0.00%)
+2026-08-12 20:01:01,113 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-1
+2026-08-12 20:01:01,133 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-2
+2026-08-12 20:01:01,149 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-3
+2026-08-12 20:01:01,164 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-4
+2026-08-12 20:01:01,181 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-5
+2026-08-12 20:01:01,197 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-6
+2026-08-12 20:01:01,215 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-7
+2026-08-12 20:01:01,231 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-8
+2026-08-12 20:01:01,250 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-9
+2026-08-12 20:01:01,266 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-10
+2026-08-12 20:01:01,284 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-11
+2026-08-12 20:01:01,300 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-12
+2026-08-12 20:01:01,317 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-13
+2026-08-12 20:01:01,334 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-14
+2026-08-12 20:01:01,351 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-15
+2026-08-12 20:01:01,369 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-16
+2026-08-12 20:01:01,384 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-17
+2026-08-12 20:01:01,402 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-18
+2026-08-12 20:01:01,419 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-19
+2026-08-12 20:01:01,436 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-20
+2026-08-12 20:01:01,454 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-21
+2026-08-12 20:01:01,471 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-22
+2026-08-12 20:01:01,487 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-23
+2026-08-12 20:01:01,505 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-24
+2026-08-12 20:01:01,522 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-25
+2026-08-12 20:01:01,538 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-26
+2026-08-12 20:01:01,556 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-27
+2026-08-12 20:01:01,573 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-28
+2026-08-12 20:01:01,590 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-29
+2026-08-12 20:01:01,606 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-30
+2026-08-12 20:01:01,623 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-31
+2026-08-12 20:01:01,640 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-32
+2026-08-12 20:01:01,657 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-33
+2026-08-12 20:01:01,675 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-34
+2026-08-12 20:01:01,692 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-35
+2026-08-12 20:01:01,708 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-36
+2026-08-12 20:01:01,725 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-37
+2026-08-12 20:01:01,742 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-38
+2026-08-12 20:01:01,759 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-39
+2026-08-12 20:01:01,776 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-40
+2026-08-12 20:01:01,793 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-41
+2026-08-12 20:01:01,810 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-42
+2026-08-12 20:01:01,827 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-43
+2026-08-12 20:01:01,845 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-44
+2026-08-12 20:01:01,862 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-45
+2026-08-12 20:01:01,879 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-46
+2026-08-12 20:01:01,896 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-47
+2026-08-12 20:01:01,912 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-48
+2026-08-12 20:01:01,930 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-49
+2026-08-12 20:01:01,946 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-50
+2026-08-12 20:01:01,963 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-51
+2026-08-12 20:01:01,981 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-52
+2026-08-12 20:01:01,997 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-53
+2026-08-12 20:01:02,015 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-54
+2026-08-12 20:01:02,031 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-55
+2026-08-12 20:01:02,048 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-56
+2026-08-12 20:01:02,066 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-57
+2026-08-12 20:01:02,082 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-58
+2026-08-12 20:01:02,100 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-59
+2026-08-12 20:01:02,116 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-60
+2026-08-12 20:01:02,133 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-61
+2026-08-12 20:01:02,150 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-62
+2026-08-12 20:01:02,166 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-63
+2026-08-12 20:01:02,183 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-64
+2026-08-12 20:01:02,202 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-65
+2026-08-12 20:01:02,219 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-66
+2026-08-12 20:01:02,236 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-67
+2026-08-12 20:01:02,252 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-68
+2026-08-12 20:01:02,270 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-69
+2026-08-12 20:01:02,287 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-70
+2026-08-12 20:01:02,303 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-71
+2026-08-12 20:01:02,320 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-72
+2026-08-12 20:01:02,337 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-73
+2026-08-12 20:01:02,353 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-74
+2026-08-12 20:01:02,370 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-75
+2026-08-12 20:01:02,388 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-76
+2026-08-12 20:01:02,405 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-77
+2026-08-12 20:01:02,422 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-78
+2026-08-12 20:01:02,440 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-79
+2026-08-12 20:01:02,456 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-80
+2026-08-12 20:01:02,473 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-81
+2026-08-12 20:01:02,490 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-82
+2026-08-12 20:01:02,506 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-83
+2026-08-12 20:01:02,525 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-84
+2026-08-12 20:01:02,541 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-85
+2026-08-12 20:01:02,558 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-86
+2026-08-12 20:01:02,574 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-87
+2026-08-12 20:01:02,593 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-88
+2026-08-12 20:01:02,610 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-89
+2026-08-12 20:01:02,626 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-90
+2026-08-12 20:01:02,642 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-91
+2026-08-12 20:01:02,660 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-92
+2026-08-12 20:01:02,677 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-93
+2026-08-12 20:01:02,694 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-94
+2026-08-12 20:01:02,711 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-95
+2026-08-12 20:01:02,727 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-96
+2026-08-12 20:01:02,745 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-97
+2026-08-12 20:01:02,761 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-98
+2026-08-12 20:01:02,780 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-99
+2026-08-12 20:01:02,797 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-100
+2026-08-12 20:01:02,815 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-101
+2026-08-12 20:01:02,833 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-102
+2026-08-12 20:01:02,848 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-103
+2026-08-12 20:01:02,865 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-104
+2026-08-12 20:01:02,881 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-105
+2026-08-12 20:01:02,899 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-106
+2026-08-12 20:01:02,915 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-107
+2026-08-12 20:01:02,931 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-108
+2026-08-12 20:01:02,949 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-109
+2026-08-12 20:01:02,967 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-110
+2026-08-12 20:01:02,983 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-111
+2026-08-12 20:01:03,001 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-112
+2026-08-12 20:01:03,018 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-113
+2026-08-12 20:01:03,034 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-114
+2026-08-12 20:01:03,051 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-115
+2026-08-12 20:01:03,068 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-116
+2026-08-12 20:01:03,085 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-117
+2026-08-12 20:01:03,101 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-118
+2026-08-12 20:01:03,120 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-119
+2026-08-12 20:01:03,137 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-120
+2026-08-12 20:01:03,152 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-121
+2026-08-12 20:01:03,171 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-122
+2026-08-12 20:01:03,188 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-123
+2026-08-12 20:01:03,204 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-124
+2026-08-12 20:01:03,221 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-125
+2026-08-12 20:01:03,238 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-126
+2026-08-12 20:01:03,256 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-127
+2026-08-12 20:01:03,272 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-128
+2026-08-12 20:01:03,289 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-129
+2026-08-12 20:01:03,306 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-130
+2026-08-12 20:01:03,325 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-131
+2026-08-12 20:01:03,341 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-132
+2026-08-12 20:01:03,358 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-133
+2026-08-12 20:01:03,375 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-134
+2026-08-12 20:01:03,392 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-135
+2026-08-12 20:01:03,408 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-136
+2026-08-12 20:01:03,425 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-137
+2026-08-12 20:01:03,441 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-138
+2026-08-12 20:01:03,461 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-139
+2026-08-12 20:01:03,478 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-140
+2026-08-12 20:01:03,493 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-141
+2026-08-12 20:01:03,511 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-142
+2026-08-12 20:01:03,527 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-143
+2026-08-12 20:01:03,544 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-144
+2026-08-12 20:01:03,562 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-145
+2026-08-12 20:01:03,579 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-146
+2026-08-12 20:01:03,595 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-147
+2026-08-12 20:01:03,612 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-148
+2026-08-12 20:01:03,630 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-149
+2026-08-12 20:01:03,647 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-150
+2026-08-12 20:01:03,662 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-151
+2026-08-12 20:01:03,680 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-152
+2026-08-12 20:01:03,697 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-153
+2026-08-12 20:01:03,713 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-154
+2026-08-12 20:01:03,730 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-155
+2026-08-12 20:01:03,750 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-156
+2026-08-12 20:01:03,766 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-157
+2026-08-12 20:01:03,782 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-158
+2026-08-12 20:01:03,800 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-159
+2026-08-12 20:01:03,817 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-160
+2026-08-12 20:01:03,834 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-161
+2026-08-12 20:01:03,850 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-162
+2026-08-12 20:01:03,867 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-163
+2026-08-12 20:01:03,884 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-164
+2026-08-12 20:01:03,903 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-165
+2026-08-12 20:01:03,920 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-166
+2026-08-12 20:01:03,936 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-167
+2026-08-12 20:01:03,953 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-168
+2026-08-12 20:01:03,970 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-169
+2026-08-12 20:01:03,986 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-170
+2026-08-12 20:01:04,003 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-171
+2026-08-12 20:01:04,020 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-172
+2026-08-12 20:01:04,037 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-173
+2026-08-12 20:01:04,054 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-174
+2026-08-12 20:01:04,070 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-175
+2026-08-12 20:01:04,087 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-176
+2026-08-12 20:01:04,104 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-177
+2026-08-12 20:01:04,124 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-178
+2026-08-12 20:01:04,140 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-179
+2026-08-12 20:01:04,157 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-180
+2026-08-12 20:01:04,175 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-181
+2026-08-12 20:01:04,191 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-182
+2026-08-12 20:01:04,208 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-183
+2026-08-12 20:01:04,224 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-184
+2026-08-12 20:01:04,241 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-185
+2026-08-12 20:01:04,258 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-186
+2026-08-12 20:01:04,275 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-187
+2026-08-12 20:01:04,293 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-188
+2026-08-12 20:01:04,310 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-189
+2026-08-12 20:01:04,326 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-190
+2026-08-12 20:01:04,342 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-191
+2026-08-12 20:01:04,359 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-192
+2026-08-12 20:01:04,376 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-193
+2026-08-12 20:01:04,393 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-194
+2026-08-12 20:01:04,412 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-195
+2026-08-12 20:01:04,429 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-196
+2026-08-12 20:01:04,446 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-197
+2026-08-12 20:01:04,463 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-198
+2026-08-12 20:01:04,479 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-199
+2026-08-12 20:01:04,496 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-200
+2026-08-12 20:01:04,513 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-201
+2026-08-12 20:01:04,532 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-202
+2026-08-12 20:01:04,546 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-203
+2026-08-12 20:01:04,563 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-204
+2026-08-12 20:01:04,581 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-205
+2026-08-12 20:01:04,600 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-206
+2026-08-12 20:01:04,616 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-207
+2026-08-12 20:01:04,631 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-208
+2026-08-12 20:01:04,650 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-209
+2026-08-12 20:01:04,667 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-210
+2026-08-12 20:01:04,684 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-211
+2026-08-12 20:01:04,700 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-212
+2026-08-12 20:01:04,717 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-213
+2026-08-12 20:01:04,736 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-214
+2026-08-12 20:01:04,751 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-215
+2026-08-12 20:01:04,769 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-216
+2026-08-12 20:01:04,786 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-217
+2026-08-12 20:01:04,803 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-218
+2026-08-12 20:01:04,820 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-219
+2026-08-12 20:01:04,836 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-220
+2026-08-12 20:01:04,853 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-221
+2026-08-12 20:01:04,870 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-222
+2026-08-12 20:01:04,888 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-223
+2026-08-12 20:01:04,903 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-224
+2026-08-12 20:01:04,922 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-225
+2026-08-12 20:01:04,938 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-226
+2026-08-12 20:01:04,956 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-227
+2026-08-12 20:01:04,972 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-228
+2026-08-12 20:01:04,990 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-229
+2026-08-12 20:01:05,006 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-230
+2026-08-12 20:01:05,024 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-231
+2026-08-12 20:01:05,040 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-232
+2026-08-12 20:01:05,058 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-233
+2026-08-12 20:01:05,075 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-234
+2026-08-12 20:01:05,091 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-235
+2026-08-12 20:01:05,108 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-236
+2026-08-12 20:01:05,126 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-237
+2026-08-12 20:01:05,143 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-238
+2026-08-12 20:01:05,161 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-239
+2026-08-12 20:01:05,177 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-240
+2026-08-12 20:01:05,194 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-241
+2026-08-12 20:01:05,211 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-242
+2026-08-12 20:01:05,228 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-243
+2026-08-12 20:01:05,244 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-244
+2026-08-12 20:01:05,260 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-245
+2026-08-12 20:01:05,277 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-246
+2026-08-12 20:01:05,296 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-247
+2026-08-12 20:01:05,312 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-248
+2026-08-12 20:01:05,330 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-249
+2026-08-12 20:01:05,346 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-250
+2026-08-12 20:01:05,363 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-251
+2026-08-12 20:01:05,380 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-252
+2026-08-12 20:01:05,398 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-253
+2026-08-12 20:01:05,413 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-254
+2026-08-12 20:01:05,430 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-255
+2026-08-12 20:01:05,448 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-256
+2026-08-12 20:01:05,466 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-257
+2026-08-12 20:01:05,482 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-258
+2026-08-12 20:01:05,500 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-259
+2026-08-12 20:01:05,516 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-260
+2026-08-12 20:01:05,532 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-261
+2026-08-12 20:01:05,550 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-262
+2026-08-12 20:01:05,567 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-263
+2026-08-12 20:01:05,584 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-264
+2026-08-12 20:01:05,601 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-265
+2026-08-12 20:01:05,618 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-266
+2026-08-12 20:01:05,636 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-267
+2026-08-12 20:01:05,652 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-268
+2026-08-12 20:01:05,669 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-269
+2026-08-12 20:01:05,686 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-270
+2026-08-12 20:01:05,703 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-271
+2026-08-12 20:01:05,719 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-272
+2026-08-12 20:01:05,737 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-273
+2026-08-12 20:01:05,755 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-274
+2026-08-12 20:01:05,771 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-275
+2026-08-12 20:01:05,789 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-276
+2026-08-12 20:01:05,805 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-277
+2026-08-12 20:01:05,823 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-278
+2026-08-12 20:01:05,839 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-279
+2026-08-12 20:01:05,857 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-280
+2026-08-12 20:01:05,874 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-281
+2026-08-12 20:01:05,890 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-282
+2026-08-12 20:01:05,908 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-283
+2026-08-12 20:01:05,925 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-284
+2026-08-12 20:01:05,942 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-285
+2026-08-12 20:01:05,961 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-286
+2026-08-12 20:01:05,975 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-287
+2026-08-12 20:01:05,991 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-288
+2026-08-12 20:01:06,009 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-289
+2026-08-12 20:01:06,027 INFO o.a.j.t.JMeterThread: Thread started: Spike - burst +290 VU 2-290
+2026-08-12 20:01:30,003 INFO o.a.j.r.Summariser: summary +   5568 in 00:00:30 =  185.8/s Avg:    37 Min:     0 Max:   769 Err:     0 (0.00%) Active: 300 Started: 300 Finished: 0
+2026-08-12 20:01:30,003 INFO o.a.j.r.Summariser: summary =   5975 in 00:01:29 =   67.2/s Avg:    35 Min:     0 Max:   769 Err:     0 (0.00%)
+2026-08-12 20:01:56,481 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-212
+2026-08-12 20:01:57,131 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-41
+2026-08-12 20:01:57,131 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-250
+2026-08-12 20:01:57,137 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-115
+2026-08-12 20:01:57,251 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-191
+2026-08-12 20:01:57,448 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-221
+2026-08-12 20:01:57,695 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-223
+2026-08-12 20:01:57,795 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-272
+2026-08-12 20:01:57,839 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-130
+2026-08-12 20:01:57,852 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-251
+2026-08-12 20:01:58,333 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-23
+2026-08-12 20:01:58,368 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-170
+2026-08-12 20:01:58,368 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-252
+2026-08-12 20:01:58,511 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-248
+2026-08-12 20:01:58,535 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-185
+2026-08-12 20:01:58,554 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-43
+2026-08-12 20:01:58,579 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-230
+2026-08-12 20:01:58,587 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-255
+2026-08-12 20:01:58,607 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-193
+2026-08-12 20:01:58,669 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-182
+2026-08-12 20:01:58,678 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-224
+2026-08-12 20:01:58,678 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-195
+2026-08-12 20:01:58,748 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-71
+2026-08-12 20:01:58,788 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-164
+2026-08-12 20:01:58,796 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-165
+2026-08-12 20:01:58,854 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-54
+2026-08-12 20:01:58,875 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-208
+2026-08-12 20:01:58,888 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-131
+2026-08-12 20:01:58,904 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-249
+2026-08-12 20:01:58,908 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-280
+2026-08-12 20:01:58,936 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-244
+2026-08-12 20:01:58,957 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-176
+2026-08-12 20:01:58,957 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-121
+2026-08-12 20:01:58,957 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-114
+2026-08-12 20:01:59,029 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-183
+2026-08-12 20:01:59,042 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-80
+2026-08-12 20:01:59,135 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-77
+2026-08-12 20:01:59,145 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-47
+2026-08-12 20:01:59,208 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-240
+2026-08-12 20:01:59,230 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-15
+2026-08-12 20:01:59,326 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-88
+2026-08-12 20:01:59,342 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-190
+2026-08-12 20:01:59,356 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-268
+2026-08-12 20:01:59,378 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-68
+2026-08-12 20:01:59,463 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-219
+2026-08-12 20:01:59,482 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-34
+2026-08-12 20:01:59,492 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-247
+2026-08-12 20:01:59,493 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-144
+2026-08-12 20:01:59,497 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-42
+2026-08-12 20:01:59,497 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-290
+2026-08-12 20:01:59,498 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-278
+2026-08-12 20:01:59,514 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-33
+2026-08-12 20:01:59,537 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-117
+2026-08-12 20:01:59,538 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-192
+2026-08-12 20:01:59,547 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-52
+2026-08-12 20:01:59,569 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-67
+2026-08-12 20:01:59,579 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-86
+2026-08-12 20:01:59,593 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-229
+2026-08-12 20:01:59,602 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-181
+2026-08-12 20:01:59,622 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-119
+2026-08-12 20:01:59,674 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-215
+2026-08-12 20:01:59,694 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-148
+2026-08-12 20:01:59,694 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-6
+2026-08-12 20:01:59,702 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-275
+2026-08-12 20:01:59,702 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-37
+2026-08-12 20:01:59,705 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-222
+2026-08-12 20:01:59,749 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-284
+2026-08-12 20:01:59,770 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-288
+2026-08-12 20:01:59,772 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-231
+2026-08-12 20:01:59,810 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-286
+2026-08-12 20:01:59,813 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-14
+2026-08-12 20:01:59,817 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-72
+2026-08-12 20:01:59,821 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-62
+2026-08-12 20:01:59,824 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-8
+2026-08-12 20:01:59,826 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-93
+2026-08-12 20:01:59,831 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-122
+2026-08-12 20:01:59,831 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-90
+2026-08-12 20:01:59,843 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-39
+2026-08-12 20:01:59,853 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-44
+2026-08-12 20:01:59,857 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-227
+2026-08-12 20:01:59,865 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-53
+2026-08-12 20:01:59,890 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-287
+2026-08-12 20:01:59,901 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-126
+2026-08-12 20:01:59,901 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-232
+2026-08-12 20:01:59,902 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-199
+2026-08-12 20:01:59,903 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-243
+2026-08-12 20:01:59,908 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-161
+2026-08-12 20:01:59,929 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-140
+2026-08-12 20:01:59,930 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-64
+2026-08-12 20:01:59,938 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-200
+2026-08-12 20:01:59,947 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-108
+2026-08-12 20:01:59,962 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-89
+2026-08-12 20:01:59,980 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-29
+2026-08-12 20:01:59,996 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-100
+2026-08-12 20:02:00,005 INFO o.a.j.r.Summariser: summary +   6415 in 00:00:30 =  213.8/s Avg:    23 Min:     0 Max:   198 Err:     0 (0.00%) Active: 206 Started: 300 Finished: 94
+2026-08-12 20:02:00,005 INFO o.a.j.r.Summariser: summary =  12390 in 00:01:59 =  104.2/s Avg:    29 Min:     0 Max:   769 Err:     0 (0.00%)
+2026-08-12 20:02:00,007 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-85
+2026-08-12 20:02:00,015 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-56
+2026-08-12 20:02:00,021 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-55
+2026-08-12 20:02:00,028 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-261
+2026-08-12 20:02:00,032 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-150
+2026-08-12 20:02:00,037 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-269
+2026-08-12 20:02:00,038 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-142
+2026-08-12 20:02:00,040 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-173
+2026-08-12 20:02:00,043 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-106
+2026-08-12 20:02:00,045 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-32
+2026-08-12 20:02:00,046 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-24
+2026-08-12 20:02:00,056 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-276
+2026-08-12 20:02:00,076 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-5
+2026-08-12 20:02:00,086 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-22
+2026-08-12 20:02:00,087 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-285
+2026-08-12 20:02:00,169 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-31
+2026-08-12 20:02:00,180 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-83
+2026-08-12 20:02:00,196 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-266
+2026-08-12 20:02:00,212 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-12
+2026-08-12 20:02:00,210 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-120
+2026-08-12 20:02:00,228 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-149
+2026-08-12 20:02:00,233 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-234
+2026-08-12 20:02:00,276 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-63
+2026-08-12 20:02:00,292 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-214
+2026-08-12 20:02:00,297 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-177
+2026-08-12 20:02:00,324 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-246
+2026-08-12 20:02:00,324 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-146
+2026-08-12 20:02:00,353 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-194
+2026-08-12 20:02:00,355 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-7
+2026-08-12 20:02:00,357 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-127
+2026-08-12 20:02:00,358 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-211
+2026-08-12 20:02:00,363 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-91
+2026-08-12 20:02:00,374 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-188
+2026-08-12 20:02:00,391 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-102
+2026-08-12 20:02:00,394 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-216
+2026-08-12 20:02:00,396 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-128
+2026-08-12 20:02:00,397 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-202
+2026-08-12 20:02:00,399 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-18
+2026-08-12 20:02:00,400 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-125
+2026-08-12 20:02:00,401 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-107
+2026-08-12 20:02:00,402 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-184
+2026-08-12 20:02:00,404 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-167
+2026-08-12 20:02:00,412 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-136
+2026-08-12 20:02:00,419 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-256
+2026-08-12 20:02:00,420 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-217
+2026-08-12 20:02:00,421 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-226
+2026-08-12 20:02:00,421 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-81
+2026-08-12 20:02:00,422 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-110
+2026-08-12 20:02:00,431 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-158
+2026-08-12 20:02:00,433 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-169
+2026-08-12 20:02:00,439 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-220
+2026-08-12 20:02:00,442 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-254
+2026-08-12 20:02:00,458 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-69
+2026-08-12 20:02:00,459 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-152
+2026-08-12 20:02:00,463 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-45
+2026-08-12 20:02:00,464 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-97
+2026-08-12 20:02:00,486 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-236
+2026-08-12 20:02:00,487 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-105
+2026-08-12 20:02:00,499 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-51
+2026-08-12 20:02:00,516 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-4
+2026-08-12 20:02:00,517 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-61
+2026-08-12 20:02:00,517 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-10
+2026-08-12 20:02:00,518 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-79
+2026-08-12 20:02:00,520 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-70
+2026-08-12 20:02:00,523 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-178
+2026-08-12 20:02:00,546 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-27
+2026-08-12 20:02:00,556 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-21
+2026-08-12 20:02:00,557 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-75
+2026-08-12 20:02:00,560 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-270
+2026-08-12 20:02:00,560 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-66
+2026-08-12 20:02:00,568 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-279
+2026-08-12 20:02:00,568 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-258
+2026-08-12 20:02:00,573 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-35
+2026-08-12 20:02:00,576 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-46
+2026-08-12 20:02:00,584 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-135
+2026-08-12 20:02:00,585 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-73
+2026-08-12 20:02:00,586 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-96
+2026-08-12 20:02:00,589 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-133
+2026-08-12 20:02:00,593 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-49
+2026-08-12 20:02:00,594 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-36
+2026-08-12 20:02:00,597 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-65
+2026-08-12 20:02:00,598 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-1
+2026-08-12 20:02:00,617 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-235
+2026-08-12 20:02:00,629 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-13
+2026-08-12 20:02:00,630 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-48
+2026-08-12 20:02:00,630 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-101
+2026-08-12 20:02:00,662 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-2
+2026-08-12 20:02:00,667 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-124
+2026-08-12 20:02:00,674 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-76
+2026-08-12 20:02:00,676 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-98
+2026-08-12 20:02:00,677 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-113
+2026-08-12 20:02:00,683 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-3
+2026-08-12 20:02:00,701 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-123
+2026-08-12 20:02:00,716 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-196
+2026-08-12 20:02:00,721 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-175
+2026-08-12 20:02:00,722 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-60
+2026-08-12 20:02:00,738 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-17
+2026-08-12 20:02:00,754 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-277
+2026-08-12 20:02:00,758 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-57
+2026-08-12 20:02:00,758 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-238
+2026-08-12 20:02:00,762 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-112
+2026-08-12 20:02:00,763 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-242
+2026-08-12 20:02:00,771 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-228
+2026-08-12 20:02:00,776 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-28
+2026-08-12 20:02:00,776 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-58
+2026-08-12 20:02:00,786 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-162
+2026-08-12 20:02:00,801 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-50
+2026-08-12 20:02:00,806 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-189
+2026-08-12 20:02:00,807 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-171
+2026-08-12 20:02:00,818 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-20
+2026-08-12 20:02:00,821 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-139
+2026-08-12 20:02:00,822 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-267
+2026-08-12 20:02:00,827 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-92
+2026-08-12 20:02:00,843 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-281
+2026-08-12 20:02:00,849 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-159
+2026-08-12 20:02:00,850 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-59
+2026-08-12 20:02:00,857 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-259
+2026-08-12 20:02:00,858 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-104
+2026-08-12 20:02:00,861 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-38
+2026-08-12 20:02:00,866 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-9
+2026-08-12 20:02:00,867 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-213
+2026-08-12 20:02:00,867 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-180
+2026-08-12 20:02:00,881 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-143
+2026-08-12 20:02:00,881 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-16
+2026-08-12 20:02:00,884 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-134
+2026-08-12 20:02:00,896 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-201
+2026-08-12 20:02:00,897 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-264
+2026-08-12 20:02:00,898 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-179
+2026-08-12 20:02:00,910 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-129
+2026-08-12 20:02:00,928 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-265
+2026-08-12 20:02:00,928 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-210
+2026-08-12 20:02:00,929 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-166
+2026-08-12 20:02:00,931 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-262
+2026-08-12 20:02:00,942 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-245
+2026-08-12 20:02:00,944 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-87
+2026-08-12 20:02:00,946 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-163
+2026-08-12 20:02:00,962 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-187
+2026-08-12 20:02:00,969 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-155
+2026-08-12 20:02:00,970 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-111
+2026-08-12 20:02:00,970 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-253
+2026-08-12 20:02:00,975 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-30
+2026-08-12 20:02:00,980 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-116
+2026-08-12 20:02:00,983 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-198
+2026-08-12 20:02:00,987 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-11
+2026-08-12 20:02:00,993 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-160
+2026-08-12 20:02:00,998 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-153
+2026-08-12 20:02:01,004 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-132
+2026-08-12 20:02:01,008 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-273
+2026-08-12 20:02:01,021 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-289
+2026-08-12 20:02:01,022 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-137
+2026-08-12 20:02:01,024 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-204
+2026-08-12 20:02:01,028 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-82
+2026-08-12 20:02:01,032 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-99
+2026-08-12 20:02:01,038 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-95
+2026-08-12 20:02:01,041 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-84
+2026-08-12 20:02:01,044 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-225
+2026-08-12 20:02:01,047 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-174
+2026-08-12 20:02:01,049 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-271
+2026-08-12 20:02:01,050 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-94
+2026-08-12 20:02:01,064 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-233
+2026-08-12 20:02:01,064 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-197
+2026-08-12 20:02:01,076 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-274
+2026-08-12 20:02:01,079 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-154
+2026-08-12 20:02:01,083 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-218
+2026-08-12 20:02:01,102 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-118
+2026-08-12 20:02:01,108 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-19
+2026-08-12 20:02:01,115 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-145
+2026-08-12 20:02:01,140 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-168
+2026-08-12 20:02:01,143 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-151
+2026-08-12 20:02:01,147 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-172
+2026-08-12 20:02:01,153 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-282
+2026-08-12 20:02:01,154 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-203
+2026-08-12 20:02:01,164 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Spike - burst +290 VU 2-25
+2026-08-12 20:02:01,164 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-25
+2026-08-12 20:02:01,164 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-186
+2026-08-12 20:02:01,172 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-237
+2026-08-12 20:02:01,174 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Spike - burst +290 VU 2-40
+2026-08-12 20:02:01,174 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-40
+2026-08-12 20:02:01,174 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Spike - burst +290 VU 2-26
+2026-08-12 20:02:01,174 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-26
+2026-08-12 20:02:01,176 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-103
+2026-08-12 20:02:01,180 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-141
+2026-08-12 20:02:01,187 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-206
+2026-08-12 20:02:01,187 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-239
+2026-08-12 20:02:01,190 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-205
+2026-08-12 20:02:01,192 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Spike - burst +290 VU 2-78
+2026-08-12 20:02:01,192 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-78
+2026-08-12 20:02:01,196 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Spike - burst +290 VU 2-74
+2026-08-12 20:02:01,196 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-74
+2026-08-12 20:02:01,198 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-138
+2026-08-12 20:02:01,199 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Spike - burst +290 VU 2-109
+2026-08-12 20:02:01,199 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-109
+2026-08-12 20:02:01,204 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-241
+2026-08-12 20:02:01,214 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-156
+2026-08-12 20:02:01,220 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Spike - burst +290 VU 2-147
+2026-08-12 20:02:01,222 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-147
+2026-08-12 20:02:01,224 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-209
+2026-08-12 20:02:01,230 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Spike - burst +290 VU 2-157
+2026-08-12 20:02:01,230 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-157
+2026-08-12 20:02:01,239 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-263
+2026-08-12 20:02:01,255 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-257
+2026-08-12 20:02:01,256 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Spike - burst +290 VU 2-207
+2026-08-12 20:02:01,256 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-207
+2026-08-12 20:02:01,273 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Spike - burst +290 VU 2-260
+2026-08-12 20:02:01,273 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-260
+2026-08-12 20:02:01,287 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Spike - burst +290 VU 2-283
+2026-08-12 20:02:01,287 INFO o.a.j.t.JMeterThread: Thread finished: Spike - burst +290 VU 2-283
+2026-08-12 20:02:30,048 INFO o.a.j.r.Summariser: summary +    450 in 00:00:30 =   15.0/s Avg:    28 Min:     1 Max:   189 Err:     0 (0.00%) Active: 10 Started: 300 Finished: 290
+2026-08-12 20:02:30,050 INFO o.a.j.r.Summariser: summary =  12840 in 00:02:29 =   86.2/s Avg:    29 Min:     0 Max:   769 Err:     0 (0.00%)
+2026-08-12 20:03:00,092 INFO o.a.j.r.Summariser: summary +    216 in 00:00:30 =    7.2/s Avg:     6 Min:     1 Max:    53 Err:     0 (0.00%) Active: 10 Started: 300 Finished: 290
+2026-08-12 20:03:00,092 INFO o.a.j.r.Summariser: summary =  13056 in 00:02:59 =   72.9/s Avg:    29 Min:     0 Max:   769 Err:     0 (0.00%)
+2026-08-12 20:03:30,085 INFO o.a.j.r.Summariser: summary +    224 in 00:00:30 =    7.5/s Avg:     4 Min:     1 Max:    19 Err:     0 (0.00%) Active: 10 Started: 300 Finished: 290
+2026-08-12 20:03:30,085 INFO o.a.j.r.Summariser: summary =  13280 in 00:03:29 =   63.5/s Avg:    28 Min:     0 Max:   769 Err:     0 (0.00%)
+2026-08-12 20:04:00,016 INFO o.a.j.r.Summariser: summary +    209 in 00:00:30 =    7.0/s Avg:     6 Min:     1 Max:    28 Err:     0 (0.00%) Active: 10 Started: 300 Finished: 290
+2026-08-12 20:04:00,016 INFO o.a.j.r.Summariser: summary =  13489 in 00:03:59 =   56.5/s Avg:    28 Min:     0 Max:   769 Err:     0 (0.00%)
+2026-08-12 20:04:03,978 INFO o.a.j.t.JMeterThread: Thread finished: Spike - baseline 10 VU 1-10
+2026-08-12 20:04:04,604 INFO o.a.j.t.JMeterThread: Thread finished: Spike - baseline 10 VU 1-5
+2026-08-12 20:04:04,618 INFO o.a.j.t.JMeterThread: Thread finished: Spike - baseline 10 VU 1-3
+2026-08-12 20:04:05,593 INFO o.a.j.t.JMeterThread: Thread finished: Spike - baseline 10 VU 1-6
+2026-08-12 20:04:05,781 INFO o.a.j.t.JMeterThread: Thread finished: Spike - baseline 10 VU 1-8
+2026-08-12 20:04:05,814 INFO o.a.j.t.JMeterThread: Thread finished: Spike - baseline 10 VU 1-4
+2026-08-12 20:04:05,823 INFO o.a.j.t.JMeterThread: Thread finished: Spike - baseline 10 VU 1-9
+2026-08-12 20:04:06,007 INFO o.a.j.t.JMeterThread: Thread finished: Spike - baseline 10 VU 1-7
+2026-08-12 20:04:06,056 INFO o.a.j.t.JMeterThread: Thread finished: Spike - baseline 10 VU 1-1
+2026-08-12 20:04:06,100 INFO o.a.j.t.JMeterThread: Thread finished: Spike - baseline 10 VU 1-2
+2026-08-12 20:04:06,101 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2026-08-12 20:04:06,101 INFO o.a.j.s.FileServer: Close: ../data/products.csv
+2026-08-12 20:04:06,101 INFO o.a.j.s.FileServer: Close: ../data/users.csv
+2026-08-12 20:04:06,112 INFO o.a.j.r.Summariser: summary +     42 in 00:00:06 =    6.9/s Avg:     9 Min:     2 Max:    29 Err:     0 (0.00%) Active: 0 Started: 300 Finished: 300
+2026-08-12 20:04:06,112 INFO o.a.j.r.Summariser: summary =  13531 in 00:04:05 =   55.2/s Avg:    28 Min:     0 Max:   769 Err:     0 (0.00%)
+2026-08-12 20:04:06,114 INFO o.a.j.JMeter: Generating Dashboard
+2026-08-12 20:04:06,114 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
+2026-08-12 20:04:06,155 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
+2026-08-12 20:04:07,315 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
+2026-08-12 20:04:07,315 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
+2026-08-12 20:04:07,318 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
+2026-08-12 20:04:07,318 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
+2026-08-12 20:04:07,345 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
+2026-08-12 20:04:07,353 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
+2026-08-12 20:04:07,353 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
+2026-08-12 20:04:07,353 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
+2026-08-12 20:04:07,657 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
+2026-08-12 20:04:07,663 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
+2026-08-12 20:04:07,665 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
+2026-08-12 20:04:07,665 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
+2026-08-12 20:04:07,960 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
+2026-08-12 20:04:07,965 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 94717 samples
+2026-08-12 20:04:07,965 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
+2026-08-12 20:04:07,966 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
+2026-08-12 20:04:07,966 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
+2026-08-12 20:04:07,970 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
+2026-08-12 20:04:07,970 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
+2026-08-12 20:04:07,971 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
+2026-08-12 20:04:07,986 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
+2026-08-12 20:04:07,991 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
+2026-08-12 20:04:07,992 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
+2026-08-12 20:04:07,992 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
+2026-08-12 20:04:07,992 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 202965 samples
+2026-08-12 20:04:07,992 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 40593 samples
+2026-08-12 20:04:07,992 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 13531 samples
+2026-08-12 20:04:07,995 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 13531 samples produced in 1s 790 ms on channel 0
+2026-08-12 20:04:07,996 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
+2026-08-12 20:04:08,189 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
+2026-08-12 20:04:08,189 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
+2026-08-12 20:04:08,191 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
+2026-08-12 20:04:08,192 INFO o.a.j.r.d.JsonExporter: Checking output folder
+2026-08-12 20:04:08,196 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to C:\Users\dn156\source\software-testing\software-testing\hw\hw5\results\html\Spike\statistics.json
+2026-08-12 20:04:08,323 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
+2026-08-12 20:04:08,335 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: C:\Users\dn156\source\software-testing\software-testing\hw\hw5\results\html\Spike
+2026-08-12 20:04:08,599 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: C:\Users\dn156\source\software-testing\software-testing\hw\hw5\results\html\Spike, creating folder structure
+2026-08-12 20:04:08,603 INFO o.a.j.r.d.TemplateVisitor: Copying folder from 'C:\Users\dn156\tools\apache-jmeter-5.6.3\bin\report-template' to 'C:\Users\dn156\source\software-testing\software-testing\hw\hw5\results\html\Spike', got message: C:\Users\dn156\source\software-testing\software-testing\hw\hw5\results\html\Spike, found non empty folder with following content [C:\Users\dn156\source\software-testing\software-testing\hw\hw5\results\html\Spike\statistics.json], will be ignored
+2026-08-12 20:04:09,436 INFO o.a.j.JMeter: Dashboard generated
