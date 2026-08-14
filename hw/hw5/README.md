@@ -93,10 +93,11 @@ Muốn hiểu nhanh: đọc `report/main-report.md` là đủ, nó dẫn link t�
 | Scenario đã chạy | Load, Stress, Spike, Endurance |
 | Nhóm endpoint phủ | auth-heavy, read-heavy, transactional (cả 3) |
 | Kết quả 3 run | 0% error; p95 Load 19ms, Stress 32ms, Spike 106ms |
-| Max stable throughput | ~276 req/s (endurance, trung bình 288/s) |
-| Memory ceiling | ~117 MB, không rò rỉ |
-| Số bug ghi nhận | 5 (xem `docs/bug-report.md`) |
-| Video demo | [đang cập nhật link] |
+| Endurance threshold | max stable ~276 req/s (trung bình 288/s), memory ceiling ~117 MB không rò rỉ, 0% error suốt 12 phút |
+| Số bug ghi nhận | 5, đã post GitHub Issues [#43-#47](https://github.com/ThanhDang-Vn/software-testing/issues) (xem `docs/bug-report.md`) |
+| Số performance issue | 0 (không lỗi/crash; giới hạn năng lực mô tả ở phần endurance) |
+| Video demo chính | [đang cập nhật link YouTube unlisted, >= 6 phút] |
+| Video demo skill | [đang cập nhật link YouTube unlisted] |
 
 ## 6. Self-assessment (tạm)
 
@@ -116,6 +117,6 @@ Muốn hiểu nhanh: đọc `report/main-report.md` là đủ, nó dẫn link t�
 
 - Chụp ảnh JMeter + Task Manager mỗi scenario (đã có trong `results/img/`), xuất `dxdiag` vào `evidence/hardware/`.
 - Quay video demo chính (>= 6 phút) và video demo skill, dán link vào mục 5 và vào `skill/`.
-- Post bug lên GitHub Issues (nội dung soạn ở `docs/bug-report.md`).
+- Đính ảnh vào 5 GitHub Issues #43-#47 đã post (response SQLi, login lộ password, màn 403 khóa tài khoản).
 - Xuất PDF cho `report/main-report.md`, `report/ai-audit-report.md`, `report/ai-critique.md`.
 - Đóng gói `23127334_HW05_AI_Performance_<grade>.zip` và nộp Moodle.

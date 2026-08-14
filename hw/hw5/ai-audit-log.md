@@ -168,3 +168,8 @@
 ### #33 - Gan label hw5
 - Prompt: "gan label hw5 di"
 - Output: Tao label hw5 (mau 1D76DB) tren repo, gan cho issue #43-#47.
+
+### #34 - P6.4 Git commit theo step + README self-assessment
+- Thoi gian: 2026-08-14 (phien)
+- Prompt: "Commit git theo tung step (da lam doc duong), export git log ra hw5/docs/git-commit-log.txt. Viet hw5/README.md (self-assessment table + test summary + video link)."
+- Output/hanh dong: Tao nhanh feature/23127334-hw5 tu HEAD hw6 (khong dung working tree hw6, chi git add hw/hw5). Commit 15 step + 1 commit git-commit-log. Export git log ra docs/git-commit-log.txt. Tinh chinh README muc 5 (endurance threshold co so, so bug 5 + link issue #43-47, so perf issue 0, 2 dong video link) va muc 7. Khong push (user chua yeu cau).
