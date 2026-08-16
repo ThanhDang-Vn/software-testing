@@ -1,0 +1,67 @@
+﻿HW05 Git Commit Log
+Branch: feature/23127334-hw5  (15 commit theo tung step, base 03765e3)
+Repo:   https://github.com/ThanhDang-Vn/software-testing
+Sinh vien: 23127334 - Nguyen Thanh Dang
+
+===== Tom tat (oneline) =====
+c38e9ee chore(hw5): add plan, prompt playbook and AI audit log
+689d05c test(hw5): P0 smoke test and API contract confirmation
+5357559 feat(hw5): data-driven CSV and account register script
+d196cc4 feat(hw5): E2E workflow design and load parameters
+5179979 feat(hw5): three JMeter test plans from shared workflow fragment
+5ed80cc test(hw5): human review of AI-generated test plans
+b554c88 test(hw5): run three scenarios, raw jtl, HTML reports and summary
+516b006 test(hw5): endurance soak test and hardware threshold
+dfe8fe5 docs(hw5): AI analysis and misinterpretation hunt
+de97a37 docs(hw5): continuous performance testing proposal
+ad80672 feat(hw5): reusable agent skill for perf-testing and log-analysis
+a8d3a64 docs(hw5): evidence capture guide and hardware spec
+faa91be docs(hw5): main report and AI critique
+0b30044 docs(hw5): bug report with 5 verified bugs (issues #43-47)
+95468cd docs(hw5): README documentation map and self-assessment
+
+===== Chi tiet =====
+c38e9ee  2026-08-14 09:58:34 +0700  ThanhDang-Vn
+    chore(hw5): add plan, prompt playbook and AI audit log
+
+689d05c  2026-08-14 09:58:34 +0700  ThanhDang-Vn
+    test(hw5): P0 smoke test and API contract confirmation
+
+5357559  2026-08-14 09:58:34 +0700  ThanhDang-Vn
+    feat(hw5): data-driven CSV and account register script
+
+d196cc4  2026-08-14 09:58:35 +0700  ThanhDang-Vn
+    feat(hw5): E2E workflow design and load parameters
+
+5179979  2026-08-14 09:58:35 +0700  ThanhDang-Vn
+    feat(hw5): three JMeter test plans from shared workflow fragment
+
+5ed80cc  2026-08-14 09:58:35 +0700  ThanhDang-Vn
+    test(hw5): human review of AI-generated test plans
+
+b554c88  2026-08-14 09:58:38 +0700  ThanhDang-Vn
+    test(hw5): run three scenarios, raw jtl, HTML reports and summary
+
+516b006  2026-08-14 09:58:39 +0700  ThanhDang-Vn
+    test(hw5): endurance soak test and hardware threshold
+
+dfe8fe5  2026-08-14 09:58:39 +0700  ThanhDang-Vn
+    docs(hw5): AI analysis and misinterpretation hunt
+
+de97a37  2026-08-14 09:58:39 +0700  ThanhDang-Vn
+    docs(hw5): continuous performance testing proposal
+
+ad80672  2026-08-14 09:58:40 +0700  ThanhDang-Vn
+    feat(hw5): reusable agent skill for perf-testing and log-analysis
+
+a8d3a64  2026-08-14 09:58:40 +0700  ThanhDang-Vn
+    docs(hw5): evidence capture guide and hardware spec
+
+faa91be  2026-08-14 09:58:40 +0700  ThanhDang-Vn
+    docs(hw5): main report and AI critique
+
+0b30044  2026-08-14 09:58:40 +0700  ThanhDang-Vn
+    docs(hw5): bug report with 5 verified bugs (issues #43-47)
+
+95468cd  2026-08-14 09:58:40 +0700  ThanhDang-Vn
+    docs(hw5): README documentation map and self-assessment

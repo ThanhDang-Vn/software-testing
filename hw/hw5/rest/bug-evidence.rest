@@ -1,0 +1,148 @@
+###############################################################################
+# HW05 - Bug Reproduction (MSSV 23127334)
+# SUT: EShop backend (Node + Express + SQLite) tại http://localhost:3000
+#
+# Cách dùng: mở file này trong VS Code (cần extension "REST Client" của
+# huachao), bấm "Send Request" phía trên từng block ###. Response mở ở panel
+# bên phải, chụp màn hình từ đó để làm evidence.
+#
+# Chuẩn bị: backend phải đang chạy. Nếu account lockout ở BUG-03 đã bị khóa
+# từ lần chạy trước, restart server (reseed DB) hoặc đổi số trong @lockEmail.
+###############################################################################
+
+@baseUrl = http://localhost:3000
+@seedEmail = test@eshop.com
+@seedPassword = Test1234!
+@lockEmail = lockdemo01@eshop.com
+@lockPassword = Good123!
+
+### Baseline - tổng số sản phẩm thật (để so sánh với BUG-01B)
+GET {{baseUrl}}/api/products
+
+### BUG-01A - SQL Injection: dấu nháy đơn gây lỗi cú pháp, server lộ nguyên lỗi SQLite
+# Payload thật: search='
+# Mong đợi đúng: 500 với thông báo chung. Thực tế: 500 lộ "SQLITE_ERROR: unrecognized token".
+GET {{baseUrl}}/api/products?search=%27
+
+### BUG-01B - SQL Injection: điều kiện luôn đúng bypass bộ lọc, trả toàn bộ sản phẩm
+# Payload thật: search=%' OR '1'='1
+# Mong đợi đúng: mảng rỗng (từ khóa lạ). Thực tế: trả về đủ 5 sản phẩm như baseline.
+GET {{baseUrl}}/api/products?search=%25%27%20OR%20%271%27%3D%271
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### BUG-02 - Login trả nguyên mật khẩu plaintext trong field user.password
+# Mong đợi đúng: response không chứa field password. Thực tế: user.password = "Test1234!".
+POST {{baseUrl}}/api/login
+Content-Type: application/json
+
+{ "email": "{{seedEmail}}", "password": "{{seedPassword}}" }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### BUG-03 (bước 0) - đăng ký account throwaway để test lockout
+POST {{baseUrl}}/api/register
+Content-Type: application/json
+
+{ "name": "lockdemo", "email": "{{lockEmail}}", "password": "{{lockPassword}}" }
+
+### BUG-03 (bước 1) - sai mật khẩu lần 1 (login_attempts: 0 -> 2)
+POST {{baseUrl}}/api/login
+Content-Type: application/json
+
+{ "email": "{{lockEmail}}", "password": "wrong" }
+
+### BUG-03 (bước 2) - sai mật khẩu lần 2 (login_attempts: 2 -> 4, khóa 180s)
+POST {{baseUrl}}/api/login
+Content-Type: application/json
+
+{ "email": "{{lockEmail}}", "password": "wrong" }
+
+### BUG-03 (bước 3) - mật khẩu ĐÚNG vẫn bị chặn HTTP 403 (khóa chỉ sau 2 lần sai)
+# Mong đợi đúng: khóa sau 3 lần sai. Thực tế: đã khóa dù mới sai 2 lần.
+POST {{baseUrl}}/api/login
+Content-Type: application/json
+
+{ "email": "{{lockEmail}}", "password": "{{lockPassword}}" }
+
+### BUG-04 - sản phẩm không tồn tại trả {} kèm HTTP 200 (đáng lẽ 404)
+# Mong đợi đúng: 404 + body báo lỗi. Thực tế: 200 + body {}.
+GET {{baseUrl}}/api/products/9999
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### BUG-05 (id lẻ) - price đúng kiểu number
+# Thực tế: "price": 30000000 (number)
+GET {{baseUrl}}/api/products/1
+
+### BUG-05 (id chẵn) - cùng field price nhưng trả kiểu string
+# Thực tế: "price": "28000000" (string) -> kiểu đổi theo tính chẵn/lẻ của id
+GET {{baseUrl}}/api/products/2

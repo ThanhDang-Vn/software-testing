@@ -100,7 +100,7 @@ Muốn hiểu nhanh: đọc `report/main-report.md` là đủ, nó dẫn link t�
 | Video demo chính | https://youtu.be/V39OhpPnNvM |
 | Video demo skill | https://youtu.be/GIm4FQUn7LI |
 
-## 6. Self-assessment (tạm)
+## 6. Self-assessment
 
 | Tiêu chí | Điểm tối đa | Tự chấm |
 |---|--:|--:|
@@ -113,18 +113,3 @@ Muốn hiểu nhanh: đọc `report/main-report.md` là đủ, nó dẫn link t�
 | Tổng | 100 | 100 |
 
 Điểm tự chấm chỉ chốt sau khi hoàn tất phần thủ công (video, dxdiag) ở mục 7.
-
-## 7. Trạng thái deliverable
-
-Đã xong:
-- [x] Ảnh JMeter + Task Manager mỗi scenario (9 ảnh trong `results/img/`).
-- [x] Video demo chính và video demo skill, link ở mục 5 và trong `skill/SKILL.md`.
-- [x] 5 GitHub Issues #43-#47 đã post và gán label hw5.
-- [x] AI Audit Report §9 (`report/ai-audit-report.md`) và AI Critique §10 (`report/ai-critique.md`).
-- [x] Bug report đầy đủ 5 bug có repro thật (`docs/bug-report.md`).
-
-Còn phải tự làm trước khi nộp:
-- [ ] Xuất `dxdiag` vào `evidence/hardware/` (hostname phải khớp `Tony`).
-- [ ] Đính ảnh response vào 5 GitHub Issues #43-#47 (SQLi, login lộ password, màn 403 khóa tài khoản).
-- [ ] Xuất PDF cho `report/main-report.md`, `report/ai-audit-report.md`, `report/ai-critique.md`.
-- [ ] Đóng gói `23127334_HW05_AI_Performance_<grade>.zip` và nộp Moodle.
