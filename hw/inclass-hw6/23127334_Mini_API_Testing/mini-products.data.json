@@ -1,0 +1,37 @@
+[
+  {
+    "tc_id": "EXEC-01",
+    "querySuffix": "",
+    "expected_status": 200,
+    "expected_count": 5,
+    "expected_name_fragment": ""
+  },
+  {
+    "tc_id": "EXEC-02",
+    "querySuffix": "?search=iPhone",
+    "expected_status": 200,
+    "expected_count": 1,
+    "expected_name_fragment": "iPhone"
+  },
+  {
+    "tc_id": "EXEC-03",
+    "querySuffix": "?search=iphone",
+    "expected_status": 200,
+    "expected_count": 1,
+    "expected_name_fragment": "iphone"
+  },
+  {
+    "tc_id": "EXEC-04",
+    "querySuffix": "?search=Pro",
+    "expected_status": 200,
+    "expected_count": 3,
+    "expected_name_fragment": "Pro"
+  },
+  {
+    "tc_id": "EXEC-05",
+    "querySuffix": "?search=__NO_SUCH_PRODUCT_23127334__",
+    "expected_status": 200,
+    "expected_count": 0,
+    "expected_name_fragment": "__NO_SUCH_PRODUCT_23127334__"
+  }
+]

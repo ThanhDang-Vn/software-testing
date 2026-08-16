@@ -1,0 +1,88 @@
+<!--
+  workflow-fragment.template.xml — khung workflow cho MỘT nhóm endpoint.
+  Đặt các sampler theo đúng thứ tự người dùng đi qua. gen-from-fragment.js sẽ
+  nhét nguyên khối này vào trong hashTree của từng Thread Group.
+
+  Quy ước:
+  - Mỗi element JMeter theo sau bởi 1 <hashTree> chứa con của nó (rỗng thì <hashTree/>).
+  - Biến CSV dùng ${ten_bien}; biến trích từ response đặt bằng JSON Extractor.
+  - Think-time nén theo property tt_mult: delay = base * tt_mult (đã có sẵn ở timer mẫu).
+  - Bước cần đăng nhập thì bọc trong If Controller kiểm token, và thêm HeaderManager Bearer.
+
+  Bên dưới là 2 bước mẫu: (1) login lấy token, (2) một GET đọc. Nhân thêm sampler
+  cho các bước còn lại của nhóm endpoint bạn đang đo.
+-->
+
+<!-- Bước 1 ví dụ: POST lấy token -->
+<HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="1 - Login" enabled="true">
+  <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+    <collectionProp name="Arguments.arguments">
+      <elementProp name="" elementType="HTTPArgument">
+        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+        <stringProp name="Argument.value">{"email":"${email}","password":"${password}"}</stringProp>
+        <stringProp name="Argument.metadata">=</stringProp>
+      </elementProp>
+    </collectionProp>
+  </elementProp>
+  <stringProp name="HTTPSampler.path">/api/login</stringProp>
+  <stringProp name="HTTPSampler.method">POST</stringProp>
+  <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+</HTTPSamplerProxy>
+<hashTree>
+  <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="think" enabled="true">
+    <stringProp name="ConstantTimer.delay">${__groovy((2000 * vars.get('tt_mult').toDouble()).round())}</stringProp>
+    <stringProp name="RandomTimer.range">${__groovy((1000 * vars.get('tt_mult').toDouble()).round())}</stringProp>
+  </GaussianRandomTimer>
+  <hashTree/>
+  <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="Extract token" enabled="true">
+    <stringProp name="JSONPostProcessor.referenceNames">authToken</stringProp>
+    <stringProp name="JSONPostProcessor.jsonPathExprs">$.token</stringProp>
+    <stringProp name="JSONPostProcessor.match_numbers">1</stringProp>
+    <stringProp name="JSONPostProcessor.defaultValues"></stringProp>
+  </JSONPostProcessor>
+  <hashTree/>
+  <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert 200" enabled="true">
+    <collectionProp name="Asserion.test_strings"><stringProp name="49586">200</stringProp></collectionProp>
+    <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+    <boolProp name="Assertion.assume_success">false</boolProp>
+    <intProp name="Assertion.test_type">8</intProp>
+  </ResponseAssertion>
+  <hashTree/>
+</hashTree>
+
+<!-- Bước 2 ví dụ: GET đọc (thay path/assert cho endpoint của bạn) -->
+<HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="2 - Read" enabled="true">
+  <elementProp name="HTTPsampler.Arguments" elementType="Arguments"><collectionProp name="Arguments.arguments"/></elementProp>
+  <stringProp name="HTTPSampler.path">/api/products/${product_id}</stringProp>
+  <stringProp name="HTTPSampler.method">GET</stringProp>
+</HTTPSamplerProxy>
+<hashTree>
+  <GaussianRandomTimer guiclass="GaussianRandomTimerGui" testclass="GaussianRandomTimer" testname="think" enabled="true">
+    <stringProp name="ConstantTimer.delay">${__groovy((5000 * vars.get('tt_mult').toDouble()).round())}</stringProp>
+    <stringProp name="RandomTimer.range">${__groovy((2000 * vars.get('tt_mult').toDouble()).round())}</stringProp>
+  </GaussianRandomTimer>
+  <hashTree/>
+  <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Assert 200" enabled="true">
+    <collectionProp name="Asserion.test_strings"><stringProp name="49586">200</stringProp></collectionProp>
+    <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+    <boolProp name="Assertion.assume_success">false</boolProp>
+    <intProp name="Assertion.test_type">8</intProp>
+  </ResponseAssertion>
+  <hashTree/>
+</hashTree>
+
+<!--
+  Bước cần token (ví dụ POST /api/cart) thì bọc trong If Controller:
+
+  <IfController ...>
+    <stringProp name="IfController.condition">${__groovy(vars.get("authToken") != null &amp;&amp; vars.get("authToken").length() &gt; 0)}</stringProp>
+    <boolProp name="IfController.useExpression">true</boolProp>
+  </IfController>
+  <hashTree>
+    ... HTTPSamplerProxy POST ...
+    <hashTree>
+      <HeaderManager ...> Authorization: Bearer ${authToken} </HeaderManager><hashTree/>
+      ... timer, assertion, extractor ...
+    </hashTree>
+  </hashTree>
+-->

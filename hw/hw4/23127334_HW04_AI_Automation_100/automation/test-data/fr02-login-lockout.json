@@ -1,0 +1,141 @@
+[
+  {
+    "id": "FR02-TC-001",
+    "category": "positive",
+    "action": "login",
+    "description": "Customer logs in with valid credentials",
+    "credentialProfile": "customer",
+    "expectedUrl": "/",
+    "expectedUserProfile": "customer"
+  },
+  {
+    "id": "FR02-TC-002",
+    "category": "positive",
+    "action": "login",
+    "description": "Administrator logs in with valid credentials",
+    "credentialProfile": "admin",
+    "expectedUrl": "/",
+    "expectedUserProfile": "admin"
+  },
+  {
+    "id": "FR02-TC-003",
+    "category": "negative",
+    "action": "invalid-login",
+    "description": "Unknown email is rejected without revealing account existence",
+    "email": "unknown@eshop.com",
+    "passwordProfile": "synthetic-valid",
+    "expectedError": "Đăng nhập thất bại. Vui lòng kiểm tra lại."
+  },
+  {
+    "id": "FR02-TC-004",
+    "category": "negative",
+    "action": "invalid-login",
+    "description": "Wrong password is rejected",
+    "emailTemplate": "fr02-wrong-{run}@eshop.com",
+    "passwordProfile": "synthetic-wrong",
+    "expectedError": "Đăng nhập thất bại. Vui lòng kiểm tra lại."
+  },
+  {
+    "id": "FR02-TC-005",
+    "category": "negative",
+    "action": "invalid-login",
+    "description": "Password comparison is case sensitive",
+    "emailTemplate": "fr02-case-{run}@eshop.com",
+    "passwordProfile": "case-changed",
+    "expectedError": "Đăng nhập thất bại. Vui lòng kiểm tra lại."
+  },
+  {
+    "id": "FR02-TC-006",
+    "category": "negative",
+    "action": "invalid-login",
+    "description": "Leading and trailing email spaces do not authenticate another identity",
+    "emailTemplate": "fr02-space-{run}@eshop.com",
+    "emailDecoration": "spaces",
+    "passwordProfile": "synthetic-valid",
+    "expectedError": "Đăng nhập thất bại. Vui lòng kiểm tra lại."
+  },
+  {
+    "id": "FR02-TC-007",
+    "category": "validation",
+    "action": "required-field",
+    "description": "Empty email is blocked by required validation",
+    "field": "email",
+    "email": "",
+    "passwordProfile": "synthetic-valid",
+    "expectedValidationMessage": true
+  },
+  {
+    "id": "FR02-TC-008",
+    "category": "validation",
+    "action": "required-field",
+    "description": "Empty password is blocked by required validation",
+    "field": "password",
+    "emailProfile": "customer",
+    "passwordProfile": "empty",
+    "expectedValidationMessage": true
+  },
+  {
+    "id": "FR02-TC-009",
+    "category": "ui-contract",
+    "action": "input-contract",
+    "description": "Email control uses native email validation",
+    "field": "email",
+    "expectedType": "email",
+    "expectedRequired": true
+  },
+  {
+    "id": "FR02-TC-010",
+    "category": "ui-contract",
+    "action": "input-contract",
+    "description": "Password control masks its value",
+    "field": "password",
+    "expectedType": "password",
+    "expectedRequired": true
+  },
+  {
+    "id": "FR02-TC-011",
+    "category": "state",
+    "action": "failures-then-success",
+    "description": "One failed attempt does not lock the account",
+    "emailTemplate": "fr02-one-{run}@eshop.com",
+    "failedAttempts": 1,
+    "expectedUrl": "/"
+  },
+  {
+    "id": "FR02-TC-012",
+    "category": "boundary",
+    "action": "failures-then-success",
+    "description": "Two consecutive failed attempts remain below the lock threshold",
+    "emailTemplate": "fr02-two-{run}@eshop.com",
+    "failedAttempts": 2,
+    "expectedUrl": "/"
+  },
+  {
+    "id": "FR02-TC-013",
+    "category": "boundary",
+    "action": "lock-after-failures",
+    "description": "Third consecutive failed attempt locks the account",
+    "emailTemplate": "fr02-three-{run}@eshop.com",
+    "failedAttempts": 3,
+    "expectedStatus": 403
+  },
+  {
+    "id": "FR02-TC-014",
+    "category": "negative",
+    "action": "locked-message",
+    "description": "Locked account receives an appropriate non-revealing message",
+    "emailTemplate": "fr02-message-{run}@eshop.com",
+    "failedAttempts": 3,
+    "expectedError": "Tài khoản đã bị khóa. Vui lòng thử lại sau."
+  },
+  {
+    "id": "FR02-TC-015",
+    "category": "edge",
+    "action": "lock-expiry",
+    "description": "Account is usable after the specified 30 second lock expires",
+    "emailTemplate": "fr02-expiry-{run}@eshop.com",
+    "failedAttempts": 3,
+    "waitMilliseconds": 31000,
+    "expectedUrl": "/"
+  }
+]

@@ -1,0 +1,917 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Users\\dn156\\AppData\\Local\\Volta\\tools\\image\\node\\20.20.2\\node.exe",
+      "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "tests/fr02-login-lockout.spec.ts",
+      "--project",
+      "webkit"
+    ],
+    "configFile": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\playwright.config.ts",
+    "rootDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/test-results/webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/test-results/webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/test-results/webkit",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/dn156/source/software-testing/software-testing/hw/hw4/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "reports\\html\\fr02-login-lockout\\webkit",
+          "title": "Run by: 23127334 | FR-02 Login & Account Lockout | webkit | 2026-08-08T01:39:59.993Z"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\reports\\json\\fr02-login-lockout\\webkit.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "fr02-login-lockout.spec.ts",
+      "file": "fr02-login-lockout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "FR-02 Login & Account Lockout",
+          "file": "fr02-login-lockout.spec.ts",
+          "line": 117,
+          "column": 6,
+          "specs": [
+            {
+              "title": "FR02-TC-001 [positive] Customer logs in with valid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1101,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:40:01.668Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c0be53c8761be0aefa9f-544ae878086669ee15a2",
+              "file": "fr02-login-lockout.spec.ts",
+              "line": 119,
+              "column": 5
+            },
+            {
+              "title": "FR02-TC-002 [positive] Administrator logs in with valid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 925,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:40:02.893Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c0be53c8761be0aefa9f-cdbfdab5dbd4e310b83c",
+              "file": "fr02-login-lockout.spec.ts",
+              "line": 119,
+              "column": 5
+            },
+            {
+              "title": "FR02-TC-003 [negative] Unknown email is rejected without revealing account existence",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1086,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:40:03.828Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c0be53c8761be0aefa9f-ded489d1bfd4efcaa966",
+              "file": "fr02-login-lockout.spec.ts",
+              "line": 119,
+              "column": 5
+            },
+            {
+              "title": "FR02-TC-004 [negative] Wrong password is rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1878,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:40:04.928Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c0be53c8761be0aefa9f-7d1c88a2d1b0988116af",
+              "file": "fr02-login-lockout.spec.ts",
+              "line": 119,
+              "column": 5
+            },
+            {
+              "title": "FR02-TC-005 [negative] Password comparison is case sensitive",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2053,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:40:06.832Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c0be53c8761be0aefa9f-e0a02c789b017b29d416",
+              "file": "fr02-login-lockout.spec.ts",
+              "line": 119,
+              "column": 5
+            },
+            {
+              "title": "FR02-TC-006 [negative] Leading and trailing email spaces do not authenticate another identity",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2104,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:40:08.913Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c0be53c8761be0aefa9f-cf66cc4f57d08f2d8126",
+              "file": "fr02-login-lockout.spec.ts",
+              "line": 119,
+              "column": 5
+            },
+            {
+              "title": "FR02-TC-007 [validation] Empty email is blocked by required validation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2012,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:40:11.045Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c0be53c8761be0aefa9f-a68c1c89e224eb03003b",
+              "file": "fr02-login-lockout.spec.ts",
+              "line": 119,
+              "column": 5
+            },
+            {
+              "title": "FR02-TC-008 [validation] Empty password is blocked by required validation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2207,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:40:13.076Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c0be53c8761be0aefa9f-ce9c955ae106d30d0e6d",
+              "file": "fr02-login-lockout.spec.ts",
+              "line": 119,
+              "column": 5
+            },
+            {
+              "title": "FR02-TC-009 [ui-contract] Email control uses native email validation",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6948,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('form').getByText('Username', { exact: true }).locator('..').locator('input')\nExpected: \u001b[32m\"email\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('form').getByText('Username', { exact: true }).locator('..').locator('input')\u001b[22m\n\u001b[2m    13 × locator resolved to <input value=\"\" required=\"\" type=\"text\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('form').getByText('Username', { exact: true }).locator('..').locator('input')\nExpected: \u001b[32m\"email\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('form').getByText('Username', { exact: true }).locator('..').locator('input')\u001b[22m\n\u001b[2m    13 × locator resolved to <input value=\"\" required=\"\" type=\"text\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts:161:31",
+                        "location": {
+                          "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                          "column": 31,
+                          "line": 161
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 159 |\u001b[39m           \u001b[36mawait\u001b[39m login\u001b[33m.\u001b[39mopen()\u001b[33m;\u001b[39m\n \u001b[90m 160 |\u001b[39m           \u001b[36mconst\u001b[39m field \u001b[33m=\u001b[39m target(login\u001b[33m,\u001b[39m item\u001b[33m.\u001b[39mfield)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 161 |\u001b[39m           \u001b[36mawait\u001b[39m expect(field)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'type'\u001b[39m\u001b[33m,\u001b[39m item\u001b[33m.\u001b[39mexpectedType \u001b[33m?\u001b[39m\u001b[33m?\u001b[39m \u001b[32m''\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 162 |\u001b[39m           \u001b[36mif\u001b[39m (item\u001b[33m.\u001b[39mexpectedRequired) \u001b[36mawait\u001b[39m expect(field)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'required'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m''\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 163 |\u001b[39m           \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 164 |\u001b[39m         }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                            "column": 31,
+                            "line": 161
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('form').getByText('Username', { exact: true }).locator('..').locator('input')\nExpected: \u001b[32m\"email\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('form').getByText('Username', { exact: true }).locator('..').locator('input')\u001b[22m\n\u001b[2m    13 × locator resolved to <input value=\"\" required=\"\" type=\"text\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n\n\n  159 |           await login.open();\n  160 |           const field = target(login, item.field);\n> 161 |           await expect(field).toHaveAttribute('type', item.expectedType ?? '');\n      |                               ^\n  162 |           if (item.expectedRequired) await expect(field).toHaveAttribute('required', '');\n  163 |           break;\n  164 |         }\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts:161:31"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:40:15.311Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-ad624-ses-native-email-validation-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-ad624-ses-native-email-validation-webkit\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-ad624-ses-native-email-validation-webkit\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-ad624-ses-native-email-validation-webkit\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                        "column": 31,
+                        "line": 161
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c0be53c8761be0aefa9f-8587aef71a741b7c8e4e",
+              "file": "fr02-login-lockout.spec.ts",
+              "line": 119,
+              "column": 5
+            },
+            {
+              "title": "FR02-TC-010 [ui-contract] Password control masks its value",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6643,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('form').getByText('Mật khẩu', { exact: true }).locator('..').locator('input')\nExpected: \u001b[32m\"password\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('form').getByText('Mật khẩu', { exact: true }).locator('..').locator('input')\u001b[22m\n\u001b[2m    13 × locator resolved to <input value=\"\" required=\"\" type=\"text\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('form').getByText('Mật khẩu', { exact: true }).locator('..').locator('input')\nExpected: \u001b[32m\"password\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('form').getByText('Mật khẩu', { exact: true }).locator('..').locator('input')\u001b[22m\n\u001b[2m    13 × locator resolved to <input value=\"\" required=\"\" type=\"text\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts:161:31",
+                        "location": {
+                          "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                          "column": 31,
+                          "line": 161
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 159 |\u001b[39m           \u001b[36mawait\u001b[39m login\u001b[33m.\u001b[39mopen()\u001b[33m;\u001b[39m\n \u001b[90m 160 |\u001b[39m           \u001b[36mconst\u001b[39m field \u001b[33m=\u001b[39m target(login\u001b[33m,\u001b[39m item\u001b[33m.\u001b[39mfield)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 161 |\u001b[39m           \u001b[36mawait\u001b[39m expect(field)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'type'\u001b[39m\u001b[33m,\u001b[39m item\u001b[33m.\u001b[39mexpectedType \u001b[33m?\u001b[39m\u001b[33m?\u001b[39m \u001b[32m''\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 162 |\u001b[39m           \u001b[36mif\u001b[39m (item\u001b[33m.\u001b[39mexpectedRequired) \u001b[36mawait\u001b[39m expect(field)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'required'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m''\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 163 |\u001b[39m           \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 164 |\u001b[39m         }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                            "column": 31,
+                            "line": 161
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('form').getByText('Mật khẩu', { exact: true }).locator('..').locator('input')\nExpected: \u001b[32m\"password\"\u001b[39m\nReceived: \u001b[31m\"text\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('form').getByText('Mật khẩu', { exact: true }).locator('..').locator('input')\u001b[22m\n\u001b[2m    13 × locator resolved to <input value=\"\" required=\"\" type=\"text\" class=\"w-full border p-2 rounded\"/>\u001b[22m\n\u001b[2m       - unexpected value \"text\"\u001b[22m\n\n\n  159 |           await login.open();\n  160 |           const field = target(login, item.field);\n> 161 |           await expect(field).toHaveAttribute('type', item.expectedType ?? '');\n      |                               ^\n  162 |           if (item.expectedRequired) await expect(field).toHaveAttribute('required', '');\n  163 |           break;\n  164 |         }\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts:161:31"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:40:23.343Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-1694c-ord-control-masks-its-value-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-1694c-ord-control-masks-its-value-webkit\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-1694c-ord-control-masks-its-value-webkit\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-1694c-ord-control-masks-its-value-webkit\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                        "column": 31,
+                        "line": 161
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c0be53c8761be0aefa9f-d7277ac1bf62f15bb4a2",
+              "file": "fr02-login-lockout.spec.ts",
+              "line": 119,
+              "column": 5
+            },
+            {
+              "title": "FR02-TC-011 [state] One failed attempt does not lock the account",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1440,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:40:31.042Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c0be53c8761be0aefa9f-776aafd02e234aa5ff97",
+              "file": "fr02-login-lockout.spec.ts",
+              "line": 119,
+              "column": 5
+            },
+            {
+              "title": "FR02-TC-012 [boundary] Two consecutive failed attempts remain below the lock threshold",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 8349,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:5173/login\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:5173/login\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:5173/login\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:5173/login\"\u001b[22m\n\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts:174:30",
+                        "location": {
+                          "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                          "column": 30,
+                          "line": 174
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 172 |\u001b[39m           \u001b[36mawait\u001b[39m login\u001b[33m.\u001b[39mopen()\u001b[33m;\u001b[39m\n \u001b[90m 173 |\u001b[39m           \u001b[36mawait\u001b[39m login\u001b[33m.\u001b[39msubmitCredentials(email\u001b[33m,\u001b[39m validPassword(item\u001b[33m.\u001b[39mid))\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 174 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${item.expectedUrl}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 175 |\u001b[39m           \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 176 |\u001b[39m         }\n \u001b[90m 177 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                            "column": 30,
+                            "line": 174
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:5173/login\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:5173/login\"\u001b[22m\n\n\n  172 |           await login.open();\n  173 |           await login.submitCredentials(email, validPassword(item.id));\n> 174 |           await expect(page).toHaveURL(new RegExp(`${item.expectedUrl}$`));\n      |                              ^\n  175 |           break;\n  176 |         }\n  177 |\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts:174:30"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:40:32.578Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-31508-in-below-the-lock-threshold-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-31508-in-below-the-lock-threshold-webkit\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-31508-in-below-the-lock-threshold-webkit\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-31508-in-below-the-lock-threshold-webkit\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                        "column": 30,
+                        "line": 174
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c0be53c8761be0aefa9f-02e2b0288a708aba6c10",
+              "file": "fr02-login-lockout.spec.ts",
+              "line": 119,
+              "column": 5
+            },
+            {
+              "title": "FR02-TC-013 [boundary] Third consecutive failed attempt locks the account",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 516,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m401\u001b[39m\nReceived: \u001b[31m403\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m401\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts:182:76",
+                        "location": {
+                          "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                          "column": 76,
+                          "line": 182
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 180 |\u001b[39m           \u001b[36mawait\u001b[39m registerAccount(request\u001b[33m,\u001b[39m email)\u001b[33m;\u001b[39m\n \u001b[90m 181 |\u001b[39m           \u001b[36mfor\u001b[39m (\u001b[36mlet\u001b[39m attempt \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m attempt \u001b[33m<\u001b[39m (item\u001b[33m.\u001b[39mfailedAttempts \u001b[33m?\u001b[39m\u001b[33m?\u001b[39m \u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m attempt \u001b[33m+=\u001b[39m \u001b[35m1\u001b[39m) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 182 |\u001b[39m             expect(\u001b[36mawait\u001b[39m loginApi(request\u001b[33m,\u001b[39m email\u001b[33m,\u001b[39m wrongPassword(item\u001b[33m.\u001b[39mid)))\u001b[33m.\u001b[39mtoBe(\u001b[35m401\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 183 |\u001b[39m           }\n \u001b[90m 184 |\u001b[39m           expect(\u001b[36mawait\u001b[39m loginApi(request\u001b[33m,\u001b[39m email\u001b[33m,\u001b[39m validPassword(item\u001b[33m.\u001b[39mid)))\u001b[33m.\u001b[39mtoBe(item\u001b[33m.\u001b[39mexpectedStatus)\u001b[33m;\u001b[39m\n \u001b[90m 185 |\u001b[39m           \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                            "column": 76,
+                            "line": 182
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m401\u001b[39m\nReceived: \u001b[31m403\u001b[39m\n\n  180 |           await registerAccount(request, email);\n  181 |           for (let attempt = 0; attempt < (item.failedAttempts ?? 0); attempt += 1) {\n> 182 |             expect(await loginApi(request, email, wrongPassword(item.id))).toBe(401);\n      |                                                                            ^\n  183 |           }\n  184 |           expect(await loginApi(request, email, validPassword(item.id))).toBe(item.expectedStatus);\n  185 |           break;\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts:182:76"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:40:41.872Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-4bebf-d-attempt-locks-the-account-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-4bebf-d-attempt-locks-the-account-webkit\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-4bebf-d-attempt-locks-the-account-webkit\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-4bebf-d-attempt-locks-the-account-webkit\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                        "column": 76,
+                        "line": 182
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c0be53c8761be0aefa9f-f378529f3b11a226f72c",
+              "file": "fr02-login-lockout.spec.ts",
+              "line": 119,
+              "column": 5
+            },
+            {
+              "title": "FR02-TC-014 [negative] Locked account receives an appropriate non-revealing message",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6990,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText(/Đăng nhập thất bại|Tài khoản đã bị khóa/)\nExpected: \u001b[32m\"\u001b[7mTài khoản đã bị khóa. Vui lòng thử lại sau\u001b[27m.\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mĐăng nhập thất bại. Vui lòng kiểm tra lại\u001b[27m.\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Đăng nhập thất bại|Tài khoản đã bị khóa/)\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mt-4 rounded\">Đăng nhập thất bại. Vui lòng kiểm tra lại.</div>\u001b[22m\n\u001b[2m       - unexpected value \"Đăng nhập thất bại. Vui lòng kiểm tra lại.\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText(/Đăng nhập thất bại|Tài khoản đã bị khóa/)\nExpected: \u001b[32m\"\u001b[7mTài khoản đã bị khóa. Vui lòng thử lại sau\u001b[27m.\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mĐăng nhập thất bại. Vui lòng kiểm tra lại\u001b[27m.\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Đăng nhập thất bại|Tài khoản đã bị khóa/)\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mt-4 rounded\">Đăng nhập thất bại. Vui lòng kiểm tra lại.</div>\u001b[22m\n\u001b[2m       - unexpected value \"Đăng nhập thất bại. Vui lòng kiểm tra lại.\"\u001b[22m\n\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts:196:46",
+                        "location": {
+                          "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                          "column": 46,
+                          "line": 196
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 194 |\u001b[39m           \u001b[36mawait\u001b[39m login\u001b[33m.\u001b[39mopen()\u001b[33m;\u001b[39m\n \u001b[90m 195 |\u001b[39m           \u001b[36mawait\u001b[39m login\u001b[33m.\u001b[39msubmitCredentials(email\u001b[33m,\u001b[39m validPassword(item\u001b[33m.\u001b[39mid))\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 196 |\u001b[39m           \u001b[36mawait\u001b[39m expect(login\u001b[33m.\u001b[39merrorMessage())\u001b[33m.\u001b[39mtoHaveText(item\u001b[33m.\u001b[39mexpectedError \u001b[33m?\u001b[39m\u001b[33m?\u001b[39m \u001b[32m''\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 197 |\u001b[39m           \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 198 |\u001b[39m         }\n \u001b[90m 199 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                            "column": 46,
+                            "line": 196
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByText(/Đăng nhập thất bại|Tài khoản đã bị khóa/)\nExpected: \u001b[32m\"\u001b[7mTài khoản đã bị khóa. Vui lòng thử lại sau\u001b[27m.\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mĐăng nhập thất bại. Vui lòng kiểm tra lại\u001b[27m.\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByText(/Đăng nhập thất bại|Tài khoản đã bị khóa/)\u001b[22m\n\u001b[2m    13 × locator resolved to <div class=\"bg-red-100 text-red-700 p-3 mt-4 rounded\">Đăng nhập thất bại. Vui lòng kiểm tra lại.</div>\u001b[22m\n\u001b[2m       - unexpected value \"Đăng nhập thất bại. Vui lòng kiểm tra lại.\"\u001b[22m\n\n\n  194 |           await login.open();\n  195 |           await login.submitCredentials(email, validPassword(item.id));\n> 196 |           await expect(login.errorMessage()).toHaveText(item.expectedError ?? '');\n      |                                              ^\n  197 |           break;\n  198 |         }\n  199 |\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts:196:46"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:40:43.264Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-69b38-riate-non-revealing-message-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-69b38-riate-non-revealing-message-webkit\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-69b38-riate-non-revealing-message-webkit\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-69b38-riate-non-revealing-message-webkit\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                        "column": 46,
+                        "line": 196
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c0be53c8761be0aefa9f-75bbb3c45cfdc84318bd",
+              "file": "fr02-login-lockout.spec.ts",
+              "line": 119,
+              "column": 5
+            },
+            {
+              "title": "FR02-TC-015 [edge] Account is usable after the specified 30 second lock expires",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 45000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 39020,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:5173/login\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:5173/login\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:5173/login\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:5173/login\"\u001b[22m\n\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts:216:30",
+                        "location": {
+                          "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                          "column": 30,
+                          "line": 216
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 214 |\u001b[39m           \u001b[36mawait\u001b[39m login\u001b[33m.\u001b[39mopen()\u001b[33m;\u001b[39m\n \u001b[90m 215 |\u001b[39m           \u001b[36mawait\u001b[39m login\u001b[33m.\u001b[39msubmitCredentials(email\u001b[33m,\u001b[39m validPassword(item\u001b[33m.\u001b[39mid))\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 216 |\u001b[39m           \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[36mnew\u001b[39m \u001b[33mRegExp\u001b[39m(\u001b[32m`${item.expectedUrl}$`\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 217 |\u001b[39m           \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 218 |\u001b[39m         }\n \u001b[90m 219 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                            "column": 30,
+                            "line": 216
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/\\/$/\u001b[39m\nReceived string:  \u001b[31m\"http://127.0.0.1:5173/login\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveURL\" with timeout 5000ms\u001b[22m\n\u001b[2m    13 × locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m       - unexpected value \"http://127.0.0.1:5173/login\"\u001b[22m\n\n\n  214 |           await login.open();\n  215 |           await login.submitCredentials(email, validPassword(item.id));\n> 216 |           await expect(page).toHaveURL(new RegExp(`${item.expectedUrl}$`));\n      |                              ^\n  217 |           break;\n  218 |         }\n  219 |\n    at C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts:216:30"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-08T01:40:51.396Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-30f45-fied-30-second-lock-expires-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-30f45-fied-30-second-lock-expires-webkit\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-30f45-fied-30-second-lock-expires-webkit\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\test-results\\webkit\\fr02-login-lockout-FR-02-L-30f45-fied-30-second-lock-expires-webkit\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\dn156\\source\\software-testing\\software-testing\\hw\\hw4\\tests\\fr02-login-lockout.spec.ts",
+                        "column": 30,
+                        "line": 216
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c0be53c8761be0aefa9f-9eabe58df961eddcd780",
+              "file": "fr02-login-lockout.spec.ts",
+              "line": 119,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-08T01:40:00.831Z",
+    "duration": 89954.567,
+    "expected": 9,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}

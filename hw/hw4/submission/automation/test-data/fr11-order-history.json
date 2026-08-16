@@ -1,0 +1,15 @@
+[
+  {"id":"FR11-TC-001","action":"api-list","description":"Authenticated user receives an order array","expectedStatus":200},
+  {"id":"FR11-TC-002","action":"api-no-token","description":"Request without a token is rejected","expectedStatus":401},
+  {"id":"FR11-TC-003","action":"api-bad-token","description":"Malformed token is rejected","expectedStatus":403},
+  {"id":"FR11-TC-004","action":"api-shape","description":"Order records expose the required FR-11 fields","expectedStatus":200},
+  {"id":"FR11-TC-005","action":"api-descending","description":"Orders are returned newest ID first","expectedStatus":200},
+  {"id":"FR11-TC-006","action":"ui-heading","description":"Profile displays the order-history heading","fixtureProfile":"standard-orders"},
+  {"id":"FR11-TC-007","action":"ui-empty","description":"An empty order list has a helpful message","fixtureProfile":"standard-orders"},
+  {"id":"FR11-TC-008","action":"ui-id","description":"Order ID is displayed with a hash prefix","fixtureProfile":"standard-orders"},
+  {"id":"FR11-TC-009","action":"ui-date","description":"Order date is localized instead of raw ISO","fixtureProfile":"standard-orders"},
+  {"id":"FR11-TC-010","action":"ui-price","description":"Total uses thousands separators and dong symbol","fixtureProfile":"standard-orders"},
+  {"id":"FR11-TC-011","action":"ui-status","description":"All statuses are translated and color differentiated","fixtureProfile":"standard-orders"},
+  {"id":"FR11-TC-012","action":"ui-actions","description":"Cancel is available only before an order reaches shipping","fixtureProfile":"standard-orders"},
+  {"id":"FR11-TC-013","action":"api-ownership","description":"A customer cannot see an order owned by another customer","totalAmount":246810,"shippingAddress":"13 Ownership Test Street","expectedStatus":200}
+]

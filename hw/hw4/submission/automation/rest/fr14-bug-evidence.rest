@@ -1,0 +1,108 @@
+# HW04 FR-14 API bug evidence
+# Compatible with the VS Code REST Client extension.
+#
+# Start the backend before sending requests:
+#   cd hw/eshop-sut/backend
+#   node server.js
+#
+# Run requests from top to bottom. Capture the response status and body for
+# BUG-05, BUG-06 and BUG-08. The accounts below are public seeded SUT-only
+# accounts documented in hw/eshop-sut/README.md; they are not personal data.
+
+@api = http://localhost:3000
+@adminEmail = admin@eshop.com
+@adminPassword = Admin123!
+@customerEmail = test@eshop.com
+@customerPassword = Test1234!
+
+### 0. Health check — expected 200 and a JSON array
+GET {{api}}/api/categories
+Accept: application/json
+
+### 1. Admin login — send before BUG-05 and BUG-06
+# @name adminLogin
+POST {{api}}/api/login
+Content-Type: application/json
+
+{
+  "email": "{{adminEmail}}",
+  "password": "{{adminPassword}}"
+}
+
+### 2. Customer login — send before BUG-08
+# @name customerLogin
+POST {{api}}/api/login
+Content-Type: application/json
+
+{
+  "email": "{{customerEmail}}",
+  "password": "{{customerPassword}}"
+}
+
+### BUG-05 / FR14-TC-005 — empty category name
+# Expected: 400 Bad Request
+# Current defect: 200 OK with "Category created"
+# @name bug05EmptyName
+POST {{api}}/api/categories
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "name": ""
+}
+
+### Cleanup BUG-05 TC-005 — run only when the response above returns an id
+DELETE {{api}}/api/categories/{{bug05EmptyName.response.body.$.id}}
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+
+### BUG-05 / FR14-TC-006 — missing category name
+# Expected: 400 Bad Request
+# Current defect: 200 OK with "Category created"
+# @name bug05MissingName
+POST {{api}}/api/categories
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+Content-Type: application/json
+
+{}
+
+### Cleanup BUG-05 TC-006 — run only when the response above returns an id
+DELETE {{api}}/api/categories/{{bug05MissingName.response.body.$.id}}
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+
+### BUG-05 / FR14-TC-007 — whitespace-only category name
+# Expected: 400 Bad Request
+# Current defect: 200 OK with "Category created"
+# @name bug05WhitespaceName
+POST {{api}}/api/categories
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "name": "   "
+}
+
+### Cleanup BUG-05 TC-007 — run only when the response above returns an id
+DELETE {{api}}/api/categories/{{bug05WhitespaceName.response.body.$.id}}
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+
+### BUG-06 / FR14-TC-009 — delete a category that does not exist
+# Expected: 404 Not Found
+# Current defect: 200 OK with "Category deleted"
+DELETE {{api}}/api/categories/999999999
+Authorization: Bearer {{adminLogin.response.body.$.token}}
+
+### BUG-08 / FR14-TC-016 — customer creates a category
+# Expected: 403 Forbidden because only admin may mutate categories
+# Current defect: 200 OK with "Category created"
+# @name bug08CustomerCreate
+POST {{api}}/api/categories
+Authorization: Bearer {{customerLogin.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "name": "REST evidence customer forbidden"
+}
+
+### Cleanup BUG-08 — admin removes the category created by the defective request
+DELETE {{api}}/api/categories/{{bug08CustomerCreate.response.body.$.id}}
+Authorization: Bearer {{adminLogin.response.body.$.token}}

@@ -1,0 +1,19 @@
+[
+  {"id":"FR14-TC-001","action":"api-list","description":"Public category list is an array","expectedStatus":200},
+  {"id":"FR14-TC-002","action":"api-create","description":"Admin creates a valid ASCII category","name":"Gaming","expectedStatus":200},
+  {"id":"FR14-TC-003","action":"api-create","description":"Admin creates a valid Vietnamese category","name":"Điện tử","expectedStatus":200},
+  {"id":"FR14-TC-004","action":"api-create","description":"One-character category name is accepted","name":"A","expectedStatus":200},
+  {"id":"FR14-TC-005","action":"api-empty","description":"Empty category name is rejected","name":"","expectedStatus":400},
+  {"id":"FR14-TC-006","action":"api-empty","description":"Missing category name is rejected","expectedStatus":400},
+  {"id":"FR14-TC-007","action":"api-whitespace","description":"Whitespace-only category name is rejected","name":"   ","expectedStatus":400},
+  {"id":"FR14-TC-008","action":"api-no-token","description":"Create without authentication is rejected","name":"Unauthorized","expectedStatus":401},
+  {"id":"FR14-TC-009","action":"api-delete-missing","description":"Deleting an unknown category returns not found","missingId":999999999,"expectedStatus":404},
+  {"id":"FR14-TC-010","action":"ui-heading","description":"Category tab has a descriptive heading"},
+  {"id":"FR14-TC-011","action":"ui-required","description":"New category name is visibly and natively required"},
+  {"id":"FR14-TC-012","action":"ui-delete-observation","description":"Exploratory observation records whether delete asks for confirmation","name":"ExploreDelete"},
+  {"id":"FR14-TC-013","action":"api-delete-success","description":"Admin deletes a category and it no longer appears in the list","name":"DeleteApi","expectedStatus":200},
+  {"id":"FR14-TC-014","action":"ui-create-view","description":"Admin creates a category through the UI and sees it in the table","name":"CreateViewUi"},
+  {"id":"FR14-TC-015","action":"ui-delete-success","description":"Admin deletes the intended category through the UI","name":"DeleteUi"},
+  {"id":"FR14-TC-016","action":"api-customer-token","description":"A customer token cannot create a category","name":"CustomerForbidden","expectedStatus":403},
+  {"id":"FR14-TC-017","action":"api-update","description":"Admin updates a category name and the change persists","name":"UpdateApi","expectedStatus":200}
+]
