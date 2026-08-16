@@ -7,3 +7,16 @@ note.md
 node_modules/
 hw/hw4/**/test-results/
 
+# Transient JMeter logs and temp scratch scripts
+jmeter.log
+**/jmeter.log
+**/_tmp_*
+
+# Submission zip packages
+*.zip
+
+# Heavy generated report/results artifacts (kept locally only)
+hw/hw4/reports/
+hw/hw4/submission/reports/
+hw/23127334_HW05_AI_Performance_100/results/
+
