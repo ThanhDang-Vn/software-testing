@@ -48,7 +48,7 @@ The workflow runs on relevant pushes, pull requests, and manual `workflow_dispat
    - The shell uses `pipefail` and reads `PIPESTATUS[0]`, so piping Newman output through `tee` cannot hide Newman's exit code.
    - All three suites run to produce complete evidence; their results are aggregated. If any Newman assertion fails, the test step and workflow job fail.
    - Artifact upload uses `if: always()`, so CLI logs, JUnit XML, HTML reports, and backend logs remain available even for a failed test run.
-   - Upload is skipped when the Newman step itself was skipped by an earlier checkout/install failure; this avoids a misleading secondary “no files found” artifact error. If Newman starts and fails assertions, its reports are still uploaded.
+   - Upload is skipped unless at least one file exists under the Newman report directory; this avoids a misleading secondary “no files found” artifact error after an earlier checkout/install/shell failure. If Newman produces reports and then fails assertions, those reports and backend logs are still uploaded.
    - HTML uses `--reporter-htmlextra-skipSensitiveData`. The workflow intentionally does not upload the runtime Postman environment or Newman JSON reporter output because those can retain resolved credentials/tokens/Authorization headers.
 
 ## Generated artifacts

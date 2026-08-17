@@ -193,18 +193,16 @@ jobs:
             fi
 
             # Replace public seed passwords with masked, per-run generated credentials.
-            node <<'NODE'
-            const path = require('path');
-            const sqlite3 = require(path.resolve(process.env.BACKEND_DIR, 'node_modules/sqlite3')).verbose();
-            const db = new sqlite3.Database(path.resolve(process.env.BACKEND_DIR, 'database.sqlite'));
-            db.serialize(() => {
-              db.run('UPDATE users SET password = ? WHERE email = ?', [process.env.HW06_USER_PASSWORD, 'test@eshop.com']);
-              db.run('UPDATE users SET password = ? WHERE email = ?', [process.env.HW06_ADMIN_PASSWORD, 'admin@eshop.com']);
-            });
-            db.close((error) => {
-              if (error) throw error;
-            });
-            NODE
+            node -e '
+              const path = require("path");
+              const sqlite3 = require(path.resolve(process.env.BACKEND_DIR, "node_modules/sqlite3")).verbose();
+              const db = new sqlite3.Database(path.resolve(process.env.BACKEND_DIR, "database.sqlite"));
+              db.serialize(() => {
+                db.run("UPDATE users SET password = ? WHERE email = ?", [process.env.HW06_USER_PASSWORD, "test@eshop.com"]);
+                db.run("UPDATE users SET password = ? WHERE email = ?", [process.env.HW06_ADMIN_PASSWORD, "admin@eshop.com"]);
+              });
+              db.close((error) => { if (error) throw error; });
+            '
           }
 
           run_suite() {
@@ -244,7 +242,7 @@ jobs:
           exit "$overall_status"
 
       - name: Upload Newman reports and backend logs
-        if: ${{ always() && steps.newman.outcome != 'skipped' }}
+        if: ${{ always() && hashFiles('hw/hw6/reports/cicd/newman/**') != '' }}
         uses: actions/upload-artifact@v6
         with:
           name: hw06-api-reports-${{ github.run_id }}-${{ github.run_attempt }}
