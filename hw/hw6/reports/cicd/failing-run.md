@@ -7,10 +7,12 @@ This exercise demonstrates that one failed Newman assertion makes the workflow f
 | Stage | Commit | Reason |
 | --- | --- | --- |
 | Passing baseline | [`805c5959dd0a19b3a93035c7829dce595ecf8d40`](https://github.com/ThanhDang-Vn/software-testing/commit/805c5959dd0a19b3a93035c7829dce595ecf8d40) | Real successful `HW06 API Tests` run: all three expected-working suites passed and reports were uploaded. |
-| One-failure demonstration | `TODO — fill with the CI DEMO FAILURE commit SHA after this commit is created` | Adds exactly one deliberately false Postman assertion named `CI DEMO FAILURE | intentional single assertion failure` to selected case `CPN-AI-017`. No request, fixture, SUT, or other assertion changes. |
+| One-failure demonstration | `TODO — fill with the corrected CI DEMO FAILURE commit SHA` | Places exactly one deliberately false Postman assertion named `CI DEMO FAILURE | intentional single assertion failure` in selected case `CPN-AI-017`. No request, fixture, SUT, or legitimate assertion changes. |
 | Restore correct assertion set | `TODO — create only after the real failure run is captured` | Removes only the deliberate assertion, restoring the exact passing collection behavior. |
 
 The later evidence-only commit `eacbea47e04f5977707c8b59050e6a1115a63609` records the already successful passing run screenshots/artifact review; it is not one of the three behavioral states above.
+
+Commit `7b311dcebe54aa683d4a04c3923d4553c61e7d0f` attempted the demonstration but placed the assertion in non-selected case `CPN-AI-002`; its real run correctly stayed green. It is retained in history for audit transparency and is not counted as the one-failure behavioral commit.
 
 ## Expected failure signature
 
