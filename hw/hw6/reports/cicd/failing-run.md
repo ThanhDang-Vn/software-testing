@@ -7,7 +7,7 @@ This exercise demonstrates that one failed Newman assertion makes the workflow f
 | Stage | Commit | Reason |
 | --- | --- | --- |
 | Passing baseline | [`805c5959dd0a19b3a93035c7829dce595ecf8d40`](https://github.com/ThanhDang-Vn/software-testing/commit/805c5959dd0a19b3a93035c7829dce595ecf8d40) | Real successful `HW06 API Tests` run: all three expected-working suites passed and reports were uploaded. |
-| One-failure demonstration | `TODO — fill with the corrected CI DEMO FAILURE commit SHA` | Places exactly one deliberately false Postman assertion named `CI DEMO FAILURE | intentional single assertion failure` in selected case `CPN-AI-017`. No request, fixture, SUT, or legitimate assertion changes. |
+| One-failure demonstration | [`8f7786b96b85233c81e788ac028e5f2c5596f2ef`](https://github.com/ThanhDang-Vn/software-testing/commit/8f7786b96b85233c81e788ac028e5f2c5596f2ef) | Places exactly one deliberately false Postman assertion named `CI DEMO FAILURE | intentional single assertion failure` in selected case `CPN-AI-017`. No request, fixture, SUT, or legitimate assertion changes. Local verification: Newman exit `1`, 27 assertions, exactly 1 failed. |
 | Restore correct assertion set | `TODO — create only after the real failure run is captured` | Removes only the deliberate assertion, restoring the exact passing collection behavior. |
 
 The later evidence-only commit `eacbea47e04f5977707c8b59050e6a1115a63609` records the already successful passing run screenshots/artifact review; it is not one of the three behavioral states above.
@@ -22,15 +22,27 @@ Commit `7b311dcebe54aa683d4a04c3923d4553c61e7d0f` attempted the demonstration bu
 - Workflow/job conclusion: failure, because Newman returns non-zero and the shell preserves that status.
 - Artifact upload: still runs and retains the real CLI/JUnit/HTML reports plus backend reset logs.
 
-## Real failure evidence — not yet supplied
+## Real failure evidence
 
-- GitHub Actions run URL: `TODO — paste only after the demonstration commit is pushed and a real run completes`
-- Demonstration commit SHA: `TODO — copy the exact pushed SHA`
-- Artifact URL: `TODO — paste the real failure-run artifact URL`
-- Screenshot: `TODO — attach a real GitHub Actions summary/log screenshot showing the red job and CI DEMO FAILURE assertion`
-- Run conclusion: `TODO — record the actual GitHub conclusion; expected failure is not evidence by itself`
+- GitHub Actions run URL: `TODO — paste the exact URL copied from the real failed run page`
+- Demonstration commit SHA: `8f7786b96b85233c81e788ac028e5f2c5596f2ef`
+- Artifact URL: `TODO — paste the exact URL copied after opening the real artifact on GitHub`
+- Artifact file: [`hw06-api-reports-32078644821-1.zip`](../../actions/fail/hw06-api-reports-32078644821-1.zip)
+- Artifact SHA-256: `4299F0DB299EBB157DB97A46AF5FF1D853219892ED4217CA4CA75A7BE5166126`
+- Run conclusion: `failure`
+- Observed result: Register `26/0`; Coupon `27/1` with only `CI DEMO FAILURE`; Product `26/0`.
 
-No run URL, artifact URL, or screenshot is generated or inferred in this file.
+### Real screenshots
+
+![Failed workflow entry for corrected demo commit](../../actions/fail/img/Screenshot%202026-08-18%20060208.png)
+
+![Failed run summary with uploaded artifact](../../actions/fail/img/Screenshot%202026-08-18%20060220.png)
+
+![Exactly one CI DEMO FAILURE assertion](../../actions/fail/img/Screenshot%202026-08-18%20060259.png)
+
+![Failed job steps after successful setup and header guard](../../actions/fail/img/Screenshot%202026-08-18%20060317.png)
+
+The URL placeholders remain intentionally unfilled because no URL text was supplied in `actions/fail/evidence.md` or visible in the screenshots. No URL is inferred or fabricated.
 
 ## Restore procedure
 

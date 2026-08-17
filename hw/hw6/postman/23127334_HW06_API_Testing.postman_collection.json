@@ -9865,9 +9865,6 @@
                     "type": "text/javascript",
                     "exec": [
                       "const TC_ID = \"CPN-AI-017\";",
-                      "pm.test('CI DEMO FAILURE | intentional single assertion failure', function () {",
-                      "  pm.expect('expected-working').to.eql('intentional-demo-failure');",
-                      "});",
                       "const expectedStatuses = [200];",
                       "const expectedSchemaText = \"JSON success; discount_amount=50000; final_amount=850000\";",
                       "const expectedSideEffect = \"No usage mutation\";",
