@@ -32,12 +32,13 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
+        uses: actions/checkout@v6
+
+      - name: Initialize the EShop SUT submodule only
+        run: git submodule update --init --depth 1 -- hw/eshop-sut
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: "20.20.2"
           cache: npm
@@ -144,6 +145,7 @@ jobs:
           NODE
 
       - name: Run expected-working Newman gate
+        id: newman
         env:
           BACKEND_DIR: hw/eshop-sut/backend
           COLLECTION: hw/hw6/postman/23127334_HW06_API_Testing.postman_collection.json
@@ -242,8 +244,8 @@ jobs:
           exit "$overall_status"
 
       - name: Upload Newman reports and backend logs
-        if: always()
-        uses: actions/upload-artifact@v4
+        if: ${{ always() && steps.newman.outcome != 'skipped' }}
+        uses: actions/upload-artifact@v6
         with:
           name: hw06-api-reports-${{ github.run_id }}-${{ github.run_attempt }}
           path: |

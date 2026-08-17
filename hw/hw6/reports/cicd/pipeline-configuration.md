@@ -9,8 +9,10 @@ The workflow runs on relevant pushes, pull requests, and manual `workflow_dispat
 ## Pipeline stages
 
 1. **Checkout and Node setup**
-   - Checks out the repository and initializes the `hw/eshop-sut` submodule from the committed `.gitmodules` URL.
+   - Checks out the repository without recursively initializing every gitlink.
+   - Initializes only `hw/eshop-sut` from the committed `.gitmodules` URL. This path-scoped command is intentional: the parent repository also contains a legacy gitlink at `hw/hw2/group05_eshop` with no `.gitmodules` URL, so a recursive all-submodule checkout fails before tests start.
    - Installs Node.js `20.20.2` and enables the npm cache using the backend lockfile.
+   - Uses current official action runtimes (`checkout`, `setup-node`, and `upload-artifact` v6) so the actions themselves do not depend on the deprecated Node 20 action runtime. The SUT test process still uses the explicitly selected Node.js `20.20.2` toolchain.
 
 2. **Install EShop and Newman**
    - Runs `npm ci` in `hw/eshop-sut/backend`; the committed lockfile controls backend dependency versions.
@@ -46,6 +48,7 @@ The workflow runs on relevant pushes, pull requests, and manual `workflow_dispat
    - The shell uses `pipefail` and reads `PIPESTATUS[0]`, so piping Newman output through `tee` cannot hide Newman's exit code.
    - All three suites run to produce complete evidence; their results are aggregated. If any Newman assertion fails, the test step and workflow job fail.
    - Artifact upload uses `if: always()`, so CLI logs, JUnit XML, HTML reports, and backend logs remain available even for a failed test run.
+   - Upload is skipped when the Newman step itself was skipped by an earlier checkout/install failure; this avoids a misleading secondary “no files found” artifact error. If Newman starts and fails assertions, its reports are still uploaded.
    - HTML uses `--reporter-htmlextra-skipSensitiveData`. The workflow intentionally does not upload the runtime Postman environment or Newman JSON reporter output because those can retain resolved credentials/tokens/Authorization headers.
 
 ## Generated artifacts
