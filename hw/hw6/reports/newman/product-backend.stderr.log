@@ -1,0 +1,66 @@
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\body-parser\lib\types\json.js:72:19)
+    at C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\body-parser\lib\read.js:162:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:524:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+TypeError: Cannot destructure property 'name' of 'req.body' as it is undefined.
+    at C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\server.js:168:11
+    at Layer.handleRequest (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\index.js:582:12)
+    at next (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\index.js:291:5)
+    at read (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\body-parser\lib\read.js:62:5)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\body-parser\lib\types\json.js:72:19)
+    at C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\body-parser\lib\read.js:162:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:524:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+TypeError: Cannot destructure property 'name' of 'req.body' as it is undefined.
+    at C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\server.js:168:11
+    at Layer.handleRequest (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\index.js:582:12)
+    at next (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\index.js:291:5)
+    at read (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\body-parser\lib\read.js:62:5)
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\body-parser\lib\types\json.js:72:19)
+    at C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\body-parser\lib\read.js:162:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:206:9)
+    at invokeCallback (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:524:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+TypeError: Cannot destructure property 'name' of 'req.body' as it is undefined.
+    at C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\server.js:168:11
+    at Layer.handleRequest (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\lib\layer.js:152:17)
+    at next (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\lib\route.js:117:3)
+    at handle (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\lib\layer.js:152:17)
+    at C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\index.js:295:15
+    at processParams (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\index.js:582:12)
+    at next (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\router\index.js:291:5)
+    at read (C:\Users\dn156\source\software-testing\software-testing\hw\eshop-sut\backend\node_modules\body-parser\lib\read.js:62:5)

@@ -1,0 +1,17 @@
+[
+  {
+    "data_id": "CPN-DATA-BIGBUY-FIXED",
+    "purpose": "Single deterministic row for the expected-working CI gate",
+    "name": "HW06 CI User",
+    "password": "unused-runtime-value",
+    "code": "BIGBUY",
+    "total_amount": 900000,
+    "user_id": 2,
+    "name_prefix": "HW06-CI-Product",
+    "price": 100000,
+    "description": "HW06 expected-working CI gate",
+    "imageUrl": "https://example.test/ci.png",
+    "category_id": 1,
+    "auth_profile": "admin"
+  }
+]

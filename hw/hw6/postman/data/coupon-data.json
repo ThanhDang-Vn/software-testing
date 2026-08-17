@@ -1,0 +1,47 @@
+[
+  {
+    "data_id": "CPN-DATA-SAVE10-EQUAL-MIN",
+    "purpose": "Inclusive lower boundary for a percent coupon",
+    "setup": "Reset SQLite; login as seeded user; set userId=2 and userToken from the login response",
+    "code": "SAVE10",
+    "total_amount": 300000,
+    "user_id": 2,
+    "auth_profile": "user",
+    "test_action": "POST /api/apply-coupon with the user bearer token",
+    "expected_status": 200,
+    "expected_discount_amount": 30000,
+    "expected_final_amount": 270000,
+    "verification": "Check status, success flag, coupon_id, discount_amount and final_amount against FR-09",
+    "teardown": "Do not reuse coupon usage state; reset SQLite before another run that depends on max_uses_per_user"
+  },
+  {
+    "data_id": "CPN-DATA-SAVE10-ABOVE-MIN",
+    "purpose": "Value immediately above the minimum for a percent coupon",
+    "setup": "Reset SQLite; login as seeded user; set userId=2 and userToken from the login response",
+    "code": "SAVE10",
+    "total_amount": 300001,
+    "user_id": 2,
+    "auth_profile": "user",
+    "test_action": "POST /api/apply-coupon with the user bearer token",
+    "expected_status": 200,
+    "expected_discount_amount": 30000.1,
+    "expected_final_amount": 270000.9,
+    "verification": "Check the percent formula without inventing a rounding rule not stated by the spec",
+    "teardown": "Reset SQLite before a later case reuses SAVE10 for user id 2"
+  },
+  {
+    "data_id": "CPN-DATA-BIGBUY-FIXED",
+    "purpose": "Independent baseline for a fixed-value coupon",
+    "setup": "Reset SQLite; login as seeded user; set userId=2 and userToken from the login response",
+    "code": "BIGBUY",
+    "total_amount": 600000,
+    "user_id": 2,
+    "auth_profile": "user",
+    "test_action": "POST /api/apply-coupon with the user bearer token",
+    "expected_status": 200,
+    "expected_discount_amount": 50000,
+    "expected_final_amount": 550000,
+    "verification": "Check the fixed discount formula and returned coupon metadata",
+    "teardown": "Reset SQLite before rerunning any usage-limit scenario"
+  }
+]
