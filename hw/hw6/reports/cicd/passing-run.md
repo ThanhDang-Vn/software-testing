@@ -1,6 +1,6 @@
 # HW06 Passing CI Run
 
-This record uses the real GitHub Actions URLs and screenshots supplied under `hw/hw6/actions`. No link, result, or screenshot is fabricated.
+This record uses the real GitHub Actions URLs and images supplied under `hw/hw6/actions`. No link, result, or image is fabricated.
 
 ## Verified identifiers
 
@@ -14,21 +14,21 @@ This record uses the real GitHub Actions URLs and screenshots supplied under `hw
 - Conclusion: `success`
 - Duration shown on summary: `29s` total; job `25s`
 
-## Real screenshots
+## Real images
 
 ### Actions run list and commit
 
-![Successful HW06 workflow entry for commit 805c595](../../actions/img/Screenshot%202026-08-18%20053707.png)
+![Successful HW06 workflow entry for commit 805c595](../../actions/success/img/success-runs.png)
 
 ### Successful run summary and artifact
 
-![Successful run summary with artifact hw06-api-reports-32076713839-1](../../actions/img/Screenshot%202026-08-18%20053748.png)
+![Successful run summary with artifact hw06-api-reports-32076713839-1](../../actions/success/img/success-summary.png)
 
 ### Successful job steps
 
-![Newman API contract tests job with all execution steps completed](../../actions/img/Screenshot%202026-08-18%20053846.png)
+![Newman API contract tests job with all execution steps completed](../../actions/success/img/success-steps.png)
 
-These are user-captured GitHub screenshots. They were inspected as supplied and were not generated or altered for this report.
+These are user-captured GitHub images. They were inspected as supplied and were not generated or altered for this report.
 
 ## Artifact verification checklist
 
@@ -42,13 +42,13 @@ These are user-captured GitHub screenshots. They were inspected as supplied and 
 - [x] The complete archive was scanned and contains no runtime Postman environment, password/token variable names, `Authorization`, `Bearer`, JWT-shaped value, or Newman JSON export.
 - [x] The successful run shows commit `805c595`, matching the recorded full SHA `805c5959dd0a19b3a93035c7829dce595ecf8d40`.
 
-Downloaded artifact retained at [`hw/hw6/actions/hw06-api-reports-32076713839-1.zip`](../../actions/hw06-api-reports-32076713839-1.zip). Its SHA-256 is:
+Downloaded artifact retained at [`hw/hw6/actions/success/hw06-api-reports-32076713839-1.zip`](../../actions/success/hw06-api-reports-32076713839-1.zip). Its SHA-256 is:
 
 ```text
 C8663684B4AF893F25492D703A32B61B120AF0C6FF9CAEFC2FF206A3E1A52432
 ```
 
-This matches the digest prefix visible in the real GitHub artifact screenshot.
+This matches the digest prefix visible in the real GitHub artifact image.
 
 ## Observed warning
 
@@ -62,4 +62,4 @@ The successful run summary shows one annotation: ``The process `/usr/bin/git` fa
 
 ## Evidence completeness
 
-The successful run identifiers, screenshots, downloaded artifact, artifact contents, report results, reset logs, and sensitive-data checks are complete. No evidence placeholder remains for this passing run.
+The successful run identifiers, images, downloaded artifact, artifact contents, report results, reset logs, and sensitive-data checks are complete. No evidence placeholder remains for this passing run.

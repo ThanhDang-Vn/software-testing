@@ -79,7 +79,7 @@ hw/hw6/reports/cicd/
     └── product-backend.log
 ```
 
-Retention is 14 days. The GitHub run URL and artifact URL can be inserted into the `commit/run link` placeholders in `bugs/github-issue-drafts.md` after a real run exists.
+Retention is 14 days. Published bug records and their evidence dispositions are maintained in `bugs/github-issues.md`; CI run and artifact URLs must only be added when a real bug-specific remote run exists.
 
 ## Expected result
 

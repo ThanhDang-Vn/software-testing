@@ -12,11 +12,11 @@
 - Downloaded artifact: `hw06-api-reports-32076713839-1.zip`
 - Artifact SHA-256: `C8663684B4AF893F25492D703A32B61B120AF0C6FF9CAEFC2FF206A3E1A52432`
 
-## Screenshots
+## Images
 
-- `img/Screenshot 2026-08-18 053707.png`: Actions run list, successful workflow, branch, and short commit SHA.
-- `img/Screenshot 2026-08-18 053748.png`: successful summary, duration, job, artifact name/size, and warning annotation.
-- `img/Screenshot 2026-08-18 053846.png`: successful job-step list including header enforcement, Newman gate, and artifact upload.
+- `img/success-runs.png`: Actions run list, successful workflow, branch, and short commit SHA.
+- `img/success-summary.png`: successful summary, duration, job, artifact name/size, and warning annotation.
+- `img/success-steps.png`: successful job-step list including header enforcement, Newman gate, and artifact upload.
 
 ## Artifact inspection
 
@@ -26,4 +26,4 @@
 - Product: 1 iteration, 10 requests, 26 assertions, 0 failed.
 - Each backend log confirms database initialization/seed, server readiness, and database connection.
 - Full-archive scan found no runtime Postman environment, password/token variable names, `Authorization`, `Bearer`, JWT-shaped value, or Newman JSON export.
-- The local ZIP SHA-256 matches the digest prefix displayed by GitHub in the supplied artifact screenshot.
+- The local ZIP SHA-256 matches the digest prefix displayed by GitHub in the supplied artifact image.
