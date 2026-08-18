@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-60.0 -260 3490.0 1525.0" width="3490.0" height="1525.0" font-family="Segoe UI, sans-serif">
+<rect x="-60.0" y="-260" width="3490.0" height="1525.0" fill="#ffffff"/>
+<defs>
+<marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1e1e1e"/></marker>
+<marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#868e96"/></marker>
+</defs>
+<rect x="0.0" y="398.0" width="200" height="84" rx="12" fill="#ffec99" stroke="#1e1e1e" stroke-width="2"/>
+<rect x="355.0" y="398.0" width="210" height="84" rx="12" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2"/>
+<rect x="715.0" y="398.0" width="210" height="84" rx="12" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2"/>
+<rect x="1075.0" y="128.0" width="210" height="84" rx="12" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2"/>
+<rect x="1075.0" y="398.0" width="210" height="84" rx="12" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2"/>
+<rect x="1075.0" y="738.0" width="210" height="84" rx="12" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2"/>
+<rect x="1435.0" y="395.0" width="210" height="90" rx="12" fill="#d0bfff" stroke="#1e1e1e" stroke-width="2"/>
+<rect x="1775.0" y="398.0" width="210" height="84" rx="12" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2"/>
+<rect x="2115.0" y="398.0" width="210" height="84" rx="12" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2"/>
+<polygon points="2580.0,370.0 2705.0,440.0 2580.0,510.0 2455.0,440.0" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2"/>
+<rect x="2812.5" y="395.0" width="215" height="90" rx="12" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2"/>
+<rect x="3150.0" y="395.0" width="220" height="90" rx="12" fill="#ffec99" stroke="#1e1e1e" stroke-width="2"/>
+<ellipse cx="1700.0" cy="1160.0" rx="160.0" ry="45.0" fill="#e9ecef" stroke="#1e1e1e" stroke-width="2"/>
+<polyline points="200.0,440.0 355.0,440.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="565.0,440.0 715.0,440.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="876.0,398.0 1124.0,212.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="925.0,440.0 1075.0,440.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="864.4705882352941,482.0 1135.5294117647059,738.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="820,482 820,600 1540,600 1540,487" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="862,482 862,640 2220,640 2220,484" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="1180.0,482.0 1180.0,738.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="1236.0,212.0 1480.0,395.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="1285.0,440.0 1435.0,440.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="1224.4705882352941,738.0 1492.3529411764705,485.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="1285,170 1830,170 1830,396" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="1285,468 1285,545 1805,545 1805,484" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="1285,780 1865,780 1865,484" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="1645.0,440.0 1775.0,440.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="1985.0,440.0 2115.0,440.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="2325.0,440.0 2455.0,440.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="2705.0,440.0 2812.5,440.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="3027.5,440.0 3150.0,440.0" fill="none" stroke="#1e1e1e" stroke-width="2" marker-end="url(#ab)"/>
+<polyline points="2580,370 2580,40 820,40 820,396" fill="none" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="10,7" marker-end="url(#ao)"/>
+<polyline points="2580,370 2580,82 1180,82 1180,126" fill="none" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="10,7" marker-end="url(#ao)"/>
+<polyline points="2580,370 2580,300 1490,300 1490,393" fill="none" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="10,7" marker-end="url(#ao)"/>
+<polyline points="2580,370 2580,340 1130,340 1130,396" fill="none" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="10,7" marker-end="url(#ao)"/>
+<polyline points="2580,510 2580,690 1130,690 1130,736" fill="none" stroke="#e8590c" stroke-width="1.5" stroke-dasharray="10,7" marker-end="url(#ao)"/>
+<polyline points="460,482 460,1030" fill="none" stroke="#7c848c" stroke-width="1.5" stroke-dasharray="10,7"/>
+<polyline points="820,482 820,1030" fill="none" stroke="#7c848c" stroke-width="1.5" stroke-dasharray="10,7"/>
+<polyline points="1240,212 1330,300 1330,1030" fill="none" stroke="#7c848c" stroke-width="1.5" stroke-dasharray="10,7"/>
+<polyline points="1240,482 1400,560 1400,1030" fill="none" stroke="#7c848c" stroke-width="1.5" stroke-dasharray="10,7"/>
+<polyline points="1240,822 1240,1030" fill="none" stroke="#7c848c" stroke-width="1.5" stroke-dasharray="10,7"/>
+<polyline points="1540,485 1540,1030" fill="none" stroke="#7c848c" stroke-width="1.5" stroke-dasharray="10,7"/>
+<polyline points="1880,482 1880,1030" fill="none" stroke="#7c848c" stroke-width="1.5" stroke-dasharray="10,7"/>
+<polyline points="2220,482 2220,1030" fill="none" stroke="#7c848c" stroke-width="1.5" stroke-dasharray="10,7"/>
+<polyline points="2580,510 2530,570 2530,1030" fill="none" stroke="#7c848c" stroke-width="1.5" stroke-dasharray="10,7"/>
+<polyline points="2920,485 2920,1030" fill="none" stroke="#7c848c" stroke-width="1.5" stroke-dasharray="10,7"/>
+<polyline points="460,1030 2920,1030" fill="none" stroke="#7c848c" stroke-width="2" stroke-dasharray="10,7"/>
+<polyline points="1700,1030 1700,1113" fill="none" stroke="#7c848c" stroke-width="1.5" stroke-dasharray="10,7" marker-end="url(#ab)"/>
+<polyline points="1860,1160 2580,1160 2580,512" fill="none" stroke="#7c848c" stroke-width="1.5" stroke-dasharray="10,7" marker-end="url(#ab)"/>
+<rect x="1253.52" y="563.5" width="192.95999999999998" height="21.0" rx="12" fill="#ffffff" stroke="transparent" stroke-width="1"/>
+<rect x="1899.6" y="613.5" width="220.79999999999998" height="21.0" rx="12" fill="#ffffff" stroke="transparent" stroke-width="1"/>
+<rect x="1436.56" y="143.5" width="206.88" height="21.0" rx="12" fill="#ffffff" stroke="transparent" stroke-width="1"/>
+<rect x="1521.36" y="520.5" width="137.27999999999997" height="21.0" rx="12" fill="#ffffff" stroke="transparent" stroke-width="1"/>
+<rect x="1537.88" y="753.5" width="144.23999999999998" height="21.0" rx="12" fill="#ffffff" stroke="transparent" stroke-width="1"/>
+<rect x="2372.84" y="16.5" width="158.16" height="21.0" rx="12" fill="#ffffff" stroke="transparent" stroke-width="1"/>
+<rect x="2345.0" y="58.5" width="186.0" height="21.0" rx="12" fill="#ffffff" stroke="transparent" stroke-width="1"/>
+<rect x="2331.08" y="276.5" width="199.92" height="21.0" rx="12" fill="#ffffff" stroke="transparent" stroke-width="1"/>
+<rect x="2317.16" y="316.5" width="213.83999999999997" height="21.0" rx="12" fill="#ffffff" stroke="transparent" stroke-width="1"/>
+<rect x="2345.0" y="666.5" width="186.0" height="21.0" rx="12" fill="#ffffff" stroke="transparent" stroke-width="1"/>
+<rect x="567.8" y="996.875" width="464.4" height="22.25" rx="12" fill="#ffffff" stroke="transparent" stroke-width="1"/>
+<rect x="2173.96" y="1129.5" width="172.07999999999998" height="21.0" rx="12" fill="#ffffff" stroke="transparent" stroke-width="1"/>
+<text x="100.0" y="435.875" font-size="15" fill="#1e1e1e" text-anchor="middle">Specification</text>
+<text x="100.0" y="454.625" font-size="15" fill="#1e1e1e" text-anchor="middle">Sources</text>
+<text x="460.0" y="445.25" font-size="15" fill="#1e1e1e" text-anchor="middle">Spec Loader</text>
+<text x="820.0" y="445.25" font-size="15" fill="#1e1e1e" text-anchor="middle">Contract Extractor</text>
+<text x="1180.0" y="165.875" font-size="15" fill="#1e1e1e" text-anchor="middle">Domain / BVA</text>
+<text x="1180.0" y="184.625" font-size="15" fill="#1e1e1e" text-anchor="middle">Generator</text>
+<text x="1180.0" y="445.25" font-size="15" fill="#1e1e1e" text-anchor="middle">State Modeler</text>
+<text x="1180.0" y="785.25" font-size="15" fill="#1e1e1e" text-anchor="middle">Security Mapper</text>
+<text x="1540.0" y="435.875" font-size="15" fill="#1e1e1e" text-anchor="middle">Schema Assertion</text>
+<text x="1540.0" y="454.625" font-size="15" fill="#1e1e1e" text-anchor="middle">Generator</text>
+<text x="1880.0" y="445.25" font-size="15" fill="#1e1e1e" text-anchor="middle">Deduplicator</text>
+<text x="2220.0" y="435.875" font-size="15" fill="#1e1e1e" text-anchor="middle">Traceability</text>
+<text x="2220.0" y="454.625" font-size="15" fill="#1e1e1e" text-anchor="middle">Checker</text>
+<text x="2580.0" y="435.875" font-size="15" fill="#1e1e1e" text-anchor="middle">Human Review</text>
+<text x="2580.0" y="454.625" font-size="15" fill="#1e1e1e" text-anchor="middle">Gate</text>
+<text x="2920.0" y="435.875" font-size="15" fill="#1e1e1e" text-anchor="middle">Excel / Postman</text>
+<text x="2920.0" y="454.625" font-size="15" fill="#1e1e1e" text-anchor="middle">Exporter</text>
+<text x="3260.0" y="435.875" font-size="15" fill="#1e1e1e" text-anchor="middle">Excel, Postman &amp;</text>
+<text x="3260.0" y="454.625" font-size="15" fill="#1e1e1e" text-anchor="middle">Export Manifest</text>
+<text x="1700.0" y="1165.25" font-size="15" fill="#1e1e1e" text-anchor="middle">Audit Logger</text>
+<rect x="224.78" y="415.5" width="105.44" height="49.0" fill="#ffffff" opacity="0.92"/>
+<text x="277.5" y="429.2" font-size="12" fill="#1e1e1e" text-anchor="middle">requirements,</text>
+<text x="277.5" y="444.2" font-size="12" fill="#1e1e1e" text-anchor="middle">API spec,</text>
+<text x="277.5" y="459.2" font-size="12" fill="#1e1e1e" text-anchor="middle">security rules</text>
+<rect x="583.8" y="423.0" width="112.39999999999999" height="34.0" fill="#ffffff" opacity="0.92"/>
+<text x="640.0" y="436.7" font-size="12" fill="#1e1e1e" text-anchor="middle">normalized spec</text>
+<text x="640.0" y="451.7" font-size="12" fill="#1e1e1e" text-anchor="middle">+ source index</text>
+<rect x="947.28" y="288.0" width="105.44" height="34.0" fill="#ffffff" opacity="0.92"/>
+<text x="1000.0" y="301.7" font-size="12" fill="#1e1e1e" text-anchor="middle">types, ranges,</text>
+<text x="1000.0" y="316.7" font-size="12" fill="#1e1e1e" text-anchor="middle">constraints</text>
+<rect x="957.72" y="423.0" width="84.55999999999999" height="34.0" fill="#ffffff" opacity="0.92"/>
+<text x="1000.0" y="436.7" font-size="12" fill="#1e1e1e" text-anchor="middle">resources,</text>
+<text x="1000.0" y="451.7" font-size="12" fill="#1e1e1e" text-anchor="middle">ops, actors</text>
+<rect x="954.24" y="593.0" width="91.52" height="34.0" fill="#ffffff" opacity="0.92"/>
+<text x="1000.0" y="606.7" font-size="12" fill="#1e1e1e" text-anchor="middle">auth, roles,</text>
+<text x="1000.0" y="621.7" font-size="12" fill="#1e1e1e" text-anchor="middle">ownership</text>
+<rect x="1130.76" y="593.0" width="98.47999999999999" height="34.0" fill="#ffffff" opacity="0.92"/>
+<text x="1180.0" y="606.7" font-size="12" fill="#1e1e1e" text-anchor="middle">state &amp;</text>
+<text x="1180.0" y="621.7" font-size="12" fill="#1e1e1e" text-anchor="middle">actor context</text>
+<rect x="1298.32" y="286.5" width="119.35999999999999" height="34.0" fill="#ffffff" opacity="0.92"/>
+<text x="1358.0" y="300.2" font-size="12" fill="#1e1e1e" text-anchor="middle">inputs +</text>
+<text x="1358.0" y="315.2" font-size="12" fill="#1e1e1e" text-anchor="middle">validity classes</text>
+<rect x="1310.76" y="423.0" width="98.47999999999999" height="34.0" fill="#ffffff" opacity="0.92"/>
+<text x="1360.0" y="436.7" font-size="12" fill="#1e1e1e" text-anchor="middle">transitions +</text>
+<text x="1360.0" y="451.7" font-size="12" fill="#1e1e1e" text-anchor="middle">side effects</text>
+<rect x="1312.6517647058824" y="594.5" width="91.52" height="34.0" fill="#ffffff" opacity="0.92"/>
+<text x="1358.4117647058824" y="608.2" font-size="12" fill="#1e1e1e" text-anchor="middle">security</text>
+<text x="1358.4117647058824" y="623.2" font-size="12" fill="#1e1e1e" text-anchor="middle">expectations</text>
+<rect x="1643.36" y="423.0" width="133.27999999999997" height="34.0" fill="#ffffff" opacity="0.92"/>
+<text x="1710.0" y="436.7" font-size="12" fill="#1e1e1e" text-anchor="middle">assertion-enriched</text>
+<text x="1710.0" y="451.7" font-size="12" fill="#1e1e1e" text-anchor="middle">candidates</text>
+<rect x="1986.84" y="423.0" width="126.32" height="34.0" fill="#ffffff" opacity="0.92"/>
+<text x="2050.0" y="436.7" font-size="12" fill="#1e1e1e" text-anchor="middle">unique cases +</text>
+<text x="2050.0" y="451.7" font-size="12" fill="#1e1e1e" text-anchor="middle">merged provenance</text>
+<rect x="2337.28" y="423.0" width="105.44" height="34.0" fill="#ffffff" opacity="0.92"/>
+<text x="2390.0" y="436.7" font-size="12" fill="#1e1e1e" text-anchor="middle">coverage, gaps</text>
+<text x="2390.0" y="451.7" font-size="12" fill="#1e1e1e" text-anchor="middle">&amp; traceability</text>
+<rect x="2726.91" y="423.0" width="63.67999999999999" height="34.0" fill="#ffffff" opacity="0.92"/>
+<text x="2758.75" y="436.7" font-size="12" fill="#1e1e1e" text-anchor="middle">approved</text>
+<text x="2758.75" y="451.7" font-size="12" fill="#1e1e1e" text-anchor="middle">cases</text>
+<rect x="3042.99" y="423.0" width="91.52" height="34.0" fill="#ffffff" opacity="0.92"/>
+<text x="3088.75" y="436.7" font-size="12" fill="#1e1e1e" text-anchor="middle">generated</text>
+<text x="3088.75" y="451.7" font-size="12" fill="#1e1e1e" text-anchor="middle">deliverables</text>
+<text x="60" y="-166.85" font-size="34" fill="#1e1e1e" text-anchor="start">AI-driven API Test Generator — Component Architecture</text>
+<text x="62" y="-127.45" font-size="18" fill="#7c848c" text-anchor="start">Solid = data flow        Orange dashed = human review feedback        Grey dashed = audit trail (append-only)</text>
+<text x="1350.0" y="578.2" font-size="12" fill="#1e1e1e" text-anchor="middle">schemas, statuses, headers</text>
+<text x="2010.0" y="628.2" font-size="12" fill="#1e1e1e" text-anchor="middle">contract elements + provenance</text>
+<text x="1540.0" y="158.2" font-size="12" fill="#1e1e1e" text-anchor="middle">domain &amp; boundary candidates</text>
+<text x="1590.0" y="535.2" font-size="12" fill="#1e1e1e" text-anchor="middle">stateful scenarios</text>
+<text x="1610.0" y="768.2" font-size="12" fill="#1e1e1e" text-anchor="middle">security candidates</text>
+<text x="2451.92" y="31.200000000000003" font-size="12" fill="#e8590c" text-anchor="middle">reinterpret conflicts</text>
+<text x="2438.0" y="73.2" font-size="12" fill="#e8590c" text-anchor="middle">regenerate affected cases</text>
+<text x="2431.04" y="291.2" font-size="12" fill="#e8590c" text-anchor="middle">revise supported assertions</text>
+<text x="2424.08" y="331.2" font-size="12" fill="#e8590c" text-anchor="middle">regenerate affected scenarios</text>
+<text x="2438.0" y="681.2" font-size="12" fill="#e8590c" text-anchor="middle">regenerate security cases</text>
+<text x="800.0" y="1012.55" font-size="13" fill="#7c848c" text-anchor="middle">decisions, transformations, versions &amp; hashes  (append-only)</text>
+<text x="2260.0" y="1144.2" font-size="12" fill="#7c848c" text-anchor="middle">read-only audit context</text>
+</svg>

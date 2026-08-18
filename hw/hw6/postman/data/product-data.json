@@ -1,0 +1,47 @@
+[
+  {
+    "data_id": "PRD-DATA-GUEST-VALID",
+    "purpose": "Authorization partition with no token",
+    "setup": "Reset SQLite; set categoryId=1; generate productRunSuffix; do not set Authorization",
+    "auth_profile": "guest",
+    "name_prefix": "HW06-Guest-Product",
+    "price": 101001,
+    "description": "guest-authorization-check",
+    "imageUrl": "https://example.test/hw06-guest.png",
+    "category_id": 1,
+    "test_action": "POST /api/products with name_prefix-productRunSuffix",
+    "expected_status": 401,
+    "verification": "Request is rejected and GET /api/products does not contain the generated name",
+    "teardown": "If the SUT creates a product unexpectedly, capture its id and delete it with the admin token; otherwise no action"
+  },
+  {
+    "data_id": "PRD-DATA-USER-VALID",
+    "purpose": "Authorization partition with a normal user token",
+    "setup": "Reset SQLite; login as test@eshop.com; set userToken and categoryId=1; generate productRunSuffix",
+    "auth_profile": "user",
+    "name_prefix": "HW06-User-Product",
+    "price": 101002,
+    "description": "user-authorization-check",
+    "imageUrl": "https://example.test/hw06-user.png",
+    "category_id": 1,
+    "test_action": "POST /api/products with the user bearer token and name_prefix-productRunSuffix",
+    "expected_status": 403,
+    "verification": "Request is rejected and GET /api/products does not contain the generated name",
+    "teardown": "If a product is created unexpectedly, capture its id and delete it with the admin token"
+  },
+  {
+    "data_id": "PRD-DATA-ADMIN-VALID",
+    "purpose": "Authorized product-creation baseline",
+    "setup": "Reset SQLite; login as admin@eshop.com; set adminToken and categoryId=1; generate productRunSuffix",
+    "auth_profile": "admin",
+    "name_prefix": "HW06-Admin-Product",
+    "price": 101003,
+    "description": "admin-create-baseline",
+    "imageUrl": "https://example.test/hw06-admin.png",
+    "category_id": 1,
+    "test_action": "POST /api/products with the admin bearer token and name_prefix-productRunSuffix",
+    "expected_status": 200,
+    "verification": "Capture response id, then GET /api/products/:id and compare all submitted fields",
+    "teardown": "DELETE /api/products/:createdProductId with the admin token and verify the id is no longer retrievable"
+  }
+]

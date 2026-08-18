@@ -1,0 +1,44 @@
+[
+  {
+    "data_id": "REG-DATA-VALID-UNIQUE",
+    "purpose": "Baseline registration with a run-scoped unique email",
+    "setup": "Reset seed or confirm the generated email does not exist",
+    "name": "HW06 Register User",
+    "email_mode": "run_unique",
+    "email_local_prefix": "hw06.register",
+    "email_domain": "example.test",
+    "password": "Valid123!",
+    "test_action": "POST /api/register once with the generatedEmail value",
+    "expected_status": 200,
+    "verification": "Response contains the success message and a positive integer id; optionally find the same email through the admin users API",
+    "teardown": "Delete the returned user id with the admin users API, or reset SQLite after the data file finishes"
+  },
+  {
+    "data_id": "REG-DATA-DUPLICATE-SEED",
+    "purpose": "Stable duplicate-email input based on a seeded identity",
+    "setup": "Reset SQLite and confirm test@eshop.com is the seeded user with id 2",
+    "name": "Duplicate Seed User",
+    "email_mode": "fixed_seed",
+    "email": "test@eshop.com",
+    "password": "Valid123!",
+    "test_action": "POST /api/register without modifying the fixed email",
+    "expected_status": 400,
+    "verification": "Response rejects the duplicate and no additional user is created",
+    "teardown": "No row should be created; reset SQLite if verification shows an unexpected mutation"
+  },
+  {
+    "data_id": "REG-DATA-REPLAY-CONTROL",
+    "purpose": "Check replay behavior inside one isolated run",
+    "setup": "Generate one new email and store it as generatedEmail",
+    "name": "HW06 Replay User",
+    "email_mode": "reuse_generated",
+    "email_local_prefix": "hw06.replay",
+    "email_domain": "example.test",
+    "password": "Valid123!",
+    "test_action": "Send the same generatedEmail twice: first request creates it, second request checks duplicate handling",
+    "expected_first_status": 200,
+    "expected_second_status": 400,
+    "verification": "Only one user exists for generatedEmail and the second response is a rejection",
+    "teardown": "Delete the id returned by the first request, or reset SQLite"
+  }
+]

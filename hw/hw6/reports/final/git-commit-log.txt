@@ -1,0 +1,43 @@
+HW06 GIT COMMIT LOG AND SEPARATION AUDIT
+========================================
+
+Repository: https://github.com/ThanhDang-Vn/software-testing
+Branch inspected: feature/23127334-hw6
+Snapshot HEAD: 3bc8edbee6a520e23430735ccb4c6e6ac706e5ae
+Tracked origin HEAD: 5c3074e38c89c99932b80a02cb69df788dce76b3
+Scope: commits reachable from HEAD that modify hw/hw6 or .github/workflows/hw06-api-tests.yml
+History rewrite performed: NO
+
+SEPARATION AUDIT
+----------------
+
+Category                 Separate commit?  Evidence / finding
+Setup                    NO                Bundled into 8f555d779775045fdf8289367a5fae219e9466c1.
+Generation               NO                AI-generated Markdown/CSV/workbook files are bundled into 8f555d779775045fdf8289367a5fae219e9466c1.
+Audit                    NO                Phase-3 audit artifacts are bundled into 8f555d7; final audit reporting has dedicated commit 2e5ffe3.
+Extension                NO                Human-added cases and decision history are bundled into 8f555d779775045fdf8289367a5fae219e9466c1.
+Postman implementation   NO                Collection, environment template, datasets, scripts, and design are bundled into 8f555d779775045fdf8289367a5fae219e9466c1.
+Execution                NO                Newman results and execution summary are bundled into 8f555d779775045fdf8289367a5fae219e9466c1.
+Bugs                     YES               f38f830 publishes verified evidence, real screenshots, reproduction REST, and issue records.
+CI                       YES               CI implementation/demo commits are retained; 285e968 records passing/failure/restore evidence.
+Generator design         YES               0ab6cd9 adds drawing brief, self-drawn Excalidraw, pseudocode, and reusable skill.
+Final report             YES               2e5ffe3 adds final report, audit report, critique, PDFs, README, and checklist; 3bc8edb normalizes audit formatting.
+
+Conclusion: four requested areas now have dedicated commits: bugs, CI evidence, generator design, and final report. Six earlier stages remain combined in pushed commit 8f555d7. No pushed history was rewritten.
+
+TEXT LOG
+--------
+
+Hash	ISO date	Author	Subject
+3bc8edbee6a520e23430735ccb4c6e6ac706e5ae	2026-08-18T21:49:48+07:00	ThanhDang-Vn	fix(hw6): normalize reconstructed audit index formatting
+2e5ffe372c93bc20fe246546839423ff9f60f7d4	2026-08-18T21:49:10+07:00	ThanhDang-Vn	docs(hw6): add final report audit critique and submission review
+0ab6cd9c4e7f02a1a7bbfd6b4f3160f5ad2335c6	2026-08-18T21:44:22+07:00	ThanhDang-Vn	design(hw6): add audited API generator and self-drawn architecture
+285e968e6cf6a7d61582321c5f0374b8985cc05e	2026-08-18T21:43:56+07:00	ThanhDang-Vn	docs(hw6): record passing failure and restore CI evidence
+f38f830ac911cf38983d7a75248dd46a8f34f13a	2026-08-18T21:43:38+07:00	ThanhDang-Vn	docs(hw6): publish verified bug evidence and issue records
+5c3074e38c89c99932b80a02cb69df788dce76b3	2026-08-18T06:07:54+07:00	ThanhDang-Vn	test(hw6): restore passing assertion set after CI demo
+8f7786b96b85233c81e788ac028e5f2c5596f2ef	2026-08-18T06:00:49+07:00	ThanhDang-Vn	test(hw6): CI DEMO FAILURE in selected coupon gate
+7b311dcebe54aa683d4a04c3923d4553c61e7d0f	2026-08-18T05:53:01+07:00	ThanhDang-Vn	test(hw6): CI DEMO FAILURE with one intentional assertion
+eacbea47e04f5977707c8b59050e6a1115a63609	2026-08-18T05:50:44+07:00	ThanhDang-Vn	docs(hw6): record verified passing CI evidence
+805c5959dd0a19b3a93035c7829dce595ecf8d40	2026-08-18T05:35:51+07:00	ThanhDang-Vn	fix(hw6): remove nested CI heredoc failure
+79993123cbb628476dbb3b1bb9bb6bef73f91ae8	2026-08-18T05:32:58+07:00	ThanhDang-Vn	fix(hw6): initialize only required SUT submodule
+8f555d779775045fdf8289367a5fae219e9466c1	2026-08-18T05:27:20+07:00	ThanhDang-Vn	test(hw6): add verified API suite and passing CI gate

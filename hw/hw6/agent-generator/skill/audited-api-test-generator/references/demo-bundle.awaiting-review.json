@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "path": "references/demo-api-specification.md",
+    "sha256": "68771885b4e049504bf6b08c8430bc4bb536117e7c12efe7d99c65f7491ff526"
+  },
+  "contract": {
+    "operations": [
+      {
+        "contract_id": "OP-CPN-APPLY",
+        "method": "POST",
+        "path": "/api/coupons/apply",
+        "source_refs": ["demo-api-specification.md#apply-coupon-api"]
+      }
+    ]
+  },
+  "spec_gaps": [],
+  "test_cases": [
+    {
+      "tc_id": "CPN-DEMO-001",
+      "title": "Apply SAVE10 at the inclusive minimum amount",
+      "techniques": ["BVA", "schema", "percent-calculation"],
+      "contract_ids": ["OP-CPN-APPLY"],
+      "source_refs": ["demo-api-specification.md#apply-coupon-api"],
+      "preconditions": ["Use a valid runtime bearer token"],
+      "request": {
+        "method": "POST",
+        "path": "/api/coupons/apply",
+        "headers": {
+          "X-Student-Id": "23127334",
+          "Authorization": "<runtime-secret>"
+        },
+        "body": {
+          "code": "SAVE10",
+          "amount": 100
+        }
+      },
+      "expected_status": 200,
+      "assertions": ["discount equals 10", "finalAmount equals 90", "response fields are numbers"],
+      "cleanup": [],
+      "covered_targets": ["FR-CPN-01", "BOUNDARY-AMOUNT-MIN", "STATUS-200", "SCHEMA-SUCCESS", "PERCENT-CALCULATION"],
+      "generation_origin": "deterministic"
+    },
+    {
+      "tc_id": "CPN-DEMO-002",
+      "title": "Reject amount immediately below the minimum",
+      "techniques": ["BVA", "negative"],
+      "contract_ids": ["OP-CPN-APPLY"],
+      "source_refs": ["demo-api-specification.md#apply-coupon-api"],
+      "preconditions": ["Use a valid runtime bearer token"],
+      "request": {
+        "method": "POST",
+        "path": "/api/coupons/apply",
+        "headers": {
+          "X-Student-Id": "23127334",
+          "Authorization": "<runtime-secret>"
+        },
+        "body": {
+          "code": "SAVE10",
+          "amount": 99.99
+        }
+      },
+      "expected_status": 400,
+      "assertions": ["request is rejected as an invalid amount"],
+      "cleanup": [],
+      "covered_targets": ["FR-CPN-01", "BOUNDARY-AMOUNT-BELOW", "STATUS-400"],
+      "generation_origin": "deterministic"
+    },
+    {
+      "tc_id": "CPN-DEMO-003",
+      "title": "Reject request with missing bearer authentication",
+      "techniques": ["security", "authentication"],
+      "contract_ids": ["OP-CPN-APPLY"],
+      "source_refs": ["demo-api-specification.md#apply-coupon-api"],
+      "preconditions": [],
+      "request": {
+        "method": "POST",
+        "path": "/api/coupons/apply",
+        "headers": {
+          "X-Student-Id": "23127334"
+        },
+        "body": {
+          "code": "SAVE10",
+          "amount": 100
+        }
+      },
+      "expected_status": 401,
+      "assertions": ["request is rejected without authentication"],
+      "cleanup": [],
+      "covered_targets": ["FR-CPN-01", "AUTH-REQUIRED", "STATUS-401"],
+      "generation_origin": "deterministic"
+    }
+  ],
+  "coverage": {
+    "required_targets": [
+      "FR-CPN-01",
+      "BOUNDARY-AMOUNT-MIN",
+      "BOUNDARY-AMOUNT-BELOW",
+      "AUTH-REQUIRED",
+      "STATUS-200",
+      "STATUS-400",
+      "STATUS-401",
+      "SCHEMA-SUCCESS",
+      "PERCENT-CALCULATION"
+    ],
+    "covered_targets": [
+      "FR-CPN-01",
+      "BOUNDARY-AMOUNT-MIN",
+      "BOUNDARY-AMOUNT-BELOW",
+      "AUTH-REQUIRED",
+      "STATUS-200",
+      "STATUS-400",
+      "STATUS-401",
+      "SCHEMA-SUCCESS",
+      "PERCENT-CALCULATION"
+    ]
+  },
+  "review": {
+    "status": "approved",
+    "reviewer": "Thành Dâng 23127334",
+    "timestamp": "2026-08-18T21:30:00+07:00",
+    "rationale": "Đã đối chiếu ba test case với FR-CPN-01; inclusive boundary, below-boundary rejection, authentication, schema và phép tính SAVE10 chính xác đều có thể truy vết và đầy đủ cho demo một operation này"
+  },
+  "audit": [
+    {
+      "stage": "review-package",
+      "actor_type": "deterministic",
+      "action": "awaiting_human_review",
+      "validation_result": "coverage_complete"
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+name: HW06 API Tests
+
+on:
+  push:
+    paths:
+      - "hw/hw6/**"
+      - "hw/eshop-sut/backend/**"
+      - ".github/workflows/hw06-api-tests.yml"
+  pull_request:
+    paths:
+      - "hw/hw6/**"
+      - "hw/eshop-sut/backend/**"
+      - ".github/workflows/hw06-api-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hw06-api-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  newman:
+    name: Newman API contract tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Initialize the EShop SUT submodule only
+        run: git submodule update --init --depth 1 -- hw/eshop-sut
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "20.20.2"
+          cache: npm
+          cache-dependency-path: hw/eshop-sut/backend/package-lock.json
+
+      - name: Install EShop backend
+        working-directory: hw/eshop-sut/backend
+        run: npm ci
+
+      - name: Install pinned Newman and reporters
+        run: |
+          npm install --prefix "$RUNNER_TEMP/hw06-newman" \
+            newman@6.2.1 \
+            newman-reporter-htmlextra@1.23.1
+          echo "$RUNNER_TEMP/hw06-newman/node_modules/.bin" >> "$GITHUB_PATH"
+
+      - name: Create report directories
+        run: |
+          mkdir -p hw/hw6/reports/cicd/newman
+          mkdir -p hw/hw6/reports/cicd/sut-logs
+
+      - name: Generate masked runtime credentials and CI environment
+        env:
+          ENV_TEMPLATE: hw/hw6/postman/23127334_HW06_Local.example.postman_environment.json
+        run: |
+          HW06_USER_PASSWORD="$(openssl rand -base64 24 | tr -d '\n')Aa1!"
+          HW06_ADMIN_PASSWORD="$(openssl rand -base64 24 | tr -d '\n')Aa1!"
+          export HW06_USER_PASSWORD HW06_ADMIN_PASSWORD
+          echo "::add-mask::$HW06_USER_PASSWORD"
+          echo "::add-mask::$HW06_ADMIN_PASSWORD"
+          echo "HW06_USER_PASSWORD=$HW06_USER_PASSWORD" >> "$GITHUB_ENV"
+          echo "HW06_ADMIN_PASSWORD=$HW06_ADMIN_PASSWORD" >> "$GITHUB_ENV"
+          echo "HW06_CI_ENV=$RUNNER_TEMP/hw06-ci.postman_environment.json" >> "$GITHUB_ENV"
+
+          node <<'NODE'
+          const fs = require('fs');
+          const environment = JSON.parse(fs.readFileSync(process.env.ENV_TEMPLATE, 'utf8'));
+          const values = Object.fromEntries(environment.values.map((entry) => [entry.key, entry]));
+          values.baseUrl.value = 'http://127.0.0.1:3000';
+          values.studentId.value = '23127334';
+          values.userPassword.value = process.env.HW06_USER_PASSWORD;
+          values.adminPassword.value = process.env.HW06_ADMIN_PASSWORD;
+          values.userToken.value = '';
+          values.adminToken.value = '';
+          values.expiredToken.value = '';
+          environment.id = '23127334_HW06_CI_Runtime';
+          environment.name = '23127334_HW06_CI_Runtime';
+          fs.writeFileSync(process.env.RUNNER_TEMP + '/hw06-ci.postman_environment.json', JSON.stringify(environment, null, 2));
+          NODE
+
+      - name: Enforce X-Student-Id on every collection request
+        env:
+          COLLECTION: hw/hw6/postman/23127334_HW06_API_Testing.postman_collection.json
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const collection = JSON.parse(fs.readFileSync(process.env.COLLECTION, 'utf8'));
+          const expected = '23127334';
+          const topPreRequest = (collection.event || [])
+            .filter((event) => event.listen === 'prerequest')
+            .flatMap((event) => event.script?.exec || [])
+            .join('\n');
+
+          const requiredFragments = [
+            "headers.upsert({ key: 'X-Student-Id'",
+            "to.eql(EXPECTED_STUDENT_ID)",
+            "const EXPECTED_STUDENT_ID = '23127334'",
+          ];
+          for (const fragment of requiredFragments) {
+            if (!topPreRequest.includes(fragment)) {
+              throw new Error(`Collection-level student-header guard is missing: ${fragment}`);
+            }
+          }
+
+          const scripts = [];
+          function walk(items) {
+            for (const item of items || []) {
+              for (const event of item.event || []) {
+                scripts.push((event.script?.exec || []).join('\n'));
+              }
+              walk(item.item);
+            }
+          }
+          walk(collection.item);
+
+          let supportingRequests = 0;
+          for (const script of scripts) {
+            let offset = 0;
+            while ((offset = script.indexOf('pm.sendRequest', offset)) !== -1) {
+              supportingRequests += 1;
+              const requestDefinition = script.slice(offset, offset + 1800);
+              if (!requestDefinition.includes("'X-Student-Id': pm.environment.get('studentId')")) {
+                throw new Error(`pm.sendRequest #${supportingRequests} is missing X-Student-Id`);
+              }
+              offset += 'pm.sendRequest'.length;
+            }
+          }
+
+          const studentEntry = (collection.variable || []).find((entry) => entry.key === 'studentId');
+          if (studentEntry && String(studentEntry.value) !== expected) {
+            throw new Error(`Unexpected collection studentId: ${studentEntry.value}`);
+          }
+          console.log(`Header guard passed: collection requests are upserted and ${supportingRequests} supporting requests explicitly attach X-Student-Id ${expected}.`);
+          NODE
+
+      - name: Run expected-working Newman gate
+        id: newman
+        env:
+          BACKEND_DIR: hw/eshop-sut/backend
+          COLLECTION: hw/hw6/postman/23127334_HW06_API_Testing.postman_collection.json
+          REPORT_DIR: hw/hw6/reports/cicd/newman
+          SUT_LOG_DIR: hw/hw6/reports/cicd/sut-logs
+        run: |
+          set -uo pipefail
+          SUT_PID=""
+
+          stop_sut() {
+            if [[ -n "$SUT_PID" ]] && kill -0 "$SUT_PID" 2>/dev/null; then
+              kill "$SUT_PID"
+              wait "$SUT_PID" 2>/dev/null || true
+            fi
+            SUT_PID=""
+          }
+
+          start_clean_sut() {
+            local suite="$1"
+            stop_sut
+
+            # Loading server.js loads database.js, which drops, recreates and seeds SQLite.
+            node "$BACKEND_DIR/server.js" > "$SUT_LOG_DIR/${suite}-backend.log" 2>&1 &
+            SUT_PID=$!
+
+            local ready=0
+            for attempt in $(seq 1 60); do
+              if ! kill -0 "$SUT_PID" 2>/dev/null; then
+                echo "Backend exited before readiness" >&2
+                cat "$SUT_LOG_DIR/${suite}-backend.log" >&2
+                return 1
+              fi
+              if curl --fail --silent --show-error \
+                -H "X-Student-Id: 23127334" \
+                http://127.0.0.1:3000/api/products > /dev/null; then
+                ready=1
+                break
+              fi
+              sleep 0.25
+            done
+            if [[ "$ready" -ne 1 ]]; then
+              echo "Backend readiness timed out" >&2
+              cat "$SUT_LOG_DIR/${suite}-backend.log" >&2
+              return 1
+            fi
+
+            # Replace public seed passwords with masked, per-run generated credentials.
+            node -e '
+              const path = require("path");
+              const sqlite3 = require(path.resolve(process.env.BACKEND_DIR, "node_modules/sqlite3")).verbose();
+              const db = new sqlite3.Database(path.resolve(process.env.BACKEND_DIR, "database.sqlite"));
+              db.serialize(() => {
+                db.run("UPDATE users SET password = ? WHERE email = ?", [process.env.HW06_USER_PASSWORD, "test@eshop.com"]);
+                db.run("UPDATE users SET password = ? WHERE email = ?", [process.env.HW06_ADMIN_PASSWORD, "admin@eshop.com"]);
+              });
+              db.close((error) => { if (error) throw error; });
+            '
+          }
+
+          run_suite() {
+            local suite="$1"
+            local test_item="$2"
+
+            start_clean_sut "$suite" || return 1
+            newman run "$COLLECTION" \
+              --environment "$HW06_CI_ENV" \
+              --iteration-data "hw/hw6/postman/data/ci-expected-working.json" \
+              --folder "00 Setup" \
+              --folder "$test_item" \
+              --folder "99 Verification-Teardown" \
+              --timeout-request 5000 \
+              --timeout 300000 \
+              --reporters cli,junit,htmlextra \
+              --reporter-junit-export "$REPORT_DIR/${suite}.xml" \
+              --reporter-htmlextra-export "$REPORT_DIR/${suite}.html" \
+              --reporter-htmlextra-skipSensitiveData \
+              --color off 2>&1 | tee "$REPORT_DIR/${suite}.cli.txt"
+            local newman_status=${PIPESTATUS[0]}
+            stop_sut
+            return "$newman_status"
+          }
+
+          trap stop_sut EXIT
+          overall_status=0
+
+          # Gate only independently audited paths that are expected to work on the current SUT.
+          # Defect-revealing cases remain in the main collection and verified-bug evidence;
+          # they are not relabelled or weakened to manufacture a green result.
+          run_suite register "REG-AI-001 | Register valid account and validate exact success schema" || overall_status=1
+          run_suite coupon "CPN-AI-017 | Apply fixed discount independent of amount magnitude" || overall_status=1
+          run_suite product "PRD-AI-001 | Create a valid product as admin and validate exact response and database side effect" || overall_status=1
+
+          # Preserve Newman's assertion failure as the job result after all reports exist.
+          exit "$overall_status"
+
+      - name: Upload Newman reports and backend logs
+        if: ${{ always() && hashFiles('hw/hw6/reports/cicd/newman/**') != '' }}
+        uses: actions/upload-artifact@v6
+        with:
+          name: hw06-api-reports-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            hw/hw6/reports/cicd/newman/
+            hw/hw6/reports/cicd/sut-logs/
+          if-no-files-found: error
+          retention-days: 14
