@@ -1,0 +1,50 @@
+HW06 SUBMISSION CHECKLIST
+=========================
+
+Student ID: 23127334
+Self-assessed grade read from README: 100
+Package name: 23127334_HW06_AI_API_100.zip
+Overall submission readiness: FAIL
+
+REQUIRED ARTIFACT CHECKS
+------------------------
+
+PASS  Main report Markdown exists: reports/final/main-report.md
+PASS  Main report PDF exists and was visually render-checked: reports/final/main-report.pdf
+PASS  AI audit report exists: reports/final/ai-audit-report.md
+PASS  AI critique exists and contains 262 prose words: reports/final/ai-critique.md
+PASS  Combined AI audit/critique appendix PDF exists and was visually render-checked: reports/final/ai-audit-critique-appendix.pdf
+FAIL  AI audit indexes 38/38 planned phases, but only 15 P6–P9 prompts are visible-session records; 23 P0–P5 entries are explicitly playbook/artifact-reconstructed, and original timestamp/exact-model metadata remains unavailable.
+PASS  All five published issue records link real student-supplied REST screenshots, immutable evidence, and Issues #49–#53. Bug-specific remote runs are truthfully marked N/A; two-trial local raw evidence is retained in bugs/verified-bugs.md.
+PASS  Postman Collection v2.1 JSON parses: postman/23127334_HW06_API_Testing.postman_collection.json
+PASS  Sanitized environment example parses and credential/token values are blank: postman/23127334_HW06_Local.example.postman_environment.json
+PASS  Excel workbook exists: testcases/23127334_HW06_API_TestCases.xlsx
+PASS  Newman HTML reports exist for Register, Coupon, and Product: reports/newman/*-run.html
+PASS  CI report and real passing/failing/restore links exist: reports/cicd/cicd-report.md
+PASS  Self-drawn diagram sources exist and parse as Excalidraw: agent-generator/hw06-architecture.excalidraw and diagram/api-test-generator-architecture.excalidraw
+PASS  Generator pseudocode exists: agent-generator/pseudocode.md
+PASS  Verified-bug raw request/response evidence exists: bugs/verified-bugs.md
+PASS  Git log exists with hash, ISO date, author, and subject: reports/final/git-commit-log.txt
+PASS  README exists with setup, execution, links, self-assessment, and test summary: README.md
+PASS  Student-provided YouTube Agent Skill demonstration URL: https://youtu.be/OpEuJcmNQPU
+
+PDF RENDER CHECKS
+-----------------
+
+PASS  main-report.pdf: 11 A4-landscape pages; automated block-bound checks found no content outside page bounds; code/text wraps; extracted text contains no Unicode replacement character.
+PASS  ai-audit-critique-appendix.pdf: 3 A4-landscape pages; automated block-bound checks found no content outside page bounds; critique begins on its own page; extracted text contains no Unicode replacement character.
+
+PACKAGE SAFETY CHECKS
+---------------------
+
+PASS  Runnable local Postman environment is excluded.
+PASS  node_modules directories are excluded.
+PASS  SQLite/database files are excluded.
+PASS  No JWT-shaped literal or private-key block is included.
+PASS  Included PNG files are limited to user-supplied GitHub Actions evidence, the real Postman Console capture, and five real REST bug captures; no generated screenshot is included.
+PASS  The EShop SUT working tree is not copied into the package.
+
+FINAL DECISION
+--------------
+
+The ZIP is a review package, not a submission-ready package. Do not claim completion until genuine P0–P5 interaction records and missing metadata for the recovered P6–P9 records are restored. The mandatory GitHub issue screenshot/evidence placeholders have been resolved with real student-supplied captures, an immutable evidence commit, and an explicit N/A disposition for bug-specific remote runs that did not occur.
