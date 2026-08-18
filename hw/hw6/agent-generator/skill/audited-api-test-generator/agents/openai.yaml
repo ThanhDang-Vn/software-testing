@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audited API Test Generator"
+  short_description: "Generate traceable API tests with human approval"
+  default_prompt: "Use $audited-api-test-generator to turn an API specification into audited test candidates for human review and approved export."
