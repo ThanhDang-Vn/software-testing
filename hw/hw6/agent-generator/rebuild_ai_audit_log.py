@@ -159,7 +159,7 @@ def main():
             "",
             "  ```text",
         ]
-        lines += ["  " + line for line in prompts[phase].splitlines()]
+        lines += [("  " + line) if line else "" for line in prompts[phase].splitlines()]
         lines += [
             "  ```",
             "",

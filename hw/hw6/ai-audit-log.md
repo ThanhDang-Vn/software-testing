@@ -36,7 +36,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   - evidence/newman/
   - evidence/cicd/
   - agent-generator/
-  
+
   Tạo template AI audit có các trường: interaction ID, tool/model, timestamp, exact prompt,
   full output hoặc file output, human review, correction, affected test IDs.
   Không generate test case ở bước này. Đề xuất commit riêng cho setup.
@@ -58,11 +58,11 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   ```text
   Khởi động EShop backend tại http://localhost:3000 và smoke-test bằng curl đúng ba API đã chọn:
   POST /api/register, POST /api/apply-coupon, POST /api/products.
-  
+
   Với mỗi API, in request headers/body, HTTP status và response body thực tế. Đối với product,
   thử cả không token, user token và admin token để xác minh authorization thực tế. Đối với coupon,
   thử total_amount bằng chính min_order_amount và lớn hơn min_order_amount.
-  
+
   Ghi kết quả vào hw6/api-contracts/p0-smoke-test.md. Tách rõ expected theo spec và actual.
   Chưa kết luận bug nếu chỉ dựa trên source code; kết luận sơ bộ phải dựa trên response chạy thật.
   ```
@@ -86,7 +86,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   - hw6/postman/data/coupon-data.json
   - hw6/postman/data/product-data.json
   - hw6/postman/data/test-identities.md
-  
+
   Nêu cách tạo email unique cho registration, cách cố định user_id/category_id, cách reset SQLite,
   và cách tránh test này làm bẩn state của test sau. Phân biệt setup, test action, verification và teardown.
   Chưa viết đủ 35 test case ở bước này.
@@ -108,11 +108,11 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   ```text
   Đọc README.md, api_specification.md và backend/server.js của EShop cho đúng ba API đã chọn.
   Tạo hw6/api-contracts/api-contract-matrix.md.
-  
+
   Với mỗi API ghi: feature/requirement, method/path, authentication, role, headers, request fields,
   data types, required/optional, constraints, business rules, expected status codes, response schema,
   side effects, SEC-01..SEC-07 liên quan, preconditions và supporting endpoints.
-  
+
   Nếu specification và implementation khác nhau, ghi SPEC EXPECTATION và IMPLEMENTATION OBSERVATION
   riêng; không tự sửa expected result theo bug hiện tại. Chưa generate test case.
   ```
@@ -135,7 +135,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   - Register: name, email, password và JSON/body/header variations.
   - Coupon: code, total_amount, user_id và authentication context.
   - Product: name, price, description, imageUrl, category_id và role context.
-  
+
   Với mỗi parameter ghi equivalence partitions, valid/invalid classes, boundary values,
   representative values, expected behavior và nguồn requirement. Không invent limit khi spec không nêu;
   đánh dấu SPEC GAP. Ghi vào hw6/testcases/p1-domain-partitions.md. Chưa tạo danh sách test cuối.
@@ -159,7 +159,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   - Register: account absent → created → duplicate registration attempt.
   - Coupon: eligible unused → applied → usage recorded → usage limit reached; active/expired states.
   - Product: product absent → created → retrievable; user role guest/user/admin.
-  
+
   Liệt kê initial state, event/request, next state, valid/invalid transition, setup endpoint,
   verification endpoint và teardown. Không vẽ diagram cuối của Agent Generator.
   Ghi vào hw6/testcases/p1-state-transitions.md.
@@ -182,7 +182,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   Tạo security + schema checklist cho ba API dựa trên SEC-01..SEC-07 và behavior của endpoint.
   Bao phủ JWT missing/malformed/expired, role escalation, mass assignment, IDOR/user_id tampering,
   SQL injection, XSS payload persistence, sensitive-data leakage, unexpected fields và malformed JSON.
-  
+
   Với schema, định nghĩa exact required fields, field types, fields không được xuất hiện,
   status/content-type và side-effect verification. Không gọi mọi validation failure là security bug.
   Ghi vào hw6/testcases/p1-security-schema-checklist.md.
@@ -206,7 +206,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   POST /api/register, ID REG-AI-001..040. Bao phủ mọi parameter bằng EP/BVA,
   account lifecycle, duplicate registration, malformed request, security SEC-01/SEC-05,
   mass assignment và exact response schema.
-  
+
   Không duplicate cùng một ý tưởng bằng cách chỉ đổi một chuỗi tương đương. Expected result phải theo spec,
   không theo bug implementation. Ghi vào hw6/testcases/register-ai-generated.md và một CSV trung gian.
   Chưa đánh nhãn audit và chưa gọi case nào là human-added.
@@ -230,7 +230,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   POST /api/apply-coupon, ID CPN-AI-001..040. Dùng decision table cho 5 điều kiện FR-09,
   BVA quanh min_order_amount, percent/fixed calculation, expired/disabled/not-found,
   usage limit state, authentication, user_id tampering và exact response schema.
-  
+
   Phải có test tại total_amount = min_order_amount. Không duplicate vô nghĩa.
   Ghi vào hw6/testcases/coupon-ai-generated.md và một CSV trung gian.
   Chưa đánh nhãn audit và chưa gọi case nào là human-added.
@@ -254,7 +254,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   POST /api/products, ID PRD-AI-001..040. Bao phủ name max 255, price > 0,
   category tồn tại, optional/unspecified fields, malformed body, guest/user/admin roles,
   role escalation, injection/XSS persistence, response schema và database side effect.
-  
+
   Expected authorization phải dựa FR-12/SEC-02/SEC-03. Không duplicate vô nghĩa.
   Ghi vào hw6/testcases/product-ai-generated.md và một CSV trung gian.
   Chưa đánh nhãn audit và chưa gọi case nào là human-added.
@@ -300,7 +300,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   3. Giải thích cụ thể.
   4. Đề xuất correction nếu cần.
   5. DỪNG để tôi xác nhận hoặc sửa quyết định trước khi ghi vào Excel.
-  
+
   Sau khi tôi xác nhận đủ 40 case, cập nhật verdict, reasoning và corrected version vào workbook,
   đồng thời ghi tổng kết vào hw6/testcases/register-human-audit.md.
   ```
@@ -368,7 +368,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   - SEC-01..SEC-07 liên quan được trace.
   - Exact schema assertions được phủ.
   - Không còn duplicate rõ ràng.
-  
+
   Xuất gap list vào hw6/testcases/p3-audit-coverage-gaps.md để tôi dùng cho human-added tests.
   ```
 
@@ -388,7 +388,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   ```text
   Từ audit gaps và behavior thực tế, đưa ra danh sách candidate mà AI có thể đã bỏ sót cho mỗi API,
   ưu tiên chained state, security và side effect. Không tự ghi chúng là human-added.
-  
+
   Đối với mỗi candidate, hỏi tôi chọn/loại/sửa. Sau khi tôi tự quyết định ít nhất 5 case/API,
   ghi chúng thành REG-H-*, CPN-H-* và PRD-H-* trong Excel và các file Markdown.
   Mỗi case phải có lời giải thích tại sao AI bỏ sót: prompt quality, model limitation,
@@ -432,7 +432,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   Thiết kế collection 23127334_HW06_API_Testing với folders:
   00 Setup, API1 Register, API2 Coupon, API3 Product, 99 Verification-Teardown.
   Mỗi API có subfolders Domain, State, Security, Schema.
-  
+
   Định nghĩa environment variables: baseUrl, studentId, user/admin credentials,
   userToken, adminToken, userId, categoryId, createdProductId và createdEmail.
   Thiết kế data-driven mapping từ các JSON files đến test IDs.
@@ -457,7 +457,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   Thêm collection-level pre-request script để upsert header X-Student-Id từ environment
   và console.log giá trị thực tế trên mọi request. studentId phải là 23127334.
   Thêm assertion xác nhận header đã được gắn trước khi gửi.
-  
+
   Hướng dẫn tôi mở Postman Console và chụp screenshot thật có request URL,
   X-Student-Id và timestamp. AI không tạo hoặc chỉnh screenshot.
   Ghi hướng dẫn vào hw6/evidence/postman/README.md.
@@ -480,7 +480,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   Từ test case cuối đã audit, sinh collection JSON và local environment JSON trong hw6/postman/.
   Implement test scripts kiểm tra status, content-type, exact schema, business values và side effects.
   Liên kết test name với TC_ID. Dùng data-driven files cho các partitions phù hợp.
-  
+
   Không hard-code JWT. Không để secret thật trong file public; tạo local ignored environment
   và sanitized example environment. Validate collection JSON parse được.
   ```
@@ -502,7 +502,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   Chạy riêng từng folder Register, Coupon và Product. Trước mỗi run reset/seed state theo strategy.
   Ghi status/body thực tế, PASS/FAIL và evidence reference vào workbook.
   Phân biệt test fail do SUT bug, test script bug, environment/setup failure và spec ambiguity.
-  
+
   Không sửa expected result chỉ để biến test thành pass. Lưu run summary vào
   hw6/reports/newman/postman-run-summary.md.
   ```
@@ -524,7 +524,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   Export collection/environment đã kiểm tra và chạy Newman ở CLI với data files cần thiết.
   Xuất CLI output và HTML report vào hw6/reports/newman/. Hostname trong output phải là
   localhost/127.0.0.1 hoặc deployment thật.
-  
+
   Lưu command chính xác, Node/Newman version, timestamp, totals, assertions, passed, failed.
   Hướng dẫn tôi chụp terminal output thật; không fabricate hoặc chỉnh output.
   Sau run, cập nhật workbook actual result và Summary.
@@ -567,7 +567,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   Đọc Postman/Newman failures và phân loại: SUT defect, test defect, environment defect,
   specification gap hoặc expected behavior. Với candidate SUT defect, chạy lại request độc lập tối thiểu
   hai lần sau khi reset state và lưu request/response thô.
-  
+
   Chỉ giữ bug tái hiện được. Đặc biệt xác minh các hypothesis về plaintext password,
   missing authorization, >= boundary và percent calculation. Ghi vào hw6/bugs/verified-bugs.md.
   ```
@@ -609,7 +609,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   Tạo .github/workflows/hw06-api-tests.yml để checkout, setup Node, cài/start EShop,
   wait health/readiness, seed/reset database, cài Newman, chạy collection và upload reports/artifacts.
   Mọi request vẫn phải có X-Student-Id 23127334. Secrets phải dùng GitHub Secrets hoặc generated runtime data.
-  
+
   Workflow phải fail khi assertion fail. Ghi giải thích pipeline vào hw6/reports/cicd/pipeline-configuration.md.
   ```
 
@@ -649,7 +649,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   Tạo một commit demonstration riêng làm đúng một assertion có chủ đích bị fail,
   không thay đổi dữ liệu thật và không phá các test khác. Gắn nhãn rõ CI DEMO FAILURE.
   Sau khi tôi push và run thật, hướng dẫn tôi lưu URL/SHA/screenshot. Sau đó tạo commit restore assertion đúng.
-  
+
   Ghi cả ba commit (passing, one-failure, restore) và lý do vào hw6/reports/cicd/failing-run.md.
   Không tự tạo GitHub run evidence.
   ```
@@ -692,7 +692,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   Spec Loader, Contract Extractor, Domain/BVA Generator, State Modeler, Security Mapper,
   Schema Assertion Generator, Deduplicator, Traceability Checker, Human Review Gate,
   Excel/Postman Exporter và Audit Logger.
-  
+
   Chỉ cung cấp component list, responsibilities, inputs/outputs và connection list.
   KHÔNG tạo Mermaid, PlantUML, image hoặc diagram cuối. Tôi phải tự vẽ diagram theo anti-cheat constraint.
   Ghi drawing brief vào hw6/agent-generator/drawing-brief.md.
@@ -755,7 +755,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   Viết hw6/reports/final/main-report.md theo ba full pipelines:
   selection rationale, contract analysis, AI generation, human audit, human extension,
   Postman implementation, execution results, bugs, Postman features, CI/CD và limitations.
-  
+
   Mọi con số phải lấy từ workbook/Newman thật. Mọi bug/run phải có evidence link.
   Không dùng câu chung chung và không che các INVALID/INCOMPLETE AI outputs.
   ```
@@ -816,7 +816,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   ```text
   Viết hw6/README.md gồm repository/SUT links, cách setup, cách chạy Postman/Newman,
   Postman features, CI links, bug links, optional video link và submission inventory.
-  
+
   Tạo self-assessment table: API1/30, API2/30, API3/30, Agent Generator/10.
   Tạo test summary từ workbook: generated, human-added, executed, passed, failed và bugs/API.
   Không điền số ước lượng.
@@ -839,7 +839,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   Kiểm tra lịch sử commit có commit riêng cho setup, generation, audit, extension,
   Postman implementation, execution, bugs, CI, generator design và final report.
   Không rewrite lịch sử nếu đã push mà chưa hỏi tôi.
-  
+
   Export log text-based vào hw6/reports/final/git-commit-log.txt với hash, ISO date, author và subject.
   ```
 
@@ -860,7 +860,7 @@ Prompt provenance: 15 interactions (`P6.1`–`P9.6`) are recoverable from the vi
   Export main report và AI audit/critique appendix thành PDF, kiểm tra render không vỡ bảng/code.
   Kiểm tra collection JSON, environment example, Excel, Newman HTML, CI report,
   self-drawn diagram, pseudocode, bug evidence, Git log và README đều tồn tại.
-  
+
   Đóng gói thành 23127334_HW06_AI_API_<SelfAssessedGrade>.zip.
   Không đóng gói secrets, node_modules, database chứa dữ liệu nhạy cảm hoặc screenshot giả.
   In checklist file nào pass/fail; không tuyên bố hoàn tất nếu còn placeholder bắt buộc.
