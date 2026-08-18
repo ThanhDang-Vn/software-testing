@@ -1,0 +1,178 @@
+@baseUrl = http://127.0.0.1:3000
+@studentId = 23127334
+
+# HW06 verified-bug screenshot reproduction
+#
+# Use the VS Code REST Client extension and click "Send Request" above one request at a time.
+# Before EACH bug/trial:
+#   1. Stop the backend process listening on port 3000.
+#   2. Start hw/eshop-sut/backend/server.js again so SQLite is recreated and seeded.
+#   3. Send only the selected request.
+#   4. Capture the REST Client request and response in the same screenshot.
+#
+# Run every bug twice after separate resets if new independent evidence is required.
+# Do not add Authorization to VB-02 or VB-03: its absence is the condition being tested.
+
+### VB-01 — Registration stores the submitted password as plaintext
+# Expected by SEC-01: HTTP 200 registration, but stored password must not equal the submitted value.
+# Actual defect: the database stores the exact submitted value.
+# After sending, copy the generated email visible in the request and run from repository root:
+# sqlite3 hw/eshop-sut/backend/database.sqlite "SELECT id,email,password FROM users WHERE email='<generated email>';"
+# Capture the REST response and the real SQLite query output. Do not expose a real personal password.
+POST {{baseUrl}}/api/register
+Accept: application/json
+Content-Type: application/json
+X-Student-Id: {{studentId}}
+
+{
+  "name": "VB01 REST Verification",
+  "email": "vb01.rest.{{$timestamp}}@example.test",
+  "password": "VB01Synthetic1!",
+  "confirm_password": "VB01Synthetic1!"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### VB-02 — Apply coupon succeeds without Authorization
+# Expected by FR-09 C4 and SEC-02: reject because Authorization is absent.
+# Actual defect: HTTP 200 with coupon calculation data.
+# IMPORTANT: Authorization is intentionally omitted.
+POST {{baseUrl}}/api/apply-coupon
+Accept: application/json
+Content-Type: application/json
+X-Student-Id: {{studentId}}
+
+{
+  "code": "SAVE10",
+  "total_amount": 500000,
+  "user_id": 2
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### VB-03 — Product creation succeeds and persists without admin Authorization
+# Expected by FR-12, SEC-02 and SEC-03: reject and create no product.
+# Actual defect: HTTP 200 and a product row is created.
+# IMPORTANT: Authorization is intentionally omitted.
+# After sending, copy the generated name visible in the request and run from repository root:
+# sqlite3 hw/eshop-sut/backend/database.sqlite "SELECT id,name,price,category_id FROM products WHERE name='<generated name>';"
+# Capture the REST response and the real SQLite query output.
+POST {{baseUrl}}/api/products
+Accept: application/json
+Content-Type: application/json
+X-Student-Id: {{studentId}}
+
+{
+  "name": "VB03-NOAUTH-{{$timestamp}}",
+  "price": 123456,
+  "description": "REST Client verification",
+  "imageUrl": "https://example.test/vb03.png",
+  "category_id": 1
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### VB-04 — Coupon rejects total_amount equal to min_order_amount
+# SAVE10 has min_order_amount=300000.
+# Expected by FR-09 C3 (>=): equality succeeds with HTTP 200.
+# Actual defect: HTTP 400 insufficient minimum value.
+# The bearer value is an intentional non-secret marker. VB-02 proves this route ignores auth.
+POST {{baseUrl}}/api/apply-coupon
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer intentionally-present-but-unchecked
+X-Student-Id: {{studentId}}
+
+{
+  "code": "SAVE10",
+  "total_amount": 300000,
+  "user_id": 2
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### VB-05 — Percent coupon uses the wrong calculation formula
+# Expected for SAVE10 and total 500000:
+#   discount_amount = 50000
+#   final_amount = 450000
+# Actual defect:
+#   discount_amount = -4500000
+#   final_amount = 5000000
+# The selected values produce integers, so no rounding-policy gap applies.
+POST {{baseUrl}}/api/apply-coupon
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer intentionally-present-but-unchecked
+X-Student-Id: {{studentId}}
+
+{
+  "code": "SAVE10",
+  "total_amount": 500000,
+  "user_id": 2
+}

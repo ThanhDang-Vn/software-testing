@@ -47,6 +47,8 @@ The Newman audit classified 148 primary cases as 88 candidate SUT failures, 16 t
 **Expected:** Per SEC-01, the stored credential must be a salted, non-plaintext representation.  
 **Actual:** Registration returns 200 and SQLite stores the exact submitted password string. Login compatibility does not make plaintext storage expected behavior.
 
+**Student-supplied screenshot:** [registration request and HTTP 200 response](./screenshots/bug1.png). The screenshot establishes the API response; the controlled SQLite observations below establish plaintext persistence.
+
 ### Trial 1 raw evidence (after reset)
 
 ```http
@@ -113,6 +115,8 @@ Raw DB observation:
 **Expected:** FR-09 C4 and SEC-02 require an authenticated user/JWT; a request with no `Authorization` header must be rejected before coupon calculation.  
 **Actual:** The unauthenticated request returns 200 and coupon data/calculation. This is not the separate status-code specification gap (`401` versus `403`): either permitted auth-failure status is contradicted by 200.
 
+**Student-supplied screenshot:** [request without Authorization and HTTP 200 response](./screenshots/bug2.png).
+
 ### Trial 1 raw request/response (after reset)
 
 ```http
@@ -166,6 +170,8 @@ x-powered-by: Express
 **Severity:** Critical  
 **Expected:** Product mutation is admin-only. Missing JWT must be rejected and no product may be created.  
 **Actual:** A request with no `Authorization` header returns 200 and creates a row. The raw DB observation confirms a real side effect, rather than only an incorrect status.
+
+**Student-supplied screenshot:** [request without Authorization and HTTP 200 creation response](./screenshots/bug3.png). The screenshot establishes the unauthorized response; the controlled database observations below establish persistence.
 
 ### Trial 1 raw evidence (after reset)
 
@@ -233,6 +239,8 @@ Raw DB observation:
 **Expected:** FR-09 C3 explicitly says `total_amount >= min_order_amount`. Seeded `SAVE10` has minimum 300000, so equality must succeed.  
 **Actual:** Equality returns 400 with an insufficient-value error in both clean trials. The deliberately non-secret bearer marker prevents this request from being confused with the missing-header hypothesis; VB-02 independently proves that this endpoint ignores auth.
 
+**Student-supplied screenshot:** [equality-boundary request and HTTP 400 response](./screenshots/bug4.png).
+
 ### Trial 1 raw request/response (after reset)
 
 ```http
@@ -288,6 +296,8 @@ x-powered-by: Express
 **Severity:** Critical  
 **Expected:** FR-09 defines `discount_amount = total × discount_value / 100` and `final_amount = total - discount_amount`. For `SAVE10` and 500000, expected values are 50000 and 450000. No rounding ambiguity exists for this input.  
 **Actual:** Both trials return `discount_amount=-4500000` and `final_amount=5000000`. The response is arithmetically and financially invalid.
+
+**Student-supplied screenshot:** [500000 request and incorrect monetary response](./screenshots/bug5.png).
 
 ### Trial 1 raw request/response (after reset)
 
